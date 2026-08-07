@@ -34,7 +34,7 @@
 <div class="socials" id="dyn-socials">
 <a href="https://www.linkedin.com/" target="_blank" id="soc-linkedin"><i class="fab fa-linkedin"></i></a>
 <a href="https://www.facebook.com/miraz.ku06" target="_blank" id="soc-facebook"><i class="fab fa-facebook"></i></a>
-<a href="https://m.me/" target="_blank" id="soc-messenger"><i class="fab fa-facebook-messenger"></i></a>
+<a href="https://m.me/miraz.ku06" target="_blank" id="soc-messenger"><i class="fab fa-facebook-messenger"></i></a>
 <a href="https://x.com/" target="_blank" id="soc-twitter"><i class="fab fa-x-twitter"></i></a>
 <a href="https://www.threads.com/" target="_blank" id="soc-threads"><i class="fab fa-threads"></i></a>
 <a href="mailto:mirazulislamku@gmail.com" id="soc-email"><i class="fas fa-envelope"></i></a>
@@ -88,40 +88,8 @@ menu.classList.toggle("active");
 }
 </script>
 
-<!-- HEADER & FOOTER LOAD -->
-<script>
-fetch("header.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("header").innerHTML = data;
-});
-
-fetch("footer.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("footer").innerHTML = data;
-});
-
-/* FETCH CONFIG FOR DYNAMIC HOMEPAGE */
-fetch("data/config.json")
-.then(res=>res.json())
-.then(cfg=>{
-    document.getElementById("dyn-name").innerText = cfg.name;
-    document.getElementById("dyn-title").innerText = cfg.title;
-    document.getElementById("dyn-about").innerText = cfg.about;
-    
-    // Update dynamic socials if exists
-    for(let key in cfg.socials) {
-        let el = document.getElementById("soc-" + key);
-        if(el && cfg.socials[key]) {
-            el.href = cfg.socials[key];
-            el.style.display = "inline-block";
-        } else if (el) {
-            el.style.display = "none";
-        }
-    }
-});
-</script>
+<!-- GLOBAL HEADER & FOOTER -->
+<script src="header.js"></script>
 
 </body>
 </html>

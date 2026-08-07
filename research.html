@@ -7,123 +7,48 @@
 <title>Research & Activities | Md. Mirazul Islam</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-
-<!-- Font Awesome -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<!-- MAIN CSS -->
 <link rel="stylesheet" href="style.css">
 
 </head>
 
 <body>
 
-<!-- 🌍 BACKGROUND ICONS -->
-<div class="bg-icons">
-<i class="fas fa-earth-asia"></i>
-<i class="fas fa-satellite-dish"></i>
-<i class="fas fa-tree"></i>
-<i class="fas fa-globe"></i>
-<i class="fas fa-seedling"></i>
-</div>
-
-<!-- HEADER LOAD -->
 <div id="header"></div>
 
-<!-- MAIN CONTENT -->
 <div class="container">
 
-<h1>Research & Thesis</h1>
+<h1 style="text-align:center; margin-bottom:30px;">Research & Activities</h1>
 
-<!-- GRADUATE -->
-<div class="card">
-<h2 id="dyn-res-grad-title">Graduate Thesis (Ongoing)</h2>
+<!-- ONGOING RESEARCH -->
+<div class="card" style="background:#065f46; padding:30px; border-radius:14px; margin-bottom:25px;">
+<h2 style="color:#4ade80; margin-bottom:15px;">Ongoing Research</h2>
 
-<p id="dyn-res-grad-topic"><strong>Title:</strong> Spatiotemporal Dynamics of Land Use and Land Cover in the Sundarbans ECA (2000–2025)</p>
+<p style="font-size:1.05rem; margin-bottom:15px;"><strong>Academic Focus:</strong> History, Civilization & Campus Media Studies (Khulna University)</p>
 
-<ul id="dyn-res-grad-ul">
-<li>Remote sensing using Google Earth Engine</li>
-<li>GIS analysis in ArcGIS Pro</li>
-<li>Land use & land cover change detection</li>
-<li>Policy impact evaluation</li>
+<ul style="line-height:1.8; color:#bbf7d0;">
+<li>Historical & Cultural Content Analysis</li>
+<li>Media Ethics, Fact-checking & Disinformation Countermeasures</li>
+<li>Campus Journalism & Student Media Dynamics</li>
 </ul>
-
-<a href="#" class="btn">Download Thesis</a>
-
 </div>
 
-<!-- MAP -->
-<div class="card map">
-<h2 id="dyn-res-map-title">Study Area & Map Preview</h2>
-<img src="images/map.jpg">
-</div>
+<!-- ACADEMIC & JOURNALISM ACTIVITIES -->
+<div class="card" style="background:#065f46; padding:30px; border-radius:14px;">
+<h2 style="color:#4ade80; margin-bottom:15px;">Academic & Media Engagement</h2>
 
-<!-- TIMELINE -->
-<div class="card">
-<h2>Research Timeline</h2>
-
-<div class="timeline" id="dyn-res-timeline">
-<div>📅 2024 – Data Collection</div>
-<div>📅 2025 – Analysis</div>
-<div>📅 2026 – Final Report</div>
-</div>
-
-</div>
-
-<!-- UNDERGRAD -->
-<div class="card">
-<h2 id="dyn-res-under-title">Undergraduate Thesis</h2>
-
-<p id="dyn-res-under-topic"><strong>Forest Cover Change in Madhupur National Park (2015–2024)</strong></p>
-
-<ul id="dyn-res-under-ul">
-<li>Landsat & Sentinel analysis</li>
-<li>Deforestation assessment</li>
-<li>Classification accuracy</li>
+<ul style="line-height:1.8; color:#bbf7d0;">
+<li>Founding Member, Khulna University Research Society (KURS)</li>
+<li>Digital and Physical Safety for Journalists Workshop (UNESCO / News Network)</li>
+<li>Multimedia Journalism Training (Press Institute Bangladesh - PIB)</li>
 </ul>
-
-</div>
-
-<!-- PUBLICATIONS -->
-<div class="card">
-<h2>Publications</h2>
-
-<ul id="dyn-res-pub-ul">
-<li>Environmental journalism articles</li>
-<li>Forest and climate related reports</li>
-</ul>
-
 </div>
 
 </div>
 
-<!-- FOOTER LOAD -->
 <div id="footer"></div>
 
-<!-- MENU FIX -->
-<script>
-function toggleMenu(){
-const menu = document.getElementById("menu");
-if(menu){
-menu.classList.toggle("active");
-}
-}
-</script>
-
-<!-- HEADER & FOOTER LOAD -->
-<script>
-fetch("header.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("header").innerHTML = data;
-});
-
-fetch("footer.html")
-.then(res => res.text())
-.then(data => {
-document.getElementById("footer").innerHTML = data;
-});
-</script>
+<script src="header.js"></script>
 
 </body>
 </html>
