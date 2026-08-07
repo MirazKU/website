@@ -48,7 +48,7 @@ position:relative;
 z-index:1;
 }
 
-/* HEADER — locked with !important for unified vibrant blue navbar */
+/* HEADER NAVIGATION */
 header{
 padding:15px 10% !important;
 display:flex !important;
@@ -73,9 +73,12 @@ letter-spacing:0.5px !important;
 margin:0 !important;
 }
 
-nav{display:flex !important;}
+header nav{
+display:flex;
+align-items:center;
+}
 
-nav a{
+header nav a{
 margin-left:20px !important;
 text-decoration:none !important;
 color:#f0f9ff !important;
@@ -85,13 +88,14 @@ font-weight:500 !important;
 transition:color 0.3s !important;
 }
 
-nav a:hover{color:#7dd3fc !important;}
+header nav a:hover{color:#7dd3fc !important;}
 
-.menu-btn{
-display:none !important;
-font-size:26px !important;
+header .menu-btn{
+display:none;
+font-size:28px !important;
 color:#7dd3fc !important;
 cursor:pointer !important;
+user-select:none !important;
 }
 
 /* HERO */
@@ -169,7 +173,7 @@ transform:translateY(-5px);
 box-shadow:0 12px 28px rgba(125,211,252,0.3);
 }
 
-/* ===== RESEARCH PAGE FIX ===== */
+/* CONTAINER & RESEARCH FIXES */
 .container .card{
 text-align:left;
 }
@@ -244,7 +248,7 @@ margin-bottom:15px;
 color:#f0f9ff;
 }
 
-/* ===== FOOTER — locked with !important ===== */
+/* ===== FOOTER ===== */
 footer{
 background:#172554 !important;
 border-top:1px solid rgba(125,211,252,0.3) !important;
@@ -301,24 +305,45 @@ font-family:'Poppins',sans-serif !important;
 font-size:0.85rem !important;
 }
 
-/* MOBILE */
+/* ===== MOBILE RESPONSIVE NAVIGATION FIX ===== */
 @media(max-width:768px){
 
-nav{
-display:none;
-flex-direction:column;
-background:#1e3a8a;
-border:1px solid #7dd3fc;
-position:absolute;
-top:65px;
-right:10%;
-padding:15px;
-border-radius:10px;
+header .menu-btn{
+display:block !important;
 }
 
-nav.active{display:flex;}
+header nav{
+display:none !important;
+flex-direction:column !important;
+background:#1e3a8a !important;
+border:1px solid #7dd3fc !important;
+position:absolute !important;
+top:65px !important;
+right:5% !important;
+left:5% !important;
+padding:20px !important;
+border-radius:12px !important;
+box-shadow:0 12px 30px rgba(0,0,0,0.4) !important;
+z-index:9999 !important;
+}
 
-.menu-btn{display:block;}
+header nav a{
+margin-left:0 !important;
+margin-bottom:12px !important;
+padding:8px 0 !important;
+text-align:center !important;
+font-size:1rem !important;
+border-bottom:1px solid rgba(125,211,252,0.15) !important;
+}
+
+header nav a:last-child{
+margin-bottom:0 !important;
+border-bottom:none !important;
+}
+
+header nav.active{
+display:flex !important;
+}
 
 .hero h1{font-size:1.8rem;}
 

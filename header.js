@@ -1,5 +1,12 @@
 // 🔥 GLOBAL HEADER FIX (Mobile Menu + Consistent Load)
 
+function toggleMenu(){
+  const menu = document.getElementById("menu");
+  if(menu){
+    menu.classList.toggle("active");
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function(){
 
   // Load config first to populate meta, header & pages
@@ -13,7 +20,8 @@ document.addEventListener("DOMContentLoaded", function(){
     fetch("header.html")
     .then(res => res.text())
     .then(data => {
-      document.getElementById("header").innerHTML = data;
+      const headerEl = document.getElementById("header");
+      if(headerEl) headerEl.innerHTML = data;
 
       // Update header title
       if(cfg.headerTitle) {
@@ -40,9 +48,10 @@ document.addEventListener("DOMContentLoaded", function(){
       const menu = document.getElementById("menu");
 
       if(menuBtn && menu){
-        menuBtn.addEventListener("click", () => {
+        menuBtn.onclick = function(e){
+          e.stopPropagation();
           menu.classList.toggle("active");
-        });
+        };
       }
     });
 
@@ -58,45 +67,14 @@ document.addEventListener("DOMContentLoaded", function(){
           aboutCard.innerHTML = cfg.aboutPage.paragraphs.map(p => `<p>${p}</p>`).join("");
        }
     }
-
-    // Research Page
-    const resGradTitle = document.getElementById("dyn-res-grad-title");
-    if(resGradTitle && cfg.researchPage) {
-       resGradTitle.innerText = cfg.researchPage.graduate.title;
-       document.getElementById("dyn-res-grad-topic").innerHTML = `<strong>Title:</strong> ${cfg.researchPage.graduate.topic}`;
-       
-       const gradUl = document.getElementById("dyn-res-grad-ul");
-       if(gradUl) {
-          gradUl.innerHTML = cfg.researchPage.graduate.bullets.map(b => `<li>${b}</li>`).join("");
-       }
-       const mapTitle = document.getElementById("dyn-res-map-title");
-       if(mapTitle) mapTitle.innerText = cfg.researchPage.title + " Study Area & Map Preview";
-       
-       const timelineList = document.getElementById("dyn-res-timeline");
-       if(timelineList) {
-          timelineList.innerHTML = cfg.researchPage.timeline.map(t => `<div>${t}</div>`).join("");
-       }
-
-       document.getElementById("dyn-res-under-title").innerText = cfg.researchPage.undergraduate.title;
-       document.getElementById("dyn-res-under-topic").innerHTML = `<strong>${cfg.researchPage.undergraduate.topic}</strong>`;
-       
-       const underUl = document.getElementById("dyn-res-under-ul");
-       if(underUl) {
-          underUl.innerHTML = cfg.researchPage.undergraduate.bullets.map(b => `<li>${b}</li>`).join("");
-       }
-
-       const pubUl = document.getElementById("dyn-res-pub-ul");
-       if(pubUl) {
-          pubUl.innerHTML = cfg.researchPage.publications.map(p => `<li>${p}</li>`).join("");
-       }
-    }
   });
 
   // Load footer
   fetch("footer.html")
   .then(res => res.text())
   .then(data => {
-    document.getElementById("footer").innerHTML = data;
+    const footerEl = document.getElementById("footer");
+    if(footerEl) footerEl.innerHTML = data;
   });
 
 });
