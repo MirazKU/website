@@ -15,12 +15,18 @@ font-family:'Poppins',sans-serif;
   
 #search{
 width:100%;
-padding:12px;
+padding:12px 18px;
 margin-bottom:20px;
-background:#065f46;
+background:#1e3a8a;
 color:white;
-border:none;
+border:1px solid rgba(255,255,255,0.3);
 border-radius:25px;
+outline:none;
+}
+
+#search:focus{
+border-color:#7dd3fc;
+background:#1e40af;
 }
 
 .categories{
@@ -31,15 +37,19 @@ margin-bottom:20px;
 }
 
 .cat-btn{
-padding:6px 14px;
-background:#064e3b;
+padding:8px 18px;
+background:#1e40af;
+border:1px solid rgba(255,255,255,0.3);
 border-radius:20px;
 cursor:pointer;
+color:#f0f9ff;
+transition:0.3s;
 }
 
 .cat-btn:hover{
-background:#22c55e;
-color:black;
+background:#7dd3fc;
+color:#1e3a8a;
+font-weight:700;
 }
 
 .gallery{
@@ -49,23 +59,32 @@ gap:20px;
 }
 
 .card{
-background:#065f46;
+background:linear-gradient(145deg,#1e40af,#1d4ed8);
+border:1px solid rgba(255,255,255,0.2);
 border-radius:12px;
 overflow:hidden;
+transition:0.3s;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.card:hover{
+transform:translateY(-4px);
+border-color:#7dd3fc;
+box-shadow:0 12px 25px rgba(125,211,252,0.3);
 }
 
 .card img{
 width:100%;
 height:220px;
 object-fit:contain;
-background:#022c22;
+background:#1e3a8a;
 cursor:pointer;
 }
 
 .caption{
 padding:10px;
 text-align:center;
-color:#bbf7d0;
+color:#f0f9ff;
 font-size:14px;
 }
 
@@ -76,7 +95,7 @@ top:0;
 left:0;
 width:100%;
 height:100%;
-background:rgba(0,0,0,0.95);
+background:rgba(30,58,138,0.95);
 display:none;
 flex-direction:column;
 justify-content:center;
@@ -91,7 +110,7 @@ margin-bottom:10px;
 }
 
 .modal-caption{
-color:white;
+color:#7dd3fc;
 font-size:16px;
 text-align:center;
 z-index:10000;
@@ -117,7 +136,7 @@ z-index:10000;
 
 <div class="container">
 
-<h1 style="text-align:center">Photo Gallery</h1>
+<h1 style="text-align:center; color:#7dd3fc;">Photo Gallery</h1>
 
 <input id="search" placeholder="Search...">
 
@@ -139,7 +158,7 @@ z-index:10000;
 <script>
 /* DEFAULT CATEGORY */
 let defaultCategories = [
-"Club","Campus","GIS","School","College","Ekramul's Photo"
+"Club","Campus","School","College","Miraz's Photo"
 ];
 
 /* FETCH FROM STATIC JSON DATABASE */

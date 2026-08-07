@@ -22,67 +22,69 @@
     .cv-layout {
         display: grid;
         grid-template-columns: 340px 1fr;
-        background: #065f46;
+        background: #1e40af;
         border-radius: 20px;
         overflow: hidden;
-        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
         color: white;
+        border: 1px solid rgba(255,255,255,0.2);
     }
 
     /* --- SIDEBAR --- */
     .cv-sidebar {
-        background: #022c22;
+        background: #1d4ed8;
         padding: 50px 30px;
         text-align: center;
-        border-right: 2px solid #10b981;
+        border-right: 2px solid #7dd3fc;
     }
 
     .cv-sidebar img.profile-pic {
         width: 170px; height: 170px;
-        border-radius: 50%; border: 5px solid #22c55e;
+        border-radius: 50%; border: 5px solid #7dd3fc;
         object-fit: cover; margin-bottom: 25px;
+        box-shadow: 0 0 25px rgba(125,211,252,0.4);
     }
 
-    .cv-sidebar h1 { color: #4ade80; font-size: 1.8rem; margin-bottom: 8px; }
-    .cv-sidebar .tagline { color: #bbf7d0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
+    .cv-sidebar h1 { color: #7dd3fc; font-size: 1.8rem; margin-bottom: 8px; }
+    .cv-sidebar .tagline { color: #f0f9ff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
 
     .contact-block { text-align: left; font-size: 0.9rem; }
-    .contact-item { display: flex; align-items: center; margin-bottom: 15px; }
-    .contact-item i { color: #4ade80; width: 25px; margin-right: 10px; }
+    .contact-item { display: flex; align-items: center; margin-bottom: 15px; color:#ffffff; }
+    .contact-item i { color: #7dd3fc; width: 25px; margin-right: 10px; }
 
     /* --- MAIN CONTENT --- */
-    .cv-main { background: #065f46; padding: 50px; }
+    .cv-main { background: #1e40af; padding: 50px; }
     .cv-section { margin-bottom: 45px; }
     .cv-section-title {
-        color: #10b981; font-size: 1.5rem; border-bottom: 2px solid #22c55e;
+        color: #7dd3fc; font-size: 1.5rem; border-bottom: 2px solid #7dd3fc;
         padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; gap: 12px;
     }
 
-    .entry { position: relative; padding-left: 25px; border-left: 2px solid #022c22; margin-bottom: 25px; }
+    .entry { position: relative; padding-left: 25px; border-left: 2px solid #1d4ed8; margin-bottom: 25px; }
     .entry::before {
         content: ""; position: absolute; left: -8px; top: 6px;
-        width: 14px; height: 14px; background: #22c55e; border-radius: 50%;
+        width: 14px; height: 14px; background: #7dd3fc; border-radius: 50%;
     }
     .entry-header { display: flex; justify-content: space-between; }
-    .entry-date { color: #facc15; font-weight: 600; font-size: 0.85rem; }
-    .entry-sub { color: #bbf7d0; font-size: 0.95rem; margin-bottom: 5px; }
-    .thesis-block { background: rgba(2, 44, 34, 0.4); padding: 15px; border-radius: 8px; border-left: 3px solid #facc15; margin-top: 10px; }
+    .entry-date { color: #93c5fd; font-weight: 600; font-size: 0.85rem; }
+    .entry-sub { color: #f0f9ff; font-size: 0.95rem; margin-bottom: 5px; }
+    .thesis-block { background: rgba(29, 78, 216, 0.6); padding: 15px; border-radius: 8px; border-left: 3px solid #7dd3fc; margin-top: 10px; }
 
     /* Personal & Download Bottom Styling */
     .bottom-info-card {
-        background: #022c22; padding: 25px; border-radius: 12px;
-        margin-top: 20px; border: 1px solid #10b981;
+        background: #1d4ed8; padding: 25px; border-radius: 12px;
+        margin-top: 20px; border: 1px solid #7dd3fc;
     }
-    .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9rem; }
-    .p-grid b { color: #4ade80; }
+    .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9rem; color:#ffffff; }
+    .p-grid b { color: #7dd3fc; }
 
     .btn-download {
         display: inline-flex; align-items: center; gap: 10px;
-        background: #22c55e; color: black; padding: 12px 30px;
+        background: #7dd3fc; color: #1e3a8a; padding: 12px 30px;
         border-radius: 30px; text-decoration: none; font-weight: bold;
         margin-top: 30px; transition: 0.3s; width: 100%; justify-content: center;
     }
-    .btn-download:hover { background: #4ade80; transform: translateY(-3px); }
+    .btn-download:hover { background: #ffffff; color:#1d4ed8; transform: translateY(-3px); }
 
     @media (max-width: 950px) {
         .cv-layout { grid-template-columns: 1fr; }
