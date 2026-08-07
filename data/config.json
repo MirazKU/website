@@ -1,79 +1,80 @@
 {
-  "siteTitle": "Md. Mirazul Islam | Researcher & Journalist",
-  "siteDescription": "Md. Mirazul Islam - Environmental Researcher, Journalist, GIS Specialist",
+  "siteTitle": "Md. Mirazul Islam | Journalist & Researcher",
+  "siteDescription": "Md. Mirazul Islam - BA in History and Civilization, Khulna University. Journalist, Media Researcher, and Campus Correspondent.",
   "siteIcon": "images/profile.jpg",
   "headerTitle": "Md. Mirazul Islam",
   "headerMenu": [
     {"label": "Home", "url": "index.html"},
     {"label": "About Me", "url": "about.html"},
-    {"label": "Research & Thesis", "url": "research.html"},
+    {"label": "Research & Activities", "url": "research.html"},
     {"label": "Newspaper Articles", "url": "articles.html"},
     {"label": "Gallery", "url": "gallery.html"},
     {"label": "CV", "url": "cv.html"},
     {"label": "Contact", "url": "contact.html"}
   ],
   "name": "Md. Mirazul Islam",
-  "title": "Environmental Researcher | Journalist | GIS & Remote Sensing",
-  "about": "I am an environmental researcher and journalist focusing on forest ecosystems, climate change, and GIS-based analysis. I actively contribute to national newspapers and conduct research on land use and biodiversity.",
+  "title": "BA in History & Civilization | Journalist & Researcher",
+  "about": "I am a campus journalist, researcher, and General Secretary of KUJA based in Khulna, Bangladesh. I graduated with a B.A. (Hon's) in History and Civilization from Khulna University and actively contribute to leading national newspapers.",
   "cvLink": "cv.pdf",
   "socials": {
-    "linkedin": "https://www.linkedin.com/in/ekramulhaqueku/",
-    "facebook": "https://www.facebook.com/EkramulKU",
-    "messenger": "https://m.me/EkramulKU",
-    "instagram": "https://www.instagram.com/ekramulhaqueku/",
-    "twitter": "https://x.com/EkramulHaqueKU",
-    "threads": "https://www.threads.com/@EkramulHaqueKU",
-    "researchgate": "https://www.researchgate.net/profile/Ekramul_Haque8",
-    "googleScholar": "https://kuja-web.live/Profile/e_haque.html",
-    "github": "https://kuja-web.live/Profile/e_haque.html",
-    "email": "mailto:ms250520@ku.ac.bd"
+    "linkedin": "https://www.linkedin.com/",
+    "facebook": "https://www.facebook.com/",
+    "messenger": "https://m.me/",
+    "instagram": "https://www.instagram.com/",
+    "twitter": "https://x.com/",
+    "threads": "https://www.threads.com/",
+    "researchgate": "https://www.kursbd.org",
+    "googleScholar": "https://ku.ac.bd/",
+    "github": "https://github.com/MirazKU",
+    "email": "mailto:mirazulislamku@gmail.com"
   },
   "aboutPage": {
     "title": "About Me",
-    "headline": "Environmental Researcher | Journalist",
+    "headline": "BA in History and Civilization | Journalist & Researcher",
     "image": "images/profile.jpg",
     "paragraphs": [
-      "Md. Mirazul Islam is an environmental researcher and journalist based in Khulna, Bangladesh. He is currently pursuing a Master of Science in Forestry at Khulna University, where his academic work focuses on land use and land cover dynamics, environmental change, and conservation policy. His ongoing graduate research investigates the spatiotemporal dynamics of land use and land cover in the Sundarbans Ecologically Critical Area (2000–2025), using remote sensing and GIS techniques. Through tools such as Google Earth Engine and ArcGIS Pro, he conducts detailed spatial analysis and develops policy-relevant insights to support sustainable forest management.",
-      "He completed his Bachelor of Science (Honours) in Forestry from Khulna University, following outstanding academic achievements in both secondary and higher secondary education with GPA 5.00. His undergraduate dissertation focused on forest cover change in Madhupur National Park (2015–2024), where he applied Landsat and Sentinel imagery, supervised classification, and spatial analysis to identify deforestation patterns and their drivers, including agricultural expansion and settlement growth.",
-      "Alongside his academic career, Ekramul has built a strong background in journalism, working as a correspondent for several national newspapers including Daily Janakantha, Share Biz, Naya Shatabdi, Barta Bichitra, and Alokito Vor, and currently serving as a Sub-Editor at Education Times. His reporting primarily focuses on environmental issues, climate change, and socio-ecological challenges. Through journalism, he aims to translate scientific research into accessible information for the public and contribute to informed decision-making.",
-      "He has also gained valuable field experience through his involvement with Friendship NGO, where he contributed to a field-based research project on mangrove ecosystems in Satkhira. His responsibilities included data collection, field coordination, and community engagement, providing him with practical insights into environmental research and conservation at the grassroots level.",
-      "Ekramul has demonstrated strong leadership through various academic and extracurricular roles. He served as the President of the Khulna University Journalists’ Association (KUJA), where he organized national-level journalism training programs, led media coordination, and managed editorial activities. He is also the Founding President of the Khulna University Writers’ Society, where he organized nationwide writing competitions and developed a digital platform for showcasing student work. In addition, he served as General Secretary of the Forestry and Wood Technology Club (FWTC) and held key roles in Genesis Foundation, contributing to environmental awareness and community engagement initiatives.",
-      "He has participated in numerous trainings and workshops, including multimedia journalism, mobile journalism, IT support training under the EDGE project, and professional graphics design training. His certifications include fact-checking training by MRDI, Reuters Digital Journalism certification, and courses on media ethics, research methods, and climate change planning from internationally recognized institutions.",
-      "His technical skills include GIS and remote sensing, data analysis, and environmental research methodologies. He is proficient in ArcGIS Pro, Google Earth Engine, and Microsoft Office, and has working knowledge of Python and C++. His interdisciplinary expertise enables him to combine scientific analysis, data interpretation, and effective communication.",
-      "Currently, Ekramul is preparing for competitive government positions and fact-checking roles. His long-term goal is to build a career at the intersection of environmental research, policy, and journalism, contributing to sustainable development and evidence-based decision-making in Bangladesh."
+      "Md. Mirazul Islam is a passionate journalist and researcher based in Khulna, Bangladesh. He holds a Bachelor of Arts (Honours) in History and Civilization from Khulna University (2025). Alongside his academic pursuits in history and human civilization, he has established himself as a dedicated media professional and campus correspondent.",
+      "His academic background includes completing his Secondary School Certificate (SSC) from Rayenda Pilot High School under the Jashore Education Board (2018) and Higher Secondary Certificate (HSC) from Govt Adamjee Nagar MW College under the Dhaka Education Board (2020), both in Humanities with strong academic standing.",
+      "Mirazul has an extensive track record in journalism across national and regional media outlets. He currently serves as Khulna University Correspondent for Kaler Kantho (National Newspaper, Dhaka), Contributor for Daily Observer, and Contributor for Bangladesh Guardian. Previously, he served as Khulna University Correspondent for Daily Bangladesh, Somoy Journal, and Rupantor Protidin.",
+      "Demonstrating active leadership, Mirazul has served in key leadership positions at Khulna University Journalists' Association (KUJA) from 2022 to March 2026, progressing through roles from Associate Member to General Secretary and Executive Member. In these roles, he led teams of campus journalists, generated thousands of news stories, and organized journalism workshops and national media events.",
+      "In addition to KUJA, Mirazul is a Founding Member of Khulna University Research Society (KURS) (2022–2023) and serves as Assistant Organizing Secretary & Executive Member of Badhan (a voluntary blood donation and social organization). He also worked as an English Teacher at Learners Aid Coaching in Khulna (2022–2024).",
+      "He has participated in specialized national and international trainings, including the 3-day Training Workshop for Journalists on Digital and Physical Safety organized by News Network and UNESCO, the 3-day Multimedia Journalism Training by Press Institute Bangladesh (PIB), Computer Skills Development at Khulna University CSE Discipline, and the PEACE Consortium workshop by RUPANTOR.",
+      "His skills and technical expertise include Content Analysis, In-depth Interviews, Media Surveys, Video Editing, Social Media Management, and MS Office. He is bilingual in Bengali with working proficiency in English.",
+      "Mirazul's goal is to bridge empirical research, history, media ethics, and journalism to advocate for media literacy, transparent reporting, and social impact."
     ]
   },
   "researchPage": {
-    "title": "Research & Thesis",
+    "title": "Research & Activities",
     "graduate": {
-      "title": "Graduate Thesis (Ongoing)",
-      "topic": "Spatiotemporal Dynamics of Land Use and Land Cover in the Sundarbans ECA (2000–2025)",
+      "title": "Academic & Historical Research",
+      "topic": "History and Civilization Studies (Khulna University)",
       "bullets": [
-        "Remote sensing using Google Earth Engine",
-        "GIS analysis in ArcGIS Pro",
-        "Land use & land cover change detection",
-        "Policy impact evaluation"
+        "Historical & Cultural Content Analysis",
+        "Qualitative & Quantitative Survey Research",
+        "In-depth Media & Ethical Journalism Studies",
+        "Campus Journalism & Student Engagement Dynamics"
       ],
-      "link": "#"
+      "link": "cv.pdf"
     },
     "mapImage": "images/map.jpg",
     "timeline": [
-      "📅 2024 – Data Collection",
-      "📅 2025 – Analysis",
-      "📅 2026 – Final Report"
+      "📅 2022 – Joined KUJA & KURS (Founding Member)",
+      "📅 2024 – Contributor & Correspondent for National Dailies",
+      "📅 2025 – B.A. (Hon's) Completion & UNESCO/PIB Training",
+      "📅 2026 – General Secretary & Executive Leadership (KUJA)"
     ],
     "undergraduate": {
-      "title": "Undergraduate Thesis",
-      "topic": "Forest Cover Change in Madhupur National Park (2015–2024)",
+      "title": "Journalism & Media Safety Training",
+      "topic": "Digital & Physical Safety and Multimedia Journalism",
       "bullets": [
-        "Landsat & Sentinel analysis",
-        "Deforestation assessment",
-        "Classification accuracy"
+        "UNESCO & News Network Digital Safety Workshop",
+        "Press Institute Bangladesh (PIB) Multimedia Journalism",
+        "Fact-checking, Media Ethics, & Disinformation Countermeasures"
       ]
     },
     "publications": [
-      "Environmental journalism articles",
-      "Forest and climate related reports"
+      "National Newspaper Reports & Campus News Coverage",
+      "Investigative & Feature Reports for Kaler Kantho, Daily Observer, Somoy Journal"
     ]
   }
 }
