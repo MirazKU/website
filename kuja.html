@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KUJA | Ekramul</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+.img-modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.img-modal img{
+max-width:90%;
+max-height:75%;
+}
+
+#modalCaption{
+color:white;
+margin-top:10px;
+font-size:14px;
+text-align:center;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+color:white;
+cursor:pointer;
+}
+  
+body{
+margin:0;
+font-family:'Inter',sans-serif;
+background:#020617;
+color:#e2e8f0;
+}
+
+/* WRAPPER FIX */
+.wrapper{
+display:grid;
+grid-template-columns:320px 1fr;
+min-height:100vh; /* 🔥 FIX */
+}
+
+/* SIDEBAR */
+.sidebar{
+background:#064e3b;
+padding:30px 25px;
+position:sticky;
+top:0;
+align-self:start; /* 🔥 FIX */
+}
+
+/* LOGO */
+.sidebar img{
+width:120px;
+height:auto;
+margin-bottom:15px;
+}
+
+/* TITLE */
+.sidebar h2{
+color:#4ade80;
+margin-bottom:10px;
+}
+
+/* ABOUT */
+.sidebar p{
+font-size:14px;
+color:#d1fae5;
+text-align:justify;
+line-height:1.6;
+}
+
+/* BUTTON */
+.btn{
+display:block;
+margin-top:10px;
+padding:9px;
+text-align:center;
+background:#22c55e;
+color:black;
+border-radius:6px;
+text-decoration:none;
+font-size:14px;
+}
+
+/* CONTENT */
+.content{
+padding:45px;
+}
+
+/* CARD */
+.card{
+background:#065f46;
+padding:25px;
+border-radius:14px;
+margin-bottom:25px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-4px);
+}
+
+/* TITLE */
+.title{
+color:#4ade80;
+margin-bottom:15px;
+font-size:20px;
+}
+
+/* TIMELINE */
+.timeline{
+border-left:2px solid #22c55e;
+padding-left:18px;
+}
+
+.timeline div{
+margin-bottom:22px;
+text-align:left;
+}
+
+/* ROLE TITLE */
+.timeline b{
+display:block;
+margin-bottom:6px;
+color:#4ade80;
+}
+
+/* LIST */
+ul{
+padding-left:18px;
+}
+
+li{
+margin-bottom:6px;
+line-height:1.6;
+}
+
+/* GALLERY */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(160px,1fr));
+gap:12px;
+}
+
+.gallery-item{
+text-align:center;
+}
+
+.gallery img{
+width:100%;
+height:140px;
+object-fit:contain; /* 🔥 FULL IMAGE */
+background:#022c22;
+border-radius:10px;
+cursor:pointer;
+}
+
+.gallery-caption{
+font-size:12px;
+color:#bbf7d0;
+margin-top:5px;
+}
+
+.gallery img:hover{
+transform:scale(1.05);
+}
+
+/* MOBILE */
+@media(max-width:768px){
+
+.wrapper{
+grid-template-columns:1fr;
+}
+
+.sidebar{
+position:relative;
+}
+
+.content{
+padding:20px;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="wrapper">
+
+<!-- SIDEBAR -->
+<div class="sidebar">
+
+<img src="images/kuja.png" style="display: block; margin-left: auto; margin-right: auto;">
+
+<h2>Khulna University Journalists’ Association (KUJA)</h2>
+
+<p>
+KUJA is a student-led organization dedicated to promoting ethical journalism, media literacy, and professional communication among students. It organizes training sessions, workshops, and collaborative programs with national media institutions.
+</p>
+
+<a href="https://kuja-web.live/Profile/e_haque.html" class="btn">🌐 More About KUJA</a>
+<a href="https://www.facebook.com/kujaofficial2020" class="btn">🔗 Facebook</a>
+
+</div>
+
+<!-- CONTENT -->
+<div class="content">
+
+<div class="card">
+<h2 class="title">My Role & Contributions</h2>
+
+<div class="timeline">
+
+<div>
+<b>President (8 Feb 2024 – 11 May 2025)</b>
+<ul>
+<li>Planned and organized high-impact journalism training with national media experts. </li>
+<li>Led PR, partnerships and press coordination with university administration and newspapers. </li>
+<li>Managed recruitment and interviewing process of 20 member applicants. </li>
+<li>Oversaw annual magazine launch and distribution, including proofread writings, sponsorship management. </li>
+<li>Led brainstorming session with campus journalists from different disciplines. </li>
+<li>Presided over a multimedia journalism training session organized by Press Institute Bangladesh (PIB). </li>
+</ul>
+</div>
+
+<div>
+<b>Organizing Secretary (22 Jan 2023 – 8 Feb 2024)</b>
+<ul>
+<li>Led member-selection committee and disciplinary sub-committee. </li>
+<li>Reviewed and evaluated membership applications for new member recruitment. </li>
+<li>Managed event registrations, media communication and participant engagement. </li>
+</ul>
+</div>
+
+<div>
+<b>Secretary of Publicity & Publication (17 May 2022 – 22 Jan 2023)</b>
+<ul>
+<li>Produced press releases and publicity content.</li>
+<li>Managed social media communication strategies.</li>
+</ul>
+</div>
+
+<div>
+<b>Member (27 Oct 2020 – 15 May 2025)</b>
+<ul>
+<li>Participated in journalism and organizing activities.</li>
+<li>Developed practical experience in campus media coordination.</li>
+</ul>
+</div>
+
+</div>
+
+</div>
+
+<div class="card">
+<h2 class="title">Gallery</h2>
+
+<div class="gallery">
+
+<div class="gallery-item">
+<img src="images/kuja1.jpg" onclick="openImg(this.src,'Training Session')">
+<div class="gallery-caption">Training Session</div>
+</div>
+
+<div class="gallery-item">
+<img src="images/kuja2.jpg" onclick="openImg(this.src,'Workshop Event')">
+<div class="gallery-caption">Workshop Event</div>
+</div>
+
+<div class="gallery-item">
+<img src="images/kuja3.jpg" onclick="openImg(this.src,'Team Meeting')">
+<div class="gallery-caption">Team Meeting</div>
+</div>
+
+</div>
+
+</div>
+
+        <div class="card">
+      <h2 class="title">KUJA Magazine</h2>
+      
+      <p style="margin-bottom:15px;">
+      Explore the official KUJA Magazine published during my tenure.
+      </p>
+      
+      <iframe 
+      allowfullscreen="allowfullscreen" 
+      allow="clipboard-write" 
+      scrolling="no" 
+      class="fp-iframe" 
+      src="https://heyzine.com/flip-book/70c298bab6.html" 
+      style="border:0;width:100%;height:500px;border-radius:12px;">
+      </iframe>
+      
+      </div>
+  
+</div>
+
+</div>
+  
+<div id="footer"></div>
+
+<script>
+fetch("./header.html").then(r=>r.text()).then(d=>header.innerHTML=d);
+fetch("./footer.html").then(r=>r.text()).then(d=>footer.innerHTML=d);
+</script>
+<script>
+function openImg(src,caption){
+document.getElementById("imgModal").style.display="flex";
+document.getElementById("modalImg").src=src;
+document.getElementById("modalCaption").innerText=caption;
+}
+
+function closeImg(){
+document.getElementById("imgModal").style.display="none";
+}
+</script>
+
+  <!-- IMAGE MODAL -->
+<div id="imgModal" class="img-modal">
+<span onclick="closeImg()" class="close">✖</span>
+<img id="modalImg">
+<div id="modalCaption"></div>
+</div>
+  
+</body>
+</html>

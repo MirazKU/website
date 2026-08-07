@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins', sans-serif;
+background:linear-gradient(to bottom,#022c22,#064e3b);
+min-height:100vh;
+color:#e2e8f0;
+}
+
+/* CONTAINER */
+.container{
+max-width:1000px;
+margin:50px auto;
+padding:20px;
+}
+
+/* TITLE */
+.title{
+text-align:center;
+margin-bottom:30px;
+}
+
+.title h1{
+color:#4ade80;
+margin-bottom:5px;
+}
+
+/* GRID */
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:25px;
+}
+
+/* CARD */
+.card{
+background:#065f46;
+padding:25px;
+border-radius:14px;
+}
+
+/* INFO */
+.info div{
+margin-bottom:15px;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.info i{
+color:#4ade80;
+}
+
+/* SOCIAL */
+.social a{
+margin-right:10px;
+font-size:18px;
+color:white;
+}
+
+/* FORM */
+form input, form textarea{
+width:100%;
+padding:10px;
+margin-bottom:15px;
+border:none;
+border-radius:6px;
+outline:none;
+font-family:'Poppins', sans-serif;
+}
+
+button{
+width:100%;
+padding:10px;
+background:#22c55e;
+border:none;
+border-radius:6px;
+font-weight:600;
+cursor:pointer;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.grid{grid-template-columns:1fr;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="container">
+
+<!-- TITLE -->
+<div class="title">
+<h1>Contact Me</h1>
+<p>Feel free to reach out for collaboration or queries</p>
+</div>
+
+<div class="grid">
+
+<!-- LEFT INFO -->
+<div class="card">
+
+<h2>Contact Information</h2>
+
+<div class="info">
+<div><i class="fas fa-map-marker-alt"></i> Khulna, Bangladesh</div>
+<div><i class="fas fa-phone"></i> 01777024027</div>
+<div><i class="fas fa-envelope"></i> ekramulhaqueku@gmail.com</div>
+</div>
+
+<h3>Connect</h3>
+
+<div class="social">
+<a href="#"><i class="fab fa-facebook"></i></a>
+<a href="#"><i class="fab fa-linkedin"></i></a>
+<a href="#"><i class="fab fa-github"></i></a>
+</div>
+
+</div>
+
+<!-- RIGHT FORM -->
+<div class="card">
+
+<h2>Send Message</h2>
+
+<form action="https://formspree.io/f/xjgpaopd" method="POST">
+
+<input type="text" name="name" placeholder="Your Name" required>
+
+<input type="email" name="email" placeholder="Your Email" required>
+
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+</div>
+
+</div>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="header.js"></script>
+</body>
+</html>

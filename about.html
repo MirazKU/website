@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About Me</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<style>
+
+body{
+margin:0;
+font-family:'Poppins',sans-serif;
+background:linear-gradient(to bottom,#022c22,#064e3b);
+min-height:100vh;
+color:#e2e8f0;
+}
+
+/* CONTAINER */
+.container{
+max-width:950px;
+margin:50px auto;
+padding:20px;
+}
+
+/* HERO */
+.hero{
+text-align:center;
+margin-bottom:30px;
+}
+
+.hero img{
+width:130px;
+height:130px;
+border-radius:50%;
+object-fit:cover;
+margin-bottom:10px;
+}
+
+.hero h1{
+margin:0;
+color:#4ade80;
+}
+
+.hero p{
+color:#94a3b8;
+}
+
+/* CARD */
+.card{
+background:#065f46;
+padding:35px;
+border-radius:16px;
+line-height:1.9;
+font-size:16px;
+}
+
+  .card p{
+font-weight:300;   /* paragraph thin */
+line-height:1.9;
+}
+
+.card{
+font-size:16px;
+line-height:1.9;
+}
+
+h1, h2{
+font-weight:600;   /* heading strong */
+}
+  
+.card p{
+margin-bottom:18px;
+text-align:justify;
+}
+
+/* FOOT */
+.bottom{
+display:flex;
+justify-content:space-between;
+flex-wrap:wrap;
+margin-top:30px;
+gap:20px;
+}
+
+.social a{
+margin-right:10px;
+font-size:18px;
+color:white;
+}
+
+.links a{
+display:inline-block;
+margin-right:10px;
+padding:8px 15px;
+background:#22c55e;
+color:black;
+border-radius:6px;
+text-decoration:none;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+.container{padding:15px;}
+.card{padding:25px;}
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="container">
+
+<!-- HERO -->
+<div class="hero">
+<img src="images/profile.jpg">
+<h1 id="dyn-about-title">About Me</h1>
+<p id="dyn-about-headline">Environmental Researcher | Journalist</p>
+</div>
+
+<!-- ABOUT TEXT -->
+<div class="card" id="dyn-about-card">
+
+<p>
+Ekramul Haque is an environmental researcher and journalist based in Khulna, Bangladesh. He is currently pursuing a Master of Science in Forestry at Khulna University, where his academic work focuses on land use and land cover dynamics, environmental change, and conservation policy. His ongoing graduate research investigates the spatiotemporal dynamics of land use and land cover in the Sundarbans Ecologically Critical Area (2000–2025), using remote sensing and GIS techniques. Through tools such as Google Earth Engine and ArcGIS Pro, he conducts detailed spatial analysis and develops policy-relevant insights to support sustainable forest management.
+</p>
+
+<p>
+He completed his Bachelor of Science (Honours) in Forestry from Khulna University, following outstanding academic achievements in both secondary and higher secondary education with GPA 5.00. His undergraduate dissertation focused on forest cover change in Madhupur National Park (2015–2024), where he applied Landsat and Sentinel imagery, supervised classification, and spatial analysis to identify deforestation patterns and their drivers, including agricultural expansion and settlement growth.
+</p>
+
+<p>
+Alongside his academic career, Ekramul has built a strong background in journalism, working as a correspondent for several national newspapers including Daily Janakantha, Share Biz, Naya Shatabdi, Barta Bichitra, and Alokito Vor, and currently serving as a Sub-Editor at Education Times. His reporting primarily focuses on environmental issues, climate change, and socio-ecological challenges. Through journalism, he aims to translate scientific research into accessible information for the public and contribute to informed decision-making.
+</p>
+
+<p>
+He has also gained valuable field experience through his involvement with Friendship NGO, where he contributed to a field-based research project on mangrove ecosystems in Satkhira. His responsibilities included data collection, field coordination, and community engagement, providing him with practical insights into environmental research and conservation at the grassroots level.
+</p>
+
+<p>
+Ekramul has demonstrated strong leadership through various academic and extracurricular roles. He served as the President of the Khulna University Journalists’ Association (KUJA), where he organized national-level journalism training programs, led media coordination, and managed editorial activities. He is also the Founding President of the Khulna University Writers’ Society, where he organized nationwide writing competitions and developed a digital platform for showcasing student work. In addition, he served as General Secretary of the Forestry and Wood Technology Club (FWTC) and held key roles in Genesis Foundation, contributing to environmental awareness and community engagement initiatives.
+</p>
+
+<p>
+He has participated in numerous trainings and workshops, including multimedia journalism, mobile journalism, IT support training under the EDGE project, and professional graphics design training. His certifications include fact-checking training by MRDI, Reuters Digital Journalism certification, and courses on media ethics, research methods, and climate change planning from internationally recognized institutions.
+</p>
+
+<p>
+His technical skills include GIS and remote sensing, data analysis, and environmental research methodologies. He is proficient in ArcGIS Pro, Google Earth Engine, and Microsoft Office, and has working knowledge of Python and C++. His interdisciplinary expertise enables him to combine scientific analysis, data interpretation, and effective communication.
+</p>
+
+<p>
+Currently, Ekramul is preparing for competitive government positions and fact-checking roles. His long-term goal is to build a career at the intersection of environmental research, policy, and journalism, contributing to sustainable development and evidence-based decision-making in Bangladesh.
+</p>
+
+</div>
+
+<!-- FOOT -->
+<div class="bottom">
+
+<div class="social">
+<h3>Connect</h3>
+<a href="https://www.facebook.com/EkramulKU"><i class="fab fa-facebook"></i></a>
+<a href="https://www.linkedin.com/in/ekramulhaqueku/"><i class="fab fa-linkedin"></i></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><i class="fab fa-github"></i></a>
+</div>
+
+<div class="links">
+<h3>Explore</h3>
+<a href="research.html">Research</a>
+<a href="articles.html">Articles</a>
+<a href="cv.html">CV</a>
+</div>
+
+</div>
+
+</div>
+
+<div id="footer"></div>
+
+<script src="header.js"></script>
+
+</body>
+</html>

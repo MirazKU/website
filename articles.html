@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Articles</title>
+
+<link rel="stylesheet" href="style.css">
+
+<!-- ✅ Poppins Font -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<!-- ✅ SolaimanLipi for Bengali content -->
+<link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+
+<style>
+
+body{
+font-family: 'Poppins', sans-serif;
+}
+
+/* SEARCH */
+#search{
+width:100%;
+padding:12px;
+margin-bottom:20px;
+background:#065f46;
+color:white;
+border:none;
+border-radius:25px;
+}
+
+/* CATEGORY */
+.categories{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.cat-btn{
+padding:6px 14px;
+background:#064e3b;
+border-radius:20px;
+cursor:pointer;
+color:white;
+}
+
+.cat-btn:hover{
+background:#22c55e;
+color:black;
+}
+
+/* GRID */
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+/* CARD */
+.card{
+background:#065f46;
+border-radius:12px;
+overflow:hidden;
+cursor:pointer;
+color:white;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:contain; /* 🔥 full image visible */
+background:#022c22;
+}
+
+.card-body{
+padding:12px;
+line-height:1.5;
+}
+
+/* MODAL */
+.modal{
+position:fixed;
+top:0;left:0;
+width:100%;height:100%;
+background:rgba(0,0,0,0.9);
+display:none;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal-content{
+padding:25px;
+border-radius:12px;
+width:90%;
+max-width:900px;
+max-height:90vh;
+overflow:auto;
+line-height:1.8;
+font-size:17px;
+}
+
+/* 🎨 CATEGORY COLORS (ONLY MODAL) */
+.modal-content.campus{
+background:#7dd3fc;
+color:#022c22; /* 🔥 dark text */
+}
+
+.modal-content.environment{
+background:#064e3b;
+color:white;
+}
+
+.modal-content.features{
+background:#7c3aed;
+color:white;
+}
+
+.modal-content.country{
+background:#7c3aed;
+color:white;
+}
+
+.modal-content.khulna{
+background:#92400e;
+color:white;
+}
+
+.modal-content.default{
+background:#022c22;
+color:white;
+}
+
+.modal img{
+width:100%;
+max-height:420px;
+object-fit:contain;
+margin:15px 0;
+}
+
+/* CLOSE */
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:32px;
+color:white;
+cursor:pointer;
+}
+
+/* BUTTON */
+.btn{
+display:inline-block;
+margin:12px 10px 0 0;
+padding:10px 18px;
+background:#22c55e;
+color:black;
+border-radius:8px;
+text-decoration:none;
+font-size:15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="container">
+
+<h1 style="text-align:center">Published News / Article</h1>
+
+<input id="search" placeholder="Search...">
+
+<div id="categories" class="categories"></div>
+
+<div id="articles" class="gallery"></div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal">
+<span class="close" onclick="closeModal()">✖</span>
+<div id="modalContent" class="modal-content"></div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+/* FETCH FROM STATIC JSON DATABASE */
+fetch("data/articles.json")
+.then(res=>res.json())
+.then(data=>{
+    let all = data;
+    let categories = new Set();
+    
+    all.forEach(i => {
+        if(i.category) categories.add(i.category);
+    });
+
+/* CATEGORY BUTTON */
+let catDiv=document.getElementById("categories");
+
+let allBtn=document.createElement("div");
+allBtn.innerText="All";
+allBtn.className="cat-btn";
+allBtn.onclick=()=>render(all);
+catDiv.appendChild(allBtn);
+
+[...categories].forEach(c=>{
+let btn=document.createElement("div");
+btn.innerText=c;
+btn.className="cat-btn";
+
+btn.onclick=()=>{
+render(all.filter(i=>i.category===c));
+};
+
+catDiv.appendChild(btn);
+});
+
+render(all);
+
+/* SEARCH */
+document.getElementById("search").addEventListener("keyup",function(){
+
+let v=this.value.toLowerCase();
+
+render(all.filter(i=>
+i.title.toLowerCase().includes(v)
+));
+
+});
+
+});
+
+/* RICH TEXT FIX */
+function parseRichText(rich){
+
+if(!rich) return "";
+
+return rich.content.map(block=>{
+return block.content.map(t=>t.value).join("");
+}).join("<br><br>");
+
+}
+
+/* COLOR */
+function getColor(c){
+
+c=c.toLowerCase();
+
+if(c==="campus") return "campus";
+if(c==="environment") return "environment";
+if(c==="features") return "features";
+if(c==="khulna") return "khulna";
+
+return "default";
+
+}
+
+/* RENDER */
+function render(list){
+
+let container=document.getElementById("articles");
+container.innerHTML="";
+
+list.forEach(i=>{
+
+let div=document.createElement("div");
+div.className="card";
+
+div.innerHTML=`
+<img src="${i.image}">
+<div class="card-body">
+<b>${i.title}</b><br>
+${i.newspaper} | ${i.date}
+</div>
+`;
+
+div.onclick=()=>openModal(i);
+
+container.appendChild(div);
+
+});
+
+}
+
+/* MODAL */
+function openModal(i){
+
+modal.style.display="flex";
+
+/* 🔥 COLOR APPLY */
+modalContent.className="modal-content "+getColor(i.category);
+
+modalContent.innerHTML=`
+
+<div>${i.category} (${i.newspaper})</div>
+
+<h2 style="
+font-size:32px;
+margin:15px 0 12px;
+line-height:1.4;
+font-weight:bold;
+">
+${i.title}
+</h2>
+
+<div style="
+margin-bottom:20px;
+font-size:16px;
+opacity:0.9;
+">
+${i.writer} (${i.date})
+</div>
+
+<img src="${i.image}">
+
+<p>${i.content}</p>
+
+<a href="${i.source}" target="_blank" class="btn">Source</a>
+<a href="${i.archive}" target="_blank" class="btn">Archive</a>
+
+`;
+
+}
+
+function closeModal(){
+modal.style.display="none";
+}
+
+</script>
+
+<!-- HEADER FOOTER -->
+<script src="header.js"></script>
+
+</body>
+</html>

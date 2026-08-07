@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Ekramul Haque | Researcher & Journalist</title>
+
+<meta name="description" content="Ekramul Haque - Environmental Researcher, Journalist, GIS Specialist">
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<!-- HEADER LOAD -->
+<div id="header"></div>
+
+<!-- HERO -->
+<section class="hero">
+
+<img src="images/profile.jpg" class="profile-img">
+
+<h1 id="dyn-name">Ekramul Haque</h1>
+<p id="dyn-title">Environmental Researcher | Journalist | GIS & Remote Sensing</p>
+
+<div class="socials" id="dyn-socials">
+<a href="https://www.linkedin.com/in/ekramulhaqueku/" target="_blank" id="soc-linkedin"><i class="fab fa-linkedin"></i></a>
+<a href="https://www.facebook.com/EkramulKU" target="_blank" id="soc-facebook"><i class="fab fa-facebook"></i></a>
+<a href="https://m.me/EkramulKU" target="_blank" id="soc-messenger"><i class="fab fa-facebook-messenger"></i></a>
+<a href="https://www.instagram.com/ekramulhaqueku/" target="_blank" id="soc-instagram"><i class="fab fa-instagram"></i></a>
+<a href="https://x.com/EkramulHaqueKU" target="_blank" id="soc-twitter"><i class="fab fa-x-twitter"></i></a>
+<a href="https://www.threads.com/@EkramulHaqueKU" target="_blank" id="soc-threads"><i class="fab fa-threads"></i></a>
+<a href="https://www.researchgate.net/profile/Ekramul_Haque8" target="_blank" id="soc-researchgate"><i class="fab fa-researchgate"></i></a>
+<a href="https://kuja-web.live/Profile/e_haque.html" target="_blank" id="soc-googleScholar"><i class="fas fa-graduation-cap"></i></a>
+<a href="https://kuja-web.live/Profile/e_haque.html" target="_blank" id="soc-github"><i class="fab fa-github"></i></a>
+<a href="mailto:ms250520@ku.ac.bd" id="soc-email"><i class="fas fa-envelope"></i></a>
+</div>
+
+</section>
+
+<!-- ABOUT SHORT -->
+<section class="container">
+<h2 style="text-align:center; margin-bottom:15px;">About Me</h2>
+
+<p style="text-align:center; max-width:700px; margin:auto; color:#bbf7d0;" id="dyn-about">
+I am an environmental researcher and journalist focusing on forest ecosystems, 
+climate change, and GIS-based analysis. I actively contribute to national newspapers 
+and conduct research on land use and biodiversity.
+</p>
+</section>
+
+<!-- QUICK LINKS -->
+<section class="quick-links">
+
+<a href="research.html" class="card">🔬 Research</a>
+<a href="articles.html" class="card">📰 Articles</a>
+<a href="gallery.html" class="card">📷 Gallery</a>
+<a href="cv.pdf" download class="card">📄 CV</a>
+
+</section>
+
+<!-- AFFILIATIONS -->
+<section class="logos">
+<h2>Affiliations & Experience</h2>
+
+<div class="logo-grid">
+
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/ku.png"></a>
+<a href="kuja.html"><img src="images/kuja.png"></a>
+<a href="kuyws.html"><img src="images/kuyws.png"></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/fwtc.png"></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/friendship.png"></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/janakantha.png"></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/sharebiz.png"></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/edutimes.png"></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/alokito.png"></a>
+<a href="https://kuja-web.live/Profile/e_haque.html"><img src="images/pib.png"></a>
+
+</div>
+
+</section>
+
+<!-- FOOTER LOAD -->
+<div id="footer"></div>
+
+<!-- MENU SCRIPT FIX -->
+<script>
+function toggleMenu(){
+const menu = document.getElementById("menu");
+if(menu){
+menu.classList.toggle("active");
+}
+}
+</script>
+
+<!-- HEADER & FOOTER LOAD -->
+<script>
+fetch("header.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("header").innerHTML = data;
+});
+
+fetch("footer.html")
+.then(res => res.text())
+.then(data => {
+document.getElementById("footer").innerHTML = data;
+});
+
+/* FETCH CONFIG FOR DYNAMIC HOMEPAGE */
+fetch("data/config.json")
+.then(res=>res.json())
+.then(cfg=>{
+    document.getElementById("dyn-name").innerText = cfg.name;
+    document.getElementById("dyn-title").innerText = cfg.title;
+    document.getElementById("dyn-about").innerText = cfg.about;
+    
+    // Update dynamic socials if exists
+    for(let key in cfg.socials) {
+        let el = document.getElementById("soc-" + key);
+        if(el && cfg.socials[key]) {
+            el.href = cfg.socials[key];
+            el.style.display = "inline-block";
+        } else if (el) {
+            el.style.display = "none";
+        }
+    }
+});
+</script>
+
+</body>
+</html>

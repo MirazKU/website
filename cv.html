@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CV | Ekramul Haque | Forestry & Journalism Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+    /* Main CV Layout */
+    .cv-section-wrapper {
+        max-width: 1200px;
+        margin: 60px auto;
+        padding: 0 20px;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    .cv-layout {
+        display: grid;
+        grid-template-columns: 340px 1fr;
+        background: #065f46;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.5);
+        color: white;
+    }
+
+    /* --- SIDEBAR --- */
+    .cv-sidebar {
+        background: #022c22;
+        padding: 50px 30px;
+        text-align: center;
+        border-right: 2px solid #10b981;
+    }
+
+    .cv-sidebar img.profile-pic {
+        width: 170px; height: 170px;
+        border-radius: 50%; border: 5px solid #22c55e;
+        object-fit: cover; margin-bottom: 25px;
+    }
+
+    .cv-sidebar h1 { color: #4ade80; font-size: 1.8rem; margin-bottom: 8px; }
+    .cv-sidebar .tagline { color: #bbf7d0; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
+
+    .contact-block { text-align: left; font-size: 0.9rem; }
+    .contact-item { display: flex; align-items: center; margin-bottom: 15px; }
+    .contact-item i { color: #4ade80; width: 25px; margin-right: 10px; }
+
+    /* --- MAIN CONTENT --- */
+    .cv-main { background: #065f46; padding: 50px; }
+    .cv-section { margin-bottom: 45px; }
+    .cv-section-title {
+        color: #10b981; font-size: 1.5rem; border-bottom: 2px solid #22c55e;
+        padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; gap: 12px;
+    }
+
+    .entry { position: relative; padding-left: 25px; border-left: 2px solid #022c22; margin-bottom: 25px; }
+    .entry::before {
+        content: ""; position: absolute; left: -8px; top: 6px;
+        width: 14px; height: 14px; background: #22c55e; border-radius: 50%;
+    }
+    .entry-header { display: flex; justify-content: space-between; }
+    .entry-date { color: #facc15; font-weight: 600; font-size: 0.85rem; }
+    .entry-sub { color: #bbf7d0; font-size: 0.95rem; margin-bottom: 5px; }
+    .thesis-block { background: rgba(2, 44, 34, 0.4); padding: 15px; border-radius: 8px; border-left: 3px solid #facc15; margin-top: 10px; }
+
+    /* Personal & Download Bottom Styling */
+    .bottom-info-card {
+        background: #022c22; padding: 25px; border-radius: 12px;
+        margin-top: 20px; border: 1px solid #10b981;
+    }
+    .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9rem; }
+    .p-grid b { color: #4ade80; }
+
+    .btn-download {
+        display: inline-flex; align-items: center; gap: 10px;
+        background: #22c55e; color: black; padding: 12px 30px;
+        border-radius: 30px; text-decoration: none; font-weight: bold;
+        margin-top: 30px; transition: 0.3s; width: 100%; justify-content: center;
+    }
+    .btn-download:hover { background: #4ade80; transform: translateY(-3px); }
+
+    @media (max-width: 950px) {
+        .cv-layout { grid-template-columns: 1fr; }
+        .cv-sidebar { border-right: none; border-bottom: 3px solid #10b981; }
+        .cv-main { padding: 30px 20px; }
+        .p-grid { grid-template-columns: 1fr; }
+    }
+</style>
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="cv-section-wrapper">
+    <div class="cv-layout">
+        
+        <aside class="cv-sidebar">
+            <img src="images/profile.jpg" alt="Ekramul Haque" class="profile-pic">
+            <h1>Ekramul Haque</h1>
+            <p class="tagline">Researcher & Journalist</p>
+
+            <div class="contact-block">
+                <div class="contact-item"><i class="fas fa-envelope"></i> <span>ekramulhaqueku@gmail.com</span></div>
+                <div class="contact-item"><i class="fas fa-phone"></i> <span>01777024027</span></div>
+                <div class="contact-item"><i class="fas fa-university"></i> <span>Khulna University, Khulna</span></div>
+            </div>
+        </aside>
+
+        <main class="cv-main">
+            
+            <section class="cv-section">
+                <h2 class="cv-section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+                <div class="entry">
+                    <div class="entry-header"><h3>MS in Forestry</h3> <span class="entry-date">2025 – 2026</span></div>
+                    <p class="entry-sub">Khulna University (Dissertation ongoing)</p>
+                </div>
+                <div class="entry">
+                    <div class="entry-header"><h3>BSc (Honours) in Forestry</h3> <span class="entry-date">2020 – 2025</span></div>
+                    <p class="entry-sub">Khulna University | CGPA: 3.22</p>
+                </div>
+                <div class="entry">
+                    <div class="entry-header"><h3>HSC & SSC (Bogura)</h3> <span class="entry-date">2014 – 2018</span></div>
+                    <p class="entry-sub">GPA 5.00 in both examinations</p>
+                </div>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="cv-section-title"><i class="fas fa-microscope"></i> Research & Thesis</h2>
+                <div class="entry">
+                    <h3>Graduate Dissertation (MS)</h3>
+                    <div class="thesis-block"><strong>Title:</strong> Spatiotemporal Dynamics of Land Use in the Sundarbans ECA (2000–2025)</div>
+                    <p style="font-size:0.85rem; margin-top:8px;">Tools: Google Earth Engine, ArcGIS Pro, Remote Sensing.</p>
+                </div>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="cv-section-title"><i class="fas fa-briefcase"></i> Work Experience</h2>
+                <div class="entry">
+                    <h3>Journalism & Editorial</h3>
+                    <p class="entry-sub">Sub-Editor at Education Times & Correspondent for Daily Janakantha.</p>
+                </div>
+                <div class="entry">
+                    <h3>Leadership</h3>
+                    <p class="entry-sub">President at KUJA & KU Writers' Society.</p>
+                </div>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="cv-section-title"><i class="fas fa-tools"></i> Technical Skills</h2>
+                <div style="display:flex; flex-wrap:wrap; gap:10px;">
+                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">ArcGIS Pro</span>
+                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">Python</span>
+                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">GEE</span>
+                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">Graphics Design</span>
+                </div>
+            </section>
+
+            <section class="cv-section">
+                <h2 class="cv-section-title"><i class="fas fa-user"></i> Personal Info & Download</h2>
+                <div class="bottom-info-card">
+                    <div class="p-grid">
+                        <div><b>DOB:</b> 04 June 2000</div>
+                        <div><b>Nationality:</b> Bangladeshi</div>
+                        <div><b>Blood Group:</b> O Positive</div>
+                        <div><b>Religion:</b> Islam</div>
+                    </div>
+                    <a href="Ekramuls CV.pdf" download class="btn-download">
+                        <i class="fas fa-file-pdf"></i> Download Complete CV (PDF)
+                    </a>
+                </div>
+            </section>
+
+        </main>
+    </div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+    function toggleMenu(){
+        const menu = document.getElementById("menu");
+        if(menu) menu.classList.toggle("active");
+    }
+
+    fetch("header.html").then(r => r.text()).then(d => { document.getElementById("header").innerHTML = d; });
+    fetch("footer.html").then(r => r.text()).then(d => { document.getElementById("footer").innerHTML = d; });
+</script>
+
+</body>
+</html>

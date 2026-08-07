@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+
+<link rel="stylesheet" href="style.css">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  
+<style>
+body{
+font-family:'Poppins',sans-serif;
+}
+  
+#search{
+width:100%;
+padding:12px;
+margin-bottom:20px;
+background:#065f46;
+color:white;
+border:none;
+border-radius:25px;
+}
+
+.categories{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.cat-btn{
+padding:6px 14px;
+background:#064e3b;
+border-radius:20px;
+cursor:pointer;
+}
+
+.cat-btn:hover{
+background:#22c55e;
+color:black;
+}
+
+.gallery{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#065f46;
+border-radius:12px;
+overflow:hidden;
+}
+
+.card img{
+width:100%;
+height:220px;
+object-fit:contain;
+background:#022c22;
+cursor:pointer;
+}
+
+.caption{
+padding:10px;
+text-align:center;
+color:#bbf7d0;
+font-size:14px;
+}
+
+/* 🔥 MODAL FIXED */
+.modal{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,0.95);
+display:none;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+z-index:9999;
+}
+
+.modal img{
+max-width:90%;
+max-height:75%;
+margin-bottom:10px;
+}
+
+.modal-caption{
+color:white;
+font-size:16px;
+text-align:center;
+z-index:10000;
+}
+
+.close{
+position:absolute;
+top:20px;
+right:30px;
+font-size:30px;
+color:white;
+cursor:pointer;
+z-index:10000;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="header"></div>
+
+<div class="container">
+
+<h1 style="text-align:center">Photo Gallery</h1>
+
+<input id="search" placeholder="Search...">
+
+<div id="categories" class="categories"></div>
+
+<div id="gallery" class="gallery"></div>
+
+</div>
+
+<!-- MODAL -->
+<div id="modal" class="modal" onclick="outsideClick(event)">
+<span class="close" onclick="closeImg()">✖</span>
+<img id="modalImg">
+<div id="modalCaption" class="modal-caption"></div>
+</div>
+
+<div id="footer"></div>
+
+<script>
+/* DEFAULT CATEGORY */
+let defaultCategories = [
+"Club","Campus","GIS","School","College","Ekramul's Photo"
+];
+
+/* FETCH FROM STATIC JSON DATABASE */
+fetch("data/gallery.json")
+.then(res=>res.json())
+.then(data=>{
+    let all = data;
+    let categories = new Set();
+    
+    /* default add */
+    defaultCategories.forEach(c=>categories.add(c));
+    
+    all.forEach(i => {
+        if(i.category) categories.add(i.category);
+    });
+
+/* CATEGORY BUTTON */
+let catDiv=document.getElementById("categories");
+
+let allBtn=document.createElement("div");
+allBtn.innerText="All";
+allBtn.className="cat-btn";
+allBtn.onclick=()=>render(all);
+catDiv.appendChild(allBtn);
+
+/* dynamic category */
+[...categories].sort().forEach(c=>{
+let btn=document.createElement("div");
+btn.innerText=c;
+btn.className="cat-btn";
+
+btn.onclick=()=>{
+let filtered=all.filter(i=>i.category===c);
+render(filtered);
+};
+
+catDiv.appendChild(btn);
+});
+
+render(all);
+
+/* SEARCH */
+document.getElementById("search").addEventListener("keyup",function(){
+let v=this.value.toLowerCase();
+
+let filtered=all.filter(i=>
+i.title.toLowerCase().includes(v)
+);
+
+render(filtered);
+});
+
+});
+
+/* RENDER */
+function render(list){
+
+let container=document.getElementById("gallery");
+container.innerHTML="";
+
+list.forEach(i=>{
+
+let div=document.createElement("div");
+div.className="card";
+
+div.innerHTML=`
+<img src="${i.image}" onclick="openImg('${i.image}','${i.title}')">
+<div class="caption">${i.title}</div>
+`;
+
+container.appendChild(div);
+
+});
+
+}
+
+/* MODAL OPEN */
+function openImg(src,caption){
+modal.style.display="flex";
+modalImg.src=src;
+modalCaption.innerText=caption;
+}
+
+/* CLOSE */
+function closeImg(){
+modal.style.display="none";
+}
+
+/* 🔥 CLICK OUTSIDE CLOSE */
+function outsideClick(e){
+if(e.target.id==="modal"){
+closeImg();
+}
+}
+
+/* 🔥 ESC CLOSE */
+document.addEventListener("keydown",function(e){
+if(e.key==="Escape"){
+closeImg();
+}
+});
+
+</script>
+
+<script src="header.js"></script>
+
+</body>
+</html>
