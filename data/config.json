@@ -1,8 +1,8 @@
 {
-  "siteTitle": "Ekramul Haque | Researcher & Journalist",
-  "siteDescription": "Ekramul Haque - Environmental Researcher, Journalist, GIS Specialist",
+  "siteTitle": "Md. Mirazul Islam | Researcher & Journalist",
+  "siteDescription": "Md. Mirazul Islam - Environmental Researcher, Journalist, GIS Specialist",
   "siteIcon": "images/profile.jpg",
-  "headerTitle": "Ekramul Haque",
+  "headerTitle": "Md. Mirazul Islam",
   "headerMenu": [
     {"label": "Home", "url": "index.html"},
     {"label": "About Me", "url": "about.html"},
@@ -12,7 +12,7 @@
     {"label": "CV", "url": "cv.html"},
     {"label": "Contact", "url": "contact.html"}
   ],
-  "name": "Ekramul Haque",
+  "name": "Md. Mirazul Islam",
   "title": "Environmental Researcher | Journalist | GIS & Remote Sensing",
   "about": "I am an environmental researcher and journalist focusing on forest ecosystems, climate change, and GIS-based analysis. I actively contribute to national newspapers and conduct research on land use and biodiversity.",
   "cvLink": "cv.pdf",
@@ -33,7 +33,7 @@
     "headline": "Environmental Researcher | Journalist",
     "image": "images/profile.jpg",
     "paragraphs": [
-      "Ekramul Haque is an environmental researcher and journalist based in Khulna, Bangladesh. He is currently pursuing a Master of Science in Forestry at Khulna University, where his academic work focuses on land use and land cover dynamics, environmental change, and conservation policy. His ongoing graduate research investigates the spatiotemporal dynamics of land use and land cover in the Sundarbans Ecologically Critical Area (2000–2025), using remote sensing and GIS techniques. Through tools such as Google Earth Engine and ArcGIS Pro, he conducts detailed spatial analysis and develops policy-relevant insights to support sustainable forest management.",
+      "Md. Mirazul Islam is an environmental researcher and journalist based in Khulna, Bangladesh. He is currently pursuing a Master of Science in Forestry at Khulna University, where his academic work focuses on land use and land cover dynamics, environmental change, and conservation policy. His ongoing graduate research investigates the spatiotemporal dynamics of land use and land cover in the Sundarbans Ecologically Critical Area (2000–2025), using remote sensing and GIS techniques. Through tools such as Google Earth Engine and ArcGIS Pro, he conducts detailed spatial analysis and develops policy-relevant insights to support sustainable forest management.",
       "He completed his Bachelor of Science (Honours) in Forestry from Khulna University, following outstanding academic achievements in both secondary and higher secondary education with GPA 5.00. His undergraduate dissertation focused on forest cover change in Madhupur National Park (2015–2024), where he applied Landsat and Sentinel imagery, supervised classification, and spatial analysis to identify deforestation patterns and their drivers, including agricultural expansion and settlement growth.",
       "Alongside his academic career, Ekramul has built a strong background in journalism, working as a correspondent for several national newspapers including Daily Janakantha, Share Biz, Naya Shatabdi, Barta Bichitra, and Alokito Vor, and currently serving as a Sub-Editor at Education Times. His reporting primarily focuses on environmental issues, climate change, and socio-ecological challenges. Through journalism, he aims to translate scientific research into accessible information for the public and contribute to informed decision-making.",
       "He has also gained valuable field experience through his involvement with Friendship NGO, where he contributed to a field-based research project on mangrove ecosystems in Satkhira. His responsibilities included data collection, field coordination, and community engagement, providing him with practical insights into environmental research and conservation at the grassroots level.",
