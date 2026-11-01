@@ -214,7 +214,16 @@ font-size:15px;
 fetch("data/articles.json")
 .then(res=>res.json())
 .then(data=>{
-    let all = data;
+    // Je news gulo bad dite chan, tader title ekhane filter kora hoyeche
+    const excludedTitles = [
+        "ছুটির বন্দোবস্ত হলো | রমজানে ক্যান্টিনে নেই সাহরির ব্যবস্থা",
+        "ABC",
+        "Miraz",
+        "ভোটার তালিকায় রুহুল কুদ্দুস তালুকদার",
+        "ইনফ্লুয়েঞ্জার পক্ষে অবস্থান নিল আর্জেন্টিনা ও মেক্সিকো"
+    ];
+
+    let all = data.filter(item => !excludedTitles.some(title => item.title && item.title.includes(title.trim())));
     let categories = new Set();
     
     all.forEach(i => {
