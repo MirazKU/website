@@ -1,94 +1,656 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Md. Mirazul Islam | Journalist, Researcher & Storyteller</title>
+  <meta name="title" content="Md. Mirazul Islam | Journalist, Researcher & Storyteller">
+  <meta name="description" content="Portfolio of Md. Mirazul Islam — Journalist and Researcher from Bangladesh. Specializing in investigative journalism, human rights, political violence, climate justice, and international history.">
+  <meta name="author" content="Md. Mirazul Islam">
+  <meta name="keywords" content="Md. Mirazul Islam, Miraz KU, Journalist Bangladesh, Khulna University, KUJA, Kaler Kantho, Daily Observer, PIB, UNESCO, International History, Climate Justice, Investigative Journalism">
 
-<title>Md. Mirazul Islam | Researcher & Journalist</title>
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://mirazku.github.io/website/">
+  <meta property="og:title" content="Md. Mirazul Islam | Journalist, Researcher & Storyteller">
+  <meta property="og:description" content="Investigative journalism and empirical research on International History, human rights, political violence, and climate justice.">
+  <meta property="og:image" content="images/profile.jpg">
 
-<meta name="description" content="Md. Mirazul Islam - BA in History and Civilization, Khulna University. Journalist & Researcher">
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://mirazku.github.io/website/">
+  <meta property="twitter:title" content="Md. Mirazul Islam | Journalist, Researcher & Storyteller">
+  <meta property="twitter:description" content="Investigative journalism and empirical research on International History, human rights, political violence, and climate justice.">
+  <meta property="twitter:image" content="images/profile.jpg">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Favicon -->
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
 
-<!-- Font Awesome -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Fonts & Icons -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<!-- MAIN CSS -->
-<link rel="stylesheet" href="style.css">
-
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<!-- HEADER LOAD -->
-<div id="header"></div>
+  <!-- ========================================================================
+       STICKY EDITORIAL HEADER
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#hero" class="brand">
+        <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-name">Md. Mirazul Islam</span>
+          <span class="brand-tagline">Journalist & Researcher</span>
+        </div>
+      </a>
 
-<!-- HERO -->
-<section class="hero">
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#featured" class="nav-link">Featured Work</a></li>
+          <li><a href="#about" class="nav-link">About</a></li>
+          <li><a href="#research" class="nav-link">Research</a></li>
+          <li><a href="#timeline" class="nav-link">Experience</a></li>
+          <li><a href="#publications" class="nav-link">Dispatches</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
 
-<img src="images/profile.jpg" class="profile-img">
+      <!-- Header Actions -->
+      <div class="header-actions">
+        <!-- Theme Toggle -->
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
 
-<h1 id="dyn-name">Md. Mirazul Islam.</h1>
-<p id="dyn-title">BA in History & Civilization | Journalist & Researcher</p>
+        <!-- CV Button -->
+        <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank" download>
+          <i class="fas fa-file-pdf"></i> <span>Download CV</span>
+        </a>
 
-<div class="socials" id="dyn-socials">
-<a href="https://www.linkedin.com/" target="_blank" id="soc-linkedin"><i class="fab fa-linkedin"></i></a>
-<a href="https://www.facebook.com/miraz.ku06" target="_blank" id="soc-facebook"><i class="fab fa-facebook"></i></a>
-<a href="https://m.me/miraz.ku06" target="_blank" id="soc-messenger"><i class="fab fa-facebook-messenger"></i></a>
-<a href="https://x.com/" target="_blank" id="soc-twitter"><i class="fab fa-x-twitter"></i></a>
-<a href="mailto:mirazulislamku@gmail.com" id="soc-email"><i class="fas fa-envelope"></i></a>
-</div>
+        <!-- Mobile Menu Trigger -->
+        <button class="mobile-menu-btn" aria-label="Open mobile navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-</section>
+  <!-- Mobile Drawer & Overlay -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="mobile-drawer-close" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <div style="margin-bottom: 24px;">
+      <h3 class="font-serif" style="font-size: 1.3rem;">Md. Mirazul Islam</h3>
+      <p style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 600; text-transform: uppercase;">
+        Journalist | Researcher | Storyteller
+      </p>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#featured">Featured Work</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#research">Research Portfolio</a></li>
+      <li><a href="#timeline">Experience & Timeline</a></li>
+      <li><a href="#publications">Publications & Media</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid var(--border-light);">
+      <a href="cv.pdf" class="btn btn-primary btn-sm" style="width: 100%;" download>
+        <i class="fas fa-file-pdf"></i> Download CV (PDF)
+      </a>
+    </div>
+  </aside>
 
-<!-- ABOUT SHORT -->
-<section class="container">
-<h2 style="text-align:center; margin-bottom:15px;">About Me</h2>
+  <main>
+    <!-- ========================================================================
+         HERO SECTION
+         ======================================================================== -->
+    <section id="hero" class="hero-section">
+      <canvas id="hero-canvas"></canvas>
 
-<p style="text-align:center; max-width:700px; margin:auto; color:#bbf7d0;" id="dyn-about">
-I am a journalist based in Khulna, Bangladesh. I graduated with a B.A. (Hon's) in History and Civilization from Khulna University and actively contribute to leading national newspapers.
-</p>
-</section>
+      <div class="container hero-grid">
+        <!-- Hero Text Column -->
+        <div class="hero-content reveal">
+          <div class="hero-eyebrow">
+            <span class="pulse-dot"></span>
+            <span>Investigative Journalism & Historical Research</span>
+          </div>
 
-<!-- QUICK LINKS -->
-<section class="quick-links">
+          <h1 class="hero-title">Md. Mirazul Islam</h1>
+          <p class="hero-identity">Journalist | Researcher | Storyteller</p>
 
-<a href="articles.html" class="card">📰 News Articles</a>
-<a href="gallery.html" class="card">📷 Gallery</a>
-<a href="cv.pdf" download class="card">📄 CV</a>
+          <p class="hero-description">
+            Investigative journalist and historical researcher from Bangladesh. Bridging empirical field inquiry, archival analysis, and public-interest reporting on <strong>International History, human rights, political violence, climate justice, and media ethics</strong>.
+          </p>
 
-</section>
+          <div class="hero-ctas">
+            <a href="#featured" class="btn btn-primary">
+              <i class="fas fa-newspaper"></i> <span>Explore My Work</span>
+            </a>
+            <a href="#research" class="btn btn-outline">
+              <i class="fas fa-microscope"></i> <span>View Research</span>
+            </a>
+            <a href="#contact" class="btn btn-outline">
+              <i class="fas fa-envelope"></i> <span>Contact Me</span>
+            </a>
+          </div>
 
-<!-- AFFILIATIONS -->
-<section class="logos">
-<h2>Affiliations & Experience</h2>
+          <!-- Quick Micro-Badges -->
+          <div style="display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.8125rem; color: var(--text-muted);">
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Khulna University
+            </span>
+            <span>•</span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> General Secretary, KUJA
+            </span>
+            <span>•</span>
+            <span style="display: flex; align-items: center; gap: 6px;">
+              <i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> UNESCO & PIB Certified
+            </span>
+          </div>
+        </div>
 
-<div class="logo-grid">
+        <!-- Hero Portrait Column -->
+        <div class="hero-portrait-card reveal reveal-delay-2">
+          <div class="floating-tag tag-top">
+            <i class="fas fa-award" style="color: var(--accent-primary);"></i>
+            <span>KUJA Executive Member</span>
+          </div>
 
-<a href="https://kuja-web.live/Profile/miraz.html"><img src="images/ku.png"></a>
-<a href="https://kuja-web.live/Profile/miraz.html"><img src="images/kuja.png"></a>
-<a href="https://www.kalerkantho.com/search?cx=20aaa23d99f8f42a3&cof=FORID%3A10&ie=UTF-8&q=%E0%A6%96%E0%A7%81%E0%A6%AC%E0%A6%BF#gsc.tab=0&gsc.q=%E0%A6%96%E0%A7%81%E0%A6%AC%E0%A6%BF&gsc.page=1"><img src="images/friendship.png"></a>
-<a href="https://pib.gov.bd/"><img src="images/pib.png"></a>
+          <div class="portrait-frame">
+            <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="portrait-img">
+            
+            <div class="portrait-overlay-badge">
+              <div class="badge-icon">
+                <i class="fas fa-id-badge"></i>
+              </div>
+              <div class="badge-text">
+                <h4>Press Correspondent</h4>
+                <p>Kaler Kantho & Daily Observer</p>
+              </div>
+            </div>
+          </div>
 
-</div>
+          <div class="floating-tag tag-bottom">
+            <i class="fas fa-university" style="color: var(--accent-primary);"></i>
+            <span>B.A. (Hon's) History & Civilization</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-</section>
+    <!-- ========================================================================
+         ANIMATED STATISTICS COUNTER SECTION
+         ======================================================================== -->
+    <section class="stats-section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item reveal">
+            <div class="stat-number" data-target="300">0<span class="plus">+</span></div>
+            <div class="stat-label">Published Reports</div>
+            <div class="stat-sublabel">National Dailies & News Dispatches</div>
+          </div>
 
-<!-- FOOTER LOAD -->
-<div id="footer"></div>
+          <div class="stat-item reveal reveal-delay-1">
+            <div class="stat-number" data-target="200">0<span class="plus">+</span></div>
+            <div class="stat-label">Special Stories</div>
+            <div class="stat-sublabel">Investigative & In-Depth Features</div>
+          </div>
 
-<!-- MENU SCRIPT FIX -->
-<script>
-function toggleMenu(){
-const menu = document.getElementById("menu");
-if(menu){
-menu.classList.toggle("active");
-}
-}
-</script>
+          <div class="stat-item reveal reveal-delay-2">
+            <div class="stat-number" data-target="15">0<span class="plus">+</span></div>
+            <div class="stat-label">Research Projects</div>
+            <div class="stat-sublabel">Field Surveys & Historical Monograph</div>
+          </div>
 
-<!-- GLOBAL HEADER & FOOTER -->
-<script src="header.js"></script>
+          <div class="stat-item reveal reveal-delay-3">
+            <div class="stat-number" data-target="4">0<span class="plus">+</span></div>
+            <div class="stat-label">Years Leadership</div>
+            <div class="stat-sublabel">KUJA Leadership & Campus Media</div>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ========================================================================
+         FEATURED WORK (INVESTIGATIVE & JOURNALISM)
+         ======================================================================== -->
+    <section id="featured" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="fas fa-bullhorn"></i> Editorial Spotlight</span>
+          <h2 class="section-title">Featured Journalism & In-Depth Dispatches</h2>
+          <p class="section-desc">
+            Spotlight investigations, frontline climate displacement reports, and investigative features examining state accountability, campus governance, and human rights.
+          </p>
+        </div>
+
+        <div class="featured-grid">
+          <!-- Dynamic Lead Story -->
+          <div id="featured-lead-wrap" class="reveal"></div>
+
+          <!-- Dynamic Stack of Stories -->
+          <div id="featured-stack-wrap" class="featured-stack reveal reveal-delay-2"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ABOUT ME SECTION
+         ======================================================================== -->
+    <section id="about" class="section section-alt">
+      <div class="container">
+        <div class="about-grid">
+          <!-- Visual Column -->
+          <div class="about-visual reveal">
+            <div class="about-img-box">
+              <img src="images/profile.jpg" alt="Md. Mirazul Islam">
+            </div>
+            <div class="about-quote-card">
+              <p>“Journalism is the first draft of history; empirical research ensures that history cannot be rewritten or erased.”</p>
+              <cite>— Md. Mirazul Islam</cite>
+            </div>
+          </div>
+
+          <!-- Content Column -->
+          <div class="about-content reveal reveal-delay-1">
+            <span class="section-tag"><i class="fas fa-feather-alt"></i> Biography & Background</span>
+            <h2 class="section-title">Bridging Historical Inquiry with Frontline Reporting</h2>
+
+            <p class="about-bio">
+              Md. Mirazul Islam is a dedicated journalist and researcher based in Khulna, Bangladesh. He holds a Bachelor of Arts (Honours) in <strong>History and Civilization</strong> from <strong>Khulna University (2025)</strong>, where he cultivated a disciplined approach to archival inquiry, oral history, and critical content analysis.
+            </p>
+
+            <p class="about-bio" style="font-size: 0.95rem; margin-top: -10px;">
+              Alongside his academic research, Mirazul has built an extensive track record in journalism across national and regional media outlets. He currently serves as <strong>Khulna University Correspondent for Daily Kaler Kantho</strong>, Contributor for <strong>Daily Observer</strong>, and Contributor for <strong>Bangladesh Guardian</strong>. From 2022 to 2026, he served in key executive leadership positions at the <strong>Khulna University Journalists' Association (KUJA)</strong>, advancing from Associate Member to <strong>General Secretary and Executive Member</strong>.
+            </p>
+
+            <!-- Research Pillars -->
+            <div class="pillars-title">Core Research & Reporting Pillars</div>
+            <div class="pillars-grid">
+              <div class="pillar-item">
+                <i class="fas fa-landmark pillar-icon"></i>
+                <div>
+                  <h5>International History</h5>
+                  <p>Colonial borderlands, statehood, and political violence.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fas fa-balance-scale pillar-icon"></i>
+                <div>
+                  <h5>Human Rights & Law</h5>
+                  <p>State accountability, civil liberties, and digital surveillance.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fas fa-seedling pillar-icon"></i>
+                <div>
+                  <h5>Climate Justice</h5>
+                  <p>Salinity intrusion, Sundarbans ecology, and displaced communities.</p>
+                </div>
+              </div>
+
+              <div class="pillar-item">
+                <i class="fas fa-shield-alt pillar-icon"></i>
+                <div>
+                  <h5>Media Safety & Ethics</h5>
+                  <p>Digital protection protocols and countering disinformation.</p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Action buttons -->
+            <div style="display: flex; gap: 14px; flex-wrap: wrap;">
+              <a href="cv.pdf" class="btn btn-primary" download>
+                <i class="fas fa-download"></i> <span>Download Full Curriculum Vitae</span>
+              </a>
+              <a href="#contact" class="btn btn-outline">
+                <i class="fas fa-paper-plane"></i> <span>Get In Touch</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         RESEARCH PORTFOLIO
+         ======================================================================== -->
+    <section id="research" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="fas fa-microscope"></i> Scholarly Inquiries</span>
+          <h2 class="section-title">Academic & Independent Research</h2>
+          <p class="section-desc">
+            Rigorous qualitative and empirical research projects across post-colonial history, environmental security, media censorship, and student civic mobilization.
+          </p>
+        </div>
+
+        <!-- Research Grid populated from data/research.json -->
+        <div id="research-grid" class="research-grid reveal"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         EXPERIENCE & ACHIEVEMENTS TIMELINE
+         ======================================================================== -->
+    <section id="timeline" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="fas fa-history"></i> Career Trajectory</span>
+          <h2 class="section-title">Experience, Leadership & Certifications</h2>
+          <p class="section-desc">
+            A chronological timeline highlighting key newsroom leadership roles, academic milestones, and international journalist training programs.
+          </p>
+        </div>
+
+        <!-- Timeline container populated from data/timeline.json -->
+        <div id="timeline-container" class="timeline-container"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PUBLICATIONS & MEDIA ARCHIVE
+         ======================================================================== -->
+    <section id="publications" class="section">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="fas fa-archive"></i> Published Dispatches</span>
+          <h2 class="section-title">Publications, Stories & Media Archive</h2>
+          <p class="section-desc">
+            Browse through published newspaper articles, special investigative stories, and multimedia reporting. Use category filters or live keyword search.
+          </p>
+        </div>
+
+        <!-- Media Controls: Filter Pills & Search -->
+        <div class="media-controls reveal">
+          <div class="filter-group">
+            <button class="filter-btn active" data-filter="all">All Stories</button>
+            <button class="filter-btn" data-filter="investigative">Investigative</button>
+            <button class="filter-btn" data-filter="climate">Climate Justice</button>
+            <button class="filter-btn" data-filter="human rights">Human Rights</button>
+            <button class="filter-btn" data-filter="campus">Campus Journalism</button>
+            <button class="filter-btn" data-filter="multimedia">Multimedia</button>
+          </div>
+
+          <div class="search-box">
+            <i class="fas fa-search"></i>
+            <input type="text" id="article-search" placeholder="Search headline, keyword, or topic...">
+          </div>
+        </div>
+
+        <!-- Articles Grid populated from data/articles.json -->
+        <div id="articles-grid" class="articles-grid reveal"></div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         AFFILIATIONS & INSTITUTIONAL PARTNERS
+         ======================================================================== -->
+    <section class="affiliations-section">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 32px;">
+          <span style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-primary);">
+            Institutional Affiliations & Media Houses
+          </span>
+        </div>
+
+        <div class="affiliations-grid">
+          <a href="https://ku.ac.bd" target="_blank" class="affiliation-item">
+            <img src="images/ku.png" alt="Khulna University" class="affiliation-logo">
+            <div class="affiliation-info">
+              <h4>Khulna University</h4>
+              <p>B.A. (Hon's) History & Civilization</p>
+            </div>
+          </a>
+
+          <a href="https://kuja-web.live/Profile/miraz.html" target="_blank" class="affiliation-item">
+            <img src="images/kuja.png" alt="KUJA" class="affiliation-logo">
+            <div class="affiliation-info">
+              <h4>KUJA</h4>
+              <p>General Secretary & Exec Member</p>
+            </div>
+          </a>
+
+          <a href="https://www.kalerkantho.com" target="_blank" class="affiliation-item">
+            <img src="images/friendship.png" alt="Kaler Kantho" class="affiliation-logo">
+            <div class="affiliation-info">
+              <h4>Kaler Kantho</h4>
+              <p>National Daily Newspaper</p>
+            </div>
+          </a>
+
+          <a href="https://pib.gov.bd" target="_blank" class="affiliation-item">
+            <img src="images/pib.png" alt="PIB" class="affiliation-logo">
+            <div class="affiliation-info">
+              <h4>Press Institute Bangladesh</h4>
+              <p>Multimedia Journalism Fellow</p>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         CONTACT SECTION
+         ======================================================================== -->
+    <section id="contact" class="section section-alt">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-tag"><i class="fas fa-envelope-open-text"></i> Media Inquiries</span>
+          <h2 class="section-title">Let's Connect & Collaborate</h2>
+          <p class="section-desc">
+            Available for investigative dispatches, research partnerships, media commentary, and conference talks on human rights, history, and climate justice.
+          </p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Contact Info Column -->
+          <div class="contact-info-card reveal">
+            <h3>Contact Information</h3>
+            <p>
+              Whether you are an editor seeking ground reports from southwestern Bangladesh, an academic researcher, or a fellow storyteller, please feel free to reach out.
+            </p>
+
+            <div class="contact-item-row">
+              <div class="contact-icon-box">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5>Office / Base Location</h5>
+                <span>Room 206, Khan Jahan Ali Hall, Khulna University, Khulna-9208, Bangladesh</span>
+              </div>
+            </div>
+
+            <div class="contact-item-row">
+              <div class="contact-icon-box">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5>Direct Electronic Mail</h5>
+                <a href="mailto:mirazulislamku@gmail.com">mirazulislamku@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-item-row">
+              <div class="contact-icon-box">
+                <i class="fas fa-phone-alt"></i>
+              </div>
+              <div>
+                <h5>Direct Phone / WhatsApp</h5>
+                <a href="tel:+8801973827347">+880 1973 827347</a>
+              </div>
+            </div>
+
+            <div class="social-links-wrap">
+              <h5>Professional Profiles & Social Networks</h5>
+              <div class="social-icons-row">
+                <a href="https://www.facebook.com/miraz.ku06" target="_blank" class="social-icon-btn" title="Facebook" aria-label="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/md-mirazul-islam-ku" target="_blank" class="social-icon-btn" title="LinkedIn" aria-label="LinkedIn">
+                  <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://x.com/mirazul_ku" target="_blank" class="social-icon-btn" title="X (Twitter)" aria-label="X Twitter">
+                  <i class="fab fa-x-twitter"></i>
+                </a>
+                <a href="https://github.com/MirazKU" target="_blank" class="social-icon-btn" title="GitHub" aria-label="GitHub">
+                  <i class="fab fa-github"></i>
+                </a>
+                <a href="https://www.kursbd.org" target="_blank" class="social-icon-btn" title="ResearchGate / KURS" aria-label="ResearchGate">
+                  <i class="fas fa-graduation-cap"></i>
+                </a>
+                <a href="mailto:mirazulislamku@gmail.com" class="social-icon-btn" title="Email" aria-label="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Contact Form Column -->
+          <div class="contact-form-card reveal reveal-delay-1">
+            <h3 class="font-serif" style="font-size: 1.45rem; margin-bottom: 8px;">Transmit a Message</h3>
+            <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 24px;">
+              Responses are typically delivered within 24 to 48 hours.
+            </p>
+
+            <form id="portfolio-contact-form" action="https://formspree.io/f/xjgpaopd" method="POST">
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name *</label>
+                  <input type="text" id="name" name="name" class="form-control" placeholder="e.g. Dr. Jane Doe" required>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address *</label>
+                  <input type="email" id="email" name="email" class="form-control" placeholder="e.g. jane@institution.org" required>
+                </div>
+              </div>
+
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="organization" class="form-label">Organization / Outlet</label>
+                  <input type="text" id="organization" name="organization" class="form-control" placeholder="e.g. International Press / University">
+                </div>
+                <div class="form-group">
+                  <label for="inquiry-type" class="form-label">Inquiry Focus *</label>
+                  <select id="inquiry-type" name="inquiry_type" class="form-control" required>
+                    <option value="Journalistic Dispatch / Assignment">Journalistic Dispatch / Assignment</option>
+                    <option value="Research Collaboration">Academic Research Collaboration</option>
+                    <option value="Media Interview / Commentary">Media Interview / Expert Commentary</option>
+                    <option value="Speaking Engagement / Workshop">Speaking Engagement / Workshop</option>
+                    <option value="General Inquiry">General Correspondence</option>
+                  </select>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="message" class="form-label">Message Details *</label>
+                <textarea id="message" name="message" class="form-control" rows="5" placeholder="Please outline your message, assignment proposal, or research inquiry..." required></textarea>
+              </div>
+
+              <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> <span>Transmit Dispatch Message</span>
+              </button>
+
+              <div id="form-feedback" class="form-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <h3>Md. Mirazul Islam</h3>
+          <p>
+            Journalist, Researcher & Storyteller based in Bangladesh. Committed to truthful, empirical, and courageous storytelling that bridges local struggles with international discourse.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#hero">Homepage</a></li>
+            <li><a href="#featured">Featured Stories</a></li>
+            <li><a href="#about">About & Perspective</a></li>
+            <li><a href="#research">Research Monograph</a></li>
+            <li><a href="#timeline">Career Experience</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Focus Domains</h4>
+          <ul class="footer-links">
+            <li><a href="#publications">Investigative Journalism</a></li>
+            <li><a href="#research">International History</a></li>
+            <li><a href="#publications">Climate Justice & Sundarbans</a></li>
+            <li><a href="#research">Media Safety & UNESCO</a></li>
+            <li><a href="#publications">Campus Democracy</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Verified Resources</h4>
+          <ul class="footer-links">
+            <li><a href="https://ku.ac.bd" target="_blank">Khulna University</a></li>
+            <li><a href="https://kuja-web.live/Profile/miraz.html" target="_blank">KUJA Profile</a></li>
+            <li><a href="https://pib.gov.bd" target="_blank">PIB Bangladesh</a></li>
+            <li><a href="cv.pdf" download>Download CV (PDF)</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          © 2026 Md. Mirazul Islam. All editorial rights reserved.
+        </div>
+        <div style="display: flex; align-items: center; gap: 16px;">
+          <span>Khulna University, Bangladesh</span>
+          <button class="back-to-top-btn" onclick="window.scrollTo({top: 0, behavior: 'smooth'});" aria-label="Back to top" title="Scroll to top">
+            <i class="fas fa-arrow-up"></i>
+          </button>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========================================================================
+       FULL STORY READER MODAL
+       ======================================================================== -->
+  <div id="reader-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeReaderModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="reader-modal-content" class="modal-content-wrap">
+        <!-- Injected dynamically via openReaderModal(id) -->
+      </div>
+    </div>
+  </div>
+
+  <!-- Main JavaScript File -->
+  <script src="main.js"></script>
 </body>
 </html>
