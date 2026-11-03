@@ -1,254 +1,476 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>CV | Md. Mirazul Islam | History & Journalism Portfolio</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae | Md. Mirazul Islam</title>
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
 
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-<style>
-
-    /* Main CV Layout */
-    .cv-section-wrapper {
-        max-width: 1200px;
-        margin: 60px auto;
-        padding: 0 20px;
-        font-family: 'Poppins', sans-serif;
+  <style>
+    :root {
+      --bg-primary: #fbfbf9;
+      --bg-surface: #ffffff;
+      --bg-subtle: #f4f4f0;
+      --text-primary: #121826;
+      --text-secondary: #475467;
+      --text-muted: #667085;
+      --accent-primary: #b45309;
+      --accent-hover: #92400e;
+      --accent-subtle: rgba(180, 83, 9, 0.08);
+      --border-light: rgba(18, 24, 38, 0.08);
+      --border-medium: rgba(18, 24, 38, 0.14);
+      --shadow-lg: 0 12px 32px -4px rgba(16, 24, 40, 0.1);
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, sans-serif;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-full: 9999px;
     }
 
-    .cv-layout {
-        display: grid;
-        grid-template-columns: 340px 1fr;
-        background: #1e40af;
-        border-radius: 20px;
-        overflow: hidden;
-        box-shadow: 0 25px 50px rgba(0,0,0,0.3);
-        color: white;
-        border: 1px solid rgba(255,255,255,0.2);
+    [data-theme="dark"] {
+      --bg-primary: #090d16;
+      --bg-surface: #111726;
+      --bg-subtle: #141c2e;
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --accent-primary: #f59e0b;
+      --accent-hover: #fbbf24;
+      --accent-subtle: rgba(245, 158, 11, 0.12);
+      --border-light: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.55);
     }
 
-    /* --- SIDEBAR --- */
-    .cv-sidebar {
-        background: #1d4ed8;
-        padding: 50px 30px;
-        text-align: center;
-        border-right: 2px solid #7dd3fc;
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      padding-top: 80px;
+      transition: background-color 0.3s, color 0.3s;
     }
 
-    .cv-sidebar img.profile-pic {
-        width: 170px; height: 170px;
-        border-radius: 50%; border: 5px solid #7dd3fc;
-        object-fit: cover; margin-bottom: 25px;
-        box-shadow: 0 0 25px rgba(125,211,252,0.4);
+    a { color: inherit; text-decoration: none; }
+
+    /* Top Nav */
+    .cv-top-bar {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 70px;
+      background: var(--bg-surface);
+      border-bottom: 1px solid var(--border-light);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 30px;
+      z-index: 1000;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
-    .cv-sidebar h1 { color: #7dd3fc; font-size: 1.8rem; margin-bottom: 8px; }
-    .cv-sidebar .tagline { color: #f0f9ff; font-size: 0.9rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
+    .cv-brand { display: flex; align-items: center; gap: 12px; }
+    .cv-avatar { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; border: 2px solid var(--accent-primary); }
+    .cv-brand-text h3 { font-family: var(--font-serif); font-size: 1.1rem; line-height: 1.2; }
+    .cv-brand-text p { font-size: 0.75rem; color: var(--accent-primary); font-weight: 600; text-transform: uppercase; }
 
-    .contact-block { text-align: left; font-size: 0.9rem; }
-    .contact-item { display: flex; align-items: center; margin-bottom: 15px; color:#ffffff; }
-    .contact-item i { color: #7dd3fc; width: 25px; margin-right: 10px; }
+    .cv-actions { display: flex; align-items: center; gap: 12px; }
 
-    /* --- MAIN CONTENT --- */
-    .cv-main { background: #1e40af; padding: 50px; }
-    .cv-section { margin-bottom: 45px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 9px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      border: 1px solid transparent;
+      transition: all 0.2s;
+    }
+
+    .btn-primary { background: var(--accent-primary); color: #fff; }
+    .btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+    .btn-outline { background: transparent; border-color: var(--border-medium); color: var(--text-primary); }
+    .btn-outline:hover { border-color: var(--accent-primary); color: var(--accent-primary); }
+
+    .theme-toggle-btn {
+      width: 38px; height: 38px; border-radius: 50%;
+      background: var(--bg-subtle); border: 1px solid var(--border-light);
+      display: flex; align-items: center; justify-content: center;
+      cursor: pointer; color: var(--text-secondary);
+    }
+
+    /* Main Container */
+    .cv-wrapper {
+      max-width: 900px;
+      margin: 30px auto 70px;
+      padding: 0 20px;
+    }
+
+    .cv-paper {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      padding: 50px;
+      box-shadow: var(--shadow-lg);
+    }
+
+    .cv-header-block {
+      border-bottom: 2px solid var(--border-medium);
+      padding-bottom: 28px;
+      margin-bottom: 34px;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 20px;
+    }
+
+    .cv-header-title h1 {
+      font-family: var(--font-serif);
+      font-size: 2.3rem;
+      line-height: 1.15;
+      margin-bottom: 6px;
+    }
+
+    .cv-header-title .tagline {
+      font-size: 1rem;
+      color: var(--accent-primary);
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .cv-contacts {
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    .cv-contacts span { display: flex; align-items: center; gap: 6px; }
+
+    /* Sections */
+    .cv-section { margin-bottom: 34px; }
     .cv-section-title {
-        color: #7dd3fc; font-size: 1.5rem; border-bottom: 2px solid #7dd3fc;
-        padding-bottom: 10px; margin-bottom: 25px; display: flex; align-items: center; gap: 12px;
+      font-family: var(--font-serif);
+      font-size: 1.35rem;
+      color: var(--accent-primary);
+      border-bottom: 1px solid var(--border-light);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
     }
 
-    .entry { position: relative; padding-left: 25px; border-left: 2px solid #1d4ed8; margin-bottom: 25px; }
-    .entry::before {
-        content: ""; position: absolute; left: -8px; top: 6px;
-        width: 14px; height: 14px; background: #7dd3fc; border-radius: 50%;
+    .cv-entry { margin-bottom: 20px; }
+    .cv-entry-head {
+      display: flex;
+      justify-content: space-between;
+      font-weight: 700;
+      font-size: 1rem;
+      color: var(--text-primary);
+      margin-bottom: 3px;
     }
-    .entry-header { display: flex; justify-content: space-between; }
-    .entry-date { color: #93c5fd; font-weight: 600; font-size: 0.85rem; }
-    .entry-sub { color: #f0f9ff; font-size: 0.95rem; margin-bottom: 5px; }
-    .thesis-block { background: rgba(29, 78, 216, 0.6); padding: 15px; border-radius: 8px; border-left: 3px solid #7dd3fc; margin-top: 10px; }
 
-    /* Personal & Download Bottom Styling */
-    .bottom-info-card {
-        background: #1d4ed8; padding: 25px; border-radius: 12px;
-        margin-top: 20px; border: 1px solid #7dd3fc;
+    .cv-entry-sub {
+      color: var(--accent-primary);
+      font-size: 0.9rem;
+      font-weight: 600;
+      margin-bottom: 6px;
     }
-    .p-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; font-size: 0.9rem; color:#ffffff; }
-    .p-grid b { color: #7dd3fc; }
 
-    .btn-download {
-        display: inline-flex; align-items: center; gap: 10px;
-        background: #7dd3fc; color: #1e3a8a; padding: 12px 30px;
-        border-radius: 30px; text-decoration: none; font-weight: bold;
-        margin-top: 30px; transition: 0.3s; width: 100%; justify-content: center;
+    .cv-entry ul {
+      padding-left: 20px;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
     }
-    .btn-download:hover { background: #ffffff; color:#1d4ed8; transform: translateY(-3px); }
 
-    @media (max-width: 950px) {
-        .cv-layout { grid-template-columns: 1fr; }
-        .cv-sidebar { border-right: none; border-bottom: 3px solid #10b981; }
-        .cv-main { padding: 30px 20px; }
-        .p-grid { grid-template-columns: 1fr; }
+    .cv-entry ul li { margin-bottom: 4px; }
+
+    .skill-pills { display: flex; flex-wrap: wrap; gap: 10px; }
+    .skill-pill {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-primary);
     }
-</style>
+
+    .p-info-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      background: var(--bg-subtle);
+      padding: 20px;
+      border-radius: var(--radius-md);
+      font-size: 0.875rem;
+    }
+    .p-info-grid div strong { color: var(--text-primary); }
+    .p-info-grid div span { color: var(--text-secondary); margin-left: 4px; }
+
+    /* Print View */
+    @media print {
+      body { padding: 0; background: #fff !important; color: #000 !important; }
+      .cv-top-bar, .cv-header-actions { display: none !important; }
+      .cv-wrapper { margin: 0; padding: 0; max-width: 100%; }
+      .cv-paper { border: none !important; box-shadow: none !important; padding: 20px !important; }
+      .cv-section-title { color: #000 !important; border-bottom: 1px solid #333 !important; }
+      .skill-pill { border: 1px solid #999 !important; background: none !important; color: #000 !important; }
+      .p-info-grid { background: none !important; border: 1px solid #ddd; }
+    }
+
+    @media (max-width: 768px) {
+      .cv-paper { padding: 25px 20px; }
+      .p-info-grid { grid-template-columns: 1fr; }
+      .cv-top-bar { padding: 0 15px; }
+    }
+  </style>
 </head>
 
 <body>
+  <!-- Top Bar -->
+  <header class="cv-top-bar">
+    <a href="index.html" class="cv-brand">
+      <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="cv-avatar">
+      <div class="cv-brand-text">
+        <h3>Md. Mirazul Islam</h3>
+        <p>Curriculum Vitae</p>
+      </div>
+    </a>
 
-<div id="header"></div>
+    <div class="cv-actions">
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle theme">
+        <i id="theme-icon" class="fas fa-moon"></i>
+      </button>
 
-<div class="cv-section-wrapper">
-    <div class="cv-layout">
-        
-        <aside class="cv-sidebar">
-            <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="profile-pic">
-            <h1>Md. Mirazul Islam</h1>
-            <p class="tagline">BA in History and Civilization</p>
+      <button class="btn btn-outline" onclick="window.print()">
+        <i class="fas fa-print"></i> <span>Print / Save as PDF</span>
+      </button>
 
-            <div class="contact-block">
-                <div class="contact-item"><i class="fas fa-envelope"></i> <span>mirazulislamku@gmail.com</span></div>
-                <div class="contact-item"><i class="fas fa-phone"></i> <span>+8801973827347</span></div>
-                <div class="contact-item"><i class="fas fa-university"></i> <span>Khulna University, Khulna-9208</span></div>
-            </div>
-        </aside>
-
-        <main class="cv-main">
-            
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
-                <div class="entry">
-                    <div class="entry-header"><h3>B.A (Hon's) in History and Civilization</h3> <span class="entry-date">2025</span></div>
-                    <p class="entry-sub">Khulna University, Khulna</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>HSC (Humanities)</h3> <span class="entry-date">2020</span></div>
-                    <p class="entry-sub">Govt Adamjee Nagar MW College (Dhaka Education Board)</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>SSC (Humanities)</h3> <span class="entry-date">2018</span></div>
-                    <p class="entry-sub">Rayenda Pilot High School (Jashore Education Board)</p>
-                </div>
-            </section>
-
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-briefcase"></i> Professional Attachments</h2>
-                <div class="entry">
-                    <div class="entry-header"><h3>Khulna University Correspondent</h3> <span class="entry-date">Jan 2025 – Present</span></div>
-                    <p class="entry-sub">Kaler Kantho (National Newspaper, Dhaka)</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Contributor at Khulna University</h3> <span class="entry-date">Mar 2024 – Present</span></div>
-                    <p class="entry-sub">Daily Observer (National Newspaper, Dhaka)</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Khulna University Contributor</h3> <span class="entry-date">1 Dec 2024 – Present</span></div>
-                    <p class="entry-sub">Bangladesh Guardian (Online Newspaper, Dhaka)</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Khulna University Correspondent</h3> <span class="entry-date">Apr 2023 – Dec 2024</span></div>
-                    <p class="entry-sub">Daily Bangladesh (Online Newspaper, Dhaka)</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Khulna University Correspondent</h3> <span class="entry-date">Feb 2023 – Present</span></div>
-                    <p class="entry-sub">Somoy Journal (Online Newspaper, Dhaka)</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Khulna University Correspondent</h3> <span class="entry-date">Mar 2022 – Present</span></div>
-                    <p class="entry-sub">Rupantor Protidin (Regional Newspaper, Khulna)</p>
-                </div>
-            </section>
-
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-chalkboard-teacher"></i> Teaching Experiences</h2>
-                <div class="entry">
-                    <div class="entry-header"><h3>English Teacher (Academic Coaching)</h3> <span class="entry-date">May 2022 – Feb 2024</span></div>
-                    <p class="entry-sub">Learners aid Coaching, Khulna</p>
-                </div>
-            </section>
-
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-users"></i> Leadership & Extra Curricular Activities</h2>
-                <div class="entry">
-                    <div class="entry-header"><h3>Khulna University Journalists' Association (KUJA)</h3> <span class="entry-date">2022 – Mar 2026</span></div>
-                    <p class="entry-sub">General Secretary | Executive Member | Member | Associate Member</p>
-                    <p style="font-size:0.85rem; margin-top:5px;">Led a team of journalists, engaged students in campus journalism, generated thousands of news stories, and organized workshops and competitions.</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Khulna University Research Society (KURS)</h3> <span class="entry-date">2022 – 2023</span></div>
-                    <p class="entry-sub">Founding Member</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Badhan (Voluntary Social Organization)</h3> <span class="entry-date">2022 – Present</span></div>
-                    <p class="entry-sub">Asst. Organizing Secretary | Executive Member</p>
-                </div>
-            </section>
-
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-certificate"></i> Training & Workshops</h2>
-                <div class="entry">
-                    <div class="entry-header"><h3>Digital and Physical Safety for Journalists (3 Days)</h3> <span class="entry-date">28–30 July, 2025</span></div>
-                    <p class="entry-sub">Co-organizers: News Network, UNESCO-IPDC, UNESCO BANGLADESH (Hotel Royal Intl., Khulna)</p>
-                    <p style="font-size:0.85rem; margin-top:5px;">Enhanced knowledge of media ethics, fact-checking, misinformation, and disinformation safety.</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Multimedia Journalism Training (3 Days)</h3> <span class="entry-date">10–12 August, 2025</span></div>
-                    <p class="entry-sub">Press Institute Bangladesh (PIB)</p>
-                    <p style="font-size:0.85rem; margin-top:5px;">Expertise in digital storytelling, video reporting, fact-checking, and ethical news production.</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Sessional on Computer Skills Development</h3> <span class="entry-date">Feb 2022 – July 2022</span></div>
-                    <p class="entry-sub">CSE Discipline, Khulna University</p>
-                </div>
-                <div class="entry">
-                    <div class="entry-header"><h3>Preventing Extremism through Active Community Engagement (PEACE)</h3> <span class="entry-date">Oct 2022 – Dec 2022</span></div>
-                    <p class="entry-sub">RUPANTOR (in association with Khulna University)</p>
-                </div>
-            </section>
-
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-tools"></i> Skills & Technical Expertise</h2>
-                <div style="display:flex; flex-wrap:wrap; gap:10px;">
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">Content Analysis</span>
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">In-depth Interviews</span>
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">Surveys</span>
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">Video Editing (Primary)</span>
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">Social Media Management</span>
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">MS Office</span>
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">Bengali (Bilingual)</span>
-                    <span style="background:#022c22; padding:5px 12px; border-radius:15px; border:1px solid #10b981; font-size:0.85rem;">English (Working)</span>
-                </div>
-            </section>
-
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-user"></i> Personal Information</h2>
-                <div class="bottom-info-card">
-                    <div class="p-grid">
-                        <div><b>Father's Name:</b> Md. Ismail Hossain</div>
-                        <div><b>Mother's Name:</b> Hasina Begum</div>
-                        <div><b>Present Address:</b> Room No:206, Khan Jahan Ali Hall, Khulna University</div>
-                        <div><b>Permanent Address:</b> Vill: Jhilbunia, Post: Rayenda-9330, Upazilla/Thana: Sharankhola, Bagerhat</div>
-                        <div><b>Nationality:</b> Bangladeshi</div>
-                        <div><b>Blood Group:</b> B+</div>
-                        <div><b>Religion:</b> Islam</div>
-                        <div><b>Marital Status:</b> Unmarried</div>
-                    </div>
-                </div>
-            </section>
-
-            <section class="cv-section">
-                <h2 class="cv-section-title"><i class="fas fa-bookmark"></i> Reference</h2>
-                </div>
-            </section>
-
-        </main>
+      <a href="index.html" class="btn btn-primary">
+        <i class="fas fa-arrow-left"></i> <span>Return to Portfolio</span>
+      </a>
     </div>
-</div>
+  </header>
 
-<div id="footer"></div>
+  <!-- Document Body -->
+  <div class="cv-wrapper">
+    <div class="cv-paper">
+      <div class="cv-header-block">
+        <div class="cv-header-title">
+          <h1>Md. Mirazul Islam</h1>
+          <div class="tagline">Journalist | Researcher | Storyteller</div>
+          <div class="cv-contacts">
+            <span><i class="fas fa-map-marker-alt" style="color:var(--accent-primary);"></i> Khulna University, Khulna-9208</span>
+            <span><i class="fas fa-envelope" style="color:var(--accent-primary);"></i> mirazulislamku@gmail.com</span>
+            <span><i class="fas fa-phone-alt" style="color:var(--accent-primary);"></i> +880 1973 827347</span>
+          </div>
+        </div>
+      </div>
 
-<script src="header.js"></script>
+      <!-- Professional Summary -->
+      <section class="cv-section">
+        <h2 class="cv-section-title"><i class="fas fa-user"></i> Professional Profile</h2>
+        <p style="color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+          Investigative journalist and historical researcher holding a Bachelor of Arts (Honours) in History and Civilization from Khulna University (2025). Established media correspondent with over 300+ published reports across prominent national dailies including Daily Kaler Kantho and Daily Observer. Demonstrated executive leadership as General Secretary and Executive Member of Khulna University Journalists' Association (KUJA). Rigorous academic focus on post-colonial statehood, political violence, climate justice in coastal Bangladesh, and media safety.
+        </p>
+      </section>
 
+      <!-- Education -->
+      <section class="cv-section">
+        <h2 class="cv-section-title"><i class="fas fa-graduation-cap"></i> Academic Background</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>B.A. (Honours) in History and Civilization</span>
+            <span>2021 – 2025</span>
+          </div>
+          <div class="cv-entry-sub">Khulna University, Khulna, Bangladesh</div>
+          <ul>
+            <li>Focus Areas: International History, Historiography, South Asian Partition Politics, Content Analysis.</li>
+            <li>Archival research on regional oral histories of the 1971 Liberation War in southwestern Bengal.</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Higher Secondary Certificate (HSC) — Humanities</span>
+            <span>2020</span>
+          </div>
+          <div class="cv-entry-sub">Govt Adamjee Nagar MW College (Dhaka Board)</div>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Secondary School Certificate (SSC) — Humanities</span>
+            <span>2018</span>
+          </div>
+          <div class="cv-entry-sub">Rayenda Pilot High School (Jashore Board)</div>
+        </div>
+      </section>
+
+      <!-- Journalism & Media Experience -->
+      <section class="cv-section">
+        <h2 class="cv-section-title"><i class="fas fa-newspaper"></i> Journalism & Media Experience</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Khulna University Correspondent</span>
+            <span>2024 – Present</span>
+          </div>
+          <div class="cv-entry-sub">Daily Kaler Kantho (National Daily Newspaper, Dhaka)</div>
+          <ul>
+            <li>Frontline investigative and campus reporting, university governance, student affairs, and regional environmental news.</li>
+            <li>Published over 300+ print and digital dispatches covering southwest Bangladesh.</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Contributor & Regional Correspondent</span>
+            <span>2024 – Present</span>
+          </div>
+          <div class="cv-entry-sub">The Daily Observer & Bangladesh Guardian</div>
+          <ul>
+            <li>Authored analytical features on higher education reform, student press autonomy, and environmental vulnerability.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Leadership & Organizational Roles -->
+      <section class="cv-section">
+        <h2 class="cv-section-title"><i class="fas fa-users"></i> Leadership & Extra-Curricular Engagements</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>General Secretary & Executive Member</span>
+            <span>March 2024 – March 2026</span>
+          </div>
+          <div class="cv-entry-sub">Khulna University Journalists' Association (KUJA)</div>
+          <ul>
+            <li>Elected to direct executive leadership, presiding over editorial integrity, fact-checking workshops, and national symposiums.</li>
+            <li>Progressed through roles from Associate Member (2022) to General Secretary (2024–2026).</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Founding Member</span>
+            <span>2022 – 2023</span>
+          </div>
+          <div class="cv-entry-sub">Khulna University Research Society (KURS)</div>
+          <ul>
+            <li>Helped establish the premier student-led research body; organized methodology seminars and peer-review sessions.</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Assistant Organizing Secretary & Executive Member</span>
+            <span>2022 – Present</span>
+          </div>
+          <div class="cv-entry-sub">Badhan (Voluntary Blood Donation & Social Service Organization)</div>
+          <ul>
+            <li>Coordinated emergency blood donation drives and public health awareness across campus.</li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- Training & Fellowships -->
+      <section class="cv-section">
+        <h2 class="cv-section-title"><i class="fas fa-certificate"></i> Training, Workshops & Certifications</h2>
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Digital and Physical Safety for Journalists Workshop</span>
+            <span>28–30 July, 2025</span>
+          </div>
+          <div class="cv-entry-sub">Co-organizers: News Network, UNESCO-IPDC, UNESCO Bangladesh</div>
+          <ul>
+            <li>Certification in encrypted source communications, digital hygiene, and incident reporting.</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Multimedia Journalism Training (Fellowship)</span>
+            <span>10–12 August, 2025</span>
+          </div>
+          <div class="cv-entry-sub">Press Institute Bangladesh (PIB)</div>
+          <ul>
+            <li>Video news reporting, mobile journalism (MoJo), digital storytelling, and media ethics.</li>
+          </ul>
+        </div>
+
+        <div class="cv-entry">
+          <div class="cv-entry-head">
+            <span>Preventing Extremism through Active Community Engagement (PEACE)</span>
+            <span>2022</span>
+          </div>
+          <div class="cv-entry-sub">RUPANTOR in association with Khulna University</div>
+        </div>
+      </section>
+
+      <!-- Skills -->
+      <section class="cv-section">
+        <h2 class="cv-section-title"><i class="fas fa-tools"></i> Skills & Core Competencies</h2>
+        <div class="skill-pills">
+          <span class="skill-pill">Investigative Journalism</span>
+          <span class="skill-pill">Historical Content Analysis</span>
+          <span class="skill-pill">Field Surveys & Interviews</span>
+          <span class="skill-pill">Digital Safety & Fact-Checking</span>
+          <span class="skill-pill">Video Editing & Multimedia</span>
+          <span class="skill-pill">Social Media Management</span>
+          <span class="skill-pill">MS Office Suite</span>
+          <span class="skill-pill">Bengali (Bilingual / Native)</span>
+          <span class="skill-pill">English (Working Proficiency)</span>
+        </div>
+      </section>
+
+      <!-- Personal Info -->
+      <section class="cv-section">
+        <h2 class="cv-section-title"><i class="fas fa-id-card"></i> Personal Information</h2>
+        <div class="p-info-grid">
+          <div><strong>Father's Name:</strong> <span>Md. Ismail Hossain</span></div>
+          <div><strong>Mother's Name:</strong> <span>Hasina Begum</span></div>
+          <div><strong>Present Address:</strong> <span>Room 206, Khan Jahan Ali Hall, Khulna University</span></div>
+          <div><strong>Permanent Address:</strong> <span>Vill: Jhilbunia, Rayenda-9330, Sharankhola, Bagerhat</span></div>
+          <div><strong>Nationality:</strong> <span>Bangladeshi</span></div>
+          <div><strong>Blood Group:</strong> <span>B+</span></div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const toggle = document.getElementById("theme-toggle");
+    const icon = document.getElementById("theme-icon");
+    const saved = localStorage.getItem("theme") || "light";
+    document.documentElement.setAttribute("data-theme", saved);
+    updateIcon(saved);
+
+    toggle.addEventListener("click", () => {
+      const cur = document.documentElement.getAttribute("data-theme") || "light";
+      const next = cur === "dark" ? "light" : "dark";
+      document.documentElement.setAttribute("data-theme", next);
+      localStorage.setItem("theme", next);
+      updateIcon(next);
+    });
+
+    function updateIcon(t) {
+      if (icon) icon.className = t === "dark" ? "fas fa-sun" : "fas fa-moon";
+    }
+  </script>
 </body>
 </html>
