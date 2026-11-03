@@ -7,18 +7,17 @@
   <!-- Primary Meta Tags -->
   <title>Md. Mirazul Islam | Journalist, Researcher & Storyteller</title>
   <meta name="title" content="Md. Mirazul Islam | Journalist, Researcher & Storyteller">
-  <meta name="description" content="Portfolio of Md. Mirazul Islam — Journalist and Researcher from Bangladesh. Specializing in investigative journalism, human rights, political violence, climate justice, and international history.">
+  <meta name="description" content="Official portfolio of Md. Mirazul Islam — Journalist and Researcher from Bangladesh. Specializing in investigative journalism, human rights, political violence, climate justice, and international history.">
   <meta name="author" content="Md. Mirazul Islam">
   <meta name="keywords" content="Md. Mirazul Islam, Miraz KU, Journalist Bangladesh, Khulna University, KUJA, Kaler Kantho, Daily Observer, PIB, UNESCO, International History, Climate Justice, Investigative Journalism">
 
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph / Social Media Sharing -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://mirazku.github.io/website/">
   <meta property="og:title" content="Md. Mirazul Islam | Journalist, Researcher & Storyteller">
   <meta property="og:description" content="Investigative journalism and empirical research on International History, human rights, political violence, and climate justice.">
   <meta property="og:image" content="images/profile.jpg">
 
-  <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://mirazku.github.io/website/">
   <meta property="twitter:title" content="Md. Mirazul Islam | Journalist, Researcher & Storyteller">
@@ -34,8 +33,1255 @@
   <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-  <!-- Stylesheet -->
-  <link rel="stylesheet" href="style.css">
+  <style>
+    /* ==========================================================================
+       EDITORIAL PORTFOLIO DESIGN SYSTEM (EMBEDDED FOR ZERO-DEPENDENCY RELIABILITY)
+       ========================================================================== */
+    :root {
+      /* Light Theme (Clean Editorial Ivory & Ink) */
+      --bg-primary: #fbfbf9;
+      --bg-surface: #ffffff;
+      --bg-surface-elevated: #ffffff;
+      --bg-subtle: #f4f4f0;
+      --bg-card-hover: #ffffff;
+      --header-bg: rgba(251, 251, 249, 0.9);
+      --modal-bg: rgba(15, 23, 42, 0.75);
+
+      --text-primary: #121826;
+      --text-secondary: #475467;
+      --text-muted: #667085;
+      --text-subtle: #98a2b3;
+      --text-inverse: #ffffff;
+
+      --accent-primary: #b45309;       /* Editorial Warm Amber */
+      --accent-hover: #92400e;
+      --accent-subtle: rgba(180, 83, 9, 0.08);
+      --accent-border: rgba(180, 83, 9, 0.25);
+      --accent-glow: rgba(180, 83, 9, 0.15);
+
+      --border-light: rgba(18, 24, 38, 0.08);
+      --border-medium: rgba(18, 24, 38, 0.14);
+      --border-focus: #b45309;
+
+      --shadow-sm: 0 1px 3px rgba(16, 24, 40, 0.05);
+      --shadow-md: 0 4px 16px -2px rgba(16, 24, 40, 0.08);
+      --shadow-lg: 0 12px 32px -4px rgba(16, 24, 40, 0.1);
+      --shadow-xl: 0 20px 48px -6px rgba(16, 24, 40, 0.14);
+
+      --font-serif: 'Playfair Display', Georgia, Cambria, serif;
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-bengali: 'Hind Siliguri', 'SolaimanLipi', sans-serif;
+
+      --transition-fast: 0.15s ease;
+      --transition-base: 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+      --transition-slow: 0.45s cubic-bezier(0.16, 1, 0.3, 1);
+
+      --radius-sm: 6px;
+      --radius-md: 12px;
+      --radius-lg: 18px;
+      --radius-full: 9999px;
+
+      --container-max: 1240px;
+    }
+
+    [data-theme="dark"] {
+      /* Dark Theme (Midnight Obsidian & Warm Gold) */
+      --bg-primary: #090d16;
+      --bg-surface: #111726;
+      --bg-surface-elevated: #182238;
+      --bg-subtle: #141c2e;
+      --bg-card-hover: #1c263e;
+      --header-bg: rgba(9, 13, 22, 0.9);
+      --modal-bg: rgba(0, 0, 0, 0.85);
+
+      --text-primary: #f8fafc;
+      --text-secondary: #cbd5e1;
+      --text-muted: #94a3b8;
+      --text-subtle: #64748b;
+      --text-inverse: #090d16;
+
+      --accent-primary: #f59e0b;       /* Rich Amber Gold */
+      --accent-hover: #fbbf24;
+      --accent-subtle: rgba(245, 158, 11, 0.12);
+      --accent-border: rgba(245, 158, 11, 0.3);
+      --accent-glow: rgba(245, 158, 11, 0.25);
+
+      --border-light: rgba(255, 255, 255, 0.08);
+      --border-medium: rgba(255, 255, 255, 0.16);
+      --border-focus: #f59e0b;
+
+      --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.3);
+      --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.4);
+      --shadow-lg: 0 12px 36px rgba(0, 0, 0, 0.55);
+      --shadow-xl: 0 24px 54px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Reset & Base */
+    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+    html { font-size: 16px; scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
+    body {
+      font-family: var(--font-sans);
+      background-color: var(--bg-primary);
+      color: var(--text-primary);
+      line-height: 1.65;
+      overflow-x: hidden;
+      transition: background-color var(--transition-slow), color var(--transition-slow);
+    }
+
+    ::selection { background-color: var(--accent-subtle); color: var(--accent-primary); }
+    img { max-width: 100%; height: auto; display: block; }
+    a { color: inherit; text-decoration: none; transition: color var(--transition-fast); }
+    button, input, textarea, select { font-family: inherit; font-size: inherit; }
+
+    .font-serif { font-family: var(--font-serif); }
+    .font-sans { font-family: var(--font-sans); }
+    .font-bn { font-family: var(--font-bengali); }
+
+    .container {
+      width: 100%;
+      max-width: var(--container-max);
+      margin-left: auto;
+      margin-right: auto;
+      padding-left: 24px;
+      padding-right: 24px;
+    }
+
+    .section { padding: 90px 0; position: relative; }
+    .section-alt { background-color: var(--bg-subtle); }
+
+    .section-header {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 50px;
+    }
+
+    .section-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.8125rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      background: var(--accent-subtle);
+      border: 1px solid var(--accent-border);
+      padding: 6px 14px;
+      border-radius: var(--radius-full);
+      margin-bottom: 16px;
+    }
+
+    .section-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2rem, 3.5vw, 2.75rem);
+      font-weight: 700;
+      line-height: 1.22;
+      color: var(--text-primary);
+      margin-bottom: 16px;
+      letter-spacing: -0.015em;
+    }
+
+    .section-desc {
+      font-size: 1.0625rem;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    /* Site Header */
+    .site-header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 74px;
+      background-color: var(--header-bg);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--border-light);
+      z-index: 1000;
+      transition: all var(--transition-base);
+    }
+
+    .site-header.scrolled {
+      height: 66px;
+      box-shadow: var(--shadow-sm);
+      border-bottom-color: var(--border-medium);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+    }
+
+    .brand { display: flex; align-items: center; gap: 12px; }
+    .brand-avatar {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-full);
+      object-fit: cover;
+      border: 2px solid var(--accent-primary);
+      box-shadow: 0 0 10px var(--accent-glow);
+    }
+
+    .brand-text { display: flex; flex-direction: column; }
+    .brand-name {
+      font-family: var(--font-serif);
+      font-size: 1.125rem;
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1.2;
+    }
+    .brand-tagline {
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 26px;
+      list-style: none;
+    }
+
+    .nav-link {
+      font-size: 0.9375rem;
+      font-weight: 500;
+      color: var(--text-secondary);
+      position: relative;
+      padding: 6px 0;
+    }
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: var(--accent-primary);
+      transition: width var(--transition-base);
+    }
+
+    .nav-link:hover, .nav-link.active { color: var(--text-primary); }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+
+    .header-actions { display: flex; align-items: center; gap: 12px; }
+
+    .theme-toggle {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      width: 38px;
+      height: 38px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      color: var(--text-secondary);
+      transition: all var(--transition-fast);
+    }
+
+    .theme-toggle:hover {
+      color: var(--accent-primary);
+      border-color: var(--accent-border);
+      transform: rotate(15deg);
+    }
+
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      font-size: 1.35rem;
+      color: var(--text-primary);
+      cursor: pointer;
+      padding: 6px;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+      padding: 12px 24px;
+      border-radius: var(--radius-md);
+      font-size: 0.9375rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .btn-primary {
+      background-color: var(--accent-primary);
+      color: var(--text-inverse);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--accent-hover);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md), 0 0 18px var(--accent-glow);
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--text-primary);
+      border-color: var(--border-medium);
+    }
+
+    .btn-outline:hover {
+      background-color: var(--bg-surface);
+      border-color: var(--accent-primary);
+      color: var(--accent-primary);
+      transform: translateY(-2px);
+    }
+
+    .btn-sm { padding: 8px 16px; font-size: 0.875rem; }
+
+    /* Hero Section */
+    .hero-section {
+      position: relative;
+      min-height: 94vh;
+      display: flex;
+      align-items: center;
+      padding: 125px 0 70px;
+      overflow: hidden;
+    }
+
+    #hero-canvas {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+      opacity: 0.65;
+    }
+
+    .hero-grid {
+      position: relative;
+      z-index: 1;
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      align-items: center;
+      gap: 50px;
+    }
+
+    .hero-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-size: 0.875rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--accent-primary);
+      margin-bottom: 18px;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--accent-primary);
+      box-shadow: 0 0 10px var(--accent-primary);
+      animation: pulseAnim 2s infinite ease-in-out;
+    }
+
+    @keyframes pulseAnim {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(0.8); }
+    }
+
+    .hero-title {
+      font-family: var(--font-serif);
+      font-size: clamp(2.4rem, 4.8vw, 4rem);
+      font-weight: 700;
+      line-height: 1.12;
+      letter-spacing: -0.025em;
+      color: var(--text-primary);
+      margin-bottom: 14px;
+    }
+
+    .hero-identity {
+      font-family: var(--font-serif);
+      font-size: clamp(1.2rem, 2.1vw, 1.7rem);
+      font-weight: 500;
+      font-style: italic;
+      color: var(--accent-primary);
+      margin-bottom: 22px;
+    }
+
+    .hero-description {
+      font-size: 1.1rem;
+      color: var(--text-secondary);
+      line-height: 1.75;
+      max-width: 620px;
+      margin-bottom: 34px;
+    }
+
+    .hero-ctas {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+
+    /* Portrait Card */
+    .hero-portrait-card { position: relative; display: flex; justify-content: center; }
+    .portrait-frame {
+      position: relative;
+      width: 100%;
+      max-width: 370px;
+      aspect-ratio: 4 / 5;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-xl);
+      border: 1px solid var(--border-light);
+      background: var(--bg-surface);
+    }
+
+    .portrait-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+
+    .portrait-frame:hover .portrait-img { transform: scale(1.03); }
+
+    .portrait-overlay-badge {
+      position: absolute;
+      bottom: 18px;
+      left: 18px;
+      right: 18px;
+      background: rgba(17, 24, 39, 0.88);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: var(--radius-md);
+      padding: 14px;
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .badge-icon {
+      width: 42px;
+      height: 42px;
+      background: var(--accent-primary);
+      border-radius: var(--radius-sm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2rem;
+      color: #ffffff;
+      flex-shrink: 0;
+    }
+
+    .badge-text h4 { font-size: 0.9375rem; font-weight: 700; line-height: 1.2; }
+    .badge-text p { font-size: 0.8125rem; color: #cbd5e1; margin-top: 2px; }
+
+    .floating-tag {
+      position: absolute;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      box-shadow: var(--shadow-md);
+      padding: 7px 15px;
+      border-radius: var(--radius-full);
+      font-size: 0.8125rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      z-index: 2;
+    }
+    .floating-tag.tag-top { top: -10px; right: -8px; }
+    .floating-tag.tag-bottom { bottom: -12px; left: -10px; }
+
+    /* Stats Section */
+    .stats-section {
+      padding: 48px 0;
+      background: var(--bg-surface);
+      border-top: 1px solid var(--border-light);
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .stats-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+    }
+
+    .stat-item {
+      text-align: center;
+      padding: 20px 14px;
+      border-right: 1px solid var(--border-light);
+    }
+    .stat-item:last-child { border-right: none; }
+
+    .stat-number {
+      font-family: var(--font-serif);
+      font-size: clamp(2.3rem, 3.8vw, 3.3rem);
+      font-weight: 700;
+      color: var(--text-primary);
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+
+    .stat-number span.plus { color: var(--accent-primary); }
+    .stat-label { font-size: 0.9375rem; font-weight: 600; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+    .stat-sublabel { font-size: 0.8125rem; color: var(--text-muted); margin-top: 4px; }
+
+    /* Featured Work Grid */
+    .featured-grid {
+      display: grid;
+      grid-template-columns: 1.15fr 0.85fr;
+      gap: 30px;
+      margin-bottom: 40px;
+    }
+
+    .lead-story-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-light);
+      box-shadow: var(--shadow-md);
+      display: flex;
+      flex-direction: column;
+      cursor: pointer;
+      transition: all var(--transition-base);
+    }
+
+    .lead-story-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-border);
+    }
+
+    .lead-story-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 330px;
+      overflow: hidden;
+      background: var(--bg-subtle);
+    }
+
+    .lead-story-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .lead-story-card:hover .lead-story-img-wrap img { transform: scale(1.04); }
+
+    .lead-story-body { padding: 30px; display: flex; flex-direction: column; flex-grow: 1; }
+
+    .story-meta {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+    }
+
+    .category-pill {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      background: var(--accent-subtle);
+      color: var(--accent-primary);
+      border: 1px solid var(--accent-border);
+    }
+
+    .story-headline {
+      font-family: var(--font-serif);
+      font-size: clamp(1.35rem, 2vw, 1.75rem);
+      font-weight: 700;
+      line-height: 1.35;
+      margin-bottom: 12px;
+      color: var(--text-primary);
+    }
+
+    .story-excerpt {
+      color: var(--text-secondary);
+      font-size: 0.95rem;
+      line-height: 1.7;
+      margin-bottom: 22px;
+      flex-grow: 1;
+    }
+
+    .story-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border-light);
+      padding-top: 16px;
+      margin-top: auto;
+    }
+
+    .publication-badge {
+      font-weight: 600;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .featured-stack { display: flex; flex-direction: column; gap: 20px; }
+
+    .mini-story-card {
+      background: var(--bg-surface);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border-light);
+      padding: 22px;
+      box-shadow: var(--shadow-sm);
+      cursor: pointer;
+      transition: all var(--transition-base);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .mini-story-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: var(--accent-border);
+    }
+
+    .mini-story-card .story-headline { font-size: 1.12rem; margin-bottom: 8px; }
+    .mini-story-card .story-excerpt {
+      font-size: 0.875rem;
+      margin-bottom: 14px;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    /* About Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 0.95fr 1.05fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .about-visual { position: relative; }
+    .about-img-box {
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      border: 1px solid var(--border-medium);
+      box-shadow: var(--shadow-xl);
+    }
+
+    .about-img-box img { width: 100%; height: auto; object-fit: cover; }
+
+    .about-quote-card {
+      position: absolute;
+      bottom: -20px;
+      right: -15px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      padding: 18px 22px;
+      border-radius: var(--radius-md);
+      box-shadow: var(--shadow-lg);
+      max-width: 320px;
+    }
+
+    .about-quote-card p {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.9375rem;
+      color: var(--text-primary);
+      line-height: 1.5;
+    }
+
+    .about-quote-card cite {
+      display: block;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--accent-primary);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-top: 8px;
+      font-style: normal;
+    }
+
+    .about-bio { color: var(--text-secondary); font-size: 1.05rem; line-height: 1.8; margin-bottom: 22px; }
+
+    .pillars-title {
+      font-size: 0.875rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--accent-primary);
+      margin-bottom: 14px;
+    }
+
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-bottom: 30px;
+    }
+
+    .pillar-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      transition: all var(--transition-fast);
+    }
+    .pillar-item:hover { border-color: var(--accent-border); transform: translateY(-2px); }
+    .pillar-icon { color: var(--accent-primary); font-size: 1.15rem; margin-top: 2px; }
+    .pillar-item h5 { font-size: 0.9rem; font-weight: 600; color: var(--text-primary); margin-bottom: 2px; }
+    .pillar-item p { font-size: 0.78125rem; color: var(--text-muted); }
+
+    /* Research Section */
+    .research-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 26px;
+    }
+
+    .research-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 30px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-base);
+    }
+
+    .research-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-border);
+    }
+
+    .research-card-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 14px;
+    }
+
+    .status-badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      text-transform: uppercase;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+    }
+    .status-badge.published {
+      background: rgba(16, 185, 129, 0.12);
+      color: #059669;
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+    .status-badge.ongoing {
+      background: rgba(245, 158, 11, 0.12);
+      color: var(--accent-primary);
+      border: 1px solid var(--accent-border);
+    }
+
+    .research-year { font-size: 0.8125rem; font-weight: 600; color: var(--text-muted); }
+    .research-title {
+      font-family: var(--font-serif);
+      font-size: 1.3rem;
+      font-weight: 700;
+      line-height: 1.35;
+      color: var(--text-primary);
+      margin-bottom: 10px;
+    }
+
+    .research-topic { font-size: 0.875rem; font-weight: 600; color: var(--accent-primary); margin-bottom: 12px; }
+    .research-abstract { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 18px; flex-grow: 1; }
+
+    .research-metadata {
+      background: var(--bg-subtle);
+      border-radius: var(--radius-sm);
+      padding: 12px 14px;
+      margin-bottom: 18px;
+      font-size: 0.8125rem;
+    }
+    .research-metadata div { margin-bottom: 5px; color: var(--text-secondary); }
+    .research-metadata div:last-child { margin-bottom: 0; }
+    .research-metadata strong { color: var(--text-primary); }
+
+    .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
+    .research-tag { font-size: 0.75rem; background: var(--bg-subtle); color: var(--text-muted); padding: 3px 10px; border-radius: var(--radius-full); }
+
+    /* Timeline Section */
+    .timeline-container {
+      max-width: 860px;
+      margin: 0 auto;
+      position: relative;
+      padding-left: 36px;
+    }
+
+    .timeline-container::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 11px;
+      width: 2px;
+      background: var(--border-medium);
+    }
+
+    .timeline-item { position: relative; margin-bottom: 42px; }
+    .timeline-item:last-child { margin-bottom: 0; }
+
+    .timeline-dot {
+      position: absolute;
+      left: -36px;
+      top: 6px;
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--bg-surface);
+      border: 3px solid var(--accent-primary);
+      box-shadow: 0 0 0 4px var(--bg-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .timeline-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      box-shadow: var(--shadow-sm);
+      transition: all var(--transition-base);
+    }
+
+    .timeline-card:hover {
+      transform: translateX(4px);
+      border-color: var(--accent-border);
+      box-shadow: var(--shadow-md);
+    }
+
+    .timeline-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 12px;
+    }
+
+    .timeline-role { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 700; color: var(--text-primary); }
+    .timeline-org { font-size: 0.9375rem; font-weight: 600; color: var(--accent-primary); }
+    .timeline-period {
+      font-size: 0.8125rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: var(--bg-subtle);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+    }
+
+    .timeline-desc { font-size: 0.9375rem; color: var(--text-secondary); line-height: 1.65; margin-bottom: 12px; }
+    .timeline-highlights { list-style: none; padding-left: 0; }
+    .timeline-highlights li {
+      position: relative;
+      padding-left: 20px;
+      margin-bottom: 6px;
+      font-size: 0.875rem;
+      color: var(--text-secondary);
+    }
+    .timeline-highlights li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--accent-primary);
+      font-weight: bold;
+    }
+
+    /* Publications Section */
+    .media-controls {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      margin-bottom: 36px;
+    }
+
+    .filter-group { display: flex; flex-wrap: wrap; gap: 8px; }
+
+    .filter-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      padding: 8px 18px;
+      border-radius: var(--radius-full);
+      font-size: 0.875rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--transition-fast);
+    }
+
+    .filter-btn:hover { border-color: var(--accent-border); color: var(--text-primary); }
+    .filter-btn.active {
+      background: var(--accent-primary);
+      color: var(--text-inverse);
+      border-color: var(--accent-primary);
+      box-shadow: 0 2px 8px var(--accent-glow);
+    }
+
+    .search-box { position: relative; min-width: 280px; }
+    .search-box input {
+      width: 100%;
+      padding: 10px 16px 10px 38px;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-full);
+      color: var(--text-primary);
+      outline: none;
+      font-size: 0.875rem;
+    }
+    .search-box input:focus { border-color: var(--accent-primary); box-shadow: 0 0 0 3px var(--accent-subtle); }
+    .search-box i {
+      position: absolute;
+      left: 14px;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-muted);
+      font-size: 0.875rem;
+    }
+
+    .articles-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+      gap: 26px;
+    }
+
+    .article-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      transition: all var(--transition-base);
+      cursor: pointer;
+    }
+
+    .article-card:hover {
+      transform: translateY(-4px);
+      box-shadow: var(--shadow-lg);
+      border-color: var(--accent-border);
+    }
+
+    .article-card-img-wrap { overflow: hidden; height: 210px; background: var(--bg-subtle); }
+    .article-card-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform var(--transition-slow);
+    }
+    .article-card:hover .article-card-img { transform: scale(1.04); }
+
+    .article-card-body { padding: 22px; display: flex; flex-direction: column; flex-grow: 1; }
+    .article-title-bn {
+      font-family: var(--font-bengali);
+      font-size: 1.2rem;
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--text-primary);
+      margin-bottom: 8px;
+    }
+
+    .article-title-en { font-size: 0.85rem; color: var(--text-muted); font-style: italic; margin-bottom: 12px; }
+    .article-card-excerpt {
+      font-family: var(--font-bengali);
+      font-size: 0.9375rem;
+      color: var(--text-secondary);
+      line-height: 1.6;
+      margin-bottom: 18px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .article-card-footer {
+      margin-top: auto;
+      border-top: 1px solid var(--border-light);
+      padding-top: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    /* Affiliations */
+    .affiliations-section { padding: 50px 0; border-top: 1px solid var(--border-light); border-bottom: 1px solid var(--border-light); }
+    .affiliations-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      align-items: center;
+    }
+
+    .affiliation-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-md);
+      padding: 18px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      transition: all var(--transition-base);
+    }
+    .affiliation-item:hover { transform: translateY(-3px); border-color: var(--accent-border); box-shadow: var(--shadow-md); }
+    .affiliation-logo { width: 48px; height: 48px; object-fit: contain; flex-shrink: 0; }
+    .affiliation-info h4 { font-size: 0.9375rem; font-weight: 700; color: var(--text-primary); line-height: 1.25; }
+    .affiliation-info p { font-size: 0.78125rem; color: var(--text-muted); margin-top: 2px; }
+
+    /* Contact Section */
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 0.85fr 1.15fr;
+      gap: 40px;
+    }
+
+    .contact-info-card, .contact-form-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-light);
+      border-radius: var(--radius-lg);
+      padding: 34px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .contact-info-card h3 { font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 12px; }
+    .contact-info-card p { color: var(--text-secondary); font-size: 0.9375rem; line-height: 1.7; margin-bottom: 24px; }
+
+    .contact-item-row { display: flex; align-items: flex-start; gap: 14px; margin-bottom: 20px; }
+    .contact-icon-box {
+      width: 42px;
+      height: 42px;
+      border-radius: var(--radius-md);
+      background: var(--accent-subtle);
+      color: var(--accent-primary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.15rem;
+      flex-shrink: 0;
+    }
+
+    .contact-item-row h5 { font-size: 0.8125rem; text-transform: uppercase; letter-spacing: 0.05em; color: var(--text-muted); margin-bottom: 2px; }
+    .contact-item-row a, .contact-item-row span { font-size: 0.9375rem; font-weight: 600; color: var(--text-primary); }
+
+    .social-links-wrap { margin-top: 28px; border-top: 1px solid var(--border-light); padding-top: 20px; }
+    .social-icons-row { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 12px; }
+    .social-icon-btn {
+      width: 40px;
+      height: 40px;
+      border-radius: var(--radius-full);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      transition: all var(--transition-fast);
+    }
+    .social-icon-btn:hover {
+      background: var(--accent-primary);
+      color: var(--text-inverse);
+      transform: translateY(-3px);
+    }
+
+    .form-group { margin-bottom: 18px; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .form-label { display: block; font-size: 0.875rem; font-weight: 600; color: var(--text-primary); margin-bottom: 6px; }
+    .form-control {
+      width: 100%;
+      padding: 11px 14px;
+      background: var(--bg-primary);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-md);
+      color: var(--text-primary);
+      font-size: 0.9375rem;
+      outline: none;
+    }
+    .form-control:focus { border-color: var(--border-focus); background: var(--bg-surface); }
+    textarea.form-control { resize: vertical; min-height: 130px; }
+
+    .form-feedback { margin-top: 16px; padding: 12px 16px; border-radius: var(--radius-md); font-size: 0.875rem; display: none; }
+    .form-feedback.success { display: block; background: rgba(16, 185, 129, 0.12); color: #059669; border: 1px solid rgba(16, 185, 129, 0.3); }
+
+    /* Footer */
+    .site-footer { background: var(--bg-surface); border-top: 1px solid var(--border-light); padding: 60px 0 28px; }
+    .footer-top { display: grid; grid-template-columns: 1.5fr 1fr 1fr 1fr; gap: 36px; margin-bottom: 40px; }
+    .footer-brand h3 { font-family: var(--font-serif); font-size: 1.35rem; margin-bottom: 10px; }
+    .footer-brand p { color: var(--text-secondary); font-size: 0.9rem; line-height: 1.6; }
+    .footer-col h4 { font-size: 0.875rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--accent-primary); margin-bottom: 16px; }
+    .footer-links { list-style: none; }
+    .footer-links li { margin-bottom: 8px; }
+    .footer-links a { font-size: 0.9rem; color: var(--text-secondary); }
+    .footer-links a:hover { color: var(--accent-primary); }
+
+    .footer-bottom {
+      border-top: 1px solid var(--border-light);
+      padding-top: 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 14px;
+      font-size: 0.8125rem;
+      color: var(--text-muted);
+    }
+
+    .back-to-top-btn {
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      width: 36px;
+      height: 36px;
+      border-radius: var(--radius-full);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+    }
+
+    /* Modal */
+    .reader-modal {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: var(--modal-bg);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      display: none;
+      justify-content: center;
+      align-items: center;
+      z-index: 2000;
+      padding: 20px;
+    }
+    .reader-modal.active { display: flex; }
+
+    .modal-dialog {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      border-radius: var(--radius-lg);
+      width: 100%;
+      max-width: 820px;
+      max-height: 90vh;
+      overflow-y: auto;
+      position: relative;
+      box-shadow: var(--shadow-xl);
+    }
+
+    .modal-close-btn {
+      position: absolute;
+      top: 18px; right: 20px;
+      width: 36px; height: 36px;
+      border-radius: var(--radius-full);
+      background: var(--bg-subtle);
+      border: 1px solid var(--border-light);
+      color: var(--text-secondary);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+    }
+
+    .modal-content-wrap { padding: 36px; }
+    .modal-header-meta { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; }
+    .modal-title-bn { font-family: var(--font-bengali); font-size: clamp(1.4rem, 2.5vw, 2rem); font-weight: 700; line-height: 1.35; margin-bottom: 8px; }
+    .modal-title-en { font-size: 0.95rem; color: var(--text-muted); font-style: italic; margin-bottom: 16px; }
+    .modal-byline { display: flex; align-items: center; gap: 14px; font-size: 0.85rem; color: var(--text-secondary); border-bottom: 1px solid var(--border-light); padding-bottom: 16px; margin-bottom: 20px; }
+    .modal-featured-img { width: 100%; max-height: 400px; object-fit: cover; border-radius: var(--radius-md); margin-bottom: 24px; }
+    .modal-body-text { font-family: var(--font-bengali); font-size: 1.05rem; line-height: 1.85; color: var(--text-primary); white-space: pre-line; margin-bottom: 28px; }
+    .modal-action-bar { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px; border-top: 1px solid var(--border-light); padding-top: 20px; }
+
+    /* Mobile Drawer */
+    .mobile-drawer {
+      position: fixed;
+      top: 0; right: -100%;
+      width: 82%; max-width: 340px; height: 100vh;
+      background: var(--bg-surface);
+      border-left: 1px solid var(--border-light);
+      z-index: 1500;
+      padding: 70px 26px 36px;
+      display: flex;
+      flex-direction: column;
+      transition: right var(--transition-slow);
+      box-shadow: var(--shadow-xl);
+    }
+    .mobile-drawer.active { right: 0; }
+    .mobile-drawer-overlay {
+      position: fixed;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(4px);
+      z-index: 1400;
+      opacity: 0; visibility: hidden;
+      transition: all var(--transition-base);
+    }
+    .mobile-drawer-overlay.active { opacity: 1; visibility: visible; }
+    .mobile-nav-links { list-style: none; display: flex; flex-direction: column; gap: 18px; }
+    .mobile-nav-links a { font-size: 1.1rem; font-weight: 600; color: var(--text-primary); }
+    .mobile-drawer-close { position: absolute; top: 20px; right: 20px; background: none; border: none; font-size: 1.4rem; color: var(--text-primary); cursor: pointer; }
+
+    /* Responsive Queries */
+    @media (max-width: 1024px) {
+      .hero-grid, .about-grid, .featured-grid, .contact-grid { grid-template-columns: 1fr; gap: 36px; }
+      .portrait-frame { max-width: 320px; margin: 0 auto; }
+      .stats-grid { grid-template-columns: repeat(2, 1fr); }
+      .affiliations-grid { grid-template-columns: repeat(2, 1fr); }
+      .footer-top { grid-template-columns: 1fr 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .nav-links, .site-header .btn-sm { display: none; }
+      .mobile-menu-btn { display: block; }
+      .research-grid, .pillars-grid, .form-row, .footer-top { grid-template-columns: 1fr; }
+      .articles-grid { grid-template-columns: 1fr; }
+      .hero-section { padding-top: 100px; text-align: center; }
+      .hero-ctas { justify-content: center; }
+      .about-quote-card { position: static; margin-top: 16px; max-width: 100%; }
+      .lead-story-img-wrap { height: 230px; }
+      .lead-story-body { padding: 20px; }
+      .stats-grid { grid-template-columns: 1fr; }
+      .stat-item { border-right: none; border-bottom: 1px solid var(--border-light); }
+      .stat-item:last-child { border-bottom: none; }
+      .affiliations-grid { grid-template-columns: 1fr; }
+      .modal-content-wrap { padding: 22px; }
+    }
+  </style>
 </head>
 
 <body>
@@ -66,19 +1312,16 @@
         </ul>
       </nav>
 
-      <!-- Header Actions -->
+      <!-- Actions -->
       <div class="header-actions">
-        <!-- Theme Toggle -->
         <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
           <i id="theme-icon" class="fas fa-moon"></i>
         </button>
 
-        <!-- CV Button -->
         <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank" download>
           <i class="fas fa-file-pdf"></i> <span>Download CV</span>
         </a>
 
-        <!-- Mobile Menu Trigger -->
         <button class="mobile-menu-btn" aria-label="Open mobile navigation">
           <i class="fas fa-bars"></i>
         </button>
@@ -86,7 +1329,7 @@
     </div>
   </header>
 
-  <!-- Mobile Drawer & Overlay -->
+  <!-- Mobile Drawer -->
   <div class="mobile-drawer-overlay"></div>
   <aside class="mobile-drawer">
     <button class="mobile-drawer-close" aria-label="Close mobile menu">
@@ -107,7 +1350,7 @@
       <li><a href="#publications">Publications & Media</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
-    <div style="margin-top: auto; padding-top: 24px; border-top: 1px solid var(--border-light);">
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-light);">
       <a href="cv.pdf" class="btn btn-primary btn-sm" style="width: 100%;" download>
         <i class="fas fa-file-pdf"></i> Download CV (PDF)
       </a>
@@ -122,8 +1365,7 @@
       <canvas id="hero-canvas"></canvas>
 
       <div class="container hero-grid">
-        <!-- Hero Text Column -->
-        <div class="hero-content reveal">
+        <div class="hero-content">
           <div class="hero-eyebrow">
             <span class="pulse-dot"></span>
             <span>Investigative Journalism & Historical Research</span>
@@ -148,7 +1390,6 @@
             </a>
           </div>
 
-          <!-- Quick Micro-Badges -->
           <div style="display: flex; flex-wrap: wrap; gap: 10px; font-size: 0.8125rem; color: var(--text-muted);">
             <span style="display: flex; align-items: center; gap: 6px;">
               <i class="fas fa-check-circle" style="color: var(--accent-primary);"></i> Khulna University
@@ -164,8 +1405,7 @@
           </div>
         </div>
 
-        <!-- Hero Portrait Column -->
-        <div class="hero-portrait-card reveal reveal-delay-2">
+        <div class="hero-portrait-card">
           <div class="floating-tag tag-top">
             <i class="fas fa-award" style="color: var(--accent-primary);"></i>
             <span>KUJA Executive Member</span>
@@ -199,26 +1439,26 @@
     <section class="stats-section">
       <div class="container">
         <div class="stats-grid">
-          <div class="stat-item reveal">
-            <div class="stat-number" data-target="300">0<span class="plus">+</span></div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="300">300<span class="plus">+</span></div>
             <div class="stat-label">Published Reports</div>
             <div class="stat-sublabel">National Dailies & News Dispatches</div>
           </div>
 
-          <div class="stat-item reveal reveal-delay-1">
-            <div class="stat-number" data-target="200">0<span class="plus">+</span></div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="200">200<span class="plus">+</span></div>
             <div class="stat-label">Special Stories</div>
             <div class="stat-sublabel">Investigative & In-Depth Features</div>
           </div>
 
-          <div class="stat-item reveal reveal-delay-2">
-            <div class="stat-number" data-target="15">0<span class="plus">+</span></div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="15">15<span class="plus">+</span></div>
             <div class="stat-label">Research Projects</div>
             <div class="stat-sublabel">Field Surveys & Historical Monograph</div>
           </div>
 
-          <div class="stat-item reveal reveal-delay-3">
-            <div class="stat-number" data-target="4">0<span class="plus">+</span></div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="4">4<span class="plus">+</span></div>
             <div class="stat-label">Years Leadership</div>
             <div class="stat-sublabel">KUJA Leadership & Campus Media</div>
           </div>
@@ -231,7 +1471,7 @@
          ======================================================================== -->
     <section id="featured" class="section">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header">
           <span class="section-tag"><i class="fas fa-bullhorn"></i> Editorial Spotlight</span>
           <h2 class="section-title">Featured Journalism & In-Depth Dispatches</h2>
           <p class="section-desc">
@@ -240,11 +1480,62 @@
         </div>
 
         <div class="featured-grid">
-          <!-- Dynamic Lead Story -->
-          <div id="featured-lead-wrap" class="reveal"></div>
+          <!-- Lead Story -->
+          <div id="featured-lead-wrap">
+            <div class="lead-story-card" onclick="openReaderModal('art-01')">
+              <div class="lead-story-img-wrap">
+                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80" alt="Climate Salinity">
+              </div>
+              <div class="lead-story-body">
+                <div class="story-meta">
+                  <span class="category-pill">Investigative / Climate</span>
+                  <span>•</span>
+                  <span><i class="far fa-clock"></i> 6 min read</span>
+                  <span>•</span>
+                  <span>14 October 2025</span>
+                </div>
+                <h3 class="story-headline font-bn">উপকূলীয় লবণাক্ততা ও জলবায়ু উদ্বাস্তুর সংকট: সুন্দরবন সংলগ্ন জনপদের বাস্তব চিত্র</h3>
+                <p class="story-excerpt font-bn">খুলনা ও বাগেরহাটের উপকূলীয় এলাকায় সুপেয় পানির তীব্র সংকট এবং কৃষিজমিতে অনিয়ন্ত্রিত লবণাক্ততার কারণে প্রতি বছর হাজার হাজার প্রান্তিক মানুষ বাস্তুচ্যুত হতে বাধ্য হচ্ছেন। মাঠপর্যায়ের অনুসন্ধান ও বিশেষজ্ঞদের মতামত নিয়ে বিশদ প্রতিবেদন।</p>
+                <div class="story-footer">
+                  <span class="publication-badge"><i class="fas fa-newspaper"></i> Kaler Kantho</span>
+                  <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); openReaderModal('art-01')">
+                    Read Full Dispatch <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
 
-          <!-- Dynamic Stack of Stories -->
-          <div id="featured-stack-wrap" class="featured-stack reveal reveal-delay-2"></div>
+          <!-- Secondary Stack -->
+          <div id="featured-stack-wrap" class="featured-stack">
+            <div class="mini-story-card" onclick="openReaderModal('art-02')">
+              <div class="story-meta">
+                <span class="category-pill">Campus & Policy</span>
+                <span>•</span>
+                <span>22 January 2026</span>
+              </div>
+              <h4 class="story-headline font-bn">খুলনা বিশ্ববিদ্যালয়ে উচ্চশিক্ষা ও গবেষণার নতুন দিগন্ত: সংকট ও সম্ভাবনা</h4>
+              <p class="story-excerpt font-bn">দক্ষিণ-পশ্চিমাঞ্চলের সর্বোচ্চ বিদ্যাপীঠে আধুনিক গবেষণাগার, আন্তর্জাতিক প্রকাশনা এবং শিক্ষক-শিক্ষার্থীদের গবেষণায় বরাদ্দ বৃদ্ধির প্রয়োজনীয়তা নিয়ে বিশেষ প্রতিবেদন।</p>
+              <div class="story-footer">
+                <span class="publication-badge"><i class="fas fa-newspaper"></i> Daily Observer</span>
+                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">View Report →</span>
+              </div>
+            </div>
+
+            <div class="mini-story-card" onclick="openReaderModal('art-03')">
+              <div class="story-meta">
+                <span class="category-pill">Press Freedom & Rights</span>
+                <span>•</span>
+                <span>08 September 2025</span>
+              </div>
+              <h4 class="story-headline font-bn">ডিজিটাল নিরাপত্তা আইন ও মাঠপর্যায়ের সাংবাদিকতা: ঝুঁকি ও আত্মরক্ষার চ্যালেঞ্জ</h4>
+              <p class="story-excerpt font-bn">মফস্বল ও ক্যাম্পাস সাংবাদিকদের ওপর ডিজিটাল নজরদারি, শারীরিক হুমকি এবং সাংবাদিকদের পেশাগত নিরাপত্তার বাস্তব চিত্র নিয়ে ইউনেস্কো কর্মশালার আলোকে রচিত অনুসন্ধান।</p>
+              <div class="story-footer">
+                <span class="publication-badge"><i class="fas fa-newspaper"></i> Bangladesh Guardian</span>
+                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">View Report →</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </section>
@@ -255,8 +1546,7 @@
     <section id="about" class="section section-alt">
       <div class="container">
         <div class="about-grid">
-          <!-- Visual Column -->
-          <div class="about-visual reveal">
+          <div class="about-visual">
             <div class="about-img-box">
               <img src="images/profile.jpg" alt="Md. Mirazul Islam">
             </div>
@@ -266,8 +1556,7 @@
             </div>
           </div>
 
-          <!-- Content Column -->
-          <div class="about-content reveal reveal-delay-1">
+          <div class="about-content">
             <span class="section-tag"><i class="fas fa-feather-alt"></i> Biography & Background</span>
             <h2 class="section-title">Bridging Historical Inquiry with Frontline Reporting</h2>
 
@@ -279,7 +1568,6 @@
               Alongside his academic research, Mirazul has built an extensive track record in journalism across national and regional media outlets. He currently serves as <strong>Khulna University Correspondent for Daily Kaler Kantho</strong>, Contributor for <strong>Daily Observer</strong>, and Contributor for <strong>Bangladesh Guardian</strong>. From 2022 to 2026, he served in key executive leadership positions at the <strong>Khulna University Journalists' Association (KUJA)</strong>, advancing from Associate Member to <strong>General Secretary and Executive Member</strong>.
             </p>
 
-            <!-- Research Pillars -->
             <div class="pillars-title">Core Research & Reporting Pillars</div>
             <div class="pillars-grid">
               <div class="pillar-item">
@@ -315,7 +1603,6 @@
               </div>
             </div>
 
-            <!-- Action buttons -->
             <div style="display: flex; gap: 14px; flex-wrap: wrap;">
               <a href="cv.pdf" class="btn btn-primary" download>
                 <i class="fas fa-download"></i> <span>Download Full Curriculum Vitae</span>
@@ -334,7 +1621,7 @@
          ======================================================================== -->
     <section id="research" class="section">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header">
           <span class="section-tag"><i class="fas fa-microscope"></i> Scholarly Inquiries</span>
           <h2 class="section-title">Academic & Independent Research</h2>
           <p class="section-desc">
@@ -342,8 +1629,99 @@
           </p>
         </div>
 
-        <!-- Research Grid populated from data/research.json -->
-        <div id="research-grid" class="research-grid reveal"></div>
+        <div id="research-grid" class="research-grid">
+          <!-- Card 1 -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Academic Thesis / Working Paper</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> 2024 - 2025</span>
+            </div>
+            <h3 class="research-title">Post-Colonial State Formation and Political Violence in Bengal: An Archival Content Analysis</h3>
+            <div class="research-topic"><i class="fas fa-compass"></i> International History & Political Science</div>
+            <p class="research-abstract">Investigating how partition, colonial border demarcations, and state authority shaped patterns of political mobilization and grassroots conflict in post-1947 Bengal. The study examines historical records, colonial commission gazettes, and post-liberation archives to understand systemic drivers of collective violence.</p>
+            <div class="research-metadata">
+              <div><strong>Methodology:</strong> Archival Research & Qualitative Historical Analysis</div>
+              <div><strong>Institution:</strong> History and Civilization Discipline, Khulna University</div>
+              <div><strong>Focus Area:</strong> Khulna & Greater Bengal Borderlands</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#History</span><span class="research-tag">#Political Violence</span><span class="research-tag">#Archival Analysis</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-book-open"></i> Monograph & Abstract</span>
+              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View Documentation <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge ongoing">Field Survey & Policy Monograph</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> 2025 - Present</span>
+            </div>
+            <h3 class="research-title">Ecological Vulnerability, Salinity Influx, and Climate Migration in Southwest Bangladesh</h3>
+            <div class="research-topic"><i class="fas fa-compass"></i> Climate Justice & Environmental Displacement</div>
+            <p class="research-abstract">An empirical assessment mapping the intersection of freshwater depletion, cyclone vulnerability, and demographic displacement across riverbank communities. Combines geo-spatial water salinity readings with in-depth qualitative oral histories from displaced women and smallholder farmers.</p>
+            <div class="research-metadata">
+              <div><strong>Methodology:</strong> Empirical Field Survey & Mixed-Method Interviews (n=120 households)</div>
+              <div><strong>Institution:</strong> Independent Research / Khulna University Research Society (KURS)</div>
+              <div><strong>Focus Area:</strong> Sundarbans Coastal Belt (Khulna, Bagerhat, Satkhira)</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Climate Justice</span><span class="research-tag">#Fieldwork</span><span class="research-tag">#Water Security</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-book-open"></i> Monograph & Abstract</span>
+              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View Documentation <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 3 -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Conference Paper & UNESCO Synthesis</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> 2025</span>
+            </div>
+            <h3 class="research-title">Digital Surveillance, Media Censorship, and Physical Safety Risks for Grassroots Journalists in South Asia</h3>
+            <div class="research-topic"><i class="fas fa-compass"></i> Media Studies & Human Rights</div>
+            <p class="research-abstract">Examines the escalating risks faced by investigative and campus journalists operating outside metropolitan news hubs. Evaluates digital tracking, phishing, legal intimidations, and physical security threats, proposing decentralized peer-protection protocols and verifiable encryption standards.</p>
+            <div class="research-metadata">
+              <div><strong>Methodology:</strong> Comparative Legal Review & Semi-Structured Focus Groups</div>
+              <div><strong>Institution:</strong> UNESCO & News Network Media Safety Framework</div>
+              <div><strong>Focus Area:</strong> Regional & Campus Newsrooms, Bangladesh</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Human Rights</span><span class="research-tag">#Media Safety</span><span class="research-tag">#UNESCO</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-book-open"></i> Monograph & Abstract</span>
+              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View Documentation <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+
+          <!-- Card 4 -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge ongoing">Ongoing Research Project</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> 2024 - 2026</span>
+            </div>
+            <h3 class="research-title">Student Mobilization, Autonomous Campus Press, and Democratic Transition in Bangladesh</h3>
+            <div class="research-topic"><i class="fas fa-compass"></i> Social Movements & Higher Education</div>
+            <p class="research-abstract">Documenting how independent student news associations navigated institutional censorship, public interest reporting, and student-led civic transitions. Focuses on the role of real-time university reporting during major national student uprisings.</p>
+            <div class="research-metadata">
+              <div><strong>Methodology:</strong> Oral History Documentation & Newspaper Content Analysis</div>
+              <div><strong>Institution:</strong> Khulna University Journalists' Association (KUJA)</div>
+              <div><strong>Focus Area:</strong> Public Universities across Bangladesh</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Campus Press</span><span class="research-tag">#Democracy</span><span class="research-tag">#Student Movements</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-book-open"></i> Monograph & Abstract</span>
+              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View Documentation <i class="fas fa-file-pdf"></i></a>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -352,7 +1730,7 @@
          ======================================================================== -->
     <section id="timeline" class="section section-alt">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header">
           <span class="section-tag"><i class="fas fa-history"></i> Career Trajectory</span>
           <h2 class="section-title">Experience, Leadership & Certifications</h2>
           <p class="section-desc">
@@ -360,8 +1738,99 @@
           </p>
         </div>
 
-        <!-- Timeline container populated from data/timeline.json -->
-        <div id="timeline-container" class="timeline-container"></div>
+        <div id="timeline-container" class="timeline-container">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">General Secretary & Executive Member</h4>
+                  <div class="timeline-org">Khulna University Journalists' Association (KUJA)</div>
+                </div>
+                <span class="timeline-period">March 2024 – March 2026</span>
+              </div>
+              <p class="timeline-desc">Elected to direct executive leadership of KUJA. Directed newsroom operations, coordinated investigations, advocated for journalist welfare, and organized journalism workshops and national media symposiums.</p>
+              <ul class="timeline-highlights">
+                <li>Led teams of campus correspondents publishing over 1,000+ national and regional news reports.</li>
+                <li>Spearheaded ethical reporting guidelines and fact-checking workshops for incoming campus journalists.</li>
+                <li>Established institutional liaison with national media houses and press clubs.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Multimedia Journalism Fellow</h4>
+                  <div class="timeline-org">Press Institute Bangladesh (PIB)</div>
+                </div>
+                <span class="timeline-period">August 2025</span>
+              </div>
+              <p class="timeline-desc">Selected for intensive 3-day professional fellowship covering digital news production, investigative video storytelling, verified digital workflows, and cross-platform publishing.</p>
+              <ul class="timeline-highlights">
+                <li>Trained by veteran investigative editors on investigative data verification.</li>
+                <li>Produced multimedia field reports on environmental challenges in southwestern Bangladesh.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Journalist Digital & Physical Safety Fellow</h4>
+                  <div class="timeline-org">UNESCO-IPDC & News Network</div>
+                </div>
+                <span class="timeline-period">July 2025</span>
+              </div>
+              <p class="timeline-desc">Completed specialized 3-day high-risk workshop on digital surveillance countermeasures, physical threat mitigation, and legal rights for journalists operating in volatile environments.</p>
+              <ul class="timeline-highlights">
+                <li>Certified in encrypted source communications, digital hygiene, and incident reporting.</li>
+                <li>Explored media ethics and disinformation mitigation frameworks.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Khulna University Correspondent</h4>
+                  <div class="timeline-org">Daily Kaler Kantho & Daily Observer</div>
+                </div>
+                <span class="timeline-period">2024 – Present</span>
+              </div>
+              <p class="timeline-desc">Reporting on campus administration, student politics, academic research discoveries, cultural movements, and regional developments across southwestern Bangladesh.</p>
+              <ul class="timeline-highlights">
+                <li>Published over 300+ bylines across print and digital editions of national dailies.</li>
+                <li>Broke front-page investigative stories on student welfare and administrative transparency.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Founding Member</h4>
+                  <div class="timeline-org">Khulna University Research Society (KURS)</div>
+                </div>
+                <span class="timeline-period">2022 – 2023</span>
+              </div>
+              <p class="timeline-desc">Co-founded the university's premier student-led research body dedicated to fostering interdisciplinary academic inquiry, research methodology workshops, and scholarly publication.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -370,7 +1839,7 @@
          ======================================================================== -->
     <section id="publications" class="section">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header">
           <span class="section-tag"><i class="fas fa-archive"></i> Published Dispatches</span>
           <h2 class="section-title">Publications, Stories & Media Archive</h2>
           <p class="section-desc">
@@ -378,8 +1847,7 @@
           </p>
         </div>
 
-        <!-- Media Controls: Filter Pills & Search -->
-        <div class="media-controls reveal">
+        <div class="media-controls">
           <div class="filter-group">
             <button class="filter-btn active" data-filter="all">All Stories</button>
             <button class="filter-btn" data-filter="investigative">Investigative</button>
@@ -395,8 +1863,9 @@
           </div>
         </div>
 
-        <!-- Articles Grid populated from data/articles.json -->
-        <div id="articles-grid" class="articles-grid reveal"></div>
+        <div id="articles-grid" class="articles-grid">
+          <!-- Populated by script and initial HTML -->
+        </div>
       </div>
     </section>
 
@@ -405,7 +1874,7 @@
          ======================================================================== -->
     <section class="affiliations-section">
       <div class="container">
-        <div style="text-align: center; margin-bottom: 32px;">
+        <div style="text-align: center; margin-bottom: 28px;">
           <span style="font-size: 0.8125rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.1em; color: var(--accent-primary);">
             Institutional Affiliations & Media Houses
           </span>
@@ -452,7 +1921,7 @@
          ======================================================================== -->
     <section id="contact" class="section section-alt">
       <div class="container">
-        <div class="section-header reveal">
+        <div class="section-header">
           <span class="section-tag"><i class="fas fa-envelope-open-text"></i> Media Inquiries</span>
           <h2 class="section-title">Let's Connect & Collaborate</h2>
           <p class="section-desc">
@@ -461,8 +1930,7 @@
         </div>
 
         <div class="contact-grid">
-          <!-- Contact Info Column -->
-          <div class="contact-info-card reveal">
+          <div class="contact-info-card">
             <h3>Contact Information</h3>
             <p>
               Whether you are an editor seeking ground reports from southwestern Bangladesh, an academic researcher, or a fellow storyteller, please feel free to reach out.
@@ -523,8 +1991,7 @@
             </div>
           </div>
 
-          <!-- Contact Form Column -->
-          <div class="contact-form-card reveal reveal-delay-1">
+          <div class="contact-form-card">
             <h3 class="font-serif" style="font-size: 1.45rem; margin-bottom: 8px;">Transmit a Message</h3>
             <p style="color: var(--text-secondary); font-size: 0.875rem; margin-bottom: 24px;">
               Responses are typically delivered within 24 to 48 hours.
@@ -644,13 +2111,437 @@
       <button class="modal-close-btn" onclick="closeReaderModal()" aria-label="Close dialog">
         <i class="fas fa-times"></i>
       </button>
-      <div id="reader-modal-content" class="modal-content-wrap">
-        <!-- Injected dynamically via openReaderModal(id) -->
-      </div>
+      <div id="reader-modal-content" class="modal-content-wrap"></div>
     </div>
   </div>
 
-  <!-- Main JavaScript File -->
-  <script src="main.js"></script>
+  <!-- ========================================================================
+       EMBEDDED INTERACTIVE SCRIPT (ZERO DEPENDENCY / NO EXTERNAL JS FILE NEEDED)
+       ======================================================================== -->
+  <script>
+    // Articles Dataset (Embedded for instant zero-lag rendering)
+    const articlesData = [
+      {
+        id: "art-01",
+        title: "উপকূলীয় লবণাক্ততা ও জলবায়ু উদ্বাস্তুর সংকট: সুন্দরবন সংলগ্ন জনপদের বাস্তব চিত্র",
+        englishTitle: "Coastal Salinity and Climate Displaced Communities: Ground Reality from Sundarbans",
+        category: "Climate Justice",
+        categoryLabel: "Investigative / Climate",
+        type: "investigative",
+        newspaper: "Kaler Kantho",
+        writer: "Md. Mirazul Islam",
+        date: "14 October 2025",
+        readTime: "6 min read",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+        summary: "খুলনা ও বাগেরহাটের উপকূলীয় এলাকায় সুপেয় পানির তীব্র সংকট এবং কৃষিজমিতে অনিয়ন্ত্রিত লবণাক্ততার কারণে প্রতি বছর হাজার হাজার প্রান্তিক মানুষ বাস্তুচ্যুত হতে বাধ্য হচ্ছেন। মাঠপর্যায়ের অনুসন্ধান ও বিশেষজ্ঞদের মতামত নিয়ে বিশদ প্রতিবেদন।",
+        content: "জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবের সম্মুখভাগে দাঁড়িয়ে থাকা বাংলাদেশের দক্ষিণ-পশ্চিম উপকূলীয় অঞ্চল আজ অস্তিত্ব সংকটে। সুন্দরবন-সংলগ্ন শ্যামনগর, কয়রা এবং শরণখোলা উপজেলার জনপদগুলোতে প্রতি বছর জোয়ারের পানির অস্বাভাবিক বৃদ্ধি ও দীর্ঘস্থায়ী লবণাক্ততার কারণে কৃষি অর্থনীতি ধ্বংসের মুখে।\n\nমাঠপর্যায়ের তথ্য অনুসন্ধানে দেখা গেছে, বিগত এক দশকে এই অঞ্চলে ভূগর্ভস্থ এবং ভূ-উপরিস্থ সুপেয় পানির স্তর আশঙ্কাজনকভাবে হ্রাস পেয়েছে। নারীদের প্রতিদিন ৩ থেকে ৫ কিলোমিটার পথ পাড়ি দিয়ে খাবার পানি সংগ্রহ করতে হচ্ছে। জলবায়ু-প্রণোদিত এই নীরব বিপর্যয় স্থানীয়দের কাজের সন্ধানে বিভাগীয় শহর ও রাজধানীতে ঝুঁকিপূর্ণ অভিবাসনে বাধ্য করছে।\n\nবিশেষজ্ঞরা বলছেন, স্থায়ী টেকসই বাঁধ নির্মাণ ও বৃষ্টির পানি সংরক্ষণের সমন্বিত জাতীয় নীতি দ্রুত বাস্তবায়ন না হলে উপকূলীয় মানব সংকট নিয়ন্ত্রণের বাইরে চলে যাবে।",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        tags: ["Climate Justice", "Sundarbans", "Investigative", "Displacement"]
+      },
+      {
+        id: "art-02",
+        title: "খুলনা বিশ্ববিদ্যালয়ে উচ্চশিক্ষা ও গবেষণার নতুন দিগন্ত: সংকট ও সম্ভাবনা",
+        englishTitle: "Higher Education and Research Frontiers at Khulna University",
+        category: "Campus Journalism",
+        categoryLabel: "Campus & Policy",
+        type: "campus",
+        newspaper: "Daily Observer",
+        writer: "Md. Mirazul Islam",
+        date: "22 January 2026",
+        readTime: "4 min read",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+        summary: "দক্ষিণ-পশ্চিমাঞ্চলের সর্বোচ্চ বিদ্যাপীঠে আধুনিক গবেষণাগার, আন্তর্জাতিক প্রকাশনা এবং শিক্ষক-শিক্ষার্থীদের গবেষণায় বরাদ্দ বৃদ্ধির প্রয়োজনীয়তা নিয়ে বিশেষ প্রতিবেদন।",
+        content: "গবেষণাধর্মী বিশ্ববিদ্যালয় হিসেবে খুলনা বিশ্ববিদ্যালয়ের একাডেমিক অগ্রযাত্রা প্রশংসিত হলেও অপ্রতুল বাজেট ও আধুনিক ল্যাব সুবিধার ঘাটতি এখনো বড় চ্যালেঞ্জ। বিভিন্ন ডিসিপ্লিনের শিক্ষক ও গবেষকদের সাথে কথা বলে জানা গেছে, আন্তর্জাতিক মানের গবেষণাপত্র প্রকাশে তরুণ গবেষকদের প্রণোদনা বৃদ্ধি করা জরুরি।\n\nবিশ্ববিদ্যালয় প্রশাসনের নেওয়া সাম্প্রতিক উদ্যোগ, নতুন গবেষণা নীতিমালা এবং শিক্ষার্থীদের জন্য গবেষণা বৃত্তির সুযোগ নিয়ে এই অনুসন্ধান তুলে ধরেছে ভবিষ্যৎ উচ্চশিক্ষার রোডম্যাপ।",
+        source: "https://www.observerbd.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        tags: ["Higher Education", "Khulna University", "Research Policy"]
+      },
+      {
+        id: "art-03",
+        title: "ডিজিটাল নিরাপত্তা আইন ও মাঠপর্যায়ের সাংবাদিকতা: ঝুঁকি ও আত্মরক্ষার চ্যালেঞ্জ",
+        englishTitle: "Digital Safety and Grassroots Journalism: Legal and Physical Risks",
+        category: "Human Rights",
+        categoryLabel: "Press Freedom & Rights",
+        type: "human rights",
+        newspaper: "Bangladesh Guardian",
+        writer: "Md. Mirazul Islam",
+        date: "08 September 2025",
+        readTime: "7 min read",
+        image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80",
+        summary: "মফস্বল ও ক্যাম্পাস সাংবাদিকদের ওপর ডিজিটাল নজরদারি, শারীরিক হুমকি এবং সাংবাদিকদের পেশাগত নিরাপত্তার বাস্তব চিত্র নিয়ে ইউনেস্কো কর্মশালার আলোকে রচিত অনুসন্ধান।",
+        content: "সত্য উদঘাটন ও নিরপেক্ষ সাংবাদিকতার পথে জেলা ও ক্যাম্পাস পর্যায়ের সাংবাদিকরা প্রতিনিয়ত নানা সামাজিক ও রাজনৈতিক চাপের মুখোমুখি হন। আন্তর্জাতিক মানদণ্ড অনুযায়ী সাংবাদিকদের ডিজিটাল ও শারীরিক নিরাপত্তা নিশ্চিত করা যেকোনো মুক্ত সমাজের অন্যতম পূর্বশর্ত।\n\nইউনেস্কো এবং নিউজ নেটওয়ার্কের নিরাপত্তা নির্দেশিকা পর্যালোচনা করে এই প্রতিবেদনে স্বাধীন সাংবাদিকতা চর্চায় আইনি সুরক্ষা ও তথ্যের গোপনীয়তা রক্ষার উপায়সমূহ বিস্তারিত আলোচনা করা হয়েছে।",
+        source: "https://pib.gov.bd",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        tags: ["Human Rights", "Press Freedom", "Digital Safety", "UNESCO"]
+      },
+      {
+        id: "art-04",
+        title: "খুলনা বিশ্ববিদ্যালয়ের শতবর্ষী স্মৃতি ও দক্ষিণবঙ্গের মুক্তিযুদ্ধ ইতিহাস চর্চা",
+        englishTitle: "Historical Memory and Liberation War Scholarship",
+        category: "Investigative",
+        categoryLabel: "Historical Analysis",
+        type: "investigative",
+        newspaper: "Kaler Kantho",
+        writer: "Md. Mirazul Islam",
+        date: "16 December 2024",
+        readTime: "5 min read",
+        image: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1200&q=80",
+        summary: "১৯৭১ সালের মহান মুক্তিযুদ্ধে খুলনা অঞ্চলের বধ্যভূমি, প্রত্যক্ষদর্শী যোদ্ধাদের মৌখিক ইতিহাস এবং আর্কাইভাল নথিপত্রের ঐতিহাসিক বিশ্লেষণ।",
+        content: "ইতিহাস ও সভ্যতা ডিসিপ্লিনের গবেষণার অংশ হিসেবে খুলনা, বাগেরহাট ও সাতক্ষীরা অঞ্চলের মুক্তিযুদ্ধকালীন স্থানীয় বীরগাথা এবং গণহত্যার অপ্রকাশিত দলিলপত্র সংগ্রহ করা হয়েছে। তরুণ প্রজন্মের কাছে মুক্তিযুদ্ধের প্রকৃত ঐতিহাসিক তথ্য পৌঁছে দিতে মৌখিক ইতিহাসের গুরুত্ব অনস্বীকার্য।",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        tags: ["History", "Liberation War", "Archival Research"]
+      },
+      {
+        id: "art-05",
+        title: "ক্যাম্পাস সাংবাদিকতার নীতি-নৈতিকতা ও শিক্ষার্থী নেতৃত্বের ভূমিকা",
+        englishTitle: "Ethics of Campus Journalism and Student Leadership",
+        category: "Campus Journalism",
+        categoryLabel: "Media Ethics",
+        type: "campus",
+        newspaper: "Somoy Journal",
+        writer: "Md. Mirazul Islam",
+        date: "05 March 2025",
+        readTime: "4 min read",
+        image: "https://images.unsplash.com/photo-1585829365295-ab7cd400c167?auto=format&fit=crop&w=1200&q=80",
+        summary: "খুবি সাংবাদিক সমিতির (কুজা) নেতৃত্বে সংবাদ সংগ্রহে নিরপেক্ষতা, ফ্যাক্ট-চেকিং এবং ভুল তথ্যের বিস্তার রোধে করণীয় সংক্রান্ত প্রতিবেদন।",
+        content: "ক্যাম্পাস সাংবাদিকতা শুধু সংবাদ পরিবেশন নয়, বরং তা ভবিষ্যতের দায়িত্বশীল ও বস্তুনিষ্ঠ সাংবাদিক তৈরির সূতিকাগার। খুলনা বিশ্ববিদ্যালয় সাংবাদিক সমিতি (কুজা)-এর কর্মশালাগুলোতে সাংবাদিকদের পেশাগত সততা, বস্তুনিষ্ঠ সংবাদ লিখন এবং তথ্য যাচাইয়ের উপর বিশেষ গুরুত্বারোপ করা হয়।",
+        source: "https://kuja-web.live",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        tags: ["Campus Journalism", "KUJA", "Fact-Checking"]
+      },
+      {
+        id: "art-06",
+        title: "দক্ষিণাঞ্চলের নদী ভাঙন ও জীবিকা রূপান্তর: এক মাল্টিমিডিয়া তথ্যচিত্র",
+        englishTitle: "Riverbank Erosion and Livelihood Shifts in Southern Bangladesh",
+        category: "Multimedia",
+        categoryLabel: "Multimedia & Video",
+        type: "multimedia",
+        newspaper: "PIB Media Dispatch",
+        writer: "Md. Mirazul Islam",
+        date: "18 August 2025",
+        readTime: "Video & Photo Story",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        summary: "রূপসা ও পশুর নদীর অব্যাহত ভাঙনে বসতভিটা হারানো প্রান্তিক জেলে ও কৃষকদের টিকে থাকার লড়াই নিয়ে ভিডিও ও আলোকচিত্রভিত্তিক অনুসন্ধান।",
+        content: "প্রেস ইনস্টিটিউট বাংলাদেশ (পিআইবি)-এর মাল্টিমিডিয়া সাংবাদিকতা প্রশিক্ষণের অংশ হিসেবে প্রস্তুতকৃত এই স্টোরিতে আধুনিক ড্রোন ফুটেজ, প্রত্যক্ষদর্শী সাক্ষাৎকার এবং ডেটা ভিজ্যুয়ালাইজেশনের মাধ্যমে নদীভাঙনের মানবিক চিত্র ফুটিয়ে তোলা হয়েছে।",
+        source: "https://pib.gov.bd",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        tags: ["Multimedia", "River Erosion", "PIB"]
+      }
+    ];
+
+    document.addEventListener("DOMContentLoaded", () => {
+      initTheme();
+      initHeroCanvas();
+      initHeader();
+      initMobileDrawer();
+      initPublications();
+      initContactForm();
+    });
+
+    // Theme Management
+    function initTheme() {
+      const toggle = document.getElementById("theme-toggle");
+      const icon = document.getElementById("theme-icon");
+      const saved = localStorage.getItem("theme") || "light";
+      document.documentElement.setAttribute("data-theme", saved);
+      updateIcon(saved);
+
+      if (toggle) {
+        toggle.addEventListener("click", () => {
+          const cur = document.documentElement.getAttribute("data-theme") || "light";
+          const next = cur === "dark" ? "light" : "dark";
+          document.documentElement.setAttribute("data-theme", next);
+          localStorage.setItem("theme", next);
+          updateIcon(next);
+        });
+      }
+
+      function updateIcon(t) {
+        if (icon) icon.className = t === "dark" ? "fas fa-sun" : "fas fa-moon";
+      }
+    }
+
+    // Hero Canvas Animation
+    function initHeroCanvas() {
+      const canvas = document.getElementById("hero-canvas");
+      if (!canvas) return;
+      const ctx = canvas.getContext("2d");
+      let w, h;
+      let particles = [];
+
+      function resize() {
+        w = canvas.width = canvas.offsetWidth;
+        h = canvas.height = canvas.offsetHeight;
+        particles = [];
+        const count = Math.min(Math.floor((w * h) / 18000), 55);
+        for (let i = 0; i < count; i++) {
+          particles.push({
+            x: Math.random() * w,
+            y: Math.random() * h,
+            vx: (Math.random() - 0.5) * 0.4,
+            vy: (Math.random() - 0.5) * 0.4,
+            r: Math.random() * 1.5 + 1
+          });
+        }
+      }
+
+      window.addEventListener("resize", resize);
+      resize();
+
+      function draw() {
+        ctx.clearRect(0, 0, w, h);
+        const isDark = document.documentElement.getAttribute("data-theme") === "dark";
+        const pColor = isDark ? "rgba(245, 158, 11, 0.4)" : "rgba(180, 83, 9, 0.3)";
+        const lColor = isDark ? "rgba(245, 158, 11, " : "rgba(180, 83, 9, ";
+
+        for (let i = 0; i < particles.length; i++) {
+          const p = particles[i];
+          p.x += p.vx; p.y += p.vy;
+          if (p.x < 0 || p.x > w) p.vx *= -1;
+          if (p.y < 0 || p.y > h) p.vy *= -1;
+
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+          ctx.fillStyle = pColor;
+          ctx.fill();
+
+          for (let j = i + 1; j < particles.length; j++) {
+            const p2 = particles[j];
+            const dist = Math.hypot(p.x - p2.x, p.y - p2.y);
+            if (dist < 100) {
+              const alpha = (1 - dist / 100) * (isDark ? 0.15 : 0.1);
+              ctx.beginPath();
+              ctx.moveTo(p.x, p.y);
+              ctx.lineTo(p2.x, p2.y);
+              ctx.strokeStyle = lColor + alpha + ")";
+              ctx.lineWidth = 0.8;
+              ctx.stroke();
+            }
+          }
+        }
+        requestAnimationFrame(draw);
+      }
+      draw();
+    }
+
+    // Header Scroll & Mobile Drawer
+    function initHeader() {
+      const header = document.querySelector(".site-header");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 40) header.classList.add("scrolled");
+        else header.classList.remove("scrolled");
+      }, { passive: true });
+    }
+
+    function initMobileDrawer() {
+      const openBtn = document.querySelector(".mobile-menu-btn");
+      const closeBtn = document.querySelector(".mobile-drawer-close");
+      const drawer = document.querySelector(".mobile-drawer");
+      const overlay = document.querySelector(".mobile-drawer-overlay");
+      const links = document.querySelectorAll(".mobile-nav-links a");
+
+      function open() { drawer.classList.add("active"); overlay.classList.add("active"); }
+      function close() { drawer.classList.remove("active"); overlay.classList.remove("active"); }
+
+      if (openBtn) openBtn.addEventListener("click", open);
+      if (closeBtn) closeBtn.addEventListener("click", close);
+      if (overlay) overlay.addEventListener("click", close);
+      links.forEach(l => l.addEventListener("click", close));
+    }
+
+    // Publications Grid Rendering, Filtering & Search
+    function initPublications() {
+      const container = document.getElementById("articles-grid");
+      const filterBtns = document.querySelectorAll(".filter-btn");
+      const searchInput = document.getElementById("article-search");
+
+      let currentFilter = "all";
+      let query = "";
+
+      function render(list) {
+        if (!container) return;
+        if (list.length === 0) {
+          container.innerHTML = `
+            <div style="grid-column: 1 / -1; text-align:center; padding: 50px 20px; color:var(--text-muted);">
+              <i class="fas fa-search" style="font-size:2.2rem; margin-bottom:14px; opacity:0.4;"></i>
+              <h4 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:6px;">No articles found</h4>
+              <p>Try searching for a different topic or select "All Stories".</p>
+            </div>
+          `;
+          return;
+        }
+
+        container.innerHTML = list.map(item => `
+          <div class="article-card" onclick="openReaderModal('${item.id}')">
+            <div class="article-card-img-wrap">
+              <img src="${item.image}" alt="${item.title}" class="article-card-img" loading="lazy">
+            </div>
+            <div class="article-card-body">
+              <div class="story-meta">
+                <span class="category-pill">${item.categoryLabel || item.category}</span>
+                <span>•</span>
+                <span>${item.date}</span>
+              </div>
+              <h3 class="article-title-bn">${item.title}</h3>
+              <p class="article-card-excerpt">${item.summary}</p>
+              <div class="article-card-footer">
+                <span><i class="fas fa-newspaper"></i> ${item.newspaper}</span>
+                <span style="color:var(--accent-primary); font-weight:600;">Read More →</span>
+              </div>
+            </div>
+          </div>
+        `).join("");
+      }
+
+      function filterAndRender() {
+        let filtered = articlesData;
+        if (currentFilter !== "all") {
+          filtered = filtered.filter(a => {
+            const cat = (a.category || "").toLowerCase();
+            const type = (a.type || "").toLowerCase();
+            return cat.includes(currentFilter) || type.includes(currentFilter);
+          });
+        }
+        if (query.trim() !== "") {
+          const q = query.toLowerCase();
+          filtered = filtered.filter(a =>
+            a.title.toLowerCase().includes(q) ||
+            a.summary.toLowerCase().includes(q) ||
+            a.newspaper.toLowerCase().includes(q)
+          );
+        }
+        render(filtered);
+      }
+
+      filterBtns.forEach(btn => {
+        btn.addEventListener("click", () => {
+          filterBtns.forEach(b => b.classList.remove("active"));
+          btn.classList.add("active");
+          currentFilter = btn.getAttribute("data-filter");
+          filterAndRender();
+        });
+      });
+
+      if (searchInput) {
+        searchInput.addEventListener("input", (e) => {
+          query = e.target.value;
+          filterAndRender();
+        });
+      }
+
+      render(articlesData);
+    }
+
+    // Modal Reader Functionality
+    window.openReaderModal = function(id) {
+      const item = articlesData.find(a => a.id === id);
+      if (!item) return;
+
+      const modal = document.getElementById("reader-modal");
+      const content = document.getElementById("reader-modal-content");
+
+      content.innerHTML = `
+        <div class="modal-header-meta">
+          <span class="category-pill">${item.categoryLabel || item.category}</span>
+          <span style="color:var(--text-muted);">•</span>
+          <span style="color:var(--text-muted); font-size:0.875rem;"><i class="fas fa-newspaper"></i> ${item.newspaper}</span>
+          <span style="color:var(--text-muted);">•</span>
+          <span style="color:var(--text-muted); font-size:0.875rem;"><i class="far fa-calendar-alt"></i> ${item.date}</span>
+        </div>
+
+        <h2 class="modal-title-bn">${item.title}</h2>
+        ${item.englishTitle ? `<div class="modal-title-en">${item.englishTitle}</div>` : ""}
+
+        <div class="modal-byline">
+          <span>By <strong>${item.writer || 'Md. Mirazul Islam'}</strong></span>
+          <span>•</span>
+          <span>${item.readTime || 'Full Report'}</span>
+        </div>
+
+        <img src="${item.image}" alt="${item.title}" class="modal-featured-img">
+
+        <div class="modal-body-text">
+          ${item.content || item.summary}
+        </div>
+
+        <div class="modal-action-bar">
+          <div style="display:flex; gap:12px;">
+            <a href="${item.source || '#'}" target="_blank" class="btn btn-primary btn-sm">
+              <i class="fas fa-external-link-alt"></i> Original Publication
+            </a>
+            <a href="${item.archive || '#'}" target="_blank" class="btn btn-outline btn-sm">
+              <i class="fas fa-archive"></i> Archive Record
+            </a>
+          </div>
+          <button class="btn btn-outline btn-sm" onclick="closeReaderModal()">
+            Close Story
+          </button>
+        </div>
+      `;
+
+      modal.classList.add("active");
+      document.body.style.overflow = "hidden";
+    };
+
+    window.closeReaderModal = function() {
+      const modal = document.getElementById("reader-modal");
+      if (modal) {
+        modal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    };
+
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape") closeReaderModal();
+    });
+
+    const modalEl = document.getElementById("reader-modal");
+    if (modalEl) {
+      modalEl.addEventListener("click", (e) => {
+        if (e.target === modalEl) closeReaderModal();
+      });
+    }
+
+    // Contact Form AJAX Handler
+    function initContactForm() {
+      const form = document.getElementById("portfolio-contact-form");
+      const feedback = document.getElementById("form-feedback");
+      const submitBtn = document.getElementById("contact-submit-btn");
+      if (!form) return;
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const origText = submitBtn.innerHTML;
+        submitBtn.innerHTML = `<i class="fas fa-spinner fa-spin"></i> Transmitting...`;
+        submitBtn.disabled = true;
+
+        try {
+          const res = await fetch("https://formspree.io/f/xjgpaopd", {
+            method: "POST",
+            body: new FormData(form),
+            headers: { Accept: "application/json" }
+          });
+          if (res.ok) {
+            feedback.className = "form-feedback success";
+            feedback.innerHTML = `<strong>Message Transmitted.</strong> Thank you! Your inquiry has been sent to Md. Mirazul Islam.`;
+            form.reset();
+          } else {
+            throw new Error();
+          }
+        } catch (err) {
+          feedback.className = "form-feedback";
+          feedback.style.display = "block";
+          feedback.style.background = "rgba(239, 68, 68, 0.12)";
+          feedback.style.color = "#dc2626";
+          feedback.innerHTML = `Direct email fallback: <a href="mailto:mirazulislamku@gmail.com">mirazulislamku@gmail.com</a>`;
+        } finally {
+          submitBtn.innerHTML = origText;
+          submitBtn.disabled = false;
+        }
+      });
+    }
+  </script>
 </body>
 </html>
