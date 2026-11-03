@@ -1369,7 +1369,7 @@
           <i id="theme-icon" class="fas fa-moon"></i>
         </button>
 
-        <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank" download>
+        <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">
           <i class="fas fa-file-pdf"></i> <span>Download CV</span>
         </a>
 
@@ -1402,7 +1402,7 @@
       <li><a href="#contact">Contact</a></li>
     </ul>
     <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-light);">
-      <a href="cv.pdf" class="btn btn-primary btn-sm" style="width: 100%;" download>
+      <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-primary btn-sm" style="width: 100%;">
         <i class="fas fa-file-pdf"></i> Download CV (PDF)
       </a>
     </div>
@@ -1660,7 +1660,7 @@
 
             <!-- ORCID ID & CV Button -->
             <div style="display: flex; gap: 14px; flex-wrap: wrap; align-items: center;">
-              <a href="cv.pdf" class="btn btn-primary" download>
+              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-primary">
                 <i class="fas fa-file-pdf"></i> <span>Download Full Curriculum Vitae</span>
               </a>
               <a href="https://orcid.org/0009-0009-5692-8928" target="_blank" class="btn btn-outline">
@@ -1708,7 +1708,7 @@
             </div>
             <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-book-open"></i> Academic Thesis</span>
-              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View CV Record <i class="fas fa-file-pdf"></i></a>
+              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Research Record <i class="fas fa-shield-alt"></i></a>
             </div>
           </div>
 
@@ -1731,7 +1731,7 @@
             </div>
             <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-leaf"></i> Energy & Livelihoods</span>
-              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View CV Record <i class="fas fa-file-pdf"></i></a>
+              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Research Record <i class="fas fa-shield-alt"></i></a>
             </div>
           </div>
 
@@ -1754,7 +1754,7 @@
             </div>
             <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-chart-bar"></i> Quantitative Media Analysis</span>
-              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View CV Record <i class="fas fa-file-pdf"></i></a>
+              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Research Record <i class="fas fa-shield-alt"></i></a>
             </div>
           </div>
 
@@ -1777,7 +1777,7 @@
             </div>
             <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
               <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-users"></i> Field Enumeration</span>
-              <a href="cv.pdf" class="btn btn-outline btn-sm" target="_blank">View CV Record <i class="fas fa-file-pdf"></i></a>
+              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Research Record <i class="fas fa-shield-alt"></i></a>
             </div>
           </div>
         </div>
@@ -2028,36 +2028,6 @@
     </section>
 
     <!-- ========================================================================
-         ACADEMIC REFERENCES (FROM CV)
-         ======================================================================== -->
-    <section class="section" style="padding-top: 50px; padding-bottom: 60px;">
-      <div class="container">
-        <div style="text-align: center; margin-bottom: 20px;">
-          <span class="section-tag"><i class="fas fa-bookmark"></i> Academic References</span>
-          <h2 class="section-title" style="font-size: 1.8rem;">Scholarly References</h2>
-        </div>
-
-        <div class="ref-grid">
-          <div class="ref-card">
-            <h4>Dr. Md. Mahmud Alam</h4>
-            <div class="ref-role">Associate Professor</div>
-            <div><i class="fas fa-university"></i> History and Civilization Discipline, Khulna University</div>
-            <div><i class="fas fa-phone"></i> +8801711-141250</div>
-            <div><i class="fas fa-envelope"></i> drmahmud@hc.ku.ac.bd</div>
-          </div>
-
-          <div class="ref-card">
-            <h4>Imran Kamal</h4>
-            <div class="ref-role">Associate Professor</div>
-            <div><i class="fas fa-university"></i> Bangla Discipline, Khulna University</div>
-            <div><i class="fas fa-phone"></i> +8801726793286</div>
-            <div><i class="fas fa-envelope"></i> imrankamal@ban.ku.ac.bd</div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ========================================================================
          CONTACT SECTION
          ======================================================================== -->
     <section id="contact" class="section section-alt">
@@ -2225,7 +2195,7 @@
             <li><a href="https://ku.ac.bd" target="_blank">Khulna University</a></li>
             <li><a href="https://kuja-web.live/Profile/miraz.html" target="_blank">KUJA Profile</a></li>
             <li><a href="https://pib.gov.bd" target="_blank">PIB Bangladesh</a></li>
-            <li><a href="cv.pdf" download>Download CV (PDF)</a></li>
+            <li><a href="javascript:void(0)" onclick="handleCvClick(event)">Download CV (PDF)</a></li>
           </ul>
         </div>
       </div>
@@ -2253,6 +2223,51 @@
         <i class="fas fa-times"></i>
       </button>
       <div id="reader-modal-content" class="modal-content-wrap"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       CV ACCESS RESTRICTED / UPON REQUEST MODAL
+       ======================================================================== -->
+  <div id="cv-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px; text-align: center; padding: 40px 28px;">
+      <button class="modal-close-btn" onclick="closeCvModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(217, 119, 6, 0.12); color: var(--accent-primary); display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 18px auto;">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+
+      <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text-primary); font-family: var(--font-display);">Curriculum Vitae Access</h3>
+      
+      <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px;">
+        তথ্যের সুরক্ষা ও ব্যক্তিগত গোপনীয়তার স্বার্থে পূর্ণাঙ্গ জীবনবৃত্তান্ত (CV) সরাসরি পাবলিক ডাউনলোড সংরক্ষিত রাখা হয়েছে। প্রাতিষ্ঠানিক, গবেষণা বা পেশাগত প্রয়োজনে জীবনবৃত্তান্ত পেতে অনুগ্রহ করে সরাসরি যোগাযোগ করার অনুরোধ করা হচ্ছে।
+      </p>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px; text-align: left; font-size: 0.9rem;">
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-envelope" style="color: var(--accent-primary);"></i>
+          <span><strong>ইমেইল:</strong> mirazulku20@gmail.com</span>
+        </div>
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fab fa-orcid" style="color: #a6ce39;"></i>
+          <span><strong>ORCID:</strong> 0009-0009-5692-8928</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-university" style="color: var(--accent-primary);"></i>
+          <span><strong>অ্যাফিলিয়েশন:</strong> খুলনা বিশ্ববিদ্যালয় (Khulna University)</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="#contact" class="btn btn-primary btn-sm" onclick="closeCvModal()">
+          <i class="fas fa-paper-plane"></i> বার্তা পাঠান (Contact Me)
+        </a>
+        <button class="btn btn-outline btn-sm" onclick="closeCvModal()">
+          বন্ধ করুন
+        </button>
+      </div>
     </div>
   </div>
 
@@ -2842,14 +2857,45 @@
       }
     };
 
+    // CV Access Restricted Modal Functionality
+    window.handleCvClick = function(e) {
+      if (e) {
+        e.preventDefault();
+        e.stopPropagation();
+      }
+      const cvModal = document.getElementById("cv-modal");
+      if (cvModal) {
+        cvModal.classList.add("active");
+        document.body.style.overflow = "hidden";
+      }
+    };
+
+    window.closeCvModal = function() {
+      const cvModal = document.getElementById("cv-modal");
+      if (cvModal) {
+        cvModal.classList.remove("active");
+        document.body.style.overflow = "";
+      }
+    };
+
     document.addEventListener("keydown", (e) => {
-      if (e.key === "Escape") closeReaderModal();
+      if (e.key === "Escape") {
+        closeReaderModal();
+        closeCvModal();
+      }
     });
 
     const modalEl = document.getElementById("reader-modal");
     if (modalEl) {
       modalEl.addEventListener("click", (e) => {
         if (e.target === modalEl) closeReaderModal();
+      });
+    }
+
+    const cvModalEl = document.getElementById("cv-modal");
+    if (cvModalEl) {
+      cvModalEl.addEventListener("click", (e) => {
+        if (e.target === cvModalEl) closeCvModal();
       });
     }
 
