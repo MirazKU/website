@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
@@ -829,6 +829,64 @@
     .research-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
     .research-tag { font-size: 0.75rem; background: var(--bg-subtle); color: var(--text-muted); padding: 3px 10px; border-radius: var(--radius-full); }
 
+    /* Timeline Featured Box & Chips */
+    .timeline-featured-box {
+      margin-top: 14px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--border-light);
+    }
+    .timeline-chips-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-top: 6px;
+    }
+    .timeline-chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.78rem;
+      background: var(--bg-subtle);
+      color: var(--text-secondary);
+      border: 1px solid var(--border-light);
+      padding: 4px 12px;
+      border-radius: var(--radius-full);
+      cursor: pointer;
+      transition: all var(--transition-fast);
+      text-decoration: none;
+    }
+    .timeline-chip:hover {
+      background: var(--accent-subtle);
+      color: var(--accent-primary);
+      border-color: var(--accent-border);
+      transform: translateY(-1px);
+    }
+
+    .load-more-wrap {
+      text-align: center;
+      margin-top: 36px;
+    }
+    .load-more-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 10px 26px;
+      border-radius: var(--radius-full);
+      font-weight: 600;
+      font-size: 0.9rem;
+      cursor: pointer;
+      transition: all var(--transition-base);
+      background: var(--bg-surface);
+      border: 1px solid var(--border-medium);
+      color: var(--text-primary);
+    }
+    .load-more-btn:hover {
+      background: var(--accent-primary);
+      color: var(--text-inverse);
+      border-color: var(--accent-primary);
+      box-shadow: 0 4px 14px var(--accent-glow);
+    }
+
     /* Timeline Section */
     .timeline-container {
       max-width: 860px;
@@ -1029,7 +1087,64 @@
       border-color: var(--accent-border);
     }
 
-    .article-card-img-wrap { overflow: hidden; height: 210px; background: var(--bg-subtle); }
+    .article-card-img-wrap { overflow: hidden; height: 210px; background: var(--bg-subtle); position: relative; }
+    .card-format-pill {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      padding: 4px 10px;
+      border-radius: var(--radius-full);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.03em;
+      z-index: 2;
+      backdrop-filter: blur(8px);
+    }
+    .video-pill {
+      background: rgba(220, 38, 38, 0.92);
+      color: #ffffff;
+      box-shadow: 0 2px 8px rgba(220, 38, 38, 0.4);
+    }
+    .print-pill {
+      background: rgba(15, 23, 42, 0.9);
+      color: #f8fafc;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .online-pill {
+      background: rgba(217, 119, 6, 0.92);
+      color: #ffffff;
+    }
+    .video-play-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all var(--transition-base);
+      z-index: 1;
+    }
+    .video-play-overlay i {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--accent-primary);
+      color: #ffffff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      padding-left: 3px;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.4);
+      transition: transform var(--transition-fast);
+    }
+    .article-card:hover .video-play-overlay {
+      background: rgba(15, 23, 42, 0.15);
+    }
+    .article-card:hover .video-play-overlay i {
+      transform: scale(1.12);
+      background: #ea580c;
+    }
     .article-card-img {
       width: 100%;
       height: 100%;
@@ -1533,23 +1648,23 @@
         <div class="featured-grid">
           <!-- Lead Story -->
           <div id="featured-lead-wrap">
-            <div class="lead-story-card" onclick="openReaderModal('kk-09')">
+            <div class="lead-story-card" onclick="openReaderModal('pr-08')">
               <div class="lead-story-img-wrap">
-                <img src="https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80" alt="Climate Salinity">
+                <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1200&q=80" alt="Mayur River Pollution">
               </div>
               <div class="lead-story-body">
                 <div class="story-meta">
-                  <span class="category-pill">জলবায়ু ও সুন্দরবন</span>
+                  <span class="category-pill">অনুসন্ধান ও পরিবেশ</span>
                   <span>•</span>
                   <span><i class="far fa-clock"></i> ৬ মিনিট পাঠ</span>
                   <span>•</span>
-                  <span>১৪ অক্টোবর ২০২৫</span>
+                  <span>১৫ সেপ্টেম্বর ২০২৫</span>
                 </div>
-                <h3 class="story-headline font-bn">উপকূলীয় লবণাক্ততা ও জলবায়ু উদ্বাস্তুর সংকট: সুন্দরবন সংলগ্ন জনপদ</h3>
-                <p class="story-excerpt font-bn">সুন্দরবন-সংলগ্ন শ্যামনগর ও কয়রায় সুপেয় পানির তীব্র সংকট ও লবণাক্ততার আগ্রাসনে কৃষি ও মৎস্যজীবীদের বাস্তুচ্যুতি নিয়ে কালের কণ্ঠের মাঠপর্যায়ের বিশেষ অনুসন্ধানী প্রতিবেদন।</p>
+                <h3 class="story-headline font-bn">ময়ূর নদ এখন নর্দমা: গবেষণায় সবচেয়ে দূষিত নদ</h3>
+                <p class="story-excerpt font-bn">খুলনা শহরের প্রাণপ্রবাহ ময়ূর নদ আজ বর্জ্যের ভাগাড়ে পরিণত হয়েছে। খুলনা বিশ্ববিদ্যালয়ের অর্থনীতি ডিসিপ্লিনের আন্তর্জাতিক গবেষণায় উঠে এসেছে নদে দ্রবীভূত অক্সিজেনের মারাত্মক পতনের তথ্য। বিশেষ অনুসন্ধানী প্রতিবেদন।</p>
                 <div class="story-footer">
-                  <span class="publication-badge"><i class="fas fa-newspaper"></i> Daily Kaler Kantho</span>
-                  <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); openReaderModal('kk-09')">
+                  <span class="publication-badge"><i class="fas fa-newspaper"></i> দৈনিক কালের কণ্ঠ</span>
+                  <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); openReaderModal('pr-08')">
                     সম্পূর্ণ পড়ুন (Read Dispatch) <i class="fas fa-arrow-right"></i>
                   </button>
                 </div>
@@ -1559,42 +1674,38 @@
 
           <!-- Secondary Stack -->
           <div id="featured-stack-wrap" class="featured-stack">
-            <div class="mini-story-card" onclick="openReaderModal('kk-01')">
+            <div class="mini-story-card" onclick="openReaderModal('pr-05')">
               <div class="story-meta">
-                <span class="category-pill">শৃঙ্খলা ও ক্যাম্পাস</span>
+                <span class="category-pill">ক্লিনটেক উদ্ভাবন</span>
                 <span>•</span>
-                <span>১ নভেম্বর ২০২৬</span>
+                <span>আগামীর সময় (টিআইসি)</span>
               </div>
-              <h4 class="story-headline font-bn">শাস্তি পেলেন খুবির ৩০ শিক্ষার্থী</h4>
-              <p class="story-excerpt font-bn">র‍্যাগিং, মারধর, মানসিক হয়রানি ও মাদক সেবনের পৃথক অভিযোগে খুলনা বিশ্ববিদ্যালয়ের ৩০ শিক্ষার্থীকে বিভিন্ন মেয়াদে শাস্তি প্রদান।</p>
+              <h4 class="story-headline font-bn">কয়েলের বদলে বাজ শিল্ড: খুবির শিক্ষার্থীদের অনন্য উদ্ভাবন</h4>
+              <p class="story-excerpt font-bn">মশার বিষাক্ত ধোঁয়া রোধে প্রাকৃতিক ভেষজ প্রতিরোধক উদ্ভাবন করে ন্যাশনাল ক্লিনটেক অ্যাওয়ার্ড ও সাড়ে আট লাখ টাকার গবেষণা অনুদান লাভ।</p>
               <div class="story-footer">
-                <span class="publication-badge"><i class="fas fa-newspaper"></i> Daily Kaler Kantho</span>
-                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">খবরটি পড়ুন →</span>
+                <span class="publication-badge"><i class="fas fa-newspaper"></i> দৈনিক আগামীর সময়</span>
+                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">প্রতিবেদন পড়ুন →</span>
               </div>
             </div>
 
-            <div class="mini-story-card" onclick="openReaderModal('kk-02')">
+            <div class="mini-story-card" onclick="openReaderModal('pr-01')">
               <div class="story-meta">
-                <span class="category-pill">শিক্ষা ও স্বর্ণপদক</span>
+                <span class="category-pill">ঐতিহ্য ও রপ্তানি গবেষণা</span>
                 <span>•</span>
-                <span>৭ অক্টোবর ২০২৬</span>
+                <span>Daily Observer</span>
               </div>
-              <h4 class="story-headline font-bn">প্রধানমন্ত্রী স্বর্ণপদক পাচ্ছেন খুবির ১২ শিক্ষার্থী</h4>
-              <p class="story-excerpt font-bn">বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরি কমিশন (ইউজিসি) প্রবর্তিত সম্মানজনক 'প্রধানমন্ত্রী স্বর্ণপদক' পাচ্ছেন খুলনা বিশ্ববিদ্যালয়ের ১২ জন কৃতী শিক্ষার্থী।</p>
+              <h4 class="story-headline font-bn">Research suggests expanding molasses market abroad</h4>
+              <p class="story-excerpt font-bn">চুয়াডাঙ্গার সরোজগঞ্জের তিন শতবর্ষী ঐতিহ্যবাহী খেজুরের গুড় ও আন্তর্জাতিক রপ্তানি সম্ভাবনা নিয়ে খুলনা ও ঢাকা বিশ্ববিদ্যালয়ের যৌথ গবেষণা প্রতিবেদন।</p>
               <div class="story-footer">
-                <span class="publication-badge"><i class="fas fa-newspaper"></i> Daily Kaler Kantho</span>
-                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">খবরটি পড়ুন →</span>
+                <span class="publication-badge"><i class="fas fa-newspaper"></i> Daily Observer</span>
+                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">Read Story →</span>
               </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
-    <!-- ========================================================================
-         ABOUT ME SECTION (SYNCHRONIZED WITH CV)
-         ======================================================================== -->
-    <section id="about" class="section section-alt">
+<section id="about" class="section section-alt">
       <div class="container">
         <div class="about-grid">
           <div class="about-visual">
@@ -1689,13 +1800,13 @@
         </div>
 
         <div id="research-grid" class="research-grid">
-          <!-- Project 1 (Thesis) -->
+          <!-- Project 1 (Undergrad Thesis) -->
           <div class="research-card">
             <div class="research-card-top">
               <span class="status-badge published">Undergraduate Thesis</span>
               <span class="research-year"><i class="far fa-calendar-alt"></i> 2025</span>
             </div>
-            <h3 class="research-title">Profession in Peril: Adaptive Strategies among Coastal Fishermen in the Sundarbans of Bangladesh</h3>
+            <h3 class="research-title">Profession in Peril: Adaptive Strategies among Coastal Fishermen in the Sundarbans</h3>
             <div class="research-topic"><i class="fas fa-compass"></i> Climate Vulnerability & Livelihood Adaptation</div>
             <p class="research-abstract">An empirical field thesis investigating how escalating salinity, unpredictable weather extremes, and mangrove ecological restrictions affect the traditional socio-economic coping mechanisms of coastal fishermen in the Sundarbans delta.</p>
             <div class="research-metadata">
@@ -1712,10 +1823,125 @@
             </div>
           </div>
 
-          <!-- Project 2 (Oxfam) -->
+          <!-- Project 2: Sarojganj Date Molasses Export Study -->
           <div class="research-card">
             <div class="research-card-top">
-              <span class="status-badge ongoing">Collaborative Research Project</span>
+              <span class="status-badge published">Published Research</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Oct 2025</span>
+            </div>
+            <h3 class="research-title">Heritage Date Molasses: International Market Expansion & Sarojganj Trade Inquiries</h3>
+            <div class="research-topic"><i class="fas fa-chart-line"></i> Sustainable Rural Economy & Agro-Heritage</div>
+            <p class="research-abstract">Scholarly research study conducted jointly with Dr. Md. Mahmud Alam (Associate Professor, History and Civilization, KU) analyzing Chuadanga's Sarojganj date molasses trade of Tk 703 million annually, chemical adulteration risks, and international export branding.</p>
+            <div class="research-metadata">
+              <div><strong>Researchers:</strong> Dr. Md. Mahmud Alam (KU) & Md. Nurul Alam (DU)</div>
+              <div><strong>Journal/Outlet:</strong> Int. Journal of Sustainable Development / Daily Observer</div>
+              <div><strong>Focus Area:</strong> Sarojganj, Chuadanga (Southwestern Bangladesh)</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Date Molasses</span><span class="research-tag">#Agro-Heritage</span><span class="research-tag">#Export Policy</span><span class="research-tag">#Observer</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-newspaper"></i> Daily Observer Special</span>
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-01')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Project 3: Coastal Belt Climate Poverty & Educational Support -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">EU Collaborative Study</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Nov 2025</span>
+            </div>
+            <h3 class="research-title">Educational Support to Mitigate Climate-Induced Urban Poverty in Coastal Slums</h3>
+            <div class="research-topic"><i class="fas fa-leaf"></i> Climate Distress Migration & Slum Dynamics</div>
+            <p class="research-abstract">Extensive empirical study submitted by Professor Dr. Abdullah Harun Chowdhury (Environmental Science Discipline, KU) funded by the European Union and implemented by Educo and Uttaran across Satkhira coastal unions and urban slums.</p>
+            <div class="research-metadata">
+              <div><strong>Lead Investigator:</strong> Prof. Dr. Abdullah Harun Chowdhury (Env. Science, KU)</div>
+              <div><strong>Funding & Partners:</strong> European Union, Educo & Uttaran / Daily Observer</div>
+              <div><strong>Focus Area:</strong> Buri Goalini, Gabura, Padmapukur (Satkhira) & Slums</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Climate Migration</span><span class="research-tag">#Urban Slums</span><span class="research-tag">#EducoUttaran</span><span class="research-tag">#Observer</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-newspaper"></i> Daily Observer Special</span>
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-02')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Project 4: Mayur River Pollution & Ecological Valuation -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Environmental Economics</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Sep 2025</span>
+            </div>
+            <h3 class="research-title">Urban River Pollution, Ecological Economics & Sewage Degradation of Mayur River</h3>
+            <div class="research-topic"><i class="fas fa-water"></i> Urban Wetland Ecology & Water Quality</div>
+            <p class="research-abstract">Landmark environmental economics research conducted by Prof. Dr. Mohammad Ziaul Haider and Taiyeba Tahsin Meem (Economics Discipline, KU) quantifying catastrophic dissolved oxygen depletion and civic rehabilitation strategies.</p>
+            <div class="research-metadata">
+              <div><strong>Lead Researcher:</strong> Prof. Dr. Mohammad Ziaul Haider (Economics, KU)</div>
+              <div><strong>Reporting By:</strong> H.M. Alauddin & Md. Mirazul Islam / Daily Kaler Kantho</div>
+              <div><strong>Focus Area:</strong> Mayur River Basin & Khulna Urban Wetlands</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Mayur River</span><span class="research-tag">#Water Pollution</span><span class="research-tag">#Economics</span><span class="research-tag">#Kaler Kantho</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-newspaper"></i> Kaler Kantho Lead</span>
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-08')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Project 5: Butterfly Biodiversity & Environmental Health -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge ongoing">Biodiversity Field Study</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> June 2026</span>
+            </div>
+            <h3 class="research-title">World of Colorful Wings: Butterfly Biodiversity & Forest Ecosystem Health</h3>
+            <div class="research-topic"><i class="fas fa-seedling"></i> Biodiversity Indicators & Conservation</div>
+            <p class="research-abstract">Field inquiries examining butterfly species richness, natural pollination dynamics, and microclimate indicators across southwestern forests, conducted under Prof. Dr. Sharif Hasan Limon (Forestry and Wood Technology Discipline, KU).</p>
+            <div class="research-metadata">
+              <div><strong>Lead Researchers:</strong> Prof. Dr. Sharif Hasan Limon & Sajjad Hossain Tuhin</div>
+              <div><strong>Narrative By:</strong> Md. Mirazul Islam / Daily Agamir Somoy</div>
+              <div><strong>Focus Area:</strong> Khulna University Butterfly Park & Sundarbans Forests</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Butterflies</span><span class="research-tag">#Forestry</span><span class="research-tag">#Biodiversity</span><span class="research-tag">#Agamir Somoy</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-feather-alt"></i> Agamir Somoy Feature</span>
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-04')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Project 6: Buz Shield CleanTech Innovation -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Awarded Innovation</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> May 2026</span>
+            </div>
+            <h3 class="research-title">Buz Shield: Plant-Derived Botanical Mosquito Repellent Innovation</h3>
+            <div class="research-topic"><i class="fas fa-flask"></i> CleanTech Innovation & Public Health</div>
+            <p class="research-abstract">Eco-friendly herbal mosquito repellent formulated by Khulna University student innovators Nishat Jahan Nadia and Mizanur Rahman Ratul, winning 3rd prize at National CleanTech Award Ceremony and BDT 8.5 Lakh research grant.</p>
+            <div class="research-metadata">
+              <div><strong>Student Innovators:</strong> Nishat Jahan Nadia & Mizanur Rahman Ratul (KU)</div>
+              <div><strong>Grant & Award:</strong> National CleanTech Award (BDT 8.5 Lakh Grant)</div>
+              <div><strong>Investigation By:</strong> Md. Mirazul Islam / Daily Agamir Somoy</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#CleanTech</span><span class="research-tag">#Buz Shield</span><span class="research-tag">#Public Health</span><span class="research-tag">#Agamir Somoy</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-award"></i> National Award</span>
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-05')">View Innovation Story <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+
+          <!-- Project 7: Oxfam Rupsha LNG Power Plant Study -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge ongoing">Collaborative Research</span>
               <span class="research-year"><i class="far fa-calendar-alt"></i> Collaborative</span>
             </div>
             <h3 class="research-title">Rupsha 800 MW (NWPGCL) LNG Power Plant Research Study</h3>
@@ -1735,13 +1961,13 @@
             </div>
           </div>
 
-          <!-- Project 3 (Research Assistantship) -->
+          <!-- Project 8: Framing Blasphemy Across Regimes -->
           <div class="research-card">
             <div class="research-card-top">
               <span class="status-badge published">Research Assistantship</span>
               <span class="research-year"><i class="far fa-calendar-alt"></i> Academic Project</span>
             </div>
-            <h3 class="research-title">Framing Blasphemy Across Regimes: A Comparative Analysis of News Coverage in Bangladeshi Mainstream Newspapers (2001–Present)</h3>
+            <h3 class="research-title">Framing Blasphemy Across Regimes: Media Coverage in Bangladeshi Newspapers (2001–Present)</h3>
             <div class="research-topic"><i class="fas fa-compass"></i> Media Studies & Political Discourse Analysis</div>
             <p class="research-abstract">Served as Research Assistant to Mazidul Islam (Assistant Professor, Mass Communication & Journalism Discipline, Khulna University). Examined longitudinal framing of religious sensitivities, blasphemy accusations, and communal violence in national dailies.</p>
             <div class="research-metadata">
@@ -1757,32 +1983,8 @@
               <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Research Record <i class="fas fa-shield-alt"></i></a>
             </div>
           </div>
-
-          <!-- Project 4 (Field Enumerator) -->
-          <div class="research-card">
-            <div class="research-card-top">
-              <span class="status-badge ongoing">Research Enumerator</span>
-              <span class="research-year"><i class="far fa-calendar-alt"></i> Field Inquiries</span>
-            </div>
-            <h3 class="research-title">Climate Vulnerability and Livelihoods in Climate-Vulnerable Areas of Bangladesh</h3>
-            <div class="research-topic"><i class="fas fa-compass"></i> Climate Justice & Household Resilience</div>
-            <p class="research-abstract">Extensive empirical field enumeration collecting household demographic, economic, and vulnerability indicators across climate-fragile coastal zones to assess community resilience and distress displacement patterns.</p>
-            <div class="research-metadata">
-              <div><strong>Role:</strong> Research Enumerator & Field Lead</div>
-              <div><strong>Methodology:</strong> Quantitative Survey Design & Field Data Enumeration</div>
-              <div><strong>Focus Area:</strong> Climate-Vulnerable Coastal Zones of Bangladesh</div>
-            </div>
-            <div class="research-tags">
-              <span class="research-tag">#Field Enumeration</span><span class="research-tag">#Climate Vulnerability</span><span class="research-tag">#Livelihoods</span>
-            </div>
-            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
-              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-users"></i> Field Enumeration</span>
-              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Research Record <i class="fas fa-shield-alt"></i></a>
-            </div>
-          </div>
         </div>
-      </div>
-    </section>
+      </div></section>
 
     <!-- ========================================================================
          EXPERIENCE & ACHIEVEMENTS TIMELINE (SYNCHRONIZED WITH CV)
@@ -1812,6 +2014,17 @@
               <p class="timeline-desc">Leading specialized reporting on corruption, investigative research, institutional accountability, and higher education campus affairs.</p>
               <ul class="timeline-highlights">
                 <li>Authored and published over 300+ special reports on corruption and investigative research.</li>
+                <li>Frontline investigations on university governance, student rights, and coastal climate crises.</li>
+              </ul>
+              <div class="timeline-featured-box">
+                <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; color:var(--accent-primary);"><i class="fas fa-newspaper"></i> আলোচিত প্রতিবেদন ও অনুসন্ধান:</div>
+                <div class="timeline-chips-wrap">
+                  <span class="timeline-chip" onclick="openReaderModal('pr-08')"><i class="fas fa-file-alt"></i> ময়ূর নদ দূষণ গবেষণা</span>
+                  <span class="timeline-chip" onclick="openReaderModal('pr-07')"><i class="fas fa-file-alt"></i> খুবির হলরোড বেহাল</span>
+                  <span class="timeline-chip" onclick="openReaderModal('kk-05')"><i class="fas fa-file-alt"></i> গল্লামারী বধ্যভূমি জাদুঘর</span>
+                  <span class="timeline-chip" onclick="openReaderModal('kk-01')"><i class="fas fa-file-alt"></i> শৃঙ্খলা বোর্ডে ৩০ শিক্ষার্থী</span>
+                </div>
+              </div>
                 <li>Conducting frontline field investigations and evidence-based reporting across southwestern Bangladesh.</li>
               </ul>
             </div>
@@ -1829,6 +2042,14 @@
                 <span class="timeline-period">May 2025 – Present</span>
               </div>
               <p class="timeline-desc">Producing in-depth human-interest stories, research-based features, and compelling narratives on social issues and untold human stories.</p>
+              <div class="timeline-featured-box">
+                <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; color:var(--accent-primary);"><i class="fas fa-feather-alt"></i> প্রকাশিত বিশেষ ফিচার ও উদ্ভাবন:</div>
+                <div class="timeline-chips-wrap">
+                  <span class="timeline-chip" onclick="openReaderModal('pr-04')"><i class="fas fa-file-alt"></i> রঙিন ডানার পৃথিবী (প্রজাপতি)</span>
+                  <span class="timeline-chip" onclick="openReaderModal('pr-05')"><i class="fas fa-file-alt"></i> কয়েলের বদলে বাজ শিল্ড</span>
+                  <span class="timeline-chip" onclick="openReaderModal('pr-06')"><i class="fas fa-file-alt"></i> জার্সি বেচে বাড়তি আয় (সেলিম)</span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -1953,21 +2174,22 @@
     <section id="publications" class="section">
       <div class="container">
         <div class="section-header">
-          <span class="section-tag"><i class="fas fa-newspaper"></i> কালের কণ্ঠ ও বিশেষ সংবাদ সংগ্রহশালা</span>
-          <h2 class="section-title">কালের কণ্ঠ বিশেষ প্রতিবেদন ও সংবাদ সংগ্রহশালা (২০২৫ – বর্তমান)</h2>
+          <span class="section-tag"><i class="fas fa-newspaper"></i> অনুসন্ধানী সাংবাদিকতা, ভিডিও ও প্রিন্ট আর্কাইভ</span>
+          <h2 class="section-title">প্রকাশিত প্রতিবেদন, ভিডিও প্যাকেজ ও প্রিন্ট আর্কাইভ</h2>
           <p class="section-desc">
-            দৈনিক কালের কণ্ঠ পত্রিকায় 'খুবি প্রতিনিধি', 'খুলনা বিশ্ববিদ্যালয় প্রতিনিধি' ও 'মো. মিরাজুল ইসলাম' বাইলাইনে প্রকাশিত ক্যাম্পাস, অপরাধ, ভর্তি, গবেষণা, শৃঙ্খলা ও উপকূলীয় জনপদের মাঠপর্যায়ের অনুসন্ধানী সংবাদ। যেকোনো খবরের ওপর ক্লিক করে সম্পূর্ণ খবরটি পড়ুন।
+            দৈনিক কালের কণ্ঠ, ডেইলি অবজারভার ও দৈনিক আগামী সময় পত্রিকায় 'খুবি প্রতিনিধি' ও 'মো. মিরাজুল ইসলাম' বাইলাইনে প্রকাশিত অনলাইন স্পেশাল, ভিডিও প্যাকেজ এবং প্রিন্ট অনুসন্ধানী প্রতিবেদন। কার্ডে ক্লিক করে সরাসরি প্রিভিউ ও বিস্তারিত সংবাদ পড়ুন।
           </p>
         </div>
 
         <div class="media-controls">
           <div class="filter-group">
-            <button class="filter-btn active" data-filter="all">সকল প্রতিবেদন (All)</button>
-            <button class="filter-btn" data-filter="kaler kantho">কালের কণ্ঠ বিশেষ (Kaler Kantho)</button>
-            <button class="filter-btn" data-filter="campus">ক্যাম্পাস ও শৃঙ্খলা (Campus)</button>
-            <button class="filter-btn" data-filter="crime">অনুসন্ধান ও অপরাধ (Crime)</button>
-            <button class="filter-btn" data-filter="education">শিক্ষা ও স্বর্ণপদক (Education)</button>
-            <button class="filter-btn" data-filter="climate">জলবায়ু ও সুন্দরবন (Climate)</button>
+            <button class="filter-btn active" data-filter="all"><i class="fas fa-layer-group"></i> সকল প্রতিবেদন (All)</button>
+            <button class="filter-btn" data-filter="kaler kantho"><i class="fas fa-newspaper"></i> কালের কণ্ঠ (Kaler Kantho)</button>
+            <button class="filter-btn" data-filter="video"><i class="fas fa-video"></i> ভিডিও প্যাকেজ (Videos)</button>
+            <button class="filter-btn" data-filter="print"><i class="fas fa-file-alt"></i> প্রিন্ট ও ফিচার (Print)</button>
+            <button class="filter-btn" data-filter="campus"><i class="fas fa-graduation-cap"></i> ক্যাম্পাস ও শিক্ষার্থী (Campus)</button>
+            <button class="filter-btn" data-filter="climate"><i class="fas fa-leaf"></i> পরিবেশ ও উপকূল (Environment)</button>
+            <button class="filter-btn" data-filter="investigative"><i class="fas fa-search-plus"></i> অনুসন্ধান ও প্রশাসন (Investigation)</button>
           </div>
 
           <div class="search-box">
@@ -2276,311 +2498,966 @@
        ======================================================================== -->
   <script>
     const articlesData = [
+      // =========================================================================
+      // 1. ভিডিও প্যাকেজ (VIDEO PACKAGES - 11 BROADCAST REPORTS WITH FB LINKS)
+      // =========================================================================
+      {
+        id: "vid-01",
+        title: "খুলনা বিশ্ববিদ্যালয়ে ৭০ শতাংশ শিক্ষার্থী থাকেন হলের বাইরে, খাবারের মান নিয়েও প্রশ্ন",
+        englishTitle: "70% Students Live Outside Halls at Khulna University Amid Severe Housing & Food Crisis",
+        category: "ক্যাম্পাস ও আবাসন",
+        categoryLabel: "ভিডিও প্যাকেজ • আবাসন",
+        type: "campus",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "মো. মিরাজুল ইসলাম ও ভিডিও টিম",
+        date: "মে ২০২৬",
+        readTime: "ভিডিও রিপোর্ট • ৩ মিনিট",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/1AVQNe4h6U/",
+        source: "https://www.facebook.com/share/v/1AVQNe4h6U/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের মাত্র ৩০ শতাংশ শিক্ষার্থীর আবাসন সুবিধা রয়েছে। বাকি ৭০ শতাংশ শিক্ষার্থী মেস ও ভাড়া বাসায় চড়া ভাড়া ও নিরাপত্তাহীনতায় দিনাতিপাত করছেন। হলের নিম্নমানের খাবারের চিত্র নিয়ে বিশেষ ভিডিও অনুসন্ধানী প্রতিবেদন।",
+        content: "দক্ষিণ-পশ্চিমাঞ্চলের সর্বোচ্চ বিদ্যাপীঠ খুলনা বিশ্ববিদ্যালয়ে তীব্র আবাসন সংকট শিক্ষার্থীদের একাডেমিক অগ্রযাত্রায় বড় বাধা হয়ে দাঁড়িয়েছে। বর্তমানে বিশ্ববিদ্যালয়ের মোট শিক্ষার্থীর মাত্র ৩০ শতাংশ হলের আবাসন সুবিধা পাচ্ছেন। ফলে প্রায় ৭০ শতাংশ শিক্ষার্থীকে ক্যাম্পাসের বাইরে গল্লামারী, সোনাডাঙ্গা ও আশপাশের এলাকায় উচ্চমূল্যে মেস ও বাসা ভাড়া নিয়ে থাকতে হচ্ছে।\n\nসরেজমিনে মেসগুলোতে ঘুরে দেখা গেছে, অস্বাস্থ্যকর পরিবেশ, অতিরিক্ত ভাড়ার চাপ এবং নিরাপত্তাহীনতার মধ্যে শিক্ষার্থীরা দিন কাটাচ্ছেন। একই সাথে আবাসিক হলগুলোতে সিট পেলেও ডাইনিং ও ক্যান্টিনের খাবারের মান নিয়ে শিক্ষার্থীদের রয়েছে বিস্তর অভিযোগ।\n\nশিক্ষার্থীরা অবিলম্বে নতুন আবাসিক হল নির্মাণ এবং স্বল্পমেয়াদে মেস মালিকদের অতিরিক্ত ভাড়া নিয়ন্ত্রণে বিশ্ববিদ্যালয় প্রশাসনের কার্যকর হস্তক্ষেপ দাবি করেছেন।",
+        tags: ["video", "ভিডিও", "খুবি", "আবাসন সংকট", "হল", "ক্যাম্পাস"]
+      },
+      {
+        id: "vid-02",
+        title: "লবণাক্ত মাটিতে সফল তুলা চাষ, বিঘা প্রতি অর্ধলক্ষ আয়ের সম্ভাবনা",
+        englishTitle: "Successful Cotton Cultivation in Saline Soil: BDT 50,000 Profit Potential per Bigha",
+        category: "পরিবেশ ও উপকূল",
+        categoryLabel: "ভিডিও প্যাকেজ • কৃষি",
+        type: "climate",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "এপ্রিল ২০২৬",
+        readTime: "ভিডিও রিপোর্ট • ৪ মিনিট",
+        image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/188yXKmWrc/",
+        source: "https://www.facebook.com/share/v/188yXKmWrc/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "দক্ষিণাঞ্চলের উপকূলীয় লবণাক্ত জমিতে লবণ-সহনশীল তুলা চাষে অভাবনীয় সাফল্য। বিঘা প্রতি অর্ধ লক্ষাধিক টাকা নিট মুনাফার নতুন আশা জাগিয়েছে প্রান্তিক কৃষকদের মাঝে। ভিডিও প্রতিবেদনে কৃষকদের সাফল্যগাথা।",
+        content: "উপকূলীয় অঞ্চলে লবণাক্ততার কারণে যেখানে প্রচলিত ধানের আবাদ ক্ষতিগ্রস্ত হচ্ছে, সেখানে নতুন অর্থনৈতিক সম্ভাবনা সৃষ্টি করেছে লবণ-সহনশীল জাতের তুলা চাষ। খুলনা ও সাতক্ষীরার বিভিন্ন উপজেলার পরিত্যক্ত লবণাক্ত জমিতে কৃষকরা এখন বাণিজ্যিক ভিত্তিতে তুলা উৎপাদন করছেন।\n\nকৃষি গবেষক ও চাষীদের সাথে কথা বলে জানা যায়, অল্প খরচে এবং কম সেচেই এ তুলার ফলন চমৎকার হচ্ছে। বিঘা প্রতি মাত্র ১৫ থেকে ২০ হাজার টাকা ব্যয়ে প্রায় ৬০ থেকে ৭০ হাজার টাকার তুলা বিক্রির সুযোগ রয়েছে, যা উপকূলীয় অর্থনীতির জন্য বড় স্বস্তির সংবাদ।\n\nতুলা উন্নয়ন বোর্ডের কর্মকর্তারা জানান, মাঠপর্যায়ে উন্নত বীজ ও কারিগরি প্রশিক্ষণ বাড়ানো গেলে দক্ষিণাঞ্চলের হাজার হাজার হেক্টর অনাবাদি জমি তুলা বিপ্লবের অংশ হতে পারে।",
+        tags: ["video", "ভিডিও", "তুলা চাষ", "লবণাক্ততা", "উপকূল", "কৃষি"]
+      },
+      {
+        id: "vid-03",
+        title: "গ্রীষ্মের রঙে রঙিন খুলনা বিশ্ববিদ্যালয় ক্যাম্পাস",
+        englishTitle: "Summer Colors Adorn Khulna University Campus with Blossoming Blooms",
+        category: "ক্যাম্পাস ও প্রকৃতি",
+        categoryLabel: "ভিডিও প্যাকেজ • ক্যাম্পাস",
+        type: "campus",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "মে ২০২৬",
+        readTime: "ভিডিও ফিচার • ২ মিনিট",
+        image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/1GJyc5to54/",
+        source: "https://www.facebook.com/share/v/1GJyc5to54/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "গ্রীষ্মের তপ্ত রোদে কৃষ্ণচূড়া, রাধাচূড়া, সোনালু ও জারুল ফুলে বর্ণিল সাজে সেজেছে খুলনা বিশ্ববিদ্যালয় প্রাঙ্গণ। ড্রোন ফুটেজ ও শিক্ষার্থীদের উচ্ছ্বাস নিয়ে নান্দনিক ভিডিও ফিচার।",
+        content: "গ্রীষ্মের প্রখর রোদ উপেক্ষা করে খুলনা বিশ্ববিদ্যালয় ক্যাম্পাসের প্রতিটি কোণ যেন সেজেছে রঙের মেলায়। জয়বাংলা চত্বর থেকে শুরু করে অদম্য বাংলা, বোটানিক্যাল গার্ডেন ও আবাসিক হলগুলোর সামনের পথ রক্তিম কৃষ্ণচূড়া আর হলুদ সোনালু ফুলে ছেয়ে গেছে।\n\nক্যাম্পাসের এই নয়নাভিরাম রূপ উপভোগ করতে শিক্ষার্থীদের পাশাপাশি বহিরাগত দর্শনার্থীরাও ভিড় করছেন। ভিডিও চিত্রে ড্রোন ক্যামেরা ও ক্লোজ-আপ শটের মাধ্যমে ক্যাম্পাসের নৈসর্গিক রূপ ও শিক্ষার্থীদের উচ্ছ্বাস তুলে ধরা হয়েছে।",
+        tags: ["video", "ভিডিও", "খুবি ক্যাম্পাস", "প্রকৃতি", "কৃষ্ণচূড়া"]
+      },
+      {
+        id: "vid-04",
+        title: "খুলনা বিশ্ববিদ্যালয়ে চলছে বিরতিহীন বর্ষবরণের প্রস্তুতি",
+        englishTitle: "Non-Stop Preparations for Pahela Baishakh Festivities at Khulna University",
+        category: "সংস্কৃতি ও উৎসব",
+        categoryLabel: "ভিডিও প্যাকেজ • সংস্কৃতি",
+        type: "campus",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "খুবি প্রতিনিধি",
+        date: "১৩ এপ্রিল ২০২৬",
+        readTime: "ভিডিও রিপোর্ট • ৩ মিনিট",
+        image: "https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/1Jmsr6hopC/",
+        source: "https://www.facebook.com/share/v/1Jmsr6hopC/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "পহেলা বৈশাখ ও বাংলা নববর্ষ বরণে চারুকলা স্কুলের শিক্ষার্থীদের দিনরাত এক করে মুখোশ, সরাচিত্র ও ঐতিহ্যবাহী ভাস্কর্য তৈরির নেপথ্য প্রস্তুতি নিয়ে বিশেষ ভিডিও কভারেজ।",
+        content: "বাঙালির প্রাণের উৎসব বাংলা নববর্ষকে বরণ করতে খুলনা বিশ্ববিদ্যালয় ক্যাম্পাসে চলছে উৎসবমুখর ও বিরামহীন প্রস্তুতি। চারুকলা স্কুলের উঠোনে শিক্ষার্থীরা দলবেঁধে বাঘ, প্যাঁচা, হাতি ও লোকজ মোটিফের বিশালাকার মুখোশ ও প্রতিকৃতি তৈরিতে ব্যস্ত সময় পার করছেন।\n\nমঙ্গল শোভাযাত্রার মূল বার্তা এবং লোকজ সংস্কৃতির হারিয়ে যাওয়া উপাদানকে পুনরুজ্জীবিত করার লক্ষ্য নিয়ে কাজ করছেন তরুণ শিল্পীরা। ভিডিও প্রতিবেদনে উঠে এসেছে তাঁদের অক্লান্ত পরিশ্রম, রঙের ছটা ও নববর্ষের আগমনী বার্তা।",
+        tags: ["video", "ভিডিও", "পহেলা বৈশাখ", "চারুকলা", "বর্ষবরণ", "খুবি"]
+      },
+      {
+        id: "vid-05",
+        title: "খুলনা বিশ্ববিদ্যালয়ে ৩০ বছর ধরে ব্যতিক্রমী পরিচর্যায় বেড়ে উঠেছে বিরল বৃক্ষ",
+        englishTitle: "Rare Botanical Tree Flourishes Through 3 Decades of Care at Khulna University",
+        category: "পরিবেশ ও জীববৈচিত্র্য",
+        categoryLabel: "ভিডিও প্যাকেজ • প্রকৃতি",
+        type: "climate",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "মার্চ ২০২৬",
+        readTime: "ভিডিও ফিচার • ৪ মিনিট",
+        image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/1SRyHrmq4p/",
+        source: "https://www.facebook.com/share/v/1SRyHrmq4p/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের বোটানিক্যাল গার্ডেন ও ক্যাম্পাসে তিন দশক ধরে গবেষকদের নিরবচ্ছিন্ন যত্নে টিকে থাকা বিলুপ্তপ্রায় ও বিরল প্রজাতির ভেষজ ও বনজ বৃক্ষের ভিডিও ডকুমেন্টারি।",
+        content: "খুলনা বিশ্ববিদ্যালয় ক্যাম্পাসের জীববৈচিত্র্যের এক অন্যতম অহংকার এর বিরল প্রজাতির বৃক্ষরাজি। ১৯৯১ সালে বিশ্ববিদ্যালয়ের সূচনালগ্ন থেকে গবেষক, মালী ও পরিবেশপ্রেমী শিক্ষকদের আন্তরিক পরিচর্যায় প্রায় ৩০ বছর ধরে ডালপালা মেলে মাথা উঁচু করে দাঁড়িয়ে রয়েছে দেশের দুর্লভ এক বৃক্ষ।\n\nফরেস্ট্রি অ্যান্ড উড টেকনোলজি ডিসিপ্লিনের শিক্ষক ও গবেষকরা জানান, এই বিরল বৃক্ষটি প্রাকৃতিক পরাগায়ন ও পরিবেশের ভারসাম্য রক্ষায় অত্যন্ত গুরুত্বপূর্ণ। ভিডিওতে এই উদ্ভিদের বৈশিষ্ট্য, ইতিহাস ও সুরক্ষার নানা উদ্যোগ তুলে ধরা হয়েছে।",
+        tags: ["video", "ভিডিও", "বিরল বৃক্ষ", "বোটানিক্যাল গার্ডেন", "পরিবেশ", "খুবি"]
+      },
+      {
+        id: "vid-06",
+        title: "মশার কয়েলের বিকল্প উদ্ভাবন খুলনা বিশ্ববিদ্যালয় শিক্ষার্থীদের",
+        englishTitle: "KU Students Innovate Natural Mosquito Repellent as Safe Alternative to Coils",
+        category: "বিজ্ঞান ও উদ্ভাবন",
+        categoryLabel: "ভিডিও প্যাকেজ • বিজ্ঞান",
+        type: "education",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "ফেব্রুয়ারি ২০২৬",
+        readTime: "ভিডিও রিপোর্ট • ৩ মিনিট",
+        image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/1CqbzStD3m/",
+        source: "https://www.facebook.com/share/v/1CqbzStD3m/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "বিষাক্ত রাসায়নিক কয়েলের ক্ষতিকর ধোঁয়া থেকে বাঁচতে খুবি শিক্ষার্থীদের প্রাকৃতিক ও পরিবেশবান্ধব ভেষজ 'বাজ শিল্ড' উদ্ভাবন। জাতীয় পর্যায়ে ক্লিনটেক অ্যাওয়ার্ড অর্জনের ভিডিও ফিচার।",
+        content: "মশার কয়েলের বিষাক্ত ধোঁয়া ফুসফুস ও স্বাস্থ্যের চরম ক্ষতি করে। এই সংকট সমাধানে খুলনা বিশ্ববিদ্যালয়ের ফার্মেসি ও এনভায়রনমেন্টাল সায়েন্সের মেধাবী শিক্ষার্থীরা স্থানীয় ভেষজ নির্যাসের সমন্বয়ে তৈরি করেছেন ধোঁয়াহীন ও নিরাপদ মশা প্রতিরোধক 'বাজ শিল্ড'।\n\nএ উদ্ভাবনটি জাতীয় পর্যায়ে ক্লিনটেক অ্যাওয়ার্ড লাভ করেছে এবং সাড়ে আট লাখ টাকার গবেষণা অনুদান পেয়েছে। ল্যাবরেটরিতে এর প্রস্তুতি, কার্যকারিতা পরীক্ষা এবং উদ্ভাবক শিক্ষার্থীদের ভবিষ্যৎ পরিকল্পনার ভিডিও রিপোর্ট।",
+        tags: ["video", "ভিডিও", "বাজ শিল্ড", "মশার কয়েল বিকল্প", "উদ্ভাবন", "খুবি"]
+      },
+      {
+        id: "vid-07",
+        title: "খুলনা বিশ্ববিদ্যালয়ে প্লাস্টিকের বিনিময়ে মিলছে গাছের চারা",
+        englishTitle: "Saplings in Exchange for Plastic: Unique Green Initiative at Khulna University",
+        category: "পরিবেশ আন্দোলন",
+        categoryLabel: "ভিডিও প্যাকেজ • পরিবেশ",
+        type: "climate",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "খুবি প্রতিনিধি",
+        date: "জানুয়ারি ২০২৬",
+        readTime: "ভিডিও রিপোর্ট • ২ মিনিট",
+        image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/18HUwYW99s/",
+        source: "https://www.facebook.com/share/v/18HUwYW99s/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "পরিবেশ দূষণ রোধ ও প্লাস্টিকমুক্ত সবুজ ক্যাম্পাস গড়তে পরিত্যক্ত প্লাস্টিক বোতল ও বর্জ্য জমা দিয়ে বিনামূল্যে ফলদ ও বনজ গাছের চারা নেওয়ার অভিনব উদ্যোগ নিয়ে সচিত্র ভিডিও প্রতিবেদন।",
+        content: "প্লাস্টিক বর্জ্যের ক্ষতিকর প্রভাব থেকে ক্যাম্পাসকে মুক্ত রাখতে খুলনা বিশ্ববিদ্যালয়ে শিক্ষার্থীদের পরিচালিত এক পরিবেশবাদী সংগঠন শুরু করেছে 'প্লাস্টিকের বিনিময়ে চারা' কর্মসূচি। যেকোনো শিক্ষার্থী বা পরিচ্ছন্নতাকর্মী নির্দিষ্ট ওজনের পরিত্যক্ত বোতল বা পলিথিন জমা দিলেই পাচ্ছেন ফলদ, বনজ বা ঔষধি চারা।\n\nএ ব্যতিক্রমী উদ্যোগে সাধারণ শিক্ষার্থীদের মাঝে ব্যাপক সাড়া পড়েছে। ভিডিও চিত্রে শিক্ষার্থীদের জমা দেওয়া প্লাস্টিকের হিসাব ও ক্যাম্পাসের বনায়নে এর দীর্ঘমেয়াদি প্রভাব তুলে ধরা হয়েছে।",
+        tags: ["video", "ভিডিও", "প্লাস্টিকমুক্ত ক্যাম্পাস", "গাছের চারা", "পরিবেশ"]
+      },
+      {
+        id: "vid-08",
+        title: "ভুল চিকিৎসার বলি দৃষ্টিহীন মোস্তফা",
+        englishTitle: "Victim of Medical Negligence: Mustafa Loses Eyesight Completely",
+        category: "অনুসন্ধান ও মানবাধিকার",
+        categoryLabel: "ভিডিও প্যাকেজ • অপরাধ ও ন্যায়বিচার",
+        type: "crime",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "ডিসেম্বর ২০২৫",
+        readTime: "ভিডিও অনুসন্ধান • ৫ মিনিট",
+        image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/1HjJg6iyHv/",
+        source: "https://www.facebook.com/share/v/1HjJg6iyHv/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "ভুল অস্ত্রোপচার ও চিকিৎসকদের চরম অবহেলায় চিরতরে চোখের আলো হারানো প্রান্তিক দিনমজুর মোস্তফার হৃদয়বিদারক মানবিক গল্প ও আইনি সুরক্ষার দাবি নিয়ে বিশেষ ভিডিও অনুসন্ধান।",
+        content: "খুলনার এক বেসরকারি চোখের ক্লিনিকে ছানি অস্ত্রোপচারের সাধারণ অপারেশনে গিয়ে চিকিৎসকের চরম অবহেলা ও ভুল চিকিৎসার শিকার হন হতদরিদ্র মোস্তফা। ভুল ইনজেকশন ও অসাবধানতার কারণে ইনফেকশন ছড়িয়ে পড়ে তিনি তাঁর দুটি চোখের দৃষ্টিই চিরতরে হারিয়েছেন।\n\nউপার্জনক্ষম একমাত্র মানুষটির এই করুণ পরিণতিতে পুরো পরিবার আজ অনাহারে ও চরম অর্থসংকটে। ক্লিনিক কর্তৃপক্ষের দায়িত্বজ্ঞানহীন আচরণ এবং চিকিৎসা অবহেলার বিচার দাবিতে ভুক্তভোগীর পরিবারের আর্তনাদ নিয়ে তৈরি এই বিশেষ অনুসন্ধানী ভিডিও।",
+        tags: ["video", "ভিডিও", "ভুল চিকিৎসা", "মানবাধিকার", "অনুসন্ধান"]
+      },
+      {
+        id: "vid-09",
+        title: "খুলনা বিশ্ববিদ্যালয় শিক্ষার্থীর তুলিতে উপকূলীয় জেলেদের জীবন সংগ্রাম",
+        englishTitle: "Struggle of Coastal Fishermen Painted by KU Fine Arts Student",
+        category: "চারুকলা ও জীবন",
+        categoryLabel: "ভিডিও প্যাকেজ • চারুকলা",
+        type: "campus",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "খুবি প্রতিনিধি",
+        date: "নভেম্বর ২০২৫",
+        readTime: "ভিডিও রিপোর্ট • ৩ মিনিট",
+        image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/14pXjRP7gyM/",
+        source: "https://www.facebook.com/share/v/14pXjRP7gyM/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "সুন্দরবন ও উপকূলের চরম বিপদাপন্ন জেলে পরিবারের প্রাত্যহিক লড়াই, ঝড়-জলোচ্ছ্বাসের স্মৃতি ক্যানভাসে ফুটিয়ে তুলে আন্তর্জাতিক দৃষ্টি আকর্ষণ করা খুবি চারুকলা শিক্ষার্থীর শিল্পকর্ম নিয়ে ভিডিও রিপোর্ট।",
+        content: "জলবায়ু পরিবর্তনের অভিঘাত আর সুন্দরবনের গভীর সংকটে বেঁচে থাকা উপকূলীয় জেলেদের জীবনসংগ্রাম ক্যানভাসে জীবন্ত করে তুলেছেন খুলনা বিশ্ববিদ্যালয়ের চারুকলা স্কুলের শিক্ষার্থী। তেলরং ও জলরঙে আঁকা প্রতিটি চিত্রে ফুটে উঠেছে জাল টানার ক্লান্তি, দস্যু আতঙ্ক আর লবণাক্ত জলের নির্মম বাস্তবতা।\n\nশিল্পীর সাথে কথোপকথন ও তাঁর চিত্রকর্মের অন্তর্নিহিত মানবিক বার্তা নিয়ে এই মনোজ্ঞ ভিডিও প্রতিবেদন।",
+        tags: ["video", "ভিডিও", "চারুকলা", "উপকূলীয় জেলে", "চিত্রকর্ম", "খুবি"]
+      },
+      {
+        id: "vid-10",
+        title: "জীবিকার সম্বল হারিয়ে নিঃস্ব আলেক চাচা, পাশে দাঁড়ানোর আহ্বান",
+        englishTitle: "Losing Sole Livelihood: Destitute Uncle Alek Appeals for Public Help",
+        category: "মানবিক অনুসন্ধান",
+        categoryLabel: "ভিডিও প্যাকেজ • মানবিক",
+        type: "human rights",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "অক্টোবর ২০২৫",
+        readTime: "ভিডিও রিপোর্ট • ৪ মিনিট",
+        image: "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/17WbTyeZgM/",
+        source: "https://www.facebook.com/share/v/17WbTyeZgM/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "বার্ধক্যে এসে উপার্জনের একমাত্র ভ্যানটি হারিয়ে অনাহারে দিনাতিপাত করা খুলনার বয়োবৃদ্ধ আলেক চাচার পাশে দাঁড়াতে সমাজের বিত্তবান ও মানবিক মানুষদের প্রতি আকুল আবেদন নিয়ে বিশেষ ভিডিও প্রতিবেদন।",
+        content: "বয়সের ভারে নুয়ে পড়া শরীর নিয়ে ভ্যান চালিয়ে দিনাতিপাত করতেন সত্তরোর্ধ্ব আলেক চাচা। কিন্তু সম্প্রতি এক দুর্ঘটনায় তাঁর একমাত্র সম্বল ভ্যানগাড়িটি দুমড়েমুচড়ে যায়। উপার্জনের পথ বন্ধ হয়ে যাওয়ায় অসুস্থ স্ত্রীকে নিয়ে মানবেতর জীবনযাপন করছেন তিনি।\n\nপ্রান্তিক সমাজের অসহায় মানুষের প্রতি সামাজিক দায়িত্ববোধের জায়গা থেকে সাংবাদিক মো. মিরাজুল ইসলাম এই মানবিক আবেদনমূলক ভিডিও প্রকাশ করেন।",
+        tags: ["video", "ভিডিও", "মানবিক", "আলেক চাচা", "সাহায্য"]
+      },
+      {
+        id: "vid-11",
+        title: "আবাসন ও পুষ্টিকর খাবারের সংকটে খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থীরা",
+        englishTitle: "Severe Crisis of Accommodation and Nutritious Food at KU Student Halls",
+        category: "ক্যাম্পাস ও শিক্ষার্থী",
+        categoryLabel: "ভিডিও প্যাকেজ • ক্যাম্পাস",
+        type: "campus",
+        format: "video",
+        newspaper: "ভিডিও প্যাকেজ",
+        writer: "খুবি প্রতিনিধি",
+        date: "আগস্ট ২০২৫",
+        readTime: "ভিডিও রিপোর্ট • ৩ মিনিট",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+        videoUrl: "https://www.facebook.com/share/v/1BtSMyRGE3/",
+        source: "https://www.facebook.com/share/v/1BtSMyRGE3/",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "আবাসিক হলের ডাইনিং ও ক্যান্টিনে চরম নিম্নমানের পুষ্টিহীন খাবার এবং আসন বরাদ্দের দীর্ঘসূত্রতায় শিক্ষার্থীদের শারীরিক ও মানসিক ভোগান্তি নিয়ে সরেজমিন ভিডিও অনুসন্ধান।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের আবাসিক হলগুলোতে ডাইনিংয়ের খাবারের মান নিয়ে শিক্ষার্থীদের দীর্ঘদিনের ক্ষোভ। বাজারের মূল্যবৃদ্ধির অজুহাতে খাবারের গুণগত মান হ্রাস এবং পুষ্টিহীন মেন্যুর কারণে শিক্ষার্থীরা বিভিন্ন পেটের পীড়ায় আক্রান্ত হচ্ছেন।\n\nপাশাপাশি আবাসন সংকটের কারণে বাধ্য হয়ে অনেকে অপর্যাপ্ত আলো-বাতাসের কক্ষে গাদাগাদি করে বাস করছেন। সরেজমিনে হলের রান্নাঘর ও শিক্ষার্থীদের সাক্ষাৎকারে উঠে এসেছে এই সংকটের ভয়াবহতা।",
+        tags: ["video", "ভিডিও", "খাবারের মান", "ক্যান্টিন", "আবাসন", "খুবি"]
+      },
+
+      // =========================================================================
+      // 2. প্রিন্টে প্রকাশিত স্পেশাল রিপোর্ট (PRINT SPECIAL DISPATCHES & ENGLISH DAILIES)
+      // =========================================================================
+      {
+        id: "pr-01",
+        title: "Research suggests expanding molasses market abroad",
+        englishTitle: "Sarojganj Date Molasses Heritage & Global Export Strategy",
+        category: "Research & Commerce",
+        categoryLabel: "প্রিন্ট স্পেশাল • গবেষণা",
+        type: "investigative",
+        format: "print",
+        newspaper: "Daily Observer",
+        printDetails: "Daily Observer, 28 October 2025 (Page 3)",
+        writer: "Our Correspondent (KHULNA)",
+        date: "28 October 2025",
+        readTime: "Print Dispatch • 5 min",
+        image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.observerbd.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "A landmark research study by Khulna University Associate Professor Dr. Md. Mahmud Alam and Dhaka University scholar Md. Nurul Alam at Bangladesh's largest date molasses hub at Sarojganj, Chuadanga. Recommends international export, combating chemical adulteration, preserving 300-year traditional sap extraction heritage, and branding pure patali and jhola gur abroad.",
+        content: "KHULNA, Oct 28: Researchers have strongly recommended expanding export opportunities through international market promotion to earn vital foreign currency from Bangladeshi traditional date molasses.\n\nIn a comprehensive joint study by researchers from Khulna and Dhaka universities at the country's largest date molasses market in Sarojganj, Chuadanga, scholars underscored the urgent need to launch replanting initiatives for date palm trees across Chuadanga, Jashore, and nearby southwestern districts.\n\nPublished in the International Journal of Sustainable Development and Planning, the study led by Associate Professor Dr. Md. Mahmud Alam of Khulna University History and Civilization Discipline and Md. Nurul Alam of DU revealed that while locals claim Sarojganj market is nearly 300 years old, empirical trade records verify it emerged as an organized commercial hub around the second decade of the 20th century.\n\nBetween 2017 and 2022, an average of 5,412 metric tons of molasses was traded annually at Sarojganj, with an estimated transaction value of Tk 703 million. However, rampantly declining date palm trees due to brick kiln usage and unscrupulous chemical adulteration threaten this heritage industry unless soft loans, farmer incentives, and national branding are enacted immediately.",
+        tags: ["print", "Daily Observer", "Date Molasses", "Sarojganj", "Research", "Export"]
+      },
+      {
+        id: "pr-02",
+        title: "Educational support can help reduce urban poverty in coastal belt: KU researcher",
+        englishTitle: "Breaking Climate Vulnerability and Distress Urban Migration",
+        category: "Climate & Education",
+        categoryLabel: "প্রিন্ট স্পেশাল • জলবায়ু",
+        type: "climate",
+        format: "print",
+        newspaper: "Daily Observer",
+        printDetails: "Daily Observer, 25 November 2025 (Page 3)",
+        writer: "Our Correspondent (KHULNA)",
+        date: "25 November 2025",
+        readTime: "Print Dispatch • 6 min",
+        image: "https://images.unsplash.com/photo-1497633762265-9d179a990aa6?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.observerbd.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "Research submitted by Professor Dr. Abdullah Harun Chowdhury of Environmental Science Discipline at Khulna University (project funded by EU, implemented by Educo & Uttaran). Highlights severe climate distress migration, salinity, drinking water scarcity, and recommended targeted educational support to break generational poverty.",
+        content: "KHULNA, Nov 25: A Khulna University research report has strongly recommended introducing salt-tolerant agriculture in coastal belts while mitigating urban poverty in slums through educational and material support instead of temporary cash handouts.\n\nSubmitted by Professor Dr. Abdullah Harun Chowdhury of Environmental Science Discipline at Khulna University, the European Union-funded project implemented by Educo and Uttaran assessed the acute socio-environmental crisis in southwestern coastal unions including Buri Goalini, Gabura, and Padmapukur in Shyamnagar, Satkhira, as well as 5 urban slum clusters.\n\nRepeated climate shocks from Cyclones Sidr and Aila, coupled with chronic hypersalinity, have wiped out freshwater fisheries and paddy lands, forcing thousands of families into severe distress migration toward urban informal settlements. In coastal villages, nearly one-third of families survive on rice and lentils, with 60-74% of women suffering reproductive ailments due to unhygienic saline water.\n\nIn urban slums, displaced families endure waterlogging, squalor, and daily eviction threats. Professor Chowdhury urged authorities to direct assistance to tuition, nutrition, clothing, and schooling to keep displaced children from dropping out into hazardous child labor.",
+        tags: ["print", "Daily Observer", "Climate Migration", "Urban Poverty", "Khulna University"]
+      },
+      {
+        id: "pr-03",
+        title: "Salinity intrusion, pollution major challenges to sustainable dev in coastal region: Dr Faridul",
+        englishTitle: "International Conference on Coastal Environmental Resilience at KU",
+        category: "Environment & Policy",
+        categoryLabel: "প্রিন্ট স্পেশাল • পরিবেশ",
+        type: "climate",
+        format: "print",
+        newspaper: "Daily Observer",
+        printDetails: "Daily Observer (International Conference Special)",
+        writer: "Our Correspondent (KHULNA)",
+        date: "17 April 2025",
+        readTime: "Print Dispatch • 5 min",
+        image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.observerbd.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "State Minister for Environment, Forest and Climate Change Dr. Sheikh Faridul Islam inaugurated a 2-day international conference on coastal resilience at Khulna University. Highlighted urgent multi-sectoral actions against salinity encroachment, protection of Sundarbans mangroves, and opening of KU Soil Archive.",
+        content: "KHULNA, Apr 17: State Minister for Environment, Forest and Climate Change Dr. Sheikh Faridul Islam addressed the inaugural session of a two-day international conference titled 'Soil, Water and Environmental Resilience in the Coastal Zone of Bangladesh under a Changing Climate' at Khulna University.\n\nOrganized by the university's Soil, Water and Environment Discipline at the Liaquat Ali Auditorium, the conference brought together over 300 delegates and 200 technical research presentations from Bangladesh, Japan, China, and across the globe.\n\nThe State Minister warned that increasing salinity and chemical pollution of coastal soils and water bodies pose immediate structural threats to Bangladesh's food sovereignty and economic stability, particularly in vulnerable zones like Rampal, Mongla, Koyra, and Shyamnagar. Vice-Chancellor Prof. Dr. Md. Rezaul Karim highlighted that KU aims not only to excel in research but to generate real-world policy solutions.\n\nFollowing the inaugural session, dignitaries visited the newly established National Soil Archive at KU Academic Building-2, preserving soil samples from across Bangladesh for long-term ecological analysis.",
+        tags: ["print", "Daily Observer", "Salinity", "Sundarbans", "Conference", "KU"]
+      },
+      {
+        id: "pr-04",
+        title: "রঙিন ডানার পৃথিবী: প্রজাপতি নিয়ে খুবির গবেষণা",
+        englishTitle: "World of Colorful Wings: Butterfly Biodiversity Research at Khulna University",
+        category: "পরিবেশ ও জীববৈচিত্র্য",
+        categoryLabel: "প্রিন্ট স্পেশাল • জীববৈচিত্র্য",
+        type: "climate",
+        format: "print",
+        newspaper: "দৈনিক আগামীর সময়",
+        printDetails: "দৈনিক আগামীর সময় (বিশেষ সচিত্র ম্যাগাজিন ফিচার)",
+        writer: "লিখেছেন: মিরাজুল ইসলাম",
+        date: "জুন ২০২৬",
+        readTime: "সচিত্র ফিচার • ৬ মিনিট",
+        image: "https://images.unsplash.com/photo-1550853024-fae8cd4be477?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.agamirsomoy.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "প্রজাপতি নিয়ে গবেষণা করছেন খুলনা বিশ্ববিদ্যালয়ের ফরেস্ট্রি অ্যান্ড উড টেকনোলজি ডিসিপ্লিনের অধ্যাপক ড. শরীফ হাসান লিমন ও গবেষণা সহযোগী সাজ্জাদ হোসেন তুহিন। সুন্দরবন ও দক্ষিণ-পশ্চিমাঞ্চলের বিরল প্রজাপতির প্রজাতি, প্রজাপতি পার্ক ও পরাগায়নে তাদের পরিবেশগত ভূমিকা নিয়ে বিস্তৃত সচিত্র প্রতিবেদন।",
+        content: "ভোরের আলো ফুটতেই একদল গবেষক ক্যামেরা ও লেন্স কাঁধে নিয়ে ছুটে চলেন বন-বাদাড়ে। তাঁদের চোখ খুঁজে ফেরে ফুলের পরাগে বসে থাকা রঙিন ডানার চঞ্চল ডানার প্রজাপতি। খুলনা বিশ্ববিদ্যালয়ের ফরেস্ট্রি অ্যান্ড উড টেকনোলজি ডিসিপ্লিনের অধ্যাপক ড. শরীফ হাসান লিমন ও তাঁর গবেষণা সহযোগী সাজ্জাদ হোসেন তুহিন দীর্ঘদিন ধরে সুন্দরবন সংলগ্ন দক্ষিণাঞ্চলের প্রজাপতি বৈচিত্র্য ও সংরক্ষণ নিয়ে নিবিড় গবেষণা চালাচ্ছেন।\n\nগবেষক দল জানান, প্রজাপতি কেবল প্রকৃতির সৌন্দর্য নয়, বরং তারা পরিবেশের স্বাস্থ্য ও পরাগায়নের অন্যতম নির্দেশক। যেখানে প্রজাপতির ঘনত্ব বেশি, সেখানকার উদ্ভিদ ও বায়ু তুলনামূলক বিশুদ্ধ। খুলনা বিশ্ববিদ্যালয়ের ভেতরে প্রস্তাবিত বাটারফ্লাই পার্ক স্থাপন ও উপকূলীয় প্রজাতির জিনগত তথ্য সংরক্ষণের ওপর গবেষণাপত্রে বিশেষ জোর দেওয়া হয়েছে।\n\nসচিত্র এ প্রতিবেদনে বিরল প্রজাতির ব্লু মরমন, প্লেইন টাইগার ও কমন ক্রোর জীবনাচরণ এবং জলবায়ু পরিবর্তনে তাদের আবাসস্থল ধ্বংসের ঝুঁকি তুলে ধরা হয়েছে।",
+        tags: ["print", "আগামীর সময়", "প্রজাপতি", "জীববৈচিত্র্য", "খুবি", "গবেষণা"]
+      },
+      {
+        id: "pr-05",
+        title: "কয়েলের বদলে বাজ শিল্ড: খুবির শিক্ষার্থীদের অনন্য উদ্ভাবন",
+        englishTitle: "Buz Shield: Natural Mosquito Repellent by Khulna University Innovators",
+        category: "উদ্ভাবন ও বিজ্ঞান",
+        categoryLabel: "প্রিন্ট স্পেশাল • উদ্ভাবন",
+        type: "education",
+        format: "print",
+        newspaper: "দৈনিক আগামীর সময়",
+        printDetails: "দৈনিক আগামীর সময় (টিআইসি পাতা)",
+        writer: "বিস্তারিত লিখেছেন: মিরাজুল ইসলাম",
+        date: "২২ মে ২০২৬",
+        readTime: "প্রিন্ট ফিচার • ৫ মিনিট",
+        image: "https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.agamirsomoy.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "মশার কামড় ও রাসায়নিক কয়েলের বিষাক্ত ধোঁয়া থেকে সুরক্ষায় খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থী নিশাত জাহান নাদিয়া ও মিজানুর রহমান রাতুল তৈরি করেছেন প্রাকৃতিক প্রতিরোধক 'বাজ শিল্ড'। ন্যাশনাল ক্লিনটেক অ্যাওয়ার্ডে ৩য় স্থান এবং সাড়ে ৮ লাখ টাকার গবেষণা অনুদান অর্জনের অনুপ্রেরণাদায়ী রিপোর্ট।",
+        content: "মশার উপদ্রব থেকে বাঁচতে দেশে প্রতিদিন কোটি কোটি বিষাক্ত রাসায়নিক কয়েল জ্বালানো হয়, যার ধোঁয়া মানবদেহের জন্য একশত সিগারেটের চেয়েও ক্ষতিকর। এই মানবিক ও স্বাস্থ্যগত ঝুঁকি মোকাবিলার সংকল্প নিয়ে খুলনা বিশ্ববিদ্যালয়ের দুই তরুণ শিক্ষার্থী নিশাত জাহান নাদিয়া ও মিজানুর রহমান রাতুল উদ্ভাবন করেছেন সম্পূর্ণ প্রাকৃতিক ভেষজ মশা প্রতিরোধক 'বাজ শিল্ড'।\n\nতাঁদের উদ্ভাবিত এই পণ্যটি কোনো ধোঁয়া বা বিষাক্ত গ্যাস নির্গমন না করেই ঘরের নির্দিষ্ট পরিধিতে মশাকে দূরে রাখতে সক্ষম। উদ্ভাবনটি 'ন্যাশনাল ক্লিনটেক অ্যাওয়ার্ড'-এ তৃতীয় স্থান অর্জন করে ১ লাখ টাকা প্রাইজমানি এবং পরবর্তী গবেষণার জন্য সাড়ে আট লাখ টাকার গবেষণা অনুদান লাভ করেছে।\n\nবিশ্ববিদ্যালয়ের উপাচার্য ও গবেষকরা এই উদ্ভাবনকে গ্রামীণ জনস্বাস্থ্য ও পরিবেশ সুরক্ষায় বাণিজ্যিক সম্ভাবনাময় এক বড় মাইলফলক হিসেবে অভিহিত করেছেন।",
+        tags: ["print", "আগামীর সময়", "বাজ শিল্ড", "উদ্ভাবন", "ক্লিনটেক", "খুবি"]
+      },
+      {
+        id: "pr-06",
+        title: "জার্সি বেচে বাড়তি আয়: স্বাবলম্বী শিক্ষার্থী সেলিমের গল্প",
+        englishTitle: "Self-Reliance Through Sports Apparel: Story of Student Entrepreneur Salim",
+        category: "তরুণ উদ্যোক্তা",
+        categoryLabel: "প্রিন্ট স্পেশাল • উদ্যোক্তা",
+        type: "campus",
+        format: "print",
+        newspaper: "দৈনিক আগামীর সময়",
+        printDetails: "দৈনিক আগামীর সময় (ক্যাম্পাস পাতা)",
+        writer: "গল্প লিখেছেন ও ছবি তুলেছেন: মিরাজুল ইসলাম",
+        date: "জুন ২০২৬",
+        readTime: "সচিত্র ফিচার • ৪ মিনিট",
+        image: "https://images.unsplash.com/photo-1574629810360-7efbbe195018?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.agamirsomoy.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের বাংলা ডিসিপ্লিনের শিক্ষার্থী সেলিম পারভেজ পড়াশোনার ফাঁকে ক্রীড়া জার্সি বিক্রি করে নিজের পড়ার খরচ জুগিয়ে স্বাবলম্বী হওয়ার অনুপ্রেরণামূলক গল্প। ক্যাম্পাসে তরুণ উদ্যোক্তাদের এগিয়ে চলার বাস্তব চিত্র।",
+        content: "পরিবারের আর্থিক সংকটের মুখে হাত গুটিয়ে বসে না থেকে নিজের পায়ে দাঁড়ানোর অনন্য দৃষ্টান্ত স্থাপন করেছেন খুলনা বিশ্ববিদ্যালয়ের বাংলা ডিসিপ্লিনের শিক্ষার্থী সেলিম পারভেজ। পড়াশোনার অবসর সময়কে কাজে লাগিয়ে ক্যাম্পাসে এবং অনলাইনে ক্রীড়াপ্রেমী শিক্ষার্থীদের জন্য মানসম্মত ফুটবল ও ক্রিকেট জার্সি সরবরাহ করছেন তিনি।\n\nঅল্প পুঁজিতে শুরু হওয়া সেলিমের এই উদ্যোগে এখন ক্যাম্পাসের বহু শিক্ষার্থী যুক্ত হয়েছেন। নিজের পড়াশোনা ও হলের খরচের পাশাপাশি তিনি পরিবারকেও নিয়মিত আর্থিক সহায়তা পাঠাচ্ছেন।\n\nসেলিম বলেন, 'কোনো কাজই ছোট নয়, সততা ও পরিশ্রম থাকলে ছাত্রাবস্থাতেই আত্মনির্ভরশীল হওয়া সম্ভব।' তাঁর এই সংগ্রাম ও সাফল্যের গল্প ক্যাম্পাসের অন্য শিক্ষার্থীদেরও উদ্যোক্তা হওয়ার সাহস জোগাচ্ছে।",
+        tags: ["print", "আগামীর সময়", "উদ্যোক্তা", "সেলিম পারভেজ", "খুবি", "জার্সি"]
+      },
+      {
+        id: "pr-07",
+        title: "খুবির হলরোড বেহাল, ভোগান্তি",
+        englishTitle: "Deplorable Condition of KU Hall Road Causes Endless Commuter Misery",
+        category: "ক্যাম্পাস ও অবকাঠামো",
+        categoryLabel: "প্রিন্ট স্পেশাল • ক্যাম্পাস",
+        type: "campus",
+        format: "print",
+        newspaper: "দৈনিক কালের কণ্ঠ",
+        printDetails: "দৈনিক কালের কণ্ঠ (খুলনা অফিস)",
+        writer: "খুলনা অফিস / খুবি প্রতিনিধি",
+        date: "১০ আগস্ট ২০২৫",
+        readTime: "প্রিন্ট রিপোর্ট • ৪ মিনিট",
+        image: "https://images.unsplash.com/photo-1515162816999-a0c47dc192f7?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের ব্যস্ততম হলরোডে দীর্ঘদিন সংস্কারের অভাব, ভারী যানবাহনের চলাচল ও অতিবৃষ্টির কাদাপানিতে ২০ হাজার শিক্ষার্থী ও ১০ হাজার এলাকাবাসীর প্রতিদিনের অবর্ণনীয় ভোগান্তি নিয়ে সরেজমিন প্রতিবেদন।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের সবচেয়ে ব্যস্ততম সড়কটির নাম 'হলরোড'। দীর্ঘদিন সংস্কারের অভাব, ভারী যানবাহনের অনিয়ন্ত্রিত চলাচল এবং অতিবৃষ্টির কারণে এই সড়কের বিভিন্ন স্থানে সৃষ্টি হয়েছে ছোট-বড় বিশালাকার গর্ত। ফলে বিশ্ববিদ্যালয়ের ২০ হাজার শিক্ষার্থী এবং আশপাশের প্রায় ১০ হাজার এলাকাবাসীর দৈনন্দিন চলাচলে চরম দুর্ভোগ পোহাতে হচ্ছে।\n\nসরেজমিনে দেখা যায়, গল্লামারী মোড় থেকে বিসমিল্লাহ সড়ক পর্যন্ত পুরো রাস্তায় সৃষ্টি হয়েছে কাদা-পানির জলাশয়। রিকশা বা ইজিবাইক প্রায়ই উল্টে গিয়ে শিক্ষার্থীরা আহত হচ্ছেন। খান জাহান আলী হল, খান বাহাদুর আহছানউল্লা হল ও বীরশ্রেষ্ঠ রুহুল আমিন হলের আবাসিক শিক্ষার্থীদের প্রতিদিন এই ঝুঁকিপূর্ণ পথেই যাতায়াত করতে হয়।\n\nএলজিইডি বটিয়াঘাটা প্রকৌশলী ও কেডিএ কর্তৃপক্ষের সমন্বয়হীনতার কারণে দীর্ঘদিন রাস্তাটির কাজ আটকে আছে। শিক্ষার্থীরা অবিলম্বে টেকসই ড্রেনেজসহ পিচঢালা সড়ক নির্মাণের জোর দাবি জানিয়েছেন।",
+        tags: ["print", "কালের কণ্ঠ", "হলরোড", "ভোগান্তি", "খুবি", "অবকাঠামো"]
+      },
+      {
+        id: "pr-08",
+        title: "ময়ূর নদ এখন নর্দমা: গবেষণায় সবচেয়ে দূষিত নদ",
+        englishTitle: "Mayur River Turned into Sewage Canal: Shocking Findings in KU Research",
+        category: "পরিবেশ ও নদী দূষণ",
+        categoryLabel: "প্রিন্ট স্পেশাল • পরিবেশ",
+        type: "climate",
+        format: "print",
+        newspaper: "দৈনিক কালের কণ্ঠ",
+        printDetails: "দৈনিক কালের কণ্ঠ (খুলনা ব্যুরো)",
+        writer: "এইচ এম আলাউদ্দিন ও মিরাজুল ইসলাম, খুলনা",
+        date: "১৫ সেপ্টেম্বর ২০২৫",
+        readTime: "প্রিন্ট অনুসন্ধান • ৬ মিনিট",
+        image: "https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা শহরের প্রাণ ময়ূর নদ আজ বর্জ্যের ভাগাড়ে পরিণত হয়েছে। খুলনা বিশ্ববিদ্যালয়ের অর্থনীতি ডিসিপ্লিনের আন্তর্জাতিক গবেষণায় উঠে এসেছে নদে দ্রবীভূত অক্সিজেনের মাত্রা মারাত্মক পতনের চিত্র। ময়ূর নদ বাঁচাতে নগরবাসীর ঐক্য ও ড্রেজিংয়ের দাবি।",
+        content: "একসময় খুলনা শহরের প্রাণপ্রবাহ ছিল ময়ূর নদ। জোয়ার-ভাটার ছন্দে চলা এই নদে এককালে ট্রলার ও নৌকার মেলা বসত, দেশি মাছে ছিল ভরপুর। অথচ খুলনা মহানগরীর অপরিকল্পিত গৃহস্থালি বর্জ্য, পলিথিন ও স্যুয়ারেজ লাইনের সরাসরি নিষ্কাশনে রূপসী সেই ময়ূর নদ আজ পরিণত হয়েছে দুর্গন্ধময় কালো নর্দমায়।\n\nখুলনা বিশ্ববিদ্যালয়ের অর্থনীতি ডিসিপ্লিনের গবেষক তাইয়্যেবা তাহসীন মীম এবং সুপারভাইজার অধ্যাপক ড. মোহাম্মদ জিয়াউল হায়দারের আন্তর্জাতিক জার্নালে প্রকাশিত যৌথ গবেষণায় উঠে এসেছে ভয়াবহ তথ্য। গবেষণায় ময়ূর নদকে দেশের অন্যতম শীর্ষ দূষিত নদী হিসেবে চিহ্নিত করা হয়েছে, যেখানে দ্রবীভূত অক্সিজেনের (DO) মাত্রা মাছ ও জলজ প্রাণী বেঁচে থাকার ন্যূনতম সীমারও নিচে নেমে গেছে।\n\nনদের দুই পাড়ের বাসিন্দারা চর্মরোগ ও মশার উপদ্রবে অতিষ্ঠ। পরিবেশকর্মীরা অবিলম্বে বর্জ্য ড্রাম্পিং বন্ধ, সীমানা নির্ধারণ ও অবৈধ দখল উচ্ছেদে প্রশাসনের কঠোর হস্তক্ষেপ দাবি করেছেন।",
+        tags: ["print", "কালের কণ্ঠ", "ময়ূর নদ", "নদী দূষণ", "খুলনা", "গবেষণা"]
+      },
+
+      // =========================================================================
+      // 3. অনলাইনে প্রকাশিত স্পেশাল ও স্পট রিপোর্ট (ONLINE SPECIAL & SPOT DISPATCHES)
+      // =========================================================================
       {
         id: "kk-01",
         title: "শাস্তি পেলেন খুবির ৩০ শিক্ষার্থী",
-        englishTitle: "30 Students Penalized for Misconduct at Khulna University",
-        category: "Campus Discipline",
-        categoryLabel: "শৃঙ্খলা ও ক্যাম্পাস",
+        englishTitle: "30 Students Penalized for Misconduct and Ragging at Khulna University",
+        category: "ক্যাম্পাস ও শৃঙ্খলা",
+        categoryLabel: "স্পট রিপোর্ট • শৃঙ্খলা",
         type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুলনা বিশ্ববিদ্যালয় প্রতিনিধি",
         date: "১ নভেম্বর ২০২৬",
-        readTime: "4 min read",
+        readTime: "৪ মিনিট পাঠ",
         image: "https://images.unsplash.com/photo-1541829070764-84a7d30dd3f3?auto=format&fit=crop&w=1200&q=80",
-        summary: "র‍্যাগিং, মারধর, মানসিক হয়রানি ও মাদক সেবনের পৃথক অভিযোগে খুলনা বিশ্ববিদ্যালয়ের (খুবি) ৩০ জন শিক্ষার্থীকে বিভিন্ন মেয়াদে বহিষ্কার, জরিমানা ও সতর্কতামূলক শাস্তি দিয়েছে বিশ্ববিদ্যালয় কর্তৃপক্ষ।",
-        content: "র‍্যাগিং, মারধর, মানসিক হয়রানি ও মাদক সেবনের পৃথক অভিযোগে খুলনা বিশ্ববিদ্যালয়ের (খুবি) ৩০ জন শিক্ষার্থীকে বিভিন্ন মেয়াদে বহিষ্কার, জরিমানা ও সতর্কতামূলক শাস্তি প্রদান করেছে বিশ্ববিদ্যালয় প্রশাসন। খুবির ছাত্র শৃঙ্খলা বোর্ডের জরুরি সভায় দীর্ঘ পর্যালোচনা শেষে এ শাস্তির সিদ্ধান্ত গৃহীত ও বিজ্ঞপ্তি আকারে প্রকাশ করা হয়।\n\nবিশ্ববিদ্যালয়ের ছাত্র বিষয়ক পরিচালকের দপ্তর সূত্রে জানা গেছে, সাম্প্রতিক সময়ে ক্যাম্পাসের আবাসিক হল ও বিভিন্ন বিভাগের জুনিয়র শিক্ষার্থীদের ওপর র‍্যাগিং ও মানসিক নিপীড়নের অভিযোগ ওঠে। এসব অভিযোগ তদন্তে শৃঙ্খলা বোর্ড গঠিত ফ্যাক্ট-ফাইন্ডিং কমিটির প্রতিবেদন পুঙ্খানুপুঙ্খভাবে পর্যালোচনা করে।\n\nতদন্তে অভিযোগের সত্যতা প্রমাণিত হওয়ায় অভিযুক্তদের মধ্য থেকে গুরুতর অভিযোগে জড়িত বেশ কয়েকজন শিক্ষার্থীকে বিভিন্ন মেয়াদে বিশ্ববিদ্যালয় ও আবাসিক হল থেকে বহিষ্কার করা হয়েছে। এ ছাড়া তুলনামূলক কম অপরাধে যুক্ত শিক্ষার্থীদের অর্থদণ্ড ও অভিভাবকসহ মুচলেকা প্রদানের নির্দেশ দেওয়া হয়েছে।\n\nবিশ্ববিদ্যালয়ের উপাচার্য জানান, খুলনা বিশ্ববিদ্যালয়ে শিক্ষার্থীদের শিক্ষার সুষ্ঠু ও ভয়মুক্ত পরিবেশ নিশ্চিত করতে প্রশাসন 'জিরো টলারেন্স' নীতি বজায় রাখবে। র‍্যাগিং ও শৃঙ্খলাভঙ্গের কোনো ঘটনা বরদাশত করা হবে না।",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "শৃঙ্খলা", "র‍্যাগিং", "Daily Kaler Kantho", "Campus", "Discipline", "kaler kantho"]
+        summary: "র‍্যাগিং, মারধর, মানসিক হয়রানি ও মাদক সেবনের পৃথক অভিযোগে খুলনা বিশ্ববিদ্যালয়ের (খুবি) ৩০ জন শিক্ষার্থীকে বিভিন্ন মেয়াদে বহিষ্কার, জরিমানা ও সতর্কতামূলক শাস্তি দিয়েছে বিশ্ববিদ্যালয় কর্তৃপক্ষ।",
+        content: "র‍্যাগিং, মারধর, মানসিক হয়রানি ও মাদক সেবনের পৃথক অভিযোগে খুলনা বিশ্ববিদ্যালয়ের (খুবি) ৩০ জন শিক্ষার্থীকে বিভিন্ন মেয়াদে বহিষ্কার, জরিমানা ও সতর্কতামূলক শাস্তি প্রদান করেছে বিশ্ববিদ্যালয় প্রশাসন। খুবির ছাত্র শৃঙ্খলা বোর্ডের জরুরি সভায় দীর্ঘ পর্যালোচনা শেষে এ শাস্তির সিদ্ধান্ত গৃহীত ও বিজ্ঞপ্তি আকারে প্রকাশ করা হয়।\n\nবিশ্ববিদ্যালয়ের ছাত্র বিষয়ক পরিচালকের দপ্তর সূত্রে জানা গেছে, সাম্প্রতিক সময়ে ক্যাম্পাসের আবাসিক হল ও বিভিন্ন বিভাগের জুনিয়র শিক্ষার্থীদের ওপর র‍্যাগিং ও মানসিক নিপীড়নের অভিযোগ ওঠে। এসব অভিযোগ তদন্তে শৃঙ্খলা বোর্ড গঠিত ফ্যাক্ট-ফাইন্ডিং কমিটির প্রতিবেদন পুঙ্খানুপুঙ্খভাবে পর্যালোচনা করে।\n\nতদন্তে অভিযোগের সত্যতা প্রমাণিত হওয়ায় অভিযুক্তদের মধ্য থেকে গুরুতর অভিযোগে জড়িত বেশ কয়েকজন শিক্ষার্থীকে বিভিন্ন মেয়াদে বিশ্ববিদ্যালয় ও আবাসিক হল থেকে বহিষ্কার করা হয়েছে। এ ছাড়া তুলনামূলক কম অপরাধে যুক্ত শিক্ষার্থীদের অর্থদণ্ড ও অভিভাবকসহ মুচলেকা প্রদানের নির্দেশ দেওয়া হয়েছে।\n\nবিশ্ববিদ্যালয়ের উপাচার্য জানান, খুলনা বিশ্ববিদ্যালয়ে শিক্ষার্থীদের শিক্ষার সুষ্ঠু ও ভয়মুক্ত পরিবেশ নিশ্চিত করতে প্রশাসন 'জিরো টলারেন্স' নীতি বজায় রাখবে।",
+        tags: ["online", "কালের কণ্ঠ", "খুবি", "শৃঙ্খলা", "র‍্যাগিং", "Campus"]
       },
       {
         id: "kk-02",
         title: "প্রধানমন্ত্রী স্বর্ণপদক পাচ্ছেন খুবির ১২ শিক্ষার্থী",
         englishTitle: "12 Khulna University Students Nominated for Prime Minister Gold Medal",
-        category: "Education & Awards",
-        categoryLabel: "শিক্ষা ও স্বর্ণপদক",
+        category: "শিক্ষা ও সম্মাননা",
+        categoryLabel: "স্পট রিপোর্ট • সম্মাননা",
         type: "education",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুবি প্রতিনিধি",
         date: "৭ অক্টোবর ২০২৬",
-        readTime: "3 min read",
+        readTime: "৩ মিনিট পাঠ",
         image: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?auto=format&fit=crop&w=1200&q=80",
-        summary: "বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরি কমিশন (ইউজিসি) প্রবর্তিত সম্মানজনক 'প্রধানমন্ত্রী স্বর্ণপদক' পাচ্ছেন খুলনা বিশ্ববিদ্যালয়ের বিভিন্ন স্কুলের ১২ জন মেধাবী শিক্ষার্থী।",
-        content: "বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরি কমিশন (ইউজিসি) প্রবর্তিত সম্মানজনক 'প্রধানমন্ত্রী স্বর্ণপদক' এর জন্য মনোনীত হয়েছেন খুলনা বিশ্ববিদ্যালয়ের (খুবি) ১২ জন মেধাবী শিক্ষার্থী। নিজ নিজ স্কুলের স্নাতক (সম্মান) পরীক্ষায় সর্বোচ্চ ফলাফল (সিজিপিএ) অর্জনের স্বীকৃতি হিসেবে তাঁদের এ সম্মাননা প্রদান করা হচ্ছে।\n\nবিশ্ববিদ্যালয়ের রেজিস্ট্রার কার্যালয় সূত্রে জানা গেছে, বিজ্ঞান, প্রকৌশল ও প্রযুক্তিবিদ্যা স্কুল, জীব বিজ্ঞান স্কুল, কলা ও মানবিক স্কুল, সামাজিক বিজ্ঞান স্কুল, ব্যবস্থাপনা ও ব্যবসায় প্রশাসন স্কুল, চারুকলা স্কুল এবং আইন স্কুলের শীর্ষ স্থানাধিকারী কৃতী শিক্ষার্থীদের নাম ইউজিসি কর্তৃক চূড়ান্ত তালিকায় প্রকাশ করা হয়েছে।\n\nশিক্ষার্থীদের এই অনন্য অর্জনে বিশ্ববিদ্যালয় পরিবারের পক্ষ থেকে অভিনন্দন জানিয়েছেন উপাচার্য। তিনি বলেন, 'খুলনা বিশ্ববিদ্যালয়ের মেধাবী শিক্ষার্থীদের এই স্বীকৃতি উচ্চশিক্ষা ও গবেষণায় দেশের মুখ উজ্জ্বল করবে। তাঁদের মেধা দেশ ও আন্তর্জাতিক পরিমণ্ডলে টেকসই উন্নয়নে কার্যকর ভূমিকা রাখবে।' মনোনীত শিক্ষার্থীরা তাঁদের অনুভূতি প্রকাশ করে বলেন, এ অর্জন ভবিষ্যতে দেশসেরা গবেষণা ও কর্মজীবনে নতুন উদ্দীপনা জোগাবে।",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["প্রধানমন্ত্রী স্বর্ণপদক", "স্বর্ণপদক", "ইউজিসি", "Daily Kaler Kantho", "Education", "Awards", "kaler kantho"]
+        summary: "বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরি কমিশন (ইউজিসি) প্রবর্তিত সম্মানজনক 'প্রধানমন্ত্রী স্বর্ণপদক' পাচ্ছেন খুলনা বিশ্ববিদ্যালয়ের বিভিন্ন স্কুলের ১২ জন মেধাবী শিক্ষার্থী।",
+        content: "বাংলাদেশ বিশ্ববিদ্যালয় মঞ্জুরি কমিশন (ইউজিসি) প্রবর্তিত সম্মানজনক 'প্রধানমন্ত্রী স্বর্ণপদক' এর জন্য মনোনীত হয়েছেন খুলনা বিশ্ববিদ্যালয়ের (খুবি) ১২ জন মেধাবী শিক্ষার্থী। নিজ নিজ স্কুলের স্নাতক (সম্মান) পরীক্ষায় সর্বোচ্চ ফলাফল (সিজিপিএ) অর্জনের স্বীকৃতি হিসেবে তাঁদের এ সম্মাননা প্রদান করা হচ্ছে।\n\nবিশ্ববিদ্যালয়ের রেজিস্ট্রার কার্যালয় সূত্রে জানা গেছে, বিজ্ঞান, প্রকৌশল ও প্রযুক্তিবিদ্যা স্কুল, জীব বিজ্ঞান স্কুল, কলা ও মানবিক স্কুল, সামাজিক বিজ্ঞান স্কুল, ব্যবস্থাপনা ও ব্যবসায় প্রশাসন স্কুল, চারুকলা স্কুল এবং আইন স্কুলের শীর্ষ স্থানাধিকারী কৃতী শিক্ষার্থীদের নাম ইউজিসি কর্তৃক চূড়ান্ত তালিকায় প্রকাশ করা হয়েছে।\n\nশিক্ষার্থীদের এই অনন্য অর্জনে বিশ্ববিদ্যালয় পরিবারের পক্ষ থেকে অভিনন্দন জানিয়েছেন উপাচার্য।",
+        tags: ["online", "কালের কণ্ঠ", "প্রধানমন্ত্রী স্বর্ণপদক", "স্বর্ণপদক", "ইউজিসি", "খুবি"]
       },
       {
         id: "kk-03",
         title: "খুলনায় ছাত্রকে পিটিয়ে হত্যা : খুবির সাবেক শিক্ষার্থী আটক",
         englishTitle: "Student Beaten to Death in Khulna: Ex-KU Student Detained",
-        category: "Investigative & Crime",
-        categoryLabel: "অনুসন্ধান ও অপরাধ",
+        category: "অনুসন্ধান ও অপরাধ",
+        categoryLabel: "স্পট রিপোর্ট • অপরাধ",
         type: "crime",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "মো. মিরাজুল ইসলাম ও খুবি প্রতিনিধি",
         date: "২২ সেপ্টেম্বর ২০২৬",
-        readTime: "5 min read",
+        readTime: "৫ মিনিট পাঠ",
         image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
-        summary: "খুলনা মহানগরীর সোনাডাঙ্গা এলাকায় এক শিক্ষার্থীকে নৃশংসভাবে পিটিয়ে হত্যার ঘটনায় জড়িত থাকার অভিযোগে খুলনা বিশ্ববিদ্যালয়ের এক সাবেক শিক্ষার্থীকে আটক করেছে পুলিশ।",
-        content: "খুলনা মহানগরীর সোনাডাঙ্গা আবাসিক এলাকায় এক শিক্ষার্থীকে নৃশংসভাবে পিটিয়ে হত্যার ঘটনায় জড়িত থাকার অভিযোগে খুলনা বিশ্ববিদ্যালয়ের (খুবি) এক সাবেক শিক্ষার্থীকে আটক করেছে সোনাডাঙ্গা মডেল থানা পুলিশ।\n\nপুলিশ ও স্থানীয় সূত্রে জানা যায়, পূর্ব শত্রুতা ও কথাকাটাকাটির জেরে ঘটনার দিন রাতে ভিকটিমের ওপর দেশীয় অস্ত্র ও লাঠিসোঁটা নিয়ে হামলা চালানো হয়। গুরুতর আহত অবস্থায় তাঁকে উদ্ধার করে খুলনা মেডিকেল কলেজ (খুমেক) হাসপাতালে নেওয়া হলে কর্তব্যরত চিকিৎসক তাঁকে মৃত ঘোষণা করেন।\n\nঘটনার পর পরই প্রত্যক্ষদর্শীদের জবানবন্দি ও সিসিটিভি ফুটেজ বিশ্লেষণ করে অভিযান চালিয়ে খুবির সাবেক ওই শিক্ষার্থীকে আটক করে পুলিশ। এ সময় হত্যাকাণ্ডে ব্যবহৃত বেশ কিছু আলামত উদ্ধার করা হয়।\n\nসোনাডাঙ্গা থানার ভারপ্রাপ্ত কর্মকর্তা (ওসি) কালের কণ্ঠকে জানান, হত্যাকাণ্ডের কারণ উদঘাটন এবং এজাহারভুক্ত অন্যান্য আসামিদের গ্রেফতারে জোর অভিযান চলছে। নিহতের পরিবারের পক্ষ থেকে একটি হত্যা মামলা দায়ের করা হয়েছে। আটককৃতকে প্রাথমিক জিজ্ঞাসাবাদ শেষে আদালতে প্রেরণ করা হবে।",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["অপরাধ", "খুলনা", "আইনশৃঙ্খলা", "Daily Kaler Kantho", "Crime", "Investigative", "kaler kantho"]
+        summary: "খুলনা মহানগরীর সোনাডাঙ্গা এলাকায় এক শিক্ষার্থীকে নৃশংসভাবে পিটিয়ে হত্যার ঘটনায় জড়িত থাকার অভিযোগে খুলনা বিশ্ববিদ্যালয়ের এক সাবেক শিক্ষার্থীকে আটক করেছে পুলিশ।",
+        content: "খুলনা মহানগরীর সোনাডাঙ্গা আবাসিক এলাকায় এক শিক্ষার্থীকে নৃশংসভাবে পিটিয়ে হত্যার ঘটনায় জড়িত থাকার অভিযোগে খুলনা বিশ্ববিদ্যালয়ের (খুবি) এক সাবেক শিক্ষার্থীকে আটক করেছে সোনাডাঙ্গা মডেল থানা পুলিশ।\n\nপুলিশ ও স্থানীয় সূত্রে জানা যায়, পূর্ব শত্রুতা ও কথাকাটাকাটির জেরে ঘটনার দিন রাতে ভিকটিমের ওপর দেশীয় অস্ত্র ও লাঠিসোঁটা নিয়ে হামলা চালানো হয়। গুরুতর আহত অবস্থায় তাঁকে উদ্ধার করে খুলনা মেডিকেল কলেজ হাসপাতালে নেওয়া হলে কর্তব্যরত চিকিৎসক মৃত ঘোষণা করেন।\n\nপুলিশ সিসিটিভি ফুটেজ ও প্রত্যক্ষদর্শীদের সাক্ষ্যের ভিত্তিতে অভিযান চালিয়ে খুবির সাবেক ওই শিক্ষার্থীকে আটক করে।",
+        tags: ["online", "কালের কণ্ঠ", "অপরাধ", "খুলনা", "আইনশৃঙ্খলা", "Investigative"]
       },
       {
         id: "kk-04",
-        title: "খুবিতে শিক্ষকের বিরুদ্ধে কুপ্রস্তাবের অভিযোগে বিক্ষোভ",
-        englishTitle: "Protest at Khulna University Over Indecent Proposal Allegation Against Faculty",
-        category: "Campus Journalism",
-        categoryLabel: "ক্যাম্পাস ও প্রতিবাদ",
+        title: "বন্ধু হবা, কফি খাব আর মজা করব—ছাত্রীকে খুবি শিক্ষক",
+        englishTitle: "Indecent Proposal to Female Student by KU Faculty Member Sparks Outrage",
+        category: "ক্যাম্পাস ও অভিযোগ",
+        categoryLabel: "স্পট রিপোর্ট • নৈতিকতা",
         type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুবি প্রতিনিধি",
         date: "১৮ জুন ২০২৬",
-        readTime: "4 min read",
+        readTime: "৪ মিনিট পাঠ",
         image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
-        summary: "এগ্রোটেকনোলজি ডিসিপ্লিনের এক ছাত্রীকে সামাজিক যোগাযোগ মাধ্যমে কুপ্রস্তাব ও অশালীন বার্তা দেওয়ার অভিযোগে অভিযুক্ত শিক্ষকের স্থায়ী বহিষ্কারের দাবিতে ফুঁসে ওঠেন শিক্ষার্থীরা।",
-        content: "খুলনা বিশ্ববিদ্যালয়ের (খুবি) এগ্রোটেকনোলজি ডিসিপ্লিনের এক শিক্ষকের বিরুদ্ধে ছাত্রীকে সামাজিক যোগাযোগ মাধ্যমে অশালীন বার্তা ও কুপ্রস্তাব দেওয়ার অভিযোগে ক্যাম্পাসে তীব্র বিক্ষোভ ও সমাবেশ করেছেন সাধারণ শিক্ষার্থীরা।\n\nশিক্ষার্থীরা প্রশাসনিক ভবনের সামনে অবস্থান নিয়ে অভিযুক্ত শিক্ষকের বিরুদ্ধে দৃষ্টান্তমূলক শাস্তি ও স্থায়ী বহিষ্কারের দাবি তোলেন। এ সময় তাঁরা 'নিরাপদ ক্যাম্পাস চাই', 'শিক্ষকের নামে নিপীড়ক বরদাশত নয়' ইত্যাদি স্লোগান দেন এবং বিশ্ববিদ্যালয়ের উপাচার্য বরাবর স্মারকলিপি প্রদান করেন।\n\nভুক্তভোগী ছাত্রীর অভিযোগের পরিপ্রেক্ষিতে বিশ্ববিদ্যালয় প্রশাসন দ্রুত একটি উচ্চপর্যায়ের তদন্ত কমিটি গঠন করে। তদন্ত চলাকালীন সময়ে অভিযুক্ত শিক্ষককে সব ধরনের একাডেমিক ও প্রশাসনিক দায়িত্ব থেকে সাময়িক অব্যাহতি প্রদান করা হয়।\n\nপ্রক্টর জানান, বিশ্ববিদ্যালয়ের যৌন নিপীড়ন নিরোধ সেল অভিযোগটি সর্বোচ্চ গুরুত্ব দিয়ে তদন্ত করছে। নিরপেক্ষ তদন্তের মাধ্যমে দোষী প্রমাণিত হলে বিধি মোতাবেক কঠোর শাস্তিমূলক ব্যবস্থা গ্রহণ করা হবে।",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "প্রতিবাদ", "যৌন নিপীড়ন বিরোধী", "Daily Kaler Kantho", "Campus", "kaler kantho"]
+        summary: "খুলনা বিশ্ববিদ্যালয়ের এক শিক্ষকের বিরুদ্ধে ছাত্রীকে সামাজিক মাধ্যমে আপত্তিকর বার্তা ও অনৈতিক প্রস্তাব দেওয়ার ঘটনায় ফুঁসে উঠেছে ক্যাম্পাস। অভিযুক্ত শিক্ষকের বিচার দাবিতে বিক্ষোভ সমাবেশ।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের এগ্রোটেকনোলজি ডিসিপ্লিনের এক শিক্ষকের বিরুদ্ধে নিজের ক্লাসের ছাত্রীকে সামাজিক যোগাযোগ মাধ্যমে অনৈতিক প্রস্তাব ও অশালীন বার্তা দেওয়ার অভিযোগে তোলপাড় সৃষ্টি হয়েছে। মেসেঞ্জারে 'বন্ধু হবা, কফি খাব আর মজা করব' এমন আপত্তিকর মেসেজের স্ক্রিনশট ছড়িয়ে পড়ার পর সাধারণ শিক্ষার্থীরা ক্ষোভে ফেটে পড়েন।\n\nশিক্ষার্থীরা প্রশাসনিক ভবনের সামনে বিক্ষোভ মিছিল ও সমাবেশ করে অভিযুক্ত শিক্ষকের স্থায়ী বহিষ্কারের দাবি জানান। উপাচার্য বরাবর স্মারকলিপি প্রদান করা হলে বিশ্ববিদ্যালয় প্রশাসন তাৎক্ষণিকভাবে একটি উচ্চপর্যায়ের তদন্ত কমিটি গঠন করে এবং শিক্ষককে পাঠদান কার্যক্রম থেকে বিরত রাখার নির্দেশ দেয়।",
+        tags: ["online", "কালের কণ্ঠ", "খুবি", "অভিযোগ", "প্রতিবাদ", "যৌন নিপীড়ন বিরোধী"]
       },
       {
         id: "kk-05",
-        title: "খুবি ছাত্রী হলের প্রভোস্টকে অব্যাহতি, তদন্তে ৩ সদস্যের কমিটি",
-        englishTitle: "KU Female Hall Provost Relieved of Duties Amid Irregularity Allegations",
-        category: "Campus Governance",
-        categoryLabel: "প্রশাসন ও হল ব্যবস্থাপনা",
-        type: "campus",
+        title: "খুবিতে ২ বছরেও চালু হয়নি গল্লামারী বধ্যভূমি স্মৃতি জাদুঘর",
+        englishTitle: "Gollamari Liberation War Memorial Museum Remains Incomplete After 2 Years",
+        category: "ইতিহাস ও মুক্তিযুদ্ধ",
+        categoryLabel: "স্পট রিপোর্ট • মুক্তিযুদ্ধ",
+        type: "investigative",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
-        writer: "খুবি প্রতিনিধি",
-        date: "৬ মে ২০২৬",
-        readTime: "4 min read",
-        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
-        summary: "আবাসিক ছাত্রীদের নানা অভিযোগ, সিট বরাদ্দে অনিয়ম ও শিক্ষার্থীদের ক্ষোভের মুখে খুলনা বিশ্ববিদ্যালয়ের 'বিজয়-২৪' ছাত্রী হলের প্রভোস্টকে প্রশাসনিক দায়িত্ব থেকে অব্যাহতি প্রদান করা হয়েছে।",
-        content: "খুলনা বিশ্ববিদ্যালয়ের (খুবি) নবনির্মিত 'বিজয়-২৪' ছাত্রী হলের প্রভোস্টকে তাঁর প্রশাসনিক দায়িত্ব থেকে অব্যাহতি প্রদান করেছে বিশ্ববিদ্যালয় প্রশাসন। হলের আসন বরাদ্দে অনিয়ম, ছাত্রীদের সাথে অসদাচরণ এবং অপরিচ্ছন্ন পরিবেশের অভিযোগে সাধারণ ছাত্রীদের ক্ষোভ ও প্রতিবাদের মুখে এ সিদ্ধান্ত গৃহীত হয়।\n\nএকই সঙ্গে শিক্ষার্থীদের উত্থাপিত অভিযোগসমূহ তদন্তে ৩ সদস্যবিশিষ্ট একটি উচ্চপর্যায়ের তদন্ত কমিটি গঠন করেছে কর্তৃপক্ষ। কমিটিকে আগামী দুই সপ্তাহের মধ্যে সুস্পষ্ট প্রতিবেদন জমা দিতে বলা হয়েছে।\n\nবিশ্ববিদ্যালয়ের রেজিস্ট্রার কার্যালয়ের এক বিজ্ঞপ্তিতে জানানো হয়, হলের স্বাভাবিক একাডেমিক ও প্রশাসনিক পরিবেশ বজায় রাখার স্বার্থে জ্যেষ্ঠ এক অধ্যাপিকাকে ভারপ্রাপ্ত প্রভোস্টের দায়িত্ব অর্পণ করা হয়েছে। তদন্ত কমিটির প্রতিবেদনের ভিত্তিতে পরবর্তী চূড়ান্ত ব্যবস্থা গ্রহণ করা হবে।",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "১৫ মে ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "ছাত্রী হল", "প্রভোস্ট", "Daily Kaler Kantho", "Campus", "kaler kantho"]
+        summary: "১৯৭১ সালের মুক্তিযুদ্ধে খুলনার অন্যতম বৃহৎ বধ্যভূমি গল্লামারীতে স্মৃতি জাদুঘর নির্মাণের উদ্যোগ নেওয়া হলেও গত দুই বছরেও তা চালু করা সম্ভব হয়নি। প্রশাসনিক ধীরগতিতে ক্ষুব্ধ বীর মুক্তিযোদ্ধা ও শিক্ষার্থীরা।",
+        content: "১৯৭১ সালের মহান মুক্তিযুদ্ধে খুলনা অঞ্চলের হাজারো মুক্তিকামী বাঙালিকে নির্মমভাবে হত্যার পর গল্লামারী খালে ফেলে দেয় পাকিস্তানি হানাদার ও তাদের দোসররা। ঐতিহাসিক সেই স্মৃতি সংরক্ষণ ও নতুন প্রজন্মের কাছে মুক্তিযুদ্ধের ইতিহাস পৌঁছে দিতে খুলনা বিশ্ববিদ্যালয় সংলগ্ন গল্লামারী বধ্যভূমিতে একটি সমৃদ্ধ স্মৃতি জাদুঘর নির্মাণের পরিকল্পনা নেওয়া হয়।\n\nকিন্তু দীর্ঘ দুই বছর পেরিয়ে গেলেও আমলাতান্ত্রিক জটিলতা ও অর্থ ছাড়ের ধীরগতির কারণে জাদুঘরটির কাজ এখনো অর্ধসমাপ্ত অবস্থায় পড়ে রয়েছে। খুলনা বিশ্ববিদ্যালয় সাংবাদিক সমিতি ও বীর মুক্তিযোদ্ধারা অবিলম্বে ঐতিহাসিক এই স্মৃতি জাদুঘরটি চালু করার দাবি জানিয়েছেন।",
+        tags: ["online", "কালের কণ্ঠ", "গল্লামারী", "বধ্যভূমি", "মুক্তিযুদ্ধ", "খুবি"]
       },
       {
         id: "kk-06",
-        title: "এসডিজি বিষয়ক মুখ্য সমন্বয়ক হলেন খুবি অধ্যাপক আব্দুল আওয়াল",
-        englishTitle: "KU Professor Dr. Abdul Awal Appointed Chief Coordinator for SDGs at PMO",
-        category: "Education & National Policy",
-        categoryLabel: "জাতীয় নীতি ও সম্মাননা",
-        type: "education",
+        title: "অর্থ আত্মসাৎ : খুবি কর্মকর্তাকে চাকরি থেকে অব্যাহতি",
+        englishTitle: "Khulna University Official Sacked Over Financial Embezzlement",
+        category: "প্রশাসন ও অনিয়ম",
+        categoryLabel: "স্পট রিপোর্ট • সুশাসন",
+        type: "investigative",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুলনা বিশ্ববিদ্যালয় প্রতিনিধি",
-        date: "১৬ মার্চ ২০২৬",
-        readTime: "3 min read",
-        image: "https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1200&q=80",
-        summary: "খুলনা বিশ্ববিদ্যালয়ের বায়োটেকনোলজি অ্যান্ড জেনেটিক ইঞ্জিনিয়ারিং ডিসিপ্লিনের জ্যেষ্ঠ শিক্ষক প্রফেসর ড. এস এম আব্দুল আওয়ালকে প্রধানমন্ত্রীর কার্যালয়ের এসডিজি বিষয়ক মুখ্য সমন্বয়ক হিসেবে চুক্তিভিত্তিক নিয়োগ দেওয়া হয়েছে।",
-        content: "খুলনা বিশ্ববিদ্যালয়ের (খুবি) বায়োটেকনোলজি অ্যান্ড জেনেটিক ইঞ্জিনিয়ারিং (বিজিই) ডিসিপ্লিনের স্বনামধন্য জ্যেষ্ঠ শিক্ষক প্রফেসর ড. এস এম আব্দুল আওয়ালকে সরকারের এসডিজি বিষয়ক মুখ্য সমন্বয়ক হিসেবে চুক্তিভিত্তিক নিয়োগ প্রদান করা হয়েছে। জনপ্রশাসন মন্ত্রণালয় থেকে এ সংক্রান্ত প্রজ্ঞাপন জারি করা হয়।\n\nপ্রজ্ঞাপনে বলা হয়, সরকারের টেকসই উন্নয়ন অভীষ্ট (এসডিজি) ২০৩০ অর্জনে জাতীয় পর্যায়ে আন্তঃমন্ত্রণালয় সমন্বয়, নীতি নির্ধারণ ও কৌশলগত বাস্তবায়নে তিনি নেতৃত্ব দেবেন। তাঁর এই নিয়োগ খুলনা বিশ্ববিদ্যালয়ের শিক্ষক ও শিক্ষার্থীদের মধ্যে ব্যাপক আনন্দ ও গৌরবের সঞ্চার করেছে।\n\nড. আব্দুল আওয়াল দেশে-বিদেশে জিন প্রকৌশল ও পরিবেশগত বায়োটেকনোলজি গবেষণায় দীর্ঘদিনের কাজের অভিজ্ঞতা রয়েছে। তিনি খুলনা বিশ্ববিদ্যালয়ের বিভিন্ন প্রশাসনিক পদে দায়িত্ব পালনসহ আন্তর্জাতিক বহু গবেষণা প্রকল্পে সফলভাবে কাজ করেছেন।",
+        date: "২৮ এপ্রিল ২০২৬",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "এসডিজি", "অধ্যাপক আব্দুল আওয়াল", "Daily Kaler Kantho", "Education", "kaler kantho"]
+        summary: "বিশ্ববিদ্যালয়ের উন্নয়ন ও ভর্তি ফান্ডের বিপুল অর্থ আত্মসাতের প্রমাণ পাওয়ায় খুলনা বিশ্ববিদ্যালয়ের এক কর্মকর্তাকে চাকরি থেকে স্থায়ী অব্যাহতি প্রদান করেছে সিন্ডিকেট।",
+        content: "বিশ্ববিদ্যালয়ের বিভিন্ন খাতের অর্থ জালিয়াতি ও আত্মসাতের দায়ে খুলনা বিশ্ববিদ্যালয়ের প্রশাসনিক এক কর্মকর্তাকে চাকরি থেকে চূড়ান্ত অব্যাহতি দিয়েছে বিশ্ববিদ্যালয় সিন্ডিকেট। দীর্ঘ তদন্তে অভিযুক্ত কর্মকর্তার বিরুদ্ধে অর্থ আত্মসাতের সুনির্দিষ্ট প্রমাণ মেলায় এ কঠোর সিদ্ধান্ত গ্রহণ করা হয়।\n\nরেজিস্ট্রার স্বাক্ষরিত এক অফিস আদেশে জানানো হয়, আত্মসাৎকৃত অর্থ সরকারি কোষাগারে ফেরত আনার পাশাপাশি তাঁর বিরুদ্ধে বিভাগীয় ও ফৌজদারি আইনি প্রক্রিয়া গ্রহণের সিদ্ধান্ত হয়েছে।",
+        tags: ["online", "কালের কণ্ঠ", "অর্থ আত্মসাৎ", "সিন্ডিকেট", "খুবি", "সুশাসন"]
       },
       {
         id: "kk-07",
-        title: "খুলনা বিশ্ববিদ্যালয়ে 'গুণী শিক্ষক' সম্মাননা পাচ্ছেন দুই অধ্যাপক",
-        englishTitle: "Two Professors Honored with Distinguished Teacher Award at Khulna University",
-        category: "Education & Awards",
-        categoryLabel: "শিক্ষা ও শিক্ষক সম্মাননা",
-        type: "education",
+        title: "সুন্দরী গাছের প্রায় ৫০ শতাংশে ‘আগা মরা’ রোগের উপসর্গ",
+        englishTitle: "Top-Dying Disease Affects Nearly 50% of Sundari Trees in the Sundarbans",
+        category: "পরিবেশ ও সুন্দরবন",
+        categoryLabel: "স্পট রিপোর্ট • সুন্দরবন",
+        type: "climate",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
-        writer: "খুবি প্রতিনিধি",
-        date: "৪ অক্টোবর ২০২৬",
-        readTime: "3 min read",
-        image: "https://images.unsplash.com/photo-1524178232363-1fb2b075b655?auto=format&fit=crop&w=1200&q=80",
-        summary: "বিশ্ব শিক্ষক দিবস উপলক্ষে শিক্ষা ও গবেষণায় বিশেষ অবদানের স্বীকৃতিস্বরূপ খুলনা বিশ্ববিদ্যালয়ের দুই প্রবীণ অধ্যাপককে 'গুণী শিক্ষক' সম্মাননা পদক প্রদান করার সিদ্ধান্ত নেওয়া হয়েছে।",
-        content: "বিশ্ব শিক্ষক দিবস উদযাপন উপলক্ষে শিক্ষা, মৌলিক গবেষণা ও জাতীয় পর্যায়ের নীতি তৈরিতে অসামান্য অবদানের স্বীকৃতি হিসেবে খুলনা বিশ্ববিদ্যালয়ের (খুবি) দুই প্রবীণ অধ্যাপককে সম্মানজনক 'গুণী শিক্ষক সম্মাননা' প্রদান করা হয়েছে।\n\nবিশ্ববিদ্যালয়ের আচার্য জগদীশচন্দ্র বসু একাডেমিক ভবনের সাংবাদিক লিয়াকত আলী মিলনায়তনে আয়োজিত এক আড়ম্বরপূর্ণ অনুষ্ঠানে তাঁদের হাতে সম্মাননা ক্রেস্ট ও সনদ তুলে দেওয়া হয়।\n\nঅনুষ্ঠানে বক্তারা বলেন, খুলনা বিশ্ববিদ্যালয় শুরু থেকেই শিক্ষাদান ও গবেষণার গুণগত মানে কোনো ছাড় দেয়নি। তরুণ প্রজন্মকে দেশপ্রেমিক ও যোগ্য গবেষক হিসেবে গড়ে তুলতে নিবেদিতপ্রাণ শিক্ষকদের এই সম্মাননা অন্যদেরও অনুপ্রেরণা জোগাবে। গুণী শিক্ষকদ্বয় তাঁদের বক্তব্যে বিশ্ববিদ্যালয়ের আধুনিক গবেষণার পরিধি আরও সম্প্রসারণের ওপর গুরুত্বারোপ করেন।",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "১০ এপ্রিল ২০২৬",
+        readTime: "৫ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "শিক্ষক দিবস", "গুণী শিক্ষক", "Daily Kaler Kantho", "Education", "kaler kantho"]
+        summary: "বিশ্ব ঐতিহ্য সুন্দরবনের প্রধান বৃক্ষ 'সুন্দরী'র অস্তিত্ব আজ বিপন্ন। নদীর লবণাক্ততা বৃদ্ধি ও পলির অভাবে বনের প্রায় ৫০ শতাংশ সুন্দরী গাছে দেখা দিয়েছে মরণব্যাধি 'আগা মরা' রোগ। বিশেষজ্ঞদের উদ্বেগের মাঠপর্যায়ের অনুসন্ধান।",
+        content: "সুন্দরবনের প্রধান বৃক্ষ সম্পদ সুন্দরী গাছে দ্রুত ছড়িয়ে পড়ছে 'টপ ডাইং' বা 'আগা মরা' রোগ। সুন্দরবনের শরণখোলা, চাঁদপাই ও সাতক্ষীরা রেঞ্জে সরেজমিনে দেখা গেছে, বনের হাজার হাজার সুন্দরী গাছের ওপরের অংশ শুকিয়ে মরে যাচ্ছে।\n\nখুলনা বিশ্ববিদ্যালয়ের ফরেস্ট্রি অ্যান্ড উড টেকনোলজি ডিসিপ্লিনের গবেষকরা জানান, উজান থেকে মিষ্টি পানির প্রবাহ কমে যাওয়া এবং বঙ্গোপসাগর থেকে অতিরিক্ত লবণাক্ত পানির অনুপ্রবেশের ফলে মাটির পুষ্টি উপাদানে ভারসাম্যহীনতা সৃষ্টি হয়েছে। এ ছাড়া ভারী ধাতুর উপস্থিতি এই রোগ ত্বরান্বিত করছে। দ্রুত কার্যকর নদী ব্যবস্থাপনা নিশ্চিত না হলে সুন্দরবনের ম্যানগ্রোভ ইকোসিস্টেম চরম বিপর্যয়ের মুখে পড়বে।",
+        tags: ["online", "কালের কণ্ঠ", "সুন্দরী গাছ", "আগা মরা রোগ", "সুন্দরবন", "লবণাক্ততা"]
       },
       {
         id: "kk-08",
-        title: "আন্দোলন প্রত্যাহার, ক্লাস-পরীক্ষায় ফিরছেন খুবি শিক্ষার্থীরা",
-        englishTitle: "Agitation Called Off: Khulna University Students Return to Classes",
-        category: "Campus Journalism",
-        categoryLabel: "শিক্ষার্থী আন্দোলন ও সমঝোতা",
+        title: "দক্ষিণ বঙ্গের সর্ববৃহৎ বৈশাখী মেলায় লাখো মানুষের ঢল",
+        englishTitle: "Lakhs of Visitors Throng South Bengal's Grand Pahela Baishakh Fair",
+        category: "সংস্কৃতি ও মেলা",
+        categoryLabel: "স্পট রিপোর্ট • বৈশাখী মেলা",
         type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুবি প্রতিনিধি",
-        date: "৩১ জুলাই ২০২৬",
-        readTime: "4 min read",
-        image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
-        summary: "বিশ্ববিদ্যালয় প্রশাসনের সাথে শিক্ষার্থীদের দীর্ঘ ও ফলপ্রসূ বৈঠকের পর তিন দফা যৌক্তিক দাবি মেনে নেওয়ায় চলমান ক্লাস বর্জন ও আন্দোলন প্রত্যাহার করে ক্লাসে ফিরেছেন শিক্ষার্থীরা।",
-        content: "বিশ্ববিদ্যালয় প্রশাসনের সাথে শিক্ষার্থী প্রতিনিধিদের দীর্ঘ আলোচনার পর তিন দফা দাবির সন্তোষজনক সমাধানের আশ্বাসে চলমান ক্লাস বর্জন আন্দোলন প্রত্যাহার করেছেন খুলনা বিশ্ববিদ্যালয়ের (খুবি) শিক্ষার্থীরা। এর ফলে ক্যাম্পাসে স্বস্তি ফিরে এসেছে এবং পুরোদমে ক্লাস ও পরীক্ষা শুরু হয়েছে।\n\nশিক্ষার্থীদের মূল দাবিসমূহের মধ্যে ছিল আবাসন সংকট নিরসনে দ্রুত নতুন হল চালু করা, ক্যাম্পাসের নিরাপত্তা জোরদার ও স্বাস্থ্যবীমা স্কিমের আওতা বৃদ্ধি। প্রশাসন শিক্ষার্থীদের দাবির যৌক্তিকতা স্বীকার করে দ্রুত বাস্তবায়নের সুনির্দিষ্ট রূপরেখা ঘোষণা করে।\n\nবিশ্ববিদ্যালয়ের ছাত্র বিষয়ক পরিচালক ও সিন্ডিকেট সদস্যরা আন্দোলনরত শিক্ষার্থীদের সাথে দফায় দফায় আলোচনা করেন। পরবর্তীতে এক যৌথ সংবাদ সম্মেলনে আন্দোলনের সমন্বয়করা কর্মসূচি প্রত্যাহারের আনুষ্ঠানিক ঘোষণা দেন।",
+        date: "১৫ এপ্রিল ২০২৬",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "শিক্ষার্থী আন্দোলন", "ক্লাস-পরীক্ষা", "Daily Kaler Kantho", "Campus", "kaler kantho"]
+        summary: "খুলনা বিশ্ববিদ্যালয় সংলগ্ন মাঠে আয়োজিত দক্ষিণবঙ্গের সর্ববৃহৎ বৈশাখী মেলায় উপচে পড়া ভিড়। গ্রামীণ লোকজ শিল্প, নাগরদোলা ও লোকসংগীতের মূর্ছনায় মুখরিত মেলা প্রাঙ্গণ।",
+        content: "পহেলা বৈশাখ উপলক্ষে খুলনা বিশ্ববিদ্যালয় ক্যাম্পাসের মুক্তমঞ্চ ও সংলগ্ন মাঠে অনুষ্ঠিত হয়েছে দক্ষিণবঙ্গের অন্যতম বৃহত্তম বৈশাখী মেলা। মেলায় খুলনা ও পার্শ্ববর্তী বাগেরহাট, যশোর ও সাতক্ষীরা জেলা থেকে লাখো দর্শনার্থীর সমাগম ঘটে।\n\nমেলায় বাঁশ ও বেতের হস্তশিল্প, মৃৎশিল্প, ঐতিহ্যবাহী মিষ্টির দোকান এবং লোকজ সাংস্কৃতিক পরিবেশনা দর্শনার্থীদের মুগ্ধ করে। কঠোর নিরাপত্তার মধ্য দিয়ে উৎসবমুখর পরিবেশে দিনব্যাপী এই মেলা উদযাপিত হয়।",
+        tags: ["online", "কালের কণ্ঠ", "বৈশাখী মেলা", "পহেলা বৈশাখ", "সংস্কৃতি", "খুলনা"]
       },
       {
         id: "kk-09",
-        title: "উপকূলীয় লবণাক্ততা ও জলবায়ু উদ্বাস্তুর সংকট: সুন্দরবন সংলগ্ন জনপদ",
-        englishTitle: "Coastal Salinity and Climate Displaced Communities: Ground Reality from Sundarbans",
-        category: "Climate Justice",
-        categoryLabel: "জলবায়ু ও সুন্দরবন",
-        type: "climate",
+        title: "খুলনা বিশ্ববিদ্যালয়ে রংবেরঙের ঘুড়ি উৎসবের আয়োজন",
+        englishTitle: "Vibrant Kite Festival Painted Khulna University Skies with Festive Colors",
+        category: "ক্যাম্পাস উৎসব",
+        categoryLabel: "স্পট রিপোর্ট • ঘুড়ি উৎসব",
+        type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
-        writer: "মো. মিরাজুল ইসলাম",
-        date: "১৪ অক্টোবর ২০২৫",
-        readTime: "6 min read",
-        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
-        summary: "সুন্দরবন-সংলগ্ন শ্যামনগর ও কয়রায় সুপেয় পানির তীব্র সংকট ও লবণাক্ততার আগ্রাসনে কৃষি ও মৎস্যজীবীদের বাস্তুচ্যুতি নিয়ে মাঠপর্যায়ের বিশেষ অনুসন্ধানী প্রতিবেদন।",
-        content: "জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবের সম্মুখভাগে দাঁড়িয়ে থাকা বাংলাদেশের দক্ষিণ-পশ্চিম উপকূলীয় অঞ্চল আজ অস্তিত্ব সংকটে। সুন্দরবন-সংলগ্ন শ্যামনগর, কয়রা এবং শরণখোলা উপজেলার জনপদগুলোতে প্রতি বছর জোয়ারের পানির অস্বাভাবিক বৃদ্ধি ও দীর্ঘস্থায়ী লবণাক্ততার কারণে কৃষি ও মৎস্য অর্থনীতি ধ্বংসের মুখে।\n\nমাঠপর্যায়ের গবেষণায় দেখা গেছে, উপকূলীয় জেলেদের জীবন-জীবিকা আজ চরম হুমকির মুখে। সুন্দরবনের ওপর তাদের প্রথাগত নির্ভরশীলতা জলবায়ু বিপর্যয় ও প্রশাসনিক বিধিনিষেধের কারণে মারাত্মকভাবে বিঘ্নিত হচ্ছে। এর ফলে তরুণ প্রজন্ম ভিটেমাটি ছেড়ে বিভাগীয় শহর ও রাজধানীতে ঝুঁকিপূর্ণ অভিবাসনে বাধ্য হচ্ছে।\n\nপানির উৎসগুলোতে লবণাক্ততার পরিমাণ সহনশীল মাত্রার চেয়ে পাঁচ থেকে দশ গুণ বেশি পাওয়া গেছে। বিশেষজ্ঞরা বলছেন, টেকসই বেড়িবাঁধ নির্মাণ, উপকূলীয় রেইনওয়াটার হার্ভেস্টিং ব্যবস্থা এবং বিকল্প জীবিকার নিরাপত্তা নিশ্চিত করা না গেলে আগামী এক দশকে আরও কয়েক লাখ মানুষ জলবায়ু উদ্বাস্তুতে পরিণত হবে।",
+        writer: "খুবি প্রতিনিধি",
+        date: "১ ফেব্রুয়ারি ২০২৬",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["সুন্দরবন", "লবণাক্ততা", "জলবায়ু উদ্বাস্তু", "Daily Kaler Kantho", "Climate", "kaler kantho"]
+        summary: "বাংলার ঐতিহ্যবাহী ঘুড়ি ওড়ানোকে কেন্দ্র করে খুলনা বিশ্ববিদ্যালয়ের কেন্দ্রীয় খেলার মাঠে অনুষ্ঠিত হলো বর্ণাঢ্য 'ঘুড়ি উৎসব'। নানা রঙের ও আকারের শত শত ঘুড়িতে ছেয়ে যায় ক্যাম্পাসের আকাশ।",
+        content: "পৌষের বিদায় ও বসন্তের আগমনে খুলনা বিশ্ববিদ্যালয় মাঠে শিক্ষার্থীদের উদ্যোগে উদযাপিত হয়েছে জমকালো ঘুড়ি উৎসব। উৎসবের দিন দুপুরে আকাশে ওড়ানো হয় চিল, ড্রাগন, প্রজাপতি, তারা ও জাতীয় পতাকার আকৃতির শতাধিক বৈচিত্র্যময় ঘুড়ি।\n\nঘুড়ি কাটাকাটির রোমাঞ্চকর লড়াইয়ে অংশ নেন বিভিন্ন ডিসিপ্লিনের শিক্ষক ও শিক্ষার্থীরা। হারিয়ে যেতে বসা গ্রামীণ এই খেলাধুলাকে নতুন প্রজন্মের মাঝে ছড়িয়ে দেওয়ার এ উদ্যোগ সবার প্রশংসা কুড়ায়।",
+        tags: ["online", "কালের কণ্ঠ", "ঘুড়ি উৎসব", "ক্যাম্পাস", "ঐতিহ্য", "খুবি"]
       },
       {
         id: "kk-10",
-        title: "খুবিতে দুই দিনব্যাপী 'কুআ জব ফেয়ার-২০২৫' অনুষ্ঠিত",
-        englishTitle: "Two-Day KUAA Job Fair 2025 Held at Khulna University",
-        category: "Career & Employment",
-        categoryLabel: "ক্যারিয়ার ও কর্মসংস্থান",
+        title: "খুবিতে পহেলা বৈশাখে থাকছে নেপালি খাবার ও পোশাকসামগ্রী",
+        englishTitle: "Nepali Cuisine & Attire Featured at Khulna University Pahela Baishakh",
+        category: "আন্তর্জাতিক শিক্ষার্থী",
+        categoryLabel: "স্পট রিপোর্ট • আন্তর্জাতিক",
         type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
-        writer: "খুলনা বিশ্ববিদ্যালয় প্রতিনিধি",
-        date: "৭ সেপ্টেম্বর ২০২৫",
-        readTime: "4 min read",
-        image: "https://images.unsplash.com/photo-1515187029135-18ee286d815b?auto=format&fit=crop&w=1200&q=80",
-        summary: "খুলনা বিশ্ববিদ্যালয় অ্যালামনাই অ্যাসোসিয়েশন (কুআ)-এর উদ্যোগে বিশ্ববিদ্যালয়ের অদম্য বাংলা চত্বরে ৫০টিরও বেশি করপোরেট ও বহুজাতিক প্রতিষ্ঠানের অংশগ্রহণে অনুষ্ঠিত হলো জব ফেয়ার।",
-        content: "খুলনা বিশ্ববিদ্যালয় অ্যালামনাই অ্যাসোসিয়েশনের (কুআ) উদ্যোগে বিশ্ববিদ্যালয়ের অদম্য বাংলা চত্বরে প্রথমবারের মতো জমকালো আয়োজনে অনুষ্ঠিত হয়েছে দুই দিনব্যাপী 'কুআ জব ফেয়ার-২০২৫'।\n\nমেলায় দেশের শীর্ষস্থানীয় আইটি কোম্পানি, বহুজাতিক ব্যাংক, উৎপাদনমুখী শিল্পগোষ্ঠী এবং উন্নয়ন সংস্থাসহ অর্ধশতাধিক স্বনামধন্য করপোরেট প্রতিষ্ঠান অংশ নেয়। মেলায় খুবির স্নাতক ও স্নাতকোত্তর পর্যায়ের শিক্ষার্থীরা সরাসরি জীবনবৃত্তান্ত (সিভি) জমা দেন এবং স্পট ইন্টারভিউতে অংশ নেন।\n\nআয়োজকরা জানান, দুই দিনের এ চাকরি মেলায় পাঁচ শতাধিক শিক্ষার্থীকে সরাসরি চাকরির জন্য প্রাথমিক বাছাই করা হয়। পাশাপাশি বিভিন্ন সেশনে কর্পোরেট ব্যক্তিত্বরা ক্যারিয়ার কাউন্সেলিং, সিভি রাইটিং এবং ইন্টারভিউ দক্ষতার ওপর কর্মশালা পরিচালনা করেন। বিশ্ববিদ্যালয় কর্তৃপক্ষ এই উদ্যোগকে গ্র্যাজুয়েটদের কর্মসংস্থানের ক্ষেত্রে এক ঐতিহাসিক মাইলফলক হিসেবে আখ্যায়িত করেন।",
+        writer: "খুবি প্রতিনিধি",
+        date: "১২ এপ্রিল ২০২৬",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1543353071-873f17a7a088?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "জব ফেয়ার", "কুআ", "কর্মসংস্থান", "Daily Kaler Kantho", "Career", "kaler kantho"]
+        summary: "খুলনা বিশ্ববিদ্যালয়ে অধ্যয়নরত নেপালি শিক্ষার্থীদের অংশগ্রহণে পহেলা বৈশাখে থাকছে নেপালের ঐতিহ্যবাহী মম, সেল রুটি ও পাহাড়ি পোশাক সামগ্রীর বিশেষ স্টল।",
+        content: "খুলনা বিশ্ববিদ্যালয়ে অধ্যয়নরত আন্তর্জাতিক শিক্ষার্থীদের উদ্যোগে বাংলা নববর্ষে যুক্ত হয়েছে ভিন্নমাত্রার আবহ। নববর্ষ উদযাপন মেলায় নেপালি শিক্ষার্থীরা নিজস্ব সংস্কৃতি ও ঐতিহ্যের প্রতিনিধিত্ব করতে স্থাপন করছেন বিশেষ প্যাভিলিয়ন।\n\nএতে নেপালের বিখ্যাত সেল রুটি, চাখা মোমো, থুকপা ইত্যাদি খাবারের পাশাপাশি ঐতিহ্যবাহী কুর্তা ও টুপি প্রদর্শনী ও বিক্রির ব্যবস্থা রাখা হয়েছে। এতে দেশি ও বিদেশি শিক্ষার্থীদের মাঝে সাংস্কৃতিক সেতুবন্ধন আরও সুদৃঢ় হয়েছে।",
+        tags: ["online", "কালের কণ্ঠ", "নেপালি খাবার", "আন্তর্জাতিক শিক্ষার্থী", "পহেলা বৈশাখ", "খুবি"]
       },
       {
         id: "kk-11",
-        title: "খুলনা বিশ্ববিদ্যালয়ে আধুনিক কেন্দ্রীয় গবেষণাগার ও ডিজিটাল রিসার্চ আর্কাইভ প্রতিষ্ঠা",
-        englishTitle: "State-of-the-Art Central Research Lab and Digital Archive Established at KU",
-        category: "Research & Innovation",
-        categoryLabel: "গবেষণা ও উদ্ভাবন",
-        type: "education",
+        title: "ফুল দিয়ে নববর্ষ বরণের প্রার্থনায় খুবি নৃগোষ্ঠীর শিক্ষার্থীরা",
+        englishTitle: "Indigenous Students at KU Welcome New Year with Floral Prayers (Phul Biju)",
+        category: "নৃগোষ্ঠী ও সংস্কৃতি",
+        categoryLabel: "স্পট রিপোর্ট • বৈসাবি",
+        type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুবি প্রতিনিধি",
-        date: "১৫ জুন ২০২৫",
-        readTime: "4 min read",
-        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80",
-        summary: "উচ্চমানের বৈজ্ঞানিক গবেষণা সম্প্রসারণ ও তথ্য সংরক্ষণ সহজতর করতে খুলনা বিশ্ববিদ্যালয়ে চালু হলো আধুনিক কেন্দ্রীয় গবেষণাগার ও ডিজিটাল রিসার্চ আর্কাইভ।",
-        content: "বিশ্বমানের গবেষণা সংস্কৃতি বিনির্মাণের লক্ষ্যে খুলনা বিশ্ববিদ্যালয়ে (খুবি) অত্যাধুনিক সুযোগ-সুবিধা সম্বলিত 'সেন্ট্রাল রিসার্চ ল্যাবরেটরি' এবং একটি সর্বাধুনিক 'ডিজিটাল রিসার্চ আর্কাইভ' উদ্বোধন করা হয়েছে।\n\nল্যাবরেটরিতে ডিএনএ সিকোয়েন্সিং, স্পেকট্রোফোটোমেট্রি, অ্যাডভান্সড মাইক্রোস্কোপিসহ ন্যানো-প্রযুক্তির গবেষণার আধুনিক সরঞ্জাম স্থাপন করা হয়েছে। এর ফলে বিশ্ববিদ্যালয়ের বিজ্ঞান ও জীববিজ্ঞান স্কুলের গবেষকরা নিজ ক্যাম্পাসেই উচ্চপর্যায়ের পরীক্ষা-নিরীক্ষা সম্পন্ন করতে পারবেন।\n\nএকই সাথে প্রতিষ্ঠিত ডিজিটাল রিসার্চ আর্কাইভে গত তিন দশকের সকল স্নাতক ও স্নাতকোত্তর থিসিস, ফ্যাকাল্টি পাবলিকেশন এবং পেটেন্ট নথিপত্র ওপেন অ্যাক্সেস নীতিতে ডিজিটাল প্ল্যাটফর্মে সংরক্ষণ করা হয়েছে। উপাচার্য বলেন, এটি খুলনা বিশ্ববিদ্যালয়কে গবেষণায় আন্তর্জাতিক র‍্যাংকিংয়ে সামনের সারিতে নিয়ে যেতে যুগান্তকারী ভূমিকা রাখবে।",
+        date: "১২ এপ্রিল ২০২৬",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "সেন্ট্রাল ল্যাব", "গবেষণা", "Daily Kaler Kantho", "Research", "kaler kantho"]
+        summary: "খুলনা বিশ্ববিদ্যালয়ের পুকুরে ফুল ভাসিয়ে বৈসাবি উৎসবের সূচনা করলেন পার্বত্য অঞ্চল থেকে আগত আদিবাসী নৃগোষ্ঠীর শিক্ষার্থীরা। পুরোনো বছরের দুঃখ ভুলে শান্তি ও সমৃদ্ধির প্রার্থনা।",
+        content: "চাকমা, মারমা ও ত্রিপুরা জনগোষ্ঠীর অন্যতম প্রধান সামাজিক উৎসব বিজু, সাংগ্রাই ও বৈসুক (বৈসাবি) উপলক্ষে খুলনা বিশ্ববিদ্যালয় প্রাঙ্গণে আয়োজন করা হয় ঐতিহ্যবাহী 'ফুল বিজু'। ভোরে শিক্ষার্থীরা ক্যাম্পাসের লেক ও পুকুরে পবিত্র ফুল ভাসিয়ে পুরোনো বছরের গ্লানি মুছে শান্তি ও মঙ্গলের প্রার্থনা করেন।\n\nপরে ঐতিহ্যবাহী পোশাক পরিধান করে নাচ-গান ও পাজন পরিবেশনের মাধ্যমে উৎসবমুখর দিনটি উদযাপন করেন নৃগোষ্ঠীর শিক্ষার্থীরা।",
+        tags: ["online", "কালের কণ্ঠ", "ফুল বিজু", "বৈসাবি", "নৃগোষ্ঠী", "খুবি"]
       },
       {
         id: "kk-12",
-        title: "খুলনা বিশ্ববিদ্যালয়ের স্নাতক ভর্তি পরীক্ষার ফল প্রকাশ",
-        englishTitle: "Khulna University Undergraduate Admission Test Results Published",
-        category: "Admission & Academic",
-        categoryLabel: "ভর্তি ও ফলাফল",
-        type: "education",
+        title: "প্রাইভেট কারের ধাক্কায় খুবি ছাত্রীর মৃত্যু, চালক গ্রেপ্তার",
+        englishTitle: "Tragic Road Accident Kills KU Female Student; Car Driver Arrested",
+        category: "দুর্ঘটনা ও আইন",
+        categoryLabel: "স্পট রিপোর্ট • সড়ক দুর্ঘটনা",
+        type: "crime",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
-        writer: "খুলনা বিশ্ববিদ্যালয় প্রতিনিধি",
-        date: "১ মে ২০২৫",
-        readTime: "3 min read",
-        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
-        summary: "খুলনা বিশ্ববিদ্যালয়ে ২০২৪-২৫ শিক্ষাবর্ষে স্নাতক প্রথম বর্ষের ভর্তি পরীক্ষার চারটি ইউনিটের ফলাফল আনুষ্ঠানিকভাবে প্রকাশ করা হয়েছে।",
-        content: "খুলনা বিশ্ববিদ্যালয়ে (খুবি) ২০২৪-২৫ শিক্ষাবর্ষে স্নাতক/স্নাতক (সম্মান) প্রথম বর্ষের ভর্তি পরীক্ষার চারটি ইউনিটের ফলাফল আনুষ্ঠানিকভাবে প্রকাশ করা হয়েছে। বিশ্ববিদ্যালয়ের কেন্দ্রীয় ভর্তি পরীক্ষা কমিটির সভাপতি ফলাফল অনুমোদন করেন।\n\nবিশ্ববিদ্যালয়ের তথ্যপ্রযুক্তি শাখা জানায়, 'এ', 'বি', 'সি' এবং 'ডি' ইউনিটের ভর্তি পরীক্ষায় অংশগ্রহণকারী শিক্ষার্থীরা খুলনা বিশ্ববিদ্যালয়ের নিজস্ব ভর্তি বিষয়ক ওয়েবসাইটে রোল নম্বর ও পিন ব্যবহার করে তাঁদের প্রাপ্ত নম্বর ও মেধাক্রম দেখতে পাচ্ছেন। একই সাথে এসএমএসের মাধ্যমেও উত্তীর্ণদের ফলাফল প্রেরণ করা হয়েছে।\n\nভর্তি কমিটির সচিব জানান, মেধা তালিকায় স্থানপ্রাপ্ত শিক্ষার্থীদের আগামী ১৫ মে থেকে অনুষদভিত্তিক বিষয় পছন্দক্রম (চয়েস ফর্ম) অনলাইনে পূরণ করতে হবে। পরবর্তীতে সাক্ষাৎকার ও সনদ যাচাই শেষে চূড়ান্ত ভর্তি কার্যক্রম সম্পন্ন করা হবে।",
+        writer: "খুবি প্রতিনিধি",
+        date: "৫ ফেব্রুয়ারি ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1563720223185-11003d516935?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "ভর্তি পরীক্ষা", "ফলাফল", "Daily Kaler Kantho", "Admission", "kaler kantho"]
+        summary: "খুলনা মহানগরীর জিরো পয়েন্ট মহাসড়কে দ্রুতগতির প্রাইভেট কারের ধাক্কায় প্রাণ হারিয়েছেন খুলনা বিশ্ববিদ্যালয়ের এক মেধাবী ছাত্রী। ঘটনার পরপরই ঘাতক প্রাইভেট কারসহ চালককে গ্রেপ্তার করেছে পুলিশ।",
+        content: "খুলনা-সাতক্ষীরা মহাসড়কের জিরো পয়েন্ট এলাকায় রাস্তা পারাপারের সময় দ্রুতগামী একটি প্রাইভেট কারের ধাক্কায় ঘটনাস্থলেই নিহত হন খুলনা বিশ্ববিদ্যালয়ের এক ছাত্রী। নিহত ছাত্রী বিশ্ববিদ্যালয়ের গণযোগাযোগ ও সাংবাদিকতা ডিসিপ্লিনের শিক্ষার্থী ছিলেন।\n\nদুর্ঘটনার পর পথচারী ও সহপাঠীরা চালককে আটক করে পুলিশের হাতে তুলে দেন। এ ঘটনায় ক্যাম্পাসে গভীর শোকের ছায়া নেমে আসে এবং নিরাপদ সড়কের দাবিতে শিক্ষার্থীরা তাৎক্ষণিক বিক্ষোভ প্রদর্শন করেন।",
+        tags: ["online", "কালের কণ্ঠ", "সড়ক দুর্ঘটনা", "ছাত্রীর মৃত্যু", "খুলনা বিশ্ববিদ্যালয়", "জিরো পয়েন্ট"]
       },
       {
         id: "kk-13",
-        title: "খুবির বঙ্গমাতা হল: রমজানে ক্যান্টিনে খাবারের মান ও সাহরি ব্যবস্থা",
-        englishTitle: "Bangamata Hall at KU: Food Quality and Midnight Sehri Arrangements in Ramadan",
-        category: "Campus Journalism",
-        categoryLabel: "হল জীবন ও রমজান",
+        title: "খুবি ছাত্রীর মৃত্যুর প্রতিবাদে শিক্ষার্থীদের ডিসি অফিস ঘেরাও",
+        englishTitle: "KU Students Besiege DC Office Protesting Classmate's Road Accident Death",
+        category: "শিক্ষার্থী আন্দোলন",
+        categoryLabel: "স্পট রিপোর্ট • ছাত্র বিক্ষোভ",
         type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুবি প্রতিনিধি",
-        date: "২০ মার্চ ২০২৫",
-        readTime: "4 min read",
-        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
-        summary: "পবিত্র মাহে রমজানে খুলনা বিশ্ববিদ্যালয়ের বঙ্গমাতা বেগম ফজিলাতুন্নেছা মুজিব হলে ছাত্রীদের সাহরি ও ইফতার ব্যবস্থাপনা এবং ক্যান্টিনের খাবারের মান নিয়ে সরেজমিন অনুসন্ধান।",
-        content: "পবিত্র মাহে রমজান উপলক্ষে খুলনা বিশ্ববিদ্যালয়ের (খুবি) আবাসিক হলগুলোতে রোজা রাখা শিক্ষার্থীদের জন্য বিশেষ সাহরি ও ইফতারের আয়োজন করা হয়েছে। বিশেষ করে বঙ্গমাতা বেগম ফজিলাতুন্নেছা মুজিব হলে গভীর রাতে পুষ্টিকর খাবারের প্রাপ্যতা এবং ক্যান্টিনের স্বাস্থ্যকর পরিবেশ নিশ্চিত করতে প্রশাসনের পক্ষ থেকে তদারকি জোরদার করা হয়েছে।\n\nসরেজমিনে দেখা যায়, প্রতিদিন মধ্যরাতে শিক্ষার্থীদের জন্য তাজা মাছ, মাংস, ডাল ও সবজির সুষম মেনু তৈরি রাখা হচ্ছে। ডাইনিং কমিটির ছাত্রী প্রতিনিধিরা জানান, বাজারের মূল্যবৃদ্ধির মধ্যেও খাবারের দাম সহনশীল রাখতে হল ফান্ড ও শিক্ষার্থীদের সমন্বয়ে বিশেষ ব্যবস্থাপনা গ্রহণ করা হয়েছে।\n\nতবে ক্যান্টিনে পানির ফিল্টারের পরিচ্ছন্নতা এবং ভিড়ের সময়ে সুশৃঙ্খল পরিবেশ বজায় রাখতে ছাত্রীরা আরও অধিক কার্যকর পদক্ষেপের দাবি জানান। হল প্রভোস্ট জানান, ছাত্রীদের সুস্বাস্থ্য ও স্বাচ্ছন্দ্য বজায় রাখতে সার্বক্ষণিক মনিটরিং টিম কাজ করছে।",
+        date: "৬ ফেব্রুয়ারি ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "রমজান", "হল ক্যান্টিন", "Daily Kaler Kantho", "Campus", "kaler kantho"]
+        summary: "সহপাঠীর মর্মান্তিক সড়ক দুর্ঘটনার সুষ্ঠু বিচার, ক্ষতিপূরণ এবং বিশ্ববিদ্যালয়ের সামনের মহাসড়কে ফুটওভার ব্রিজ ও স্পিডব্রেকার নির্মাণের দাবিতে খুলনার জেলা প্রশাসকের কার্যালয় ঘেরাও করে স্মারকলিপি প্রদান।",
+        content: "সড়ক দুর্ঘটনায় সহপাঠী নিহতের প্রতিবাদে খুলনা বিশ্ববিদ্যালয়ের কয়েক হাজার শিক্ষার্থী মিছিল নিয়ে জেলা প্রশাসকের (ডিসি) কার্যালয় ঘেরাও করেন। শিক্ষার্থীরা ডিসি অফিসের সামনের রাস্তা অবরোধ করে অবস্থান ধর্মঘট পালন করেন।\n\nশিক্ষার্থীদের দাবির মধ্যে ছিল নিহত শিক্ষার্থীর পরিবারকে উপযুক্ত ক্ষতিপূরণ, ঘাতক চালকের সর্বোচ্চ শাস্তি, গল্লামারী ও জিরো পয়েন্টে ফুটওভার ব্রিজ নির্মাণ এবং ভারী যানবাহনের গতি নিয়ন্ত্রণ। জেলা প্রশাসক শিক্ষার্থীদের দাবি মেনে নিয়ে দ্রুত বাস্তবায়নের লিখিত আশ্বাস দিলে অবরোধ প্রত্যাহার করা হয়।",
+        tags: ["online", "কালের কণ্ঠ", "ডিসি অফিস ঘেরাও", "ছাত্র বিক্ষোভ", "নিরাপদ সড়ক", "খুবি"]
       },
       {
         id: "kk-14",
-        title: "খুবিতে চার দিনব্যাপী বার্ষিক শিল্পকর্ম প্রদর্শনী শুরু",
-        englishTitle: "Four-Day Annual Art Exhibition Begins at Khulna University",
-        category: "Culture & Arts",
-        categoryLabel: "শিল্প ও সংস্কৃতি",
+        title: "ইফতারিতে খুবি শিক্ষার্থীদের প্রশান্তি মেলে হলরোডের জুসে",
+        englishTitle: "Hall Road Fresh Juice Offers Ramadan Refreshment to KU Students",
+        category: "হল জীবন ও রমজান",
+        categoryLabel: "স্পট রিপোর্ট • রমজান জীবন",
         type: "campus",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
         writer: "খুবি প্রতিনিধি",
-        date: "১২ ফেব্রুয়ারি ২০২৫",
-        readTime: "3 min read",
-        image: "https://images.unsplash.com/photo-1579783900882-c0d3dad7b119?auto=format&fit=crop&w=1200&q=80",
-        summary: "চারুকলা স্কুলের শিক্ষার্থীদের সৃজনশীল ভাস্কর্য, জলরং ও ঐতিহ্যবাহী চিত্রকর্ম নিয়ে খুলনা বিশ্ববিদ্যালয়ের কবি জীবনানন্দ দাশ গ্যালারিতে চার দিনব্যাপী বর্ণাঢ্য প্রদর্শনী শুরু।",
-        content: "খুলনা বিশ্ববিদ্যালয়ের (খুবি) চারুকলা স্কুলের শিক্ষার্থীদের আঁকা জলরং, তেলচিত্র, ছাপচিত্র, ভাস্কর্য ও মৃৎশিল্পের সমন্বয়ে চার দিনব্যাপী বার্ষিক শিল্পকর্ম প্রদর্শনী-২০২৫ শুরু হয়েছে। বিশ্ববিদ্যালয়ের কবি জীবনানন্দ দাশ গ্যালারিতে এ প্রদর্শনীর উদ্বোধন করেন দেশের খ্যাতিমান চিত্রশিল্পীবৃন্দ।\n\nপ্রদর্শনীর উন্মোচিত শিল্পকর্মে বাংলার লোকজ ঐতিহ্য, সুন্দরবনের প্রাকৃতিক রূপ, উপকূলীয় মানুষের জীবনসংগ্রাম এবং সমসাময়িক সামাজিক প্রতিবাদের চিত্র অনন্য দক্ষতায় ফুটে উঠেছে। প্রদর্শনীতে চারুকলা স্কুলের তিনটি ডিসিপ্লিনের শিক্ষার্থীদের নির্বাচিত দুই শতাধিক শিল্পকর্ম স্থান পেয়েছে।\n\nপ্রতিদিন সকাল ১০টা থেকে রাত ৮টা পর্যন্ত সর্বসাধারণের জন্য প্রদর্শনীটি উন্মুক্ত রাখা হয়েছে। খুলনা শহরের বিপুল সংখ্যক শিল্পানুরাগী, শিক্ষক ও শিক্ষার্থী উদ্বোধনী দিনেই প্রদর্শনী ঘুরে দেখেন এবং নবীন শিল্পীদের সৃষ্টিশীলতার ভূয়সী প্রশংসা করেন।",
+        date: "২৫ মার্চ ২০২৫",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["খুবি", "চারুকলা", "শিল্পকর্ম", "Daily Kaler Kantho", "Art", "kaler kantho"]
+        summary: "পবিত্র মাহে রমজানের কাঠফাটা রোদে সারাদিন রোজা রাখার পর ইফতারির সময় খুবির হলরোডের টাটকা ফলের জুস আর শরবতের দোকানে ভিড় জমান শিক্ষার্থীরা। ক্যাম্পাসের রমজানের আমেজ নিয়ে বিশেষ প্রতিবেদন।",
+        content: "তীব্র গরমে সারাদিনের রোজা শেষে ইফতারের মুহূর্তে এক গ্লাস ঠান্ডা বেলের শরবত, তরমুজের রস কিংবা লেবুর জুস যেন পরম প্রশান্তি এনে দেয় খুলনা বিশ্ববিদ্যালয়ের শিক্ষার্থীদের মাঝে। ক্যাম্পাসের প্রবেশমুখের হলরোডে গড়ে ওঠা ফ্রেশ জুসের দোকানগুলোতে আসরের পর থেকেই শুরু হয় শিক্ষার্থীদের উপচে পড়া ভিড়।\n\nদোকানিরা জানান, রমজানে শিক্ষার্থীদের স্বাস্থ্য সুরক্ষায় কৃত্রিম রঙ বা চিনি পরিহার করে শতভাগ প্রাকৃতিক ফলের রস সরবরাহ নিশ্চিত করতে তারা সচেষ্ট থাকেন। ক্যাম্পাসের ভ্রাতৃত্বপূর্ণ রমজানের এই আনন্দঘন চিত্র তুলে ধরা হয়েছে।",
+        tags: ["online", "কালের কণ্ঠ", "রমজান", "হলরোড জুস", "ইফতারি", "খুবি"]
       },
       {
         id: "kk-15",
-        title: "খুলনা বিশ্ববিদ্যালয়ের শতবর্ষী স্মৃতি ও দক্ষিণবঙ্গের মুক্তিযুদ্ধ ইতিহাস চর্চা",
-        englishTitle: "Historical Memory and Liberation War Scholarship at Khulna University",
-        category: "Investigative",
-        categoryLabel: "ইতিহাস ও মুক্তিযুদ্ধ",
+        title: "আবেদনের শর্ত পূরণ ছাড়াই খুবির সমাজবিজ্ঞান বিভাগে ভর্তির অভিযোগ",
+        englishTitle: "Allegations of Admission Irregularities in Sociology Discipline at KU",
+        category: "ভর্তি ও অনিয়ম",
+        categoryLabel: "স্পট রিপোর্ট • ভর্তি অনিয়ম",
         type: "investigative",
+        format: "online",
         newspaper: "Daily Kaler Kantho",
-        writer: "মো. মিরাজুল ইসলাম",
-        date: "১৬ ডিসেম্বর ২০২৪",
-        readTime: "5 min read",
-        image: "https://images.unsplash.com/photo-1461360370896-922624d12aa1?auto=format&fit=crop&w=1200&q=80",
-        summary: "১৯৭১ সালের মহান মুক্তিযুদ্ধে খুলনা অঞ্চলের বধ্যভূমি, প্রত্যক্ষদর্শী যোদ্ধাদের মৌখিক ইতিহাস এবং আর্কাইভাল নথিপত্রের ঐতিহাসিক বিশ্লেষণ।",
-        content: "ইতিহাস ও সভ্যতা ডিসিপ্লিনের গবেষণার অংশ হিসেবে খুলনা, বাগেরহাট ও সাতক্ষীরা অঞ্চলের মুক্তিযুদ্ধকালীন স্থানীয় বীরগাথা এবং গণহত্যার অপ্রকাশিত দলিলপত্র সংগ্রহ করা হয়েছে। তরুণ প্রজন্মের কাছে মুক্তিযুদ্ধের প্রকৃত ঐতিহাসিক তথ্য পৌঁছে দিতে মৌখিক ইতিহাসের গুরুত্ব অনস্বীকার্য।\n\nখুলনা বিশ্ববিদ্যালয়ের গবেষণা টিম গল্লামারী বধ্যভূমি ও খুলনার উপকণ্ঠে পাক হানাদার বাহিনী ও তাদের দোসরদের বর্বরোচিত ধ্বংসযজ্ঞের ওপর মাঠপর্যায়ের জরিপ পরিচালনা করে। প্রত্যক্ষদর্শী মুক্তিযোদ্ধা ও শহীদ পরিবারের সদস্যদের মৌখিক জবানবন্দি অডিও-ভিজ্যুয়াল আকারে সংরক্ষণ করা হচ্ছে, যা জাতীয় ইতিহাসের গুরুত্বপূর্ণ সম্পদ হয়ে থাকবে।",
+        writer: "খুলনা বিশ্ববিদ্যালয় প্রতিনিধি",
+        date: "১৫ জুলাই ২০২৫",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&w=1200&q=80",
         source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["ইতিহাস", "মুক্তিযুদ্ধ", "খুবি", "Daily Kaler Kantho", "History", "kaler kantho"]
+        summary: "বিশ্ববিদ্যালয়ের ভর্তি নীতিমালার আবশ্যক শর্ত ও জিপিএ পূরণ না করেই প্রভাব খাটিয়ে সমাজবিজ্ঞান ডিসিপ্লিনে শিক্ষার্থী ভর্তির গুরুতর অভিযোগ উঠেছে। বিষয়টি তদন্তে উচ্চপর্যায়ের কমিটি গঠন।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের ২০২৪-২৫ শিক্ষাবর্ষে স্নাতক ভর্তি কার্যক্রমে সমাজবিজ্ঞান ডিসিপ্লিনে নীতিমালার তোয়াক্কা না করে কম যোগ্যতাসম্পন্ন প্রার্থীকে ভর্তির অভিযোগ উঠেছে। মেধাতালিকায় এগিয়ে থাকা যোগ্য প্রার্থীদের পেছনে ফেলে প্রভাবশালী মহলের তদবিরে এই অনিয়ম সংঘটিত হয়েছে বলে অনুসন্ধানে জানা গেছে।\n\nসাধারণ শিক্ষার্থীদের দাবির মুখে বিশ্ববিদ্যালয় কর্তৃপক্ষ তদন্ত কমিটি গঠন করেছে। উপাচার্য জানিয়েছেন, ভর্তির স্বচ্ছতা ক্ষুন্ন করে এমন কোনো অনিয়ম প্রমাণিত হলে ভর্তি বাতিলসহ দায়ী ব্যক্তিদের বিরুদ্ধে কঠোর ব্যবস্থা নেওয়া হবে।",
+        tags: ["online", "কালের কণ্ঠ", "ভর্তি অনিয়ম", "সমাজবিজ্ঞান", "খুবি", "অনুসন্ধান"]
       },
       {
-        id: "art-02",
-        title: "খুলনা বিশ্ববিদ্যালয়ে উচ্চশিক্ষা ও গবেষণার নতুন দিগন্ত: সংকট ও সম্ভাবনা",
-        englishTitle: "Higher Education and Research Frontiers at Khulna University",
-        category: "Campus Journalism",
-        categoryLabel: "উচ্চশিক্ষা নীতি",
+        id: "kk-16",
+        title: "হল নিয়ে ফেসবুকে সমালোচনাকে ‘নাশকতা’ দাবি, ২ ছাত্রীকে কারণ দর্শানোর নোটিশ",
+        englishTitle: "Critique on Facebook Labeled 'Sabotage': 2 KU Female Students Served Show-Cause",
+        category: "বাকস্বাধীনতা ও হল",
+        categoryLabel: "স্পট রিপোর্ট • মতপ্রকাশ",
         type: "campus",
-        newspaper: "Daily Observer",
-        writer: "Md. Mirazul Islam",
-        date: "২২ জানুয়ারি ২০২৬",
-        readTime: "4 min read",
-        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
-        summary: "দক্ষিণ-পশ্চিমাঞ্চলের সর্বোচ্চ বিদ্যাপীঠে আধুনিক গবেষণাগার, আন্তর্জাতিক প্রকাশনা এবং শিক্ষক-শিক্ষার্থীদের গবেষণায় বরাদ্দ বৃদ্ধির প্রয়োজনীয়তা নিয়ে বিশেষ প্রতিবেদন।",
-        content: "গবেষণাধর্মী বিশ্ববিদ্যালয় হিসেবে খুলনা বিশ্ববিদ্যালয়ের একাডেমিক অগ্রযাত্রা প্রশংসিত হলেও অপ্রতুল বাজেট ও আধুনিক ল্যাব সুবিধার ঘাটতি এখনো বড় চ্যালেঞ্জ। বিভিন্ন ডিসিপ্লিনের শিক্ষক ও গবেষকদের সাথে কথা বলে জানা গেছে, আন্তর্জাতিক মানের গবেষণাপত্র প্রকাশে তরুণ গবেষকদের প্রণোদনা বৃদ্ধি করা জরুরি।\n\nবিশ্ববিদ্যালয় প্রশাসনের নেওয়া সাম্প্রতিক উদ্যোগ, নতুন গবেষণা নীতিমালা এবং শিক্ষার্থীদের জন্য গবেষণা বৃত্তির সুযোগ নিয়ে এই অনুসন্ধান তুলে ধরেছে ভবিষ্যৎ উচ্চশিক্ষার রোডম্যাপ।",
-        source: "https://www.observerbd.com",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "২ মে ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["Higher Education", "Khulna University", "Research Policy", "Daily Observer"]
+        summary: "আবাসিক হলের খাবারের নিম্নমান ও নোংরা বাথরুম নিয়ে সামাজিক যোগাযোগ মাধ্যমে পোস্ট দেওয়ায় দুই নারী শিক্ষার্থীকে 'বিশ্ববিদ্যালয়ের বিরুদ্ধে নাশকতা'র অভিযোগ এনে কারণ দর্শানোর নোটিশ দেওয়ায় নিন্দা।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের নবনির্মিত বঙ্গমাতা ও বিজয়-২৪ ছাত্রী হলের অপরিচ্ছন্ন পরিবেশ ও খাবার সংকটের সমাধান চেয়ে ফেসবুকে ক্ষোভ প্রকাশ করায় দুই নারী শিক্ষার্থীকে কারণ দর্শানোর (শোকজ) নোটিশ পাঠিয়েছে হল প্রশাসন। নোটিশে শিক্ষার্থীদের যৌক্তিক সমালোচনামূলক পোস্টকে 'শৃঙ্খলাভঙ্গ ও নাশকতা' হিসেবে আখ্যায়িত করায় তীব্র নিন্দার ঝড় উঠেছে।\n\nশিক্ষার্থী ও মানবাধিকার কর্মীরা বলছেন, হলের ন্যায্য নাগরিক সমস্যা তুলে ধরা শিক্ষার্থীদের মৌলিক বাকস্বাধীনতার অংশ। শোকজ প্রত্যাহারের দাবিতে শিক্ষার্থীরা সামাজিক মাধ্যমে সরব হয়েছেন।",
+        tags: ["online", "কালের কণ্ঠ", "শোকজ", "বাকস্বাধীনতা", "ছাত্রী হল", "খুবি"]
       },
       {
-        id: "art-03",
-        title: "মব ভায়োলেন্স, মানবাধিকার লংঘন ও ডিজিটাল নিরাপত্তা: সাংবাদিকতায় সুরক্ষার চ্যালেঞ্জ",
-        englishTitle: "Digital Safety and Grassroots Journalism: Legal and Physical Risks",
-        category: "Human Rights",
-        categoryLabel: "মানবাধিকার ও নিরাপত্তা",
-        type: "human rights",
-        newspaper: "Daily Agamir Somoy",
+        id: "kk-17",
+        title: "সাফল্যের মাঝেও নানা সংকটে জর্জরিত খুলনা বিশ্ববিদ্যালয়",
+        englishTitle: "Khulna University Plagued by Severe Challenges Amid Scholarly Triumphs",
+        category: "উচ্চশিক্ষা ও সংকট",
+        categoryLabel: "স্পট রিপোর্ট • বিশ্ববিদ্যালয় সংকট",
+        type: "campus",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
         writer: "মো. মিরাজুল ইসলাম",
-        date: "৮ সেপ্টেম্বর ২০২৫",
-        readTime: "7 min read",
-        image: "https://images.unsplash.com/photo-1504711434969-e33886168f5c?auto=format&fit=crop&w=1200&q=80",
-        summary: "মফস্বল ও ক্যাম্পাস সাংবাদিকদের ওপর ডিজিটাল নজরদারি, শারীরিক হুমকি এবং মব ভায়োলেন্সের মুখে পেশাগত নিরাপত্তার বাস্তব চিত্র নিয়ে ইউনেস্কো ও টিআইবি নির্দেশিকার আলোকে বিশ্লেষণ।",
-        content: "সত্য উদঘাটন ও নিরপেক্ষ সাংবাদিকতার পথে জেলা ও ক্যাম্পাস পর্যায়ের সাংবাদিকরা প্রতিনিয়ত নানা সামাজিক ও রাজনৈতিক চাপের মুখোমুখি হন। আন্তর্জাতিক মানদণ্ড অনুযায়ী সাংবাদিকদের ডিজিটাল ও শারীরিক নিরাপত্তা নিশ্চিত করা যেকোনো মুক্ত সমাজের অন্যতম পূর্বশর্ত।\n\nইউনেস্কো এবং নিউজ নেটওয়ার্কের নিরাপত্তা নির্দেশিকা পর্যালোচনা করে এই প্রতিবেদনে স্বাধীন সাংবাদিকতা চর্চায় আইনি সুরক্ষা, মব ভায়োলেন্সের ঝুঁকি মোকাবিলা ও তথ্যের গোপনীয়তা রক্ষার উপায়সমূহ বিস্তারিত আলোচনা করা হয়েছে।",
-        source: "https://pib.gov.bd",
+        date: "২৫ নভেম্বর ২০২৫",
+        readTime: "৫ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
         archive: "https://kuja-web.live/Profile/miraz.html",
-        tags: ["Human Rights", "Mob Violence", "Digital Safety", "TIB", "Agamir Somoy"]
+        summary: "স্নাতক ও গবেষণায় জাতীয়ভাবে সুনাম কুড়ালেও অপ্রতুল বাজেট, ল্যাবরেটরির সরঞ্জাম সংকট, আবাসন ঘাটতি ও দীর্ঘদিনের শিক্ষক স্বল্পতায় খুলনা বিশ্ববিদ্যালয়ের সার্বিক অগ্রগতি ব্যাহত হচ্ছে।",
+        content: "দক্ষিণবঙ্গের সর্বোচ্চ বাতিঘর খুলনা বিশ্ববিদ্যালয় সেশনজটমুক্ত পরিবেশ ও গবেষণার সুনামের দিক থেকে অনন্য হলেও নানা মৌলিক সংকটে জর্জরিত। ক্যাম্পাসে প্রায় সাত হাজার শিক্ষার্থীর জন্য পর্যাপ্ত আবাসন নেই, আধুনিক সেন্ট্রাল লাইব্রেরিতে গবেষণার আন্তর্জাতিক ডাটাবেজ এক্সেস অপ্রতুল।\n\nবিভিন্ন ডিসিপ্লিনের গবেষণাগারগুলোতে আধুনিক মেশিনারিজ ও রিএজেন্টের তীব্র ঘাটতি রয়েছে। সংশ্লিষ্টরা বলছেন, সরকারি বাজেট বরাদ্দ বৃদ্ধি এবং আন্তর্জাতিক বিশ্ববিদ্যালয়ের সাথে দ্বিপাক্ষিক সহযোগিতা জোরদার না করলে ভবিষ্যৎ উচ্চশিক্ষার অগ্রযাত্রা ধরে রাখা কঠিন হবে।",
+        tags: ["online", "কালের কণ্ঠ", "খুবি সংকট", "উচ্চশিক্ষা", "বাজেট", "গবেষণা"]
+      },
+      {
+        id: "kk-18",
+        title: "ভেজালের দৌরাত্ম্য ও নানা চ্যালেঞ্জের মুখে দেশের বৃহৎ খেজুর গুড়ের হাট",
+        englishTitle: "Adulteration & Modern Challenges Threaten Country's Largest Date Molasses Hub",
+        category: "ঐতিহ্য ও ভেজাল অনুসন্ধান",
+        categoryLabel: "স্পট রিপোর্ট • খেজুর গুড়ের হাট",
+        type: "investigative",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "২০ জানুয়ারি ২০২৬",
+        readTime: "৫ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1541781774459-bb2af2f05b55?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "চুয়াডাঙ্গার ঐতিহ্যবাহী সরোজগঞ্জ খেজুর গুড়ের হাটে চিনি, হাইড্রোজ ও সোডা মিশিয়ে তৈরি করা হচ্ছে ভেজাল গুড়। ৩ শতাধিক বছরের ঐতিহ্য টিকিয়ে রাখতে প্রশাসন ও গবেষকদের নজরদারির তাগিদ।",
+        content: "দেশের সর্ববৃহৎ খেজুর গুড়ের হাট চুয়াডাঙ্গার সরোজগঞ্জ বাজারে শীতের মৌসুমে প্রতি সপ্তাহে কোটি কোটি টাকার গুড় লেনদেন হয়। কিন্তু অতি মুনাফালোভী একটি অসাধু চক্র সাদা চিনি, ক্ষতিকর রং, ফিটকিরি ও হাইড্রোজ মিশিয়ে খাঁটি খেজুরের পাটালি তৈরি করছে, যা জনস্বাস্থ্যের জন্য চরম মারাত্মক।\n\nমাঠপর্যায়ের অনুসন্ধানে দেখা গেছে, আসল গাছিরা খেজুরের রস সংকটে পড়ার সুযোগ নিয়ে এই ভেজাল কারবার রমরমা হয়ে উঠেছে। ক্রেতারা বলছেন, নিয়মিত মোবাইল কোর্ট ও খাঁটি গুড় সনাক্তকরণের আধুনিক ব্যবস্থা চালু না হলে এই শতাব্দীপ্রাচীন গ্রামীণ ঐতিহ্য চিরতরে সুনাম হারাবে।",
+        tags: ["online", "কালের কণ্ঠ", "খেজুর গুড়", "সরোজগঞ্জ", "ভেজাল", "অনুসন্ধান"]
+      },
+      {
+        id: "kk-19",
+        title: "জলবায়ু সংকটে উপকূলের জীবিকা, পানি ও স্যানিটেশন বিপর্যস্ত",
+        englishTitle: "Climate Crisis Shatters Livelihoods, Water & Sanitation in Coastal Belt",
+        category: "জলবায়ু ও জনস্বাস্থ্য",
+        categoryLabel: "স্পট রিপোর্ট • উপকূলীয় সংকট",
+        type: "climate",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "১৪ অক্টোবর ২০২৫",
+        readTime: "৬ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "সুন্দরবন-সংলগ্ন শ্যামনগর ও কয়রায় সুপেয় পানির তীব্র সংকট ও লবণাক্ততার আগ্রাসনে কৃষি ও মৎস্যজীবীদের বাস্তুচ্যুতি নিয়ে কালের কণ্ঠের মাঠপর্যায়ের বিশেষ অনুসন্ধানী প্রতিবেদন।",
+        content: "জলবায়ু পরিবর্তনের ক্ষতিকর প্রভাবের সম্মুখভাগে দাঁড়িয়ে থাকা বাংলাদেশের দক্ষিণ-পশ্চিম উপকূলীয় অঞ্চল আজ অস্তিত্ব সংকটে। সুন্দরবন-সংলগ্ন শ্যামনগর, কয়রা এবং শরণখোলা উপজেলার জনপদগুলোতে প্রতি বছর জোয়ারের পানির অস্বাভাবিক বৃদ্ধি ও দীর্ঘস্থায়ী লবণাক্ততার কারণে কৃষি ও মৎস্য অর্থনীতি ধ্বংসের মুখে।\n\nমাঠপর্যায়ের গবেষণায় দেখা গেছে, উপকূলীয় জেলেদের জীবন-জীবিকা আজ চরম হুমকির মুখে। সুন্দরবনের ওপর তাদের প্রথাগত নির্ভরশীলতা জলবায়ু বিপর্যয় ও প্রশাসনিক বিধিনিষেধের কারণে মারাত্মকভাবে বিঘ্নিত হচ্ছে। এর ফলে তরুণ প্রজন্ম ভিটেমাটি ছেড়ে বিভাগীয় শহর ও রাজধানীতে ঝুঁকিপূর্ণ অভিবাসনে বাধ্য হচ্ছে।",
+        tags: ["online", "কালের কণ্ঠ", "জলবায়ু", "উপকূল", "সুপেয় পানি", "লবণাক্ততা"]
+      },
+      {
+        id: "kk-20",
+        title: "সমস্যায় জর্জরিত অপরাজিতা হল, ছাত্রীদের দুর্ভোগ",
+        englishTitle: "Severe Problems in Aparajita Hall: Female Students in Misery",
+        category: "আবাসন ও হল সংকট",
+        categoryLabel: "স্পট রিপোর্ট • ছাত্রী হল",
+        type: "campus",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "১৮ সেপ্টেম্বর ২০২৫",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের অন্যতম পুরাতন ছাত্রী হল 'অপরাজিতা'য় পানির তীব্র সংকট, ডাইনিংয়ে অখাদ্য পরিবেশন এবং জরাজীর্ণ কক্ষের কারণে আবাসিক ছাত্রীরা অবর্ণনীয় দুর্ভোগে দিন কাটাচ্ছেন।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের অপরাজিতা হলের চার শতাধিক আবাসিক ছাত্রী প্রতিনিয়ত তীব্র পানি ও পরিচ্ছন্নতা সংকটে ভুগছেন। হলের রিজার্ভ ট্যাংকে নিয়মিত ময়লা জমে থাকা, বাথরুমের ফিটিংস নষ্ট থাকা এবং ফ্যানের ধীরগতির কারণে গরমে পড়াশোনা করাই দায় হয়ে পড়েছে।\n\nছাত্রীরা জানান, বারবার হল প্রাধ্যক্ষ বরাবর লিখিত অভিযোগ দিয়েও কোনো ফল মেলেনি। ডাইনিংয়ের খাবারের মান এতই নিম্নমানের যে বাধ্য হয়ে ছাত্রীদের বাইরে থেকে অনিরাপদ খাবার কিনে খেতে হচ্ছে।",
+        tags: ["online", "কালের কণ্ঠ", "অপরাজিতা হল", "ছাত্রী দুর্ভোগ", "খুবি", "আবাসন"]
+      },
+      {
+        id: "kk-21",
+        title: "খুবির হল ও ক্যাফেটেরিয়ায় নিম্নমানের খাবার, অভিযোগ টেস্টিং সল্ট ব্যবহারের",
+        englishTitle: "Substandard Food in KU Cafeterias: Dangerous Use of Tasting Salt Alleged",
+        category: "খাদ্য নিরাপত্তা ও স্বাস্থ্য",
+        categoryLabel: "স্পট রিপোর্ট • স্বাস্থ্যঝুঁকি",
+        type: "campus",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "১২ নভেম্বর ২০২৫",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের কেন্দ্রীয় ক্যাফেটেরিয়া ও আবাসিক হলগুলোর খাবারে ক্ষতিকর টেস্টিং সল্ট এবং বাসি-পচা তেল ব্যবহারের অভিযোগ। শিক্ষার্থীদের মাঝে বাড়ছে গ্যাস্ট্রিক ও পেটের মারাত্মক ব্যাধি।",
+        content: "ক্যাম্পাসের ক্যাফেটেরিয়া ও হলগুলোতে খাবারের স্বাদ বৃদ্ধির অজুহাতে দেদারসে নিষিদ্ধ ক্ষতিকর রাসায়নিক টেস্টিং সল্ট (এমএসজি) ব্যবহার করা হচ্ছে বলে গুরুতর অভিযোগ উঠেছে। সরেজমিনে দেখা গেছে, পোড়া তেলে বারবার খাবার ভাজা হচ্ছে এবং পরিষ্কার-পরিচ্ছন্নতার ন্যূনতম মান বজায় রাখা হচ্ছে না।\n\nখুবি চিকিৎসাকেন্দ্রের চিকিৎসকরা জানান, প্রতিদিন বিপুল সংখ্যক শিক্ষার্থী ফুড পয়জনিং ও তীব্র পেটের পীড়া নিয়ে হাসপাতালে আসছেন। শিক্ষার্থীরা অবিলম্বে খাদ্যমান তদারকিতে ফুড সেফটি কমিটি গঠনের দাবি জানিয়েছেন।",
+        tags: ["online", "কালের কণ্ঠ", "টেস্টিং সল্ট", "ক্যাফেটেরিয়া", "খাদ্য নিরাপত্তা", "খুবি"]
+      },
+      {
+        id: "kk-22",
+        title: "গবেষণায় যুক্ত শিক্ষার্থীদের মাসিক ভাতা দেবে খুলনা বিশ্ববিদ্যালয়",
+        englishTitle: "Khulna University Announces Monthly Stipends for Student Researchers",
+        category: "শিক্ষা ও গবেষণা অনুদান",
+        categoryLabel: "স্পট রিপোর্ট • গবেষণা প্রণোদনা",
+        type: "education",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুলনা বিশ্ববিদ্যালয় প্রতিনিধি",
+        date: "১৫ জানুয়ারি ২০২৬",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "উচ্চমানের গবেষণায় শিক্ষার্থীদের উৎসাহিত করতে স্নাতকোত্তর ও পিএইচডি পর্যায়ের গবেষকদের জন্য আকর্ষণীয় মাসিক গবেষণা ফেলোশিপ ও ভাতা চালু করেছে খুলনা বিশ্ববিদ্যালয় প্রশাসন।",
+        content: "গবেষণাধর্মী বিশ্ববিদ্যালয় হিসেবে অগ্রযাত্রাকে বেগবান করতে খুলনা বিশ্ববিদ্যালয় সিন্ডিকেট স্নাতক ও স্নাতকোত্তর পর্যায়ের সক্রিয় গবেষকদের জন্য মাসিক সম্মানজনক গবেষণা ভাতা বরাদ্দের ঐতিহাসিক সিদ্ধান্ত নিয়েছে।\n\nনতুন এই গবেষণা নীতিমালার আওতায় আন্তর্জাতিক ইনডেক্সড জার্নালে পেপার প্রকাশে তরুণ গবেষকদের আর্থিক অনুদান দেওয়া হবে। উপাচার্য বলেন, এই উদ্যোগ শিক্ষার্থীদের মেধা পাচার রোধে এবং দেশীয় সমস্যা সমাধানে মৌলিক গবেষণার সুযোগ তৈরি করবে।",
+        tags: ["online", "কালের কণ্ঠ", "গবেষণা ভাতা", "ফেলোশিপ", "খুবি", "শিক্ষা"]
+      },
+      {
+        id: "kk-23",
+        title: "অবসরের তিন মাস আগে তিন কর্মকর্তাকে নতুন নিয়োগ",
+        englishTitle: "Controversy as 3 Officials Appointed 3 Months Prior to Retirement at KU",
+        category: "প্রশাসন ও বিতর্ক",
+        categoryLabel: "স্পট রিপোর্ট • নিয়োগ বিতর্ক",
+        type: "investigative",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "২৮ আগস্ট ২০২৫",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1450133064473-71024230f91b?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "চাকরির বয়সসীমা শেষ হওয়ার মাত্র তিন মাস আগে তড়িঘড়ি করে তিনজন জ্যেষ্ঠ কর্মকর্তাকে নতুন পদে পদোন্নতি ও নিয়োগ দেওয়ার ঘটনায় ক্যাম্পাসে তীব্র সমালোচনার ঝড় উঠেছে।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের সাবেক প্রশাসনের বিদায়লগ্নে অবসরের মাত্র কয়েক মাস বাকি থাকা অবস্থায় তিনজন কর্মকর্তাকে বিতর্কিতভাবে গুরুত্বপূর্ণ প্রশাসনিক পদে নিয়োগ দেওয়ার অভিযোগ পাওয়া গেছে। সংশ্লিষ্টরা বলছেন, পেনশন সুবিধা ও আর্থিক প্রণোদনা বাড়াতে নিয়মনীতিকে পাশ কাটিয়ে এই বিশেষ সুবিধা দেওয়া হয়েছে।\n\nবিশ্ববিদ্যালয়ের শিক্ষক সমিতি ও সাধারণ কর্মচারীদের পক্ষ থেকে এই বিতর্কিত নিয়োগ পর্যালোচনার দাবি জানানো হয়েছে।",
+        tags: ["online", "কালের কণ্ঠ", "নিয়োগ বিতর্ক", "প্রশাসন", "খুবি", "অনুসন্ধান"]
+      },
+      {
+        id: "kk-24",
+        title: "‘আমার ভালোবাসার চিহ্ন এঁকে দেবই’, ছাত্রীকে অধ্যাপকের চ্যালেঞ্জ",
+        englishTitle: "'Will Leave My Mark of Love': KU Professor's Threatening Words to Student",
+        category: "ক্যাম্পাস ও যৌন নিপীড়ন",
+        categoryLabel: "স্পট রিপোর্ট • নিপীড়ন অভিযোগ",
+        type: "campus",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "২০ জুন ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1544717305-2782549b5136?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের অভিযুক্ত এক শিক্ষকের বিরুদ্ধে ছাত্রীকে অনৈতিক প্রস্তাব প্রত্যাখ্যাত হওয়ার পর 'শরীরে ভালোবাসার চিহ্ন এঁকে দেবই' বলে হুমকি দেওয়ার চাঞ্চল্যকর অডিও ফাঁস। ক্যাম্পাসে তুমুল ক্ষোভ।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের শিক্ষক কর্তৃক ছাত্রীকে যৌন হয়রানির ঘটনায় এবার বেরিয়ে এসেছে চাঞ্চল্যকর অডিও রেকর্ড। ফাঁস হওয়া কথোপকথনে অভিযুক্ত শিক্ষককে ছাত্রীকে ভীতি প্রদর্শন করে বলতে শোনা যায়, 'আমার প্রস্তাবে রাজি না হলে ক্যারিয়ার ধ্বংস করে দেব, ভালোবাসার চিহ্ন এঁকে দেবই।' \n\nএই অডিও ফাঁসের পর ক্যাম্পাসে সাধারণ শিক্ষার্থীরা ক্লাস বর্জন করে প্রশাসনিক ভবনের সামনে অবস্থান কর্মসূচি পালন করছেন। যৌন নিপীড়ন নিরোধ সেল জানিয়েছে, অডিওটির ফরেনসিক পরীক্ষা শেষে চূড়ান্ত ব্যবস্থা নেওয়া হবে।",
+        tags: ["online", "কালের কণ্ঠ", "যৌন নিপীড়ন", "অডিও ফাঁস", "খুবি", "প্রতিবাদ"]
+      },
+      {
+        id: "kk-25",
+        title: "খুবি শিক্ষকের বিরুদ্ধে নানা অভিযোগ, ৫ মাসেও হয়নি সমাধান",
+        englishTitle: "Multiple Allegations Against KU Faculty Remain Unresolved for 5 Months",
+        category: "প্রশাসন ও তদন্ত ধীরগতি",
+        categoryLabel: "স্পট রিপোর্ট • তদন্তের ধীরগতি",
+        type: "investigative",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "৫ অক্টোবর ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1589829545856-d10d557cf95f?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "খুলনা বিশ্ববিদ্যালয়ের এক শিক্ষকের বিরুদ্ধে একাডেমিক অসদাচরণ, নম্বর জালিয়াতি ও অসৌজন্যমূলক আচরণের একাধিক অভিযোগ জমা পড়ার পাঁচ মাস পেরিয়ে গেলেও কোনো বিচার হয়নি।",
+        content: "খুলনা বিশ্ববিদ্যালয়ের এক বিতর্কিত শিক্ষকের বিরুদ্ধে সহকর্মী ও শিক্ষার্থীদের পক্ষ থেকে উত্থাপিত একাধিক গুরুতর অভিযোগ পাঁচ মাস ধরে ফাইলেই বন্দি রয়েছে। ফ্যাক্ট-ফাইন্ডিং কমিটি গঠিত হলেও এখন পর্যন্ত কোনো কার্যকর পদক্ষেপ নেওয়া হয়নি বলে জানা গেছে।\n\nশিক্ষার্থীরা ক্ষোভ প্রকাশ করে বলেছেন, প্রভাবশালীদের আড়াল করতে তদন্তে গড়িমসি করা হচ্ছে। দ্রুত প্রতিবেদন প্রকাশ করে দোষীদের বিরুদ্ধে শাস্তিমূলক ব্যবস্থা না নিলে কঠোর আন্দোলনের হুঁশিয়ারি দেওয়া হয়েছে।",
+        tags: ["online", "কালের কণ্ঠ", "তদন্ত", "ধীরগতি", "খুবি", "প্রশাসন"]
+      },
+      {
+        id: "kk-26",
+        title: "শহীদ মীর মুগ্ধ দিবসে খুবিতে নেই ‘বড়’ আয়োজন, হতাশ শিক্ষার্থীরা",
+        englishTitle: "Disappointment at KU as No Grand Program Marks Shaheed Mugdho Day",
+        category: "ছাত্র আন্দোলন ও শহীদ স্মরণ",
+        categoryLabel: "স্পট রিপোর্ট • মুগ্ধ স্মরণ",
+        type: "campus",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "১৮ জুলাই ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "জুলাই অভ্যুত্থানের বীর শহীদ খুবির প্রাক্তন শিক্ষার্থী মীর মাহফুজুর রহমান মুগ্ধর শাহাদাত বার্ষিকীতে ক্যাম্পাসে প্রশাসনের পক্ষ থেকে বড় কোনো স্মরণসভা না থাকায় সাধারণ শিক্ষার্থীদের চরম অসন্তোষ।",
+        content: "জুলাই ছাত্র-জনতার গণঅভ্যুত্থানে 'পানি লাগবে কারো, পানি?' বলে তৃষ্ণার্ত মানুষের পাশে দাঁড়িয়ে আত্মাহুতি দেওয়া খুলনা বিশ্ববিদ্যালয়ের প্রাক্তন শিক্ষার্থী শহীদ মীর মাহফুজুর রহমান মুগ্ধর স্মরণ দিবসে ক্যাম্পাসে প্রশাসনের দৃশ্যমান বড় কোনো আয়োজন না থাকায় ক্ষোভ প্রকাশ করেছেন সাধারণ শিক্ষার্থীরা।\n\nশিক্ষার্থীরা বলছেন, যাঁর বীরত্বে সমগ্র জাতি নতুন বাংলাদেশের স্বপ্ন দেখল, তাঁর নিজ বিদ্যাপীঠেই তাঁকে যথাযথ শ্রদ্ধায় স্মরণ করার ক্ষেত্রে প্রশাসনের অনীহা অগ্রহণযোগ্য। শিক্ষার্থীরা নিজেরাই অদম্য বাংলায় মোমবাতি প্রজ্বলন ও দোয়ার আয়োজন করেন।",
+        tags: ["online", "কালের কণ্ঠ", "মীর মুগ্ধ", "শহীদ মুগ্ধ", "জুলাই অভ্যুত্থান", "খুবি"]
+      },
+      {
+        id: "kk-27",
+        title: "মুগ্ধের অনুরোধ স্মরণ : অদম্য বাংলায় ‘কালো কাপড়’ বাঁধবে শিক্ষার্থীরা",
+        englishTitle: "Remembering Mugdho: KU Students Tie Black Ribbons at Odommo Bangla",
+        category: "শহীদ স্মরণ ও প্রতিবাদ",
+        categoryLabel: "স্পট রিপোর্ট • মীর মুগ্ধ",
+        type: "campus",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুবি প্রতিনিধি",
+        date: "১৯ জুলাই ২০২৬",
+        readTime: "৩ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1523050854058-8df90110c9f1?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "শহীদ মীর মুগ্ধর আত্মত্যাগের চেতনাকে সমুন্নত রাখতে খুলনা বিশ্ববিদ্যালয়ের ঐতিহাসিক অদম্য বাংলা চত্বরে কালো কাপড় বেঁধে মৌন প্রতিবাদ ও শ্রদ্ধা জানান শত শত শিক্ষার্থী।",
+        content: "শহীদ মীর মাহফুজুর রহমান মুগ্ধর অমর স্মৃতির প্রতি শ্রদ্ধা জানাতে খুলনা বিশ্ববিদ্যালয়ের অদম্য বাংলা ভাস্কর্য চত্বরে সমবেত হন শিক্ষক ও সাধারণ শিক্ষার্থীরা। প্রশাসনের নিষ্ক্রিয়তার প্রতিবাদে শিক্ষার্থীরা নিজেদের চোখে ও মুখে কালো কাপড় বেঁধে মৌন অবস্থান কর্মসূচি পালন করেন।\n\nএ সময় শহীদদের আকাঙ্ক্ষার বৈষম্যহীন ক্যাম্পাস ও রাষ্ট্র বিনির্মাণের শপথ পুনর্ব্যক্ত করা হয়।",
+        tags: ["online", "কালের কণ্ঠ", "অদম্য বাংলা", "কালো কাপড়", "মীর মুগ্ধ", "খুবি"]
+      },
+      {
+        id: "kk-28",
+        title: "অল্প লবণাক্ত পানিতে গলদা-রুইয়ের মিশ্র চাষে সাফল্য",
+        englishTitle: "Success in Poly-Culture of Golda Prawn & Rui in Low-Salinity Waters",
+        category: "উপকূল ও মৎস্য অর্থনীতি",
+        categoryLabel: "স্পট রিপোর্ট • মৎস্য চাষ",
+        type: "climate",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "২০ ফেব্রুয়ারি ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1544620347-c4fd4a3d5957?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "দক্ষিণাঞ্চলের অল্প লবণাক্ত ঘেরে গলদা চিংড়ির সাথে দেশীয় কার্প জাতীয় মাছের মিশ্র চাষে অভূতপূর্ব সাফল্য পেয়েছেন খুলনা ও বাগেরহাটের চাষিরা। লাভজনক এ পদ্ধতির বৈজ্ঞানিক অনুসন্ধান।",
+        content: "উপকূলীয় অঞ্চলে জলবায়ু পরিবর্তনের ফলে নদীর পানিতে মৃদু লবণাক্ততা বৃদ্ধিকে মৎস্য চাষিরা এখন অর্থনৈতিক সম্পদে রূপান্তর করছেন। খুলনা বিশ্ববিদ্যালয়ের ফিশারিজ অ্যান্ড মেরিন রিসোর্স টেকনোলজি ডিসিপ্লিনের তত্ত্বাবধানে কৃষকরা অল্প লবণাক্ত পানিতে গলদা চিংড়ি ও রুই-কাতলার মিশ্র চাষ করে দ্বিগুণ মুনাফা অর্জন করছেন।\n\nগবেষকরা জানান, এই মিশ্র চাষে মাছের রোগবালাই কমে এবং জলের বাস্তুতন্ত্র চমৎকার থাকে। প্রান্তিক চাষীদের জন্য এটি একটি নির্ভরযোগ্য ও টেকসই জীবিকার পথ তৈরি করেছে।",
+        tags: ["online", "কালের কণ্ঠ", "গলদা চিংড়ি", "রুই মাছ", "মিশ্র চাষ", "মৎস্য অর্থনীতি"]
+      },
+      {
+        id: "kk-29",
+        title: "উপকূলের লবণাক্ত মাটিতে তুলার সফল চাষ",
+        englishTitle: "Successful Cotton Harvesting in Coastal Saline Belt of Bangladesh",
+        category: "পরিবেশ ও কৃষি",
+        categoryLabel: "স্পট রিপোর্ট • উপকূলীয় কৃষি",
+        type: "climate",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "মো. মিরাজুল ইসলাম",
+        date: "১৮ মার্চ ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1605000797499-95a51c5269ae?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "লবণাক্ততার কারণে বছরের অধিকাংশ সময় অনাবাদি পড়ে থাকা খুলনার উপকূলীয় জমিতে লবণ-সহনশীল তুলা চাষ করে ব্যাপক লাভবান হচ্ছেন স্থানীয় কৃষকরা। নতুন সম্ভাবনার সচিত্র সংবাদ।",
+        content: "উপকূলীয় শ্যামনগর ও কয়রা অঞ্চলে বোরো মৌসুমে সেচের মিষ্টি পানির অভাবে হাজার হাজার হেক্টর জমি অনাবাদি থাকত। কিন্তু তুলা উন্নয়ন বোর্ডের সহযোগিতায় লবণাক্ত মাটিতে তুলা চাষ শুরু হওয়ার পর দৃশ্যপট পাল্টে গেছে।\n\nলবণাক্ত জমিতে উৎপাদিত এই তুলার আঁশের মান অত্যন্ত উন্নত হওয়ায় দেশের শীর্ষ টেক্সটাইল মিলগুলো সরাসরি কৃষকদের কাছ থেকে চড়া দামে তুলা ক্রয় করছে। এতে উপকূলীয় যুবসমাজের জন্য নতুন কর্মসংস্থানের দিগন্ত উন্মোচিত হয়েছে।",
+        tags: ["online", "কালের কণ্ঠ", "তুলা চাষ", "লবণাক্ত মাটি", "উপকূল", "কৃষি অর্থনীতি"]
+      },
+      {
+        id: "kk-30",
+        title: "খুবিতে ঢাকার বাইরে প্রথম ন্যাট টেস্ট সাইট স্থাপন",
+        englishTitle: "Outside Dhaka: First NAT Testing Site Established at Khulna University",
+        category: "বিজ্ঞান ও স্বাস্থ্য প্রযুক্তি",
+        categoryLabel: "স্পট রিপোর্ট • ন্যাট ল্যাব",
+        type: "education",
+        format: "online",
+        newspaper: "Daily Kaler Kantho",
+        writer: "খুলনা বিশ্ববিদ্যালয় প্রতিনিধি",
+        date: "১০ জানুয়ারি ২০২৬",
+        readTime: "৪ মিনিট পাঠ",
+        image: "https://images.unsplash.com/photo-1532094349884-543bc11b234d?auto=format&fit=crop&w=1200&q=80",
+        source: "https://www.kalerkantho.com",
+        archive: "https://kuja-web.live/Profile/miraz.html",
+        summary: "রাজধানী ঢাকার বাইরে প্রথমবারের মতো খুলনা বিশ্ববিদ্যালয়ে স্থাপিত হলো সর্বাধুনিক 'নিউক্লিক অ্যাসিড টেস্টিং' (NAT) সাইট। এর ফলে রক্তের নিরাপদ স্ক্রিনিং ও ভাইরাস শনাক্তকরণে বৈপ্লবিক অগ্রগতি সাধিত হলো।",
+        content: "দক্ষিণ-পশ্চিমাঞ্চলের স্বাস্থ্যসেবা ও চিকিৎসা গবেষণায় এক ঐতিহাসিক মাইলফলক অর্জিত হলো খুলনা বিশ্ববিদ্যালয়ে ঢাকার বাইরে প্রথম 'ন্যাট টেস্ট সাইট' (Nucleic Acid Testing) চালুর মাধ্যমে। এই সর্বাধুনিক ল্যাবের মাধ্যমে রক্ত পরিসঞ্চালনের পূর্বে এইচআইভি, হেপাটাইটিস বি এবং সি ভাইরাসের অতি সূক্ষ্ম উইন্ডো পিরিয়ডেই শতভাগ নির্ভুলভাবে শনাক্ত করা সম্ভব হবে।\n\nবিশ্ববিদ্যালয়ের বায়োটেকনোলজি অ্যান্ড জেনেটিক ইঞ্জিনিয়ারিং ডিসিপ্লিনের তত্ত্বাবধানে এই ল্যাব পরিচালিত হচ্ছে। বিশেষজ্ঞ চিকিৎসকরা জানিয়েছেন, এটি এই অঞ্চলের হাজারো রোগীর জীবন বাঁচাতে এক বৈপ্লবিক ভূমিকা রাখবে।",
+        tags: ["online", "কালের কণ্ঠ", "ন্যাট টেস্ট", "স্বাস্থ্য প্রযুক্তি", "খুবি ল্যাব", "চিকিৎসা"]
       }
     ];
 
@@ -2712,6 +3589,8 @@
 
       let currentFilter = "all";
       let query = "";
+      let displayedCount = 9; // Initial clean display limit (3x3 grid)
+      const PAGE_INCREMENT = 9;
 
       function render(list) {
         if (!container) return;
@@ -2719,46 +3598,105 @@
           container.innerHTML = `
             <div style="grid-column: 1 / -1; text-align:center; padding: 50px 20px; color:var(--text-muted);">
               <i class="fas fa-search" style="font-size:2.2rem; margin-bottom:14px; opacity:0.4;"></i>
-              <h4 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:6px;">No articles found</h4>
-              <p>Try searching for a different topic or select "All Stories".</p>
+              <h4 style="font-size:1.1rem; color:var(--text-primary); margin-bottom:6px;">কোনো প্রতিবেদন পাওয়া যায়নি</h4>
+              <p>ভিন্ন কোনো বিষয় অনুসন্ধান করুন অথবা "সকল প্রতিবেদন" নির্বাচন করুন।</p>
             </div>
           `;
+          updateLoadMore(0, 0);
           return;
         }
 
-        container.innerHTML = list.map(item => `
-          <div class="article-card" onclick="openReaderModal('${item.id}')">
-            <div class="article-card-img-wrap">
-              <img src="${item.image}" alt="${item.title}" class="article-card-img" loading="lazy">
-            </div>
-            <div class="article-card-body">
-              <div class="story-meta">
-                <span class="category-pill">${item.categoryLabel || item.category}</span>
-                <span>•</span>
-                <span>${item.date}</span>
+        const visibleItems = list.slice(0, displayedCount);
+
+        container.innerHTML = visibleItems.map(item => {
+          let formatBadge = '';
+          let playOverlay = '';
+          if (item.format === 'video') {
+            formatBadge = '<span class="card-format-pill video-pill"><i class="fas fa-video"></i> ভিডিও প্যাকেজ</span>';
+            playOverlay = '<div class="video-play-overlay"><i class="fas fa-play"></i></div>';
+          } else if (item.format === 'print') {
+            formatBadge = '<span class="card-format-pill print-pill"><i class="fas fa-newspaper"></i> প্রিন্ট স্পেশাল</span>';
+          } else {
+            formatBadge = '<span class="card-format-pill online-pill"><i class="fas fa-bolt"></i> স্পট রিপোর্ট</span>';
+          }
+
+          const btnText = item.format === 'video' ? 'ভিডিও প্রিভিউ ▶' : 'প্রিভিউ পড়ুন →';
+          const iconType = item.format === 'video' ? 'fab fa-facebook' : (item.format === 'print' ? 'fas fa-newspaper' : 'fas fa-globe');
+
+          return `
+            <div class="article-card" onclick="openReaderModal('${item.id}')">
+              <div class="article-card-img-wrap">
+                <img src="${item.image}" alt="${item.title}" class="article-card-img" loading="lazy">
+                ${formatBadge}
+                ${playOverlay}
               </div>
-              <h3 class="article-title-bn">${item.title}</h3>
-              <p class="article-card-excerpt">${item.summary}</p>
-              <div class="article-card-footer">
-                <span><i class="fas fa-newspaper"></i> ${item.newspaper}</span>
-                <span style="color:var(--accent-primary); font-weight:600;">Read More →</span>
+              <div class="article-card-body">
+                <div class="story-meta">
+                  <span class="category-pill">${item.categoryLabel || item.category}</span>
+                  <span>•</span>
+                  <span>${item.date}</span>
+                </div>
+                <h3 class="article-title-bn">${item.title}</h3>
+                <p class="article-card-excerpt">${item.summary}</p>
+                <div class="article-card-footer">
+                  <span><i class="${iconType}"></i> ${item.newspaper}</span>
+                  <span style="color:var(--accent-primary); font-weight:600;">${btnText}</span>
+                </div>
               </div>
             </div>
-          </div>
-        `).join("");
+          `;
+        }).join("");
+
+        updateLoadMore(visibleItems.length, list.length);
       }
+
+      function updateLoadMore(showing, total) {
+        let loadMoreWrap = document.getElementById("load-more-wrap");
+        if (!loadMoreWrap) {
+          loadMoreWrap = document.createElement("div");
+          loadMoreWrap.id = "load-more-wrap";
+          loadMoreWrap.className = "load-more-wrap";
+          container.parentNode.appendChild(loadMoreWrap);
+        }
+
+        if (showing < total) {
+          const remaining = total - showing;
+          loadMoreWrap.innerHTML = `
+            <button id="load-more-btn" class="load-more-btn" onclick="window.loadMoreDispatches()">
+              <i class="fas fa-plus-circle"></i> আরো ${remaining}টি প্রতিবেদন দেখুন (Load More)
+            </button>
+          `;
+        } else {
+          loadMoreWrap.innerHTML = "";
+        }
+      }
+
+      window.loadMoreDispatches = function() {
+        displayedCount += PAGE_INCREMENT;
+        filterAndRender();
+      };
 
       function filterAndRender() {
         let filtered = articlesData;
         if (currentFilter !== "all") {
           const filterLower = currentFilter.toLowerCase();
           filtered = filtered.filter(a => {
+            const format = (a.format || "").toLowerCase();
             const newspaper = (a.newspaper || "").toLowerCase();
             const cat = (a.category || "").toLowerCase();
             const catLabel = (a.categoryLabel || "").toLowerCase();
             const type = (a.type || "").toLowerCase();
             const tags = (a.tags || []).map(t => t.toLowerCase()).join(" ");
+
+            if (filterLower === "video") return format === "video";
+            if (filterLower === "print") return format === "print" || newspaper.includes("observer") || newspaper.includes("আগামী");
+            if (filterLower === "kaler kantho") return newspaper.includes("কালের কণ্ঠ") || newspaper.includes("kaler kantho");
+            if (filterLower === "campus") return cat.includes("ক্যাম্পাস") || cat.includes("campus") || catLabel.includes("ক্যাম্পাস") || type === "campus";
+            if (filterLower === "climate") return cat.includes("পরিবেশ") || cat.includes("জলবায়ু") || cat.includes("উপকূল") || tags.includes("climate") || tags.includes("সুন্দরবন");
+            if (filterLower === "investigative") return format !== "video" && (cat.includes("অনুসন্ধান") || type === "investigative" || catLabel.includes("অপরাধ") || catLabel.includes("প্রশাসন") || catLabel.includes("শৃঙ্খলা") || catLabel.includes("অনিয়ম"));
+
             return newspaper.includes(filterLower) || 
+                   format.includes(filterLower) ||
                    cat.includes(filterLower) || 
                    catLabel.includes(filterLower) || 
                    type.includes(filterLower) ||
@@ -2784,6 +3722,7 @@
           filterBtns.forEach(b => b.classList.remove("active"));
           btn.classList.add("active");
           currentFilter = btn.getAttribute("data-filter");
+          displayedCount = 9; // Reset to 9 on filter switch
           filterAndRender();
         });
       });
@@ -2791,20 +3730,64 @@
       if (searchInput) {
         searchInput.addEventListener("input", (e) => {
           query = e.target.value;
+          displayedCount = 9;
           filterAndRender();
         });
       }
 
+      window.filterBySource = function(src) {
+        filterBtns.forEach(b => {
+          if (b.getAttribute("data-filter") === src) b.classList.add("active");
+          else b.classList.remove("active");
+        });
+        currentFilter = src;
+        displayedCount = 9;
+        filterAndRender();
+        const pubs = document.getElementById("publications");
+        if (pubs) pubs.scrollIntoView({ behavior: "smooth" });
+      };
+
       render(articlesData);
     }
 
-    // Modal Reader Functionality
+    // Modal Reader Functionality (Rich Interactive Preview)
     window.openReaderModal = function(id) {
       const item = articlesData.find(a => a.id === id);
       if (!item) return;
 
       const modal = document.getElementById("reader-modal");
       const content = document.getElementById("reader-modal-content");
+
+      let headerExtra = "";
+      if (item.format === "video") {
+        headerExtra = `
+          <div class="modal-video-banner" style="background: linear-gradient(135deg, rgba(217, 119, 6, 0.12), rgba(15, 23, 42, 0.95)); border: 1px solid var(--accent-border); border-radius: var(--radius-md); padding: 18px 20px; margin-bottom: 22px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 14px;">
+            <div style="display:flex; align-items:center; gap:12px;">
+              <div style="width:44px; height:44px; border-radius:50%; background:var(--accent-primary); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.2rem;">
+                <i class="fas fa-play"></i>
+              </div>
+              <div>
+                <strong style="color:#fff; font-size:1rem; display:block;">বিশেষ ভিডিও সম্প্রচার ও প্যাকেজ</strong>
+                <span style="color:var(--text-muted); font-size:0.85rem;">সরাসরি ফেসবুকে সম্প্রচারিত ভিডিও প্রতিবেদন</span>
+              </div>
+            </div>
+            <a href="${item.videoUrl || item.source}" target="_blank" class="btn btn-primary btn-sm" style="box-shadow: 0 4px 12px rgba(217,119,6,0.3);">
+              <i class="fab fa-facebook"></i> ফেসবুকে সম্পূর্ণ ভিডিও দেখুন <i class="fas fa-external-link-alt" style="font-size:0.75rem; margin-left:4px;"></i>
+            </a>
+          </div>
+        `;
+      } else if (item.format === "print") {
+        headerExtra = `
+          <div class="modal-print-banner" style="background: var(--bg-surface); border-left: 4px solid var(--accent-primary); padding: 12px 18px; margin-bottom: 20px; border-radius: 0 var(--radius-sm) var(--radius-sm) 0;">
+            <div style="font-size:0.82rem; text-transform:uppercase; letter-spacing:0.08em; color:var(--accent-primary); font-weight:700;">
+              <i class="fas fa-print"></i> জাতীয় দৈনিকের প্রিন্ট সংস্করণ
+            </div>
+            <div style="font-size:0.95rem; font-weight:600; color:var(--text-primary); margin-top:2px;">
+              ${item.printDetails || item.newspaper}
+            </div>
+          </div>
+        `;
+      }
 
       content.innerHTML = `
         <div class="modal-header-meta">
@@ -2821,10 +3804,15 @@
         <div class="modal-byline">
           <span>By <strong>${item.writer || 'মো. মিরাজুল ইসলাম'}</strong></span>
           <span>•</span>
-          <span>${item.readTime || 'Full Report'}</span>
+          <span>${item.readTime || 'প্রতিবেদন প্রিভিউ'}</span>
         </div>
 
-        <img src="${item.image}" alt="${item.title}" class="modal-featured-img">
+        ${headerExtra}
+
+        <div style="position:relative; margin-bottom:24px; border-radius:var(--radius-md); overflow:hidden;">
+          <img src="${item.image}" alt="${item.title}" class="modal-featured-img" style="margin-bottom:0;">
+          ${item.format === 'video' ? `<a href="${item.videoUrl || item.source}" target="_blank" style="position:absolute; inset:0; background:rgba(0,0,0,0.35); display:flex; align-items:center; justify-content:center; text-decoration:none;"><span style="width:68px; height:68px; border-radius:50%; background:var(--accent-primary); color:#fff; display:flex; align-items:center; justify-content:center; font-size:1.8rem; box-shadow:0 6px 20px rgba(0,0,0,0.4);"><i class="fas fa-play" style="margin-left:4px;"></i></span></a>` : ''}
+        </div>
 
         <div class="modal-body-text" style="font-size: 1.05rem; line-height: 1.85; color: var(--text-primary); margin: 24px 0;">
           ${item.content ? item.content.split('\n\n').map(p => `<p style="margin-bottom: 1.15em;">${p}</p>`).join('') : `<p>${item.summary}</p>`}
@@ -2832,11 +3820,17 @@
 
         <div class="modal-action-bar">
           <div style="display:flex; gap:12px; flex-wrap:wrap;">
-            <a href="${item.source || 'https://www.kalerkantho.com'}" target="_blank" class="btn btn-primary btn-sm">
-              <i class="fas fa-external-link-alt"></i> মূল প্রতিবেদন (Original Publication)
-            </a>
+            ${item.format === 'video' ? `
+              <a href="${item.videoUrl}" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fab fa-facebook"></i> ফেসবুকে ভিডিও দেখুন <i class="fas fa-external-link-alt"></i>
+              </a>
+            ` : `
+              <a href="${item.source || 'https://www.kalerkantho.com'}" target="_blank" class="btn btn-primary btn-sm">
+                <i class="fas fa-external-link-alt"></i> মূল প্রতিবেদন (Original Publication)
+              </a>
+            `}
             <a href="${item.archive || 'https://kuja-web.live/Profile/miraz.html'}" target="_blank" class="btn btn-outline btn-sm">
-              <i class="fas fa-archive"></i> কুজা প্রেস প্রোফাইল (KUJA Profile)
+              <i class="fas fa-archive"></i> প্রেস আর্কাইভ (KUJA Profile)
             </a>
           </div>
           <button class="btn btn-outline btn-sm" onclick="closeReaderModal()">
