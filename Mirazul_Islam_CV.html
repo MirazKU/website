@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curriculum Vitae - Md. Mirazul Islam</title>
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=SolaimanLipi&family=Hind+Siliguri:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <style>
+    /* CV Document Styles */
+    :root {
+      --primary-color: #064e3b;      /* Deep Forest Emerald */
+      --secondary-color: #065f46;    /* Medium Emerald */
+      --accent-color: #059669;       /* Vibrant Green */
+      --text-main: #1f2937;
+      --text-muted: #4b5563;
+      --border-color: #e5e7eb;
+      --bg-page: #f9fafb;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      color: var(--text-main);
+      background-color: var(--bg-page);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      padding: 30px 15px;
+    }
+
+    /* Print / PDF Action Toolbar */
+    .cv-toolbar {
+      max-width: 860px;
+      margin: 0 auto 20px auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #ffffff;
+      padding: 14px 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.06);
+      border: 1px solid var(--border-color);
+    }
+
+    .toolbar-title {
+      font-weight: 700;
+      color: var(--primary-color);
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.95rem;
+    }
+
+    .btn-print {
+      background: linear-gradient(135deg, #059669 0%, #047857 100%);
+      color: #ffffff;
+      border: none;
+      padding: 9px 20px;
+      border-radius: 8px;
+      font-weight: 700;
+      font-size: 0.9rem;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 12px rgba(5, 150, 105, 0.3);
+      transition: all 0.2s;
+    }
+
+    .btn-print:hover {
+      background: #047857;
+      transform: translateY(-1px);
+      box-shadow: 0 6px 16px rgba(5, 150, 105, 0.4);
+    }
+
+    /* Main CV Sheet (A4 Proportion) */
+    .cv-sheet {
+      max-width: 860px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 48px 56px;
+      border-radius: 8px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+      border: 1px solid var(--border-color);
+    }
+
+    /* Header */
+    .cv-header {
+      border-bottom: 2px solid var(--primary-color);
+      padding-bottom: 22px;
+      margin-bottom: 26px;
+    }
+
+    .cv-name {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      letter-spacing: -0.5px;
+      margin-bottom: 4px;
+    }
+
+    .cv-title-tagline {
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--secondary-color);
+      margin-bottom: 14px;
+    }
+
+    .cv-contact-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px 22px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    .cv-contact-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .cv-contact-item i {
+      color: var(--accent-color);
+      font-size: 0.95rem;
+    }
+
+    .cv-contact-item a {
+      color: var(--text-muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .cv-contact-item a:hover {
+      color: var(--primary-color);
+      text-decoration: underline;
+    }
+
+    /* Section Styling */
+    .cv-section {
+      margin-bottom: 26px;
+    }
+
+    .cv-section-title {
+      font-family: 'Merriweather', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      border-bottom: 1.5px solid #d1fae5;
+      padding-bottom: 5px;
+      margin-bottom: 14px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .cv-section-title i {
+      color: var(--accent-color);
+      font-size: 1.05rem;
+    }
+
+    .cv-summary-text {
+      font-size: 0.94rem;
+      line-height: 1.7;
+      color: #374151;
+      text-align: justify;
+    }
+
+    /* Timeline & Experience Items */
+    .cv-item {
+      margin-bottom: 18px;
+      page-break-inside: avoid;
+    }
+
+    .cv-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .cv-item-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      margin-bottom: 2px;
+    }
+
+    .cv-role {
+      font-size: 1rem;
+      font-weight: 700;
+      color: #111827;
+    }
+
+    .cv-org {
+      font-weight: 600;
+      color: var(--secondary-color);
+      font-size: 0.94rem;
+    }
+
+    .cv-date {
+      font-size: 0.84rem;
+      font-weight: 600;
+      color: #6b7280;
+    }
+
+    .cv-location {
+      font-size: 0.82rem;
+      color: #9ca3af;
+      margin-bottom: 6px;
+    }
+
+    .cv-desc-list {
+      list-style-type: disc;
+      margin-left: 20px;
+      font-size: 0.9rem;
+      color: #374151;
+      line-height: 1.6;
+    }
+
+    .cv-desc-list li {
+      margin-bottom: 4px;
+    }
+
+    /* Research & Studies Grid */
+    .research-grid-cv {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+      gap: 14px;
+    }
+
+    .research-card-cv {
+      background: #f8fafc;
+      border: 1px solid #e2e8f0;
+      border-left: 3.5px solid var(--accent-color);
+      padding: 12px 14px;
+      border-radius: 4px;
+      page-break-inside: avoid;
+    }
+
+    .research-card-cv h4 {
+      font-size: 0.92rem;
+      font-weight: 700;
+      color: #0f172a;
+      margin-bottom: 4px;
+      line-height: 1.35;
+    }
+
+    .research-card-cv .meta-sub {
+      font-size: 0.8rem;
+      color: var(--secondary-color);
+      font-weight: 600;
+      margin-bottom: 5px;
+    }
+
+    .research-card-cv p {
+      font-size: 0.84rem;
+      color: #475467;
+      line-height: 1.5;
+    }
+
+    /* Skills & Pill tags */
+    .skills-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 12px;
+    }
+
+    .skill-category {
+      background: #f8fafc;
+      padding: 12px 14px;
+      border-radius: 6px;
+      border: 1px solid #e2e8f0;
+    }
+
+    .skill-cat-title {
+      font-size: 0.84rem;
+      font-weight: 700;
+      color: var(--primary-color);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 6px;
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .skill-pill {
+      background: #ecfdf5;
+      color: #065f46;
+      border: 1px solid #a7f3d0;
+      font-size: 0.76rem;
+      font-weight: 600;
+      padding: 3px 8px;
+      border-radius: 12px;
+    }
+
+    /* Print Specific Styles */
+    @media print {
+      body {
+        background: #ffffff;
+        padding: 0;
+      }
+
+      .cv-toolbar {
+        display: none !important;
+      }
+
+      .cv-sheet {
+        box-shadow: none;
+        border: none;
+        padding: 0;
+        max-width: 100%;
+      }
+
+      a {
+        text-decoration: none !important;
+        color: inherit !important;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .cv-sheet {
+        padding: 28px 20px;
+      }
+      .cv-name {
+        font-size: 1.8rem;
+      }
+      .research-grid-cv {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ACTION TOOLBAR (Hidden in Print) -->
+  <div class="cv-toolbar">
+    <div class="toolbar-title">
+      <i class="fas fa-file-alt"></i>
+      <span>Md. Mirazul Islam — Official Curriculum Vitae</span>
+    </div>
+    <button class="btn-print" onclick="window.print()">
+      <i class="fas fa-print"></i> Print / Save as PDF
+    </button>
+  </div>
+
+  <!-- MAIN CV DOCUMENT -->
+  <main class="cv-sheet">
+    <!-- Header -->
+    <header class="cv-header">
+      <h1 class="cv-name">Md. Mirazul Islam</h1>
+      <div class="cv-title-tagline">Investigative Journalist & Historical Researcher</div>
+
+      <div class="cv-contact-row">
+        <div class="cv-contact-item">
+          <i class="fas fa-envelope"></i>
+          <a href="mailto:mirazulislamku@gmail.com">mirazulislamku@gmail.com</a>
+        </div>
+        <div class="cv-contact-item">
+          <i class="fas fa-university"></i>
+          <span>Khulna University, Khulna-9208, Bangladesh</span>
+        </div>
+        <div class="cv-contact-item">
+          <i class="fas fa-globe"></i>
+          <a href="https://mirazku.github.io/website/" target="_blank">mirazku.github.io/website</a>
+        </div>
+        <div class="cv-contact-item">
+          <i class="fab fa-orcid" style="color:#a6ce39;"></i>
+          <a href="https://orcid.org/0009-0009-5692-8928" target="_blank">ORCID: 0009-0009-5692-8928</a>
+        </div>
+        <div class="cv-contact-item">
+          <i class="fas fa-id-card"></i>
+          <a href="https://kuja-web.live/Profile/miraz.html" target="_blank">KUJA Profile: miraz.html</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- Professional Executive Summary -->
+    <section class="cv-section">
+      <h2 class="cv-section-title"><i class="fas fa-user"></i> Professional Profile</h2>
+      <p class="cv-summary-text">
+        Evidence-driven investigative journalist and historical researcher based in Khulna, Bangladesh. Pursuing an M.A. in International History and holding a B.A. (Hon's) from Khulna University. Over 4 years of frontline newsroom experience having authored 300+ special dispatches and investigative reports for leading national dailies including <em>Daily Kaler Kantho</em> and <em>Daily Agamir Somoy</em>. Demonstrates sustained leadership as General Secretary and Executive Member of the Khulna University Journalists' Association (KUJA). Focuses on political and mob violence documentation, institutional corruption, university governance, primary archival preservation, and climate vulnerability in the coastal Sundarbans delta.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="cv-section">
+      <h2 class="cv-section-title"><i class="fas fa-graduation-cap"></i> Education</h2>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <span class="cv-role">Master of Arts (M.A.) in International History</span>
+            <div class="cv-org">Khulna University, Bangladesh</div>
+          </div>
+          <span class="cv-date">2025 – Expected 2026</span>
+        </div>
+        <div class="cv-location">Discipline of History and Civilization</div>
+        <ul class="cv-desc-list">
+          <li>Advanced studies in geopolitical diplomacy, primary archival methodology, delta historiography, and human rights documentation.</li>
+        </ul>
+      </div>
+
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <span class="cv-role">Bachelor of Arts (B.A. Honours) in History and Civilization</span>
+            <div class="cv-org">Khulna University, Bangladesh</div>
+          </div>
+          <span class="cv-date">2021 – 2025</span>
+        </div>
+        <div class="cv-location">Discipline of History and Civilization</div>
+        <ul class="cv-desc-list">
+          <li><strong>Undergraduate Field Thesis:</strong> <em>"Profession in Peril: Adaptive Strategies among Coastal Fishermen in the Sundarbans"</em> — qualitative field surveys and oral history inquiries documenting climate vulnerability, salinity ingress, and socio-economic adaptation.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Professional Experience -->
+    <section class="cv-section">
+      <h2 class="cv-section-title"><i class="fas fa-briefcase"></i> Professional Journalism & Newsroom Leadership</h2>
+
+      <!-- Daily Kaler Kantho -->
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <span class="cv-role">Reporter (Khulna University & Southwestern Correspondent)</span>
+            <div class="cv-org">Daily Kaler Kantho (Leading National Daily in Bangladesh)</div>
+          </div>
+          <span class="cv-date">November 2024 – Present</span>
+        </div>
+        <ul class="cv-desc-list">
+          <li>Lead beat reporter on university governance, student rights, financial and administrative corruption, and regional environmental affairs.</li>
+          <li>Authored and published over 300+ frontline dispatches, investigative packages, and print exclusives.</li>
+          <li>Investigated and reported major national stories: Mayur River encroachment and dissolved oxygen collapse, university infrastructure decay, and the Gollamari 1971 Liberation War Museum project.</li>
+        </ul>
+      </div>
+
+      <!-- Daily Agamir Somoy -->
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <span class="cv-role">Feature Writer & Campus Correspondent</span>
+            <div class="cv-org">Daily Agamir Somoy (National Daily)</div>
+          </div>
+          <span class="cv-date">May 2025 – Present</span>
+        </div>
+        <ul class="cv-desc-list">
+          <li>Researches and produces long-form investigative features, public-interest human stories, and environmental biodiversity specials.</li>
+          <li>Documented the national CleanTech award-winning 'Buz Shield' biopesticide innovation and butterfly ecosystem conservation at Khulna University.</li>
+        </ul>
+      </div>
+
+      <!-- KUJA -->
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <span class="cv-role">General Secretary & Executive Member</span>
+            <div class="cv-org">Khulna University Journalists' Association (KUJA)</div>
+          </div>
+          <span class="cv-date">February 2022 – October 2026</span>
+        </div>
+        <ul class="cv-desc-list">
+          <li>Served as <strong>General Secretary</strong> (October 2025 – October 2026) managing campus newsroom governance, ethical standards, and press briefings.</li>
+          <li>Previously served as Executive Member (May 2024 – October 2025) and General Member (Feb 2022 – May 2024).</li>
+          <li>Organized journalism capacity-building workshops, fact-checking symposiums, and coordinated official press representations.</li>
+        </ul>
+      </div>
+
+      <!-- The Daily Observer -->
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <span class="cv-role">Campus Contributor</span>
+            <div class="cv-org">The Daily Observer (National English Daily)</div>
+          </div>
+          <span class="cv-date">April 2024 – December 2025</span>
+        </div>
+        <ul class="cv-desc-list">
+          <li>Authored English news and investigative dispatches on international academic conferences, climate symposiums, and academic research breakthroughs.</li>
+        </ul>
+      </div>
+
+      <!-- Daily Bangladesh -->
+      <div class="cv-item">
+        <div class="cv-item-header">
+          <div>
+            <span class="cv-role">Campus Correspondent</span>
+            <div class="cv-org">Daily Bangladesh</div>
+          </div>
+          <span class="cv-date">March 2022 – November 2024</span>
+        </div>
+        <ul class="cv-desc-list">
+          <li>Covered daily academic news, university admissions, student welfare affairs, and departmental developments.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Research & Fieldwork Inquiries -->
+    <section class="cv-section">
+      <h2 class="cv-section-title"><i class="fas fa-microscope"></i> Academic Research Projects & Fieldwork</h2>
+
+      <div class="research-grid-cv">
+        <div class="research-card-cv">
+          <h4>Profession in Peril: Coastal Fishermen in the Sundarbans (Thesis)</h4>
+          <div class="meta-sub">Undergrad Field Thesis | Khulna University (2025)</div>
+          <p>Fieldwork assessing socio-economic coping strategies and salinity impact across southwestern mangrove fringe communities.</p>
+        </div>
+
+        <div class="research-card-cv">
+          <h4>Heritage Date Molasses: Sarojganj Trade & Export Potential</h4>
+          <div class="meta-sub">Co-investigator with Dr. Md. Mahmud Alam (Oct 2025)</div>
+          <p>Empirical study on Chuadanga's 300-year-old jaggery market, international export benchmarks, and cold chain logistics.</p>
+        </div>
+
+        <div class="research-card-cv">
+          <h4>Mayur River Pollution & Environmental Economics Survey</h4>
+          <div class="meta-sub">Research Reporting with Prof. Dr. Mohammad Ziaul Haider (Sep 2025)</div>
+          <p>Water quality and economic assessment documenting extreme dissolved oxygen depletion (&lt;1 mg/L) and industrial encroachment.</p>
+        </div>
+
+        <div class="research-card-cv">
+          <h4>EU-Funded Sundarbans Salinity & Educational Poverty Study</h4>
+          <div class="meta-sub">Research Feature with Prof. Dr. Abdullah Harun Chowdhury (Nov 2025)</div>
+          <p>Multidimensional survey examining extreme drinking water crisis, poverty traps, and primary school dropout rates in coastal villages.</p>
+        </div>
+
+        <div class="research-card-cv">
+          <h4>Butterfly Biodiversity & Host Plant Conservation</h4>
+          <div class="meta-sub">Documentation with Prof. Dr. Sharif Hasan Limon (Oct 2025)</div>
+          <p>Ecological documentation cataloging 41 butterfly species across 5 families in Khulna University Butterfly Park.</p>
+        </div>
+
+        <div class="research-card-cv">
+          <h4>Oral History Documentation: 1971 Liberation War & Genocide</h4>
+          <div class="meta-sub">Primary Archival Fieldwork Supervised by Dr. Md. Mahmud Alam</div>
+          <p>Eyewitness oral documentation of genocide survivors and killing fields at Gollamari and southwestern massacre sites.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Certifications & Fellowships -->
+    <section class="cv-section">
+      <h2 class="cv-section-title"><i class="fas fa-certificate"></i> Professional Fellowships & Certifications</h2>
+      <ul class="cv-desc-list">
+        <li><strong>Press Institute Bangladesh (PIB) & UNESCO:</strong> Certified Training in Investigative Reporting Ethics, Digital Safety, and Verification (2023).</li>
+        <li><strong>Transparency International Bangladesh (TIB):</strong> Investigative Journalism Fellowship on Anti-Corruption, Public Procurement, and Right to Information (2023).</li>
+        <li><strong>Center for Bangladesh Studies (CBS):</strong> Fellowship on Historical Research Methods and Archival Documentation (2023).</li>
+        <li><strong>Founding Member:</strong> Khulna University Research Society (KURS) — promoting interdisciplinary academic inquiry.</li>
+      </ul>
+    </section>
+
+    <!-- Core Skills & Competencies -->
+    <section class="cv-section">
+      <h2 class="cv-section-title"><i class="fas fa-tools"></i> Core Skills & Methodologies</h2>
+      <div class="skills-grid">
+        <div class="skill-category">
+          <div class="skill-cat-title">Journalism & Media</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Investigative Reporting</span>
+            <span class="skill-pill">Field Inquiries</span>
+            <span class="skill-pill">Newsroom Leadership</span>
+            <span class="skill-pill">Video Packages</span>
+            <span class="skill-pill">Public Interest</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-title">Research & Archival</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Primary Archival Inquiries</span>
+            <span class="skill-pill">Oral History</span>
+            <span class="skill-pill">Qualitative Methods</span>
+            <span class="skill-pill">Delta Ecology</span>
+            <span class="skill-pill">Genocide Studies</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-title">Digital & Verification</div>
+          <div class="skill-pills">
+            <span class="skill-pill">OSINT & Fact-Checking</span>
+            <span class="skill-pill">Data Archiving</span>
+            <span class="skill-pill">Digital Safety</span>
+            <span class="skill-pill">Web Publishing</span>
+          </div>
+        </div>
+
+        <div class="skill-category">
+          <div class="skill-cat-title">Languages</div>
+          <div class="skill-pills">
+            <span class="skill-pill">Bengali (Native)</span>
+            <span class="skill-pill">English (Professional)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Declaration -->
+    <section class="cv-section" style="margin-top:20px; border-top:1px solid #e5e7eb; padding-top:14px; font-size:0.84rem; color:#6b7280; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+      <div>Khulna University, Khulna, Bangladesh</div>
+      <div>Verified Academic & Press Record — Md. Mirazul Islam</div>
+    </section>
+  </main>
+
+</body>
+</html>
