@@ -140,7 +140,7 @@ document.addEventListener("DOMContentLoaded", function(){
         let el = document.getElementById("soc-" + key);
         if(el && cfg.socials[key]) {
           el.href = cfg.socials[key];
-          el.style.display = "inline-flex";
+          el.style.display = "inline-flex"; el.style.alignItems = "center"; el.style.justifyContent = "center";
         }
       }
     }

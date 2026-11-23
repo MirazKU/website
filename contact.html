@@ -55,15 +55,32 @@
   font-size: 1.1rem;
 }
 
+.contact-social {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
 .contact-social a {
-  margin-right: 12px;
-  font-size: 20px;
-  color: #ffffff;
-  transition: color 0.2s;
+  display: inline-flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  background: #022c22 !important;
+  border: 1px solid rgba(74, 222, 128, 0.3) !important;
+  font-size: 18px !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  transition: all 0.25s ease !important;
 }
 
 .contact-social a:hover {
-  color: #4ade80;
+  background: #22c55e !important;
+  color: #022c22 !important;
+  transform: translateY(-2px) !important;
 }
 
 form input, form textarea {
