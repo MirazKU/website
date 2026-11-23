@@ -1,80 +1,28 @@
-{
-  "siteTitle": "Md. Mirazul Islam | Journalist & Researcher",
-  "siteDescription": "Md. Mirazul Islam - BA in History and Civilization, Khulna University. Journalist, Media Researcher, and Campus Correspondent.",
+﻿{
+  "siteTitle": "Md. Mirazul Islam | Journalist, Researcher & Storyteller",
+  "siteDescription": "Md. Mirazul Islam - Investigative Journalist at Daily Kaler Kantho, Feature Writer at Agamir Somoy, and Historical Researcher at Khulna University",
   "siteIcon": "images/profile.jpg",
   "headerTitle": "Md. Mirazul Islam",
   "headerMenu": [
-    {"label": "Home", "url": "index.html"},
-    {"label": "About Me", "url": "about.html"},
-    {"label": "Research & Activities", "url": "research.html"},
-    {"label": "Newspaper Articles", "url": "articles.html"},
-    {"label": "Gallery", "url": "gallery.html"},
-    {"label": "CV", "url": "cv.html"},
-    {"label": "Contact", "url": "contact.html"}
+    { "label": "Home", "url": "index.html" },
+    { "label": "About Me", "url": "about.html" },
+    { "label": "Research & Thesis", "url": "research.html" },
+    { "label": "Newspaper Articles", "url": "articles.html" },
+    { "label": "Experience", "url": "experience.html" },
+    { "label": "CV", "url": "javascript:void(0)" },
+    { "label": "Contact", "url": "contact.html" }
   ],
   "name": "Md. Mirazul Islam",
-  "title": "BA in History & Civilization | Journalist & Researcher",
-  "about": "I am a journalist based in Khulna, Bangladesh. I graduated with a B.A. (Hon's) in History and Civilization from Khulna University and actively contribute to leading national newspapers.",
+  "title": "Investigative Journalist | Researcher | Storyteller",
+  "subTitle": "Reporter, Daily Kaler Kantho & Feature Writer, Daily Agamir Somoy",
+  "about": "Investigative journalist and historical researcher based in Khulna, Bangladesh. Focusing on human rights, political & mob violence, investigative research, media accountability, digital information integrity, and climate vulnerability through evidence-based approaches.",
   "cvLink": "cv.pdf",
   "socials": {
     "linkedin": "https://www.linkedin.com/",
-    "facebook": "https://www.facebook.com/miraz.ku06",
-    "messenger": "https://m.me/miraz.ku06",
-    "instagram": "https://www.instagram.com/",
+    "facebook": "https://www.facebook.com/",
     "twitter": "https://x.com/",
-    "threads": "https://www.threads.com/",
-    "researchgate": "https://www.kursbd.org",
-    "googleScholar": "https://ku.ac.bd/",
-    "github": "https://github.com/MirazKU",
+    "orcid": "https://orcid.org/0009-0009-5692-8928",
+    "kuja": "https://kuja-web.live/Profile/miraz.html",
     "email": "mailto:mirazulislamku@gmail.com"
-  },
-  "aboutPage": {
-    "title": "About Me",
-    "headline": "BA in History and Civilization | Journalist & Researcher",
-    "image": "images/profile.jpg",
-    "paragraphs": [
-      "Md. Mirazul Islam is a passionate journalist and researcher based in Khulna, Bangladesh. He holds a Bachelor of Arts (Honours) in History and Civilization from Khulna University (2025). Alongside his academic pursuits in history and human civilization, he has established himself as a dedicated media professional and campus correspondent.",
-      "His academic background includes completing his Secondary School Certificate (SSC) from Rayenda Pilot High School under the Jashore Education Board (2018) and Higher Secondary Certificate (HSC) from Govt Adamjee Nagar MW College under the Dhaka Education Board (2020), both in Humanities with strong academic standing.",
-      "Mirazul has an extensive track record in journalism across national and regional media outlets. He currently serves as Khulna University Correspondent for Kaler Kantho (National Newspaper, Dhaka), Contributor for Daily Observer, and Contributor for Bangladesh Guardian. Previously, he served as Khulna University Correspondent for Daily Bangladesh, Somoy Journal, and Rupantor Protidin.",
-      "Demonstrating active leadership, Mirazul has served in key leadership positions at Khulna University Journalists' Association (KUJA) from 2022 to March 2026, progressing through roles from Associate Member to General Secretary and Executive Member. In these roles, he led teams of campus journalists, generated thousands of news stories, and organized journalism workshops and national media events.",
-      "In addition to KUJA, Mirazul is a Founding Member of Khulna University Research Society (KURS) (2022–2023) and serves as Assistant Organizing Secretary & Executive Member of Badhan (a voluntary blood donation and social organization). He also worked as an English Teacher at Learners Aid Coaching in Khulna (2022–2024).",
-      "He has participated in specialized national and international trainings, including the 3-day Training Workshop for Journalists on Digital and Physical Safety organized by News Network and UNESCO, the 3-day Multimedia Journalism Training by Press Institute Bangladesh (PIB), Computer Skills Development at Khulna University CSE Discipline, and the PEACE Consortium workshop by RUPANTOR.",
-      "His skills and technical expertise include Content Analysis, In-depth Interviews, Media Surveys, Video Editing, Social Media Management, and MS Office. He is bilingual in Bengali with working proficiency in English.",
-      "Mirazul's goal is to bridge empirical research, history, media ethics, and journalism to advocate for media literacy, transparent reporting, and social impact."
-    ]
-  },
-  "researchPage": {
-    "title": "Research & Activities",
-    "graduate": {
-      "title": "Academic & Historical Research",
-      "topic": "History and Civilization Studies (Khulna University)",
-      "bullets": [
-        "Historical & Cultural Content Analysis",
-        "Qualitative & Quantitative Survey Research",
-        "In-depth Media & Ethical Journalism Studies",
-        "Campus Journalism & Student Engagement Dynamics"
-      ],
-      "link": "cv.pdf"
-    },
-    "mapImage": "images/map.jpg",
-    "timeline": [
-      "📅 2022 – Joined KUJA & KURS (Founding Member)",
-      "📅 2024 – Contributor & Correspondent for National Dailies",
-      "📅 2025 – B.A. (Hon's) Completion & UNESCO/PIB Training",
-      "📅 2026 – General Secretary & Executive Leadership (KUJA)"
-    ],
-    "undergraduate": {
-      "title": "Journalism & Media Safety Training",
-      "topic": "Digital & Physical Safety and Multimedia Journalism",
-      "bullets": [
-        "UNESCO & News Network Digital Safety Workshop",
-        "Press Institute Bangladesh (PIB) Multimedia Journalism",
-        "Fact-checking, Media Ethics, & Disinformation Countermeasures"
-      ]
-    },
-    "publications": [
-      "National Newspaper Reports & Campus News Coverage",
-      "Investigative & Feature Reports for Kaler Kantho, Daily Observer, Somoy Journal"
-    ]
   }
 }
