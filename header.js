@@ -17,9 +17,10 @@ function highlightActiveNav() {
     const isArticles = (currentPath.includes("articles") || currentPath.includes("dispatches")) && (href.includes("articles") || href.includes("dispatches"));
     const isAbout = currentPath.includes("about") && href.includes("about");
     const isExperience = currentPath.includes("experience") && href.includes("experience");
+    const isBlog = currentPath.includes("blog") && href.includes("blog");
     const isContact = currentPath.includes("contact") && href.includes("contact");
 
-    if (isHome || isResearch || isArticles || isAbout || isExperience || isContact) {
+    if (isHome || isResearch || isArticles || isAbout || isExperience || isBlog || isContact) {
       if (!link.classList.contains("header-cv-btn")) {
         link.classList.add("active");
       }
