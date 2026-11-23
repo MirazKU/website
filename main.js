@@ -464,7 +464,7 @@ function initContactForm() {
     submitBtn.disabled = true;
 
     try {
-      const res = await fetch("https://formspree.io/f/xjgpaopd", {
+      const res = await fetch("https://formspree.io/f/xzerkgao", {
         method: "POST",
         body: new FormData(form),
         headers: { Accept: "application/json" }
