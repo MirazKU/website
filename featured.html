@@ -1,0 +1,377 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Featured Work & Major Investigations | Md. Mirazul Islam</title>
+  <meta name="title" content="Featured Work & Major Investigations | Md. Mirazul Islam">
+  <meta name="description" content="Spotlight investigative journalism, environmental inquiries, and innovation reporting by Md. Mirazul Islam.">
+  <meta name="author" content="Md. Mirazul Islam">
+
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Md. Mirazul Islam Home">
+        <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-name">Md. Mirazul Islam</span>
+          <span class="brand-tagline">Journalist & Researcher</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="featured.html" class="nav-link active">Featured Work</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="research.html" class="nav-link ">Research</a></li>
+          <li><a href="experience.html" class="nav-link ">Experience</a></li>
+          <li><a href="dispatches.html" class="nav-link ">Dispatches</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+
+        <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">
+          <i class="fas fa-file-pdf"></i> <span>Download CV</span>
+        </a>
+
+        <button class="mobile-menu-btn" aria-label="Open mobile navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="mobile-drawer-close" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <div style="margin-bottom: 24px;">
+      <h3 class="font-serif" style="font-size: 1.3rem;">Md. Mirazul Islam</h3>
+      <p style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 600; text-transform: uppercase;">
+        Journalist | Researcher | Storyteller
+      </p>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="featured.html">Featured Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="research.html">Research Portfolio</a></li>
+      <li><a href="experience.html">Experience & Timeline</a></li>
+      <li><a href="dispatches.html">Publications & Dispatches</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-light);">
+      <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-primary btn-sm" style="width: 100%;">
+        <i class="fas fa-file-pdf"></i> Download CV (PDF)
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Subpage Banner -->
+    <section class="subpage-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+          <span style="color:var(--text-primary); font-weight:600;">Featured Work</span>
+        </div>
+        <div class="subpage-badge">
+          <i class="fas fa-bullhorn"></i> Editorial Spotlight
+        </div>
+        <h1 class="subpage-title">Featured Journalism & In-Depth Investigations</h1>
+        <p class="subpage-subtitle">
+          Frontline investigative dispatches on environmental destruction, public accountability, campus governance, and grassroots university innovations.
+        </p>
+      </div>
+    </section>
+
+    <!-- Main Content Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="featured-grid">
+          <!-- Lead Story -->
+          <div id="featured-lead-wrap">
+            <div class="lead-story-card" onclick="openReaderModal('pr-08')">
+              <div class="lead-story-img-wrap">
+                <img src="https://images.unsplash.com/photo-1530587191325-3db32d826c18?auto=format&fit=crop&w=1200&q=80" alt="Mayur River Pollution">
+              </div>
+              <div class="lead-story-body">
+                <div class="story-meta">
+                  <span class="category-pill">অনুসন্ধান ও পরিবেশ</span>
+                  <span>•</span>
+                  <span><i class="far fa-clock"></i> ৬ মিনিট পাঠ</span>
+                  <span>•</span>
+                  <span>১৫ সেপ্টেম্বর ২০২৫</span>
+                </div>
+                <h3 class="story-headline font-bn">ময়ূর নদ এখন নর্দমা: গবেষণায় সবচেয়ে দূষিত নদ</h3>
+                <p class="story-excerpt font-bn">খুলনা শহরের প্রাণপ্রবাহ ময়ূর নদ আজ বর্জ্যের ভাগাড়ে পরিণত হয়েছে। খুলনা বিশ্ববিদ্যালয়ের অর্থনীতি ডিসিপ্লিনের আন্তর্জাতিক গবেষণায় উঠে এসেছে নদে দ্রবীভূত অক্সিজেনের মারাত্মক পতনের তথ্য। বিশেষ অনুসন্ধানী প্রতিবেদন।</p>
+                <div class="story-footer">
+                  <span class="publication-badge"><i class="fas fa-newspaper"></i> দৈনিক কালের কণ্ঠ</span>
+                  <button class="btn btn-primary btn-sm" onclick="event.stopPropagation(); openReaderModal('pr-08')">
+                    সম্পূর্ণ পড়ুন (Read Dispatch) <i class="fas fa-arrow-right"></i>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Secondary Stack -->
+          <div id="featured-stack-wrap" class="featured-stack">
+            <div class="mini-story-card" onclick="openReaderModal('pr-05')">
+              <div class="story-meta">
+                <span class="category-pill">ক্লিনটেক উদ্ভাবন</span>
+                <span>•</span>
+                <span>আগামীর সময় (টিআইসি)</span>
+              </div>
+              <h4 class="story-headline font-bn">কয়েলের বদলে বাজ শিল্ড: খুবির শিক্ষার্থীদের অনন্য উদ্ভাবন</h4>
+              <p class="story-excerpt font-bn">মশার বিষাক্ত ধোঁয়া রোধে প্রাকৃতিক ভেষজ প্রতিরোধক উদ্ভাবন করে ন্যাশনাল ক্লিনটেক অ্যাওয়ার্ড ও সাড়ে আট লাখ টাকার গবেষণা অনুদান লাভ।</p>
+              <div class="story-footer">
+                <span class="publication-badge"><i class="fas fa-newspaper"></i> দৈনিক আগামীর সময়</span>
+                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">প্রতিবেদন পড়ুন →</span>
+              </div>
+            </div>
+
+            <div class="mini-story-card" onclick="openReaderModal('pr-01')">
+              <div class="story-meta">
+                <span class="category-pill">ঐতিহ্য ও রপ্তানি গবেষণা</span>
+                <span>•</span>
+                <span>Daily Observer</span>
+              </div>
+              <h4 class="story-headline font-bn">Research suggests expanding molasses market abroad</h4>
+              <p class="story-excerpt font-bn">চুয়াডাঙ্গার সরোজগঞ্জের তিন শতবর্ষী ঐতিহ্যবাহী খেজুরের গুড় ও আন্তর্জাতিক রপ্তানি সম্ভাবনা নিয়ে খুলনা ও ঢাকা বিশ্ববিদ্যালয়ের যৌথ গবেষণা প্রতিবেদন।</p>
+              <div class="story-footer">
+                <span class="publication-badge"><i class="fas fa-newspaper"></i> Daily Observer</span>
+                <span style="color:var(--accent-primary); font-weight:600; font-size:0.85rem;">Read Story →</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Additional Spotlight Grid -->
+        <div style="margin-top: 48px;">
+          <h3 style="font-family:var(--font-serif); font-size:1.6rem; margin-bottom:24px; color:var(--text-primary);">
+            More Spotlight Investigations
+          </h3>
+
+          <div class="articles-grid" style="margin-top:0;">
+            <!-- Story 4: Hall Road -->
+            <div class="article-card" onclick="openReaderModal('pr-07')">
+              <div class="article-card-img">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186156f?auto=format&fit=crop&w=1200&q=80" alt="খুবির হলরোড বেহাল" loading="lazy">
+                <div class="card-format-badge-wrap">
+                  <span class="card-format-pill print-pill"><i class="fas fa-print"></i> বিশেষ রিপোর্ট</span>
+                </div>
+              </div>
+              <div class="article-card-body">
+                <div class="article-card-meta">
+                  <span class="category-pill">ক্যাম্পাস অবকাঠামো</span>
+                  <span class="meta-sep">•</span>
+                  <span class="date"><i class="far fa-calendar-alt"></i> ২৮ সেপ্টেম্বর ২০২৫</span>
+                </div>
+                <h3 class="article-card-title">খুলনা বিশ্ববিদ্যালয়ের হলরোড বেহাল: চরম ভোগান্তিতে শিক্ষার্থীরা</h3>
+                <p class="article-card-summary">এক যুগ ধরে সংস্কারহীন খুবির প্রধান সংযোগ সড়ক। বর্ষায় হাঁটু সমান কাদা আর খানাখন্দে বিপর্যস্ত সহস্রাধিক শিক্ষার্থীর যাতায়াত। বিশেষ সরেজমিন অনুসন্ধান।</p>
+                <div class="article-card-footer">
+                  <span class="publication-badge"><i class="fas fa-newspaper"></i> কালের কণ্ঠ</span>
+                  <span class="read-more-link">সম্পূর্ণ পড়ুন →</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Story 5: Gollamari 1971 Museum -->
+            <div class="article-card" onclick="openReaderModal('kk-05')">
+              <div class="article-card-img">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&w=1200&q=80" alt="গল্লামারী স্মৃতি জাদুঘর" loading="lazy">
+                <div class="card-format-badge-wrap">
+                  <span class="card-format-pill online-pill"><i class="fas fa-newspaper"></i> ইতিহাস অনুসন্ধান</span>
+                </div>
+              </div>
+              <div class="article-card-body">
+                <div class="article-card-meta">
+                  <span class="category-pill">মুক্তিযুদ্ধ ও ইতিহাস</span>
+                  <span class="meta-sep">•</span>
+                  <span class="date"><i class="far fa-calendar-alt"></i> ২০ সেপ্টেম্বর ২০২৫</span>
+                </div>
+                <h3 class="article-card-title">গল্লামারী বধ্যভূমি স্মৃতিসৌধ ও ৭১ এর স্মৃতি জাদুঘর নির্মাণ প্রকল্প</h3>
+                <p class="article-card-summary">খুলনার ঐতিহাসিক গল্লামারী বধ্যভূমি সংরক্ষণে দীর্ঘ প্রতীক্ষিত আধুনিক স্মৃতিসৌধ ও জাদুঘর প্রকল্পের অগ্রগতি ও স্থানীয় দাবি নিয়ে প্রতিবেদন।</p>
+                <div class="article-card-footer">
+                  <span class="publication-badge"><i class="fas fa-newspaper"></i> কালের কণ্ঠ</span>
+                  <span class="read-more-link">সম্পূর্ণ পড়ুন →</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Story 6: Butterfly Biodiversity -->
+            <div class="article-card" onclick="openReaderModal('pr-04')">
+              <div class="article-card-img">
+                <img src="https://images.unsplash.com/photo-1550853024-fae8cd4be47f?auto=format&fit=crop&w=1200&q=80" alt="রঙিন ডানার পৃথিবী" loading="lazy">
+                <div class="card-format-badge-wrap">
+                  <span class="card-format-pill print-pill"><i class="fas fa-print"></i> পরিবেশ ফিচার</span>
+                </div>
+              </div>
+              <div class="article-card-body">
+                <div class="article-card-meta">
+                  <span class="category-pill">জীববৈচিত্র্য</span>
+                  <span class="meta-sep">•</span>
+                  <span class="date"><i class="far fa-calendar-alt"></i> ১২ অক্টোবর ২০২৫</span>
+                </div>
+                <h3 class="article-card-title">রঙিন ডানার পৃথিবী: খুবির অনন্য প্রজাপতি পার্ক ও সংরক্ষণ সমীক্ষা</h3>
+                <p class="article-card-summary">খুলনা বিশ্ববিদ্যালয়ের ফরেস্ট্রি অ্যান্ড উড টেকনোলজি ডিসিপ্লিনের তত্ত্বাবধানে ৪১ প্রজাতির প্রজাপতির বাস্তুতান্ত্রিক জরিপ ও রঙিন ডানার বিস্ময়কর জগৎ।</p>
+                <div class="article-card-footer">
+                  <span class="publication-badge"><i class="fas fa-newspaper"></i> দৈনিক আগামীর সময়</span>
+                  <span class="read-more-link">সম্পূর্ণ পড়ুন →</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Call to Action Banner -->
+        <div style="margin-top: 56px; background: linear-gradient(135deg, rgba(180, 83, 9, 0.08), rgba(18, 24, 38, 0.04)); border: 1px solid var(--accent-border); border-radius: var(--radius-lg); padding: 36px 32px; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 20px;">
+          <div>
+            <h4 style="font-family:var(--font-serif); font-size:1.4rem; color:var(--text-primary); margin-bottom:8px;">
+              Looking for the Complete Archive of 49+ Dispatches?
+            </h4>
+            <p style="color:var(--text-secondary); margin:0; max-width:640px;">
+              Browse the dedicated media archive featuring video packages with direct Facebook video streaming, spot dispatches, and print investigative pieces.
+            </p>
+          </div>
+          <a href="dispatches.html" class="btn btn-primary">
+            <i class="fas fa-newspaper"></i> Go to Dispatches Desk <i class="fas fa-arrow-right"></i>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-wide">
+          <h3 class="footer-brand font-serif">Md. Mirazul Islam</h3>
+          <p class="footer-text">
+            Investigative journalist and historical researcher based in Khulna, Bangladesh. Committed to evidence-based documentation of human rights, climate vulnerability, and institutional transparency.
+          </p>
+          <div class="footer-accreditations">
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Kaler Kantho</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Agamir Somoy</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> KUJA Executive</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Pages & Desks</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="featured.html">Featured Investigations</a></li>
+            <li><a href="about.html">Academic Profile & Bio</a></li>
+            <li><a href="research.html">Research Portfolio</a></li>
+            <li><a href="experience.html">Professional Timeline</a></li>
+            <li><a href="dispatches.html">All 49+ Dispatches</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect & Media</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:mirazulislamku@gmail.com"><i class="fas fa-envelope"></i> mirazulislamku@gmail.com</a></li>
+            <li><a href="https://orcid.org/0009-0009-5692-8928" target="_blank"><i class="fab fa-orcid"></i> ORCID Profile</a></li>
+            <li><a href="https://kuja-web.live/Profile/miraz.html" target="_blank"><i class="fas fa-globe"></i> KUJA Editorial Archive</a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook Video Feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Md. Mirazul Islam. All editorial and academic rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)" onclick="handleCvClick(event)">Curriculum Vitae</a>
+          <span>•</span>
+          <a href="dispatches.html">News Archive</a>
+          <span>•</span>
+          <a href="contact.html">Press Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reader Modal -->
+  <div id="reader-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeReaderModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="reader-modal-content" class="modal-content-wrap"></div>
+    </div>
+  </div>
+
+  <!-- CV Privacy Modal -->
+  <div id="cv-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px; text-align: center; padding: 40px 28px;">
+      <button class="modal-close-btn" onclick="closeCvModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(217, 119, 6, 0.12); color: var(--accent-primary); display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 18px auto;">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+
+      <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text-primary); font-family: var(--font-display);">Curriculum Vitae Access</h3>
+      
+      <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px;">
+        তথ্যের সুরক্ষা ও ব্যক্তিগত গোপনীয়তার স্বার্থে পূর্ণাঙ্গ জীবনবৃত্তান্ত (CV) সরাসরি পাবলিক ডাউনলোড সংরক্ষিত রাখা হয়েছে। প্রাতিষ্ঠানিক, গবেষণা বা পেশাগত প্রয়োজনে জীবনবৃত্তান্ত পেতে অনুগ্রহ করে সরাসরি যোগাযোগ করার অনুরোধ করা হচ্ছে।
+      </p>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px; text-align: left; font-size: 0.9rem;">
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-envelope" style="color: var(--accent-primary);"></i>
+          <span><strong>ইমেইল:</strong> mirazulislamku@gmail.com</span>
+        </div>
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-university" style="color: var(--accent-primary);"></i>
+          <span><strong>ঠিকানা:</strong> ইতিহাস ও সভ্যতা ডিসিপ্লিন, খুলনা বিশ্ববিদ্যালয়</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-id-badge" style="color: var(--accent-primary);"></i>
+          <span><strong>ORCID:</strong> 0009-0009-5692-8928</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary btn-sm">
+          <i class="fas fa-envelope"></i> সিভি চেয়ে বার্তা পাঠান
+        </a>
+        <button class="btn btn-outline btn-sm" onclick="closeCvModal()">
+          বাতিল করুন (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="articles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

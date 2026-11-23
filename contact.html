@@ -1,193 +1,331 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Contact</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Contact & Media Inquiries | Md. Mirazul Islam</title>
+  <meta name="title" content="Contact & Media Inquiries | Md. Mirazul Islam">
+  <meta name="description" content="Reach out to Md. Mirazul Islam for investigative dispatches, research partnerships, and press inquiries.">
+  <meta name="author" content="Md. Mirazul Islam">
 
-<link rel="stylesheet" href="style.css">
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-<style>
-
-body{
-margin:0;
-font-family:'Poppins', sans-serif;
-background:linear-gradient(135deg,#1e3a8a 0%,#1d4ed8 50%,#2563eb 100%);
-min-height:100vh;
-color:#ffffff;
-}
-
-/* CONTAINER */
-.container{
-max-width:1000px;
-margin:50px auto;
-padding:20px;
-}
-
-/* TITLE */
-.title{
-text-align:center;
-margin-bottom:30px;
-}
-
-.title h1{
-color:#7dd3fc;
-margin-bottom:5px;
-}
-
-/* GRID */
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:25px;
-}
-
-/* CARD */
-.card{
-background:linear-gradient(145deg,#1e40af,#1d4ed8);
-border:1px solid rgba(255,255,255,0.2);
-padding:25px;
-border-radius:14px;
-box-shadow:0 8px 20px rgba(0,0,0,0.2);
-}
-
-.card h2, .card h3{
-color:#7dd3fc;
-margin-bottom:15px;
-}
-
-/* INFO */
-.info div{
-margin-bottom:15px;
-display:flex;
-align-items:center;
-gap:10px;
-color:#f0f9ff;
-}
-
-.info i{
-color:#7dd3fc;
-}
-
-/* SOCIAL */
-.social a{
-margin-right:10px;
-font-size:22px;
-color:#7dd3fc;
-transition:0.3s;
-}
-
-.social a:hover{
-color:#ffffff;
-}
-
-/* FORM */
-form input, form textarea{
-width:100%;
-padding:12px;
-margin-bottom:15px;
-border:1px solid rgba(255,255,255,0.3);
-border-radius:8px;
-background:#1e3a8a;
-color:white;
-outline:none;
-font-family:'Poppins', sans-serif;
-}
-
-form input:focus, form textarea:focus{
-border-color:#7dd3fc;
-background:#1e40af;
-}
-
-button{
-width:100%;
-padding:12px;
-background:#7dd3fc;
-color:#1e3a8a;
-border:none;
-border-radius:8px;
-font-weight:700;
-cursor:pointer;
-transition:0.3s;
-}
-
-button:hover{
-background:#ffffff;
-color:#1d4ed8;
-}
-
-/* MOBILE */
-@media(max-width:768px){
-.grid{grid-template-columns:1fr;}
-}
-
-</style>
-
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Md. Mirazul Islam Home">
+        <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-name">Md. Mirazul Islam</span>
+          <span class="brand-tagline">Journalist & Researcher</span>
+        </div>
+      </a>
 
-<div id="header"></div>
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="featured.html" class="nav-link ">Featured Work</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="research.html" class="nav-link ">Research</a></li>
+          <li><a href="experience.html" class="nav-link ">Experience</a></li>
+          <li><a href="dispatches.html" class="nav-link ">Dispatches</a></li>
+          <li><a href="contact.html" class="nav-link active">Contact</a></li>
+        </ul>
+      </nav>
 
-<div class="container">
+      <!-- Actions -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
 
-<!-- TITLE -->
-<div class="title">
-<h1>Contact Me</h1>
-<p>Feel free to reach out for collaboration or queries</p>
-</div>
+        <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">
+          <i class="fas fa-file-pdf"></i> <span>Download CV</span>
+        </a>
 
-<div class="grid">
+        <button class="mobile-menu-btn" aria-label="Open mobile navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<!-- LEFT INFO -->
-<div class="card">
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="mobile-drawer-close" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <div style="margin-bottom: 24px;">
+      <h3 class="font-serif" style="font-size: 1.3rem;">Md. Mirazul Islam</h3>
+      <p style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 600; text-transform: uppercase;">
+        Journalist | Researcher | Storyteller
+      </p>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="featured.html">Featured Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="research.html">Research Portfolio</a></li>
+      <li><a href="experience.html">Experience & Timeline</a></li>
+      <li><a href="dispatches.html">Publications & Dispatches</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-light);">
+      <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-primary btn-sm" style="width: 100%;">
+        <i class="fas fa-file-pdf"></i> Download CV (PDF)
+      </a>
+    </div>
+  </aside>
 
-<h2>Contact Information</h2>
+  <main>
+    <!-- Subpage Banner -->
+    <section class="subpage-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+          <span style="color:var(--text-primary); font-weight:600;">Contact</span>
+        </div>
+        <div class="subpage-badge">
+          <i class="fas fa-paper-plane"></i> Direct Connection
+        </div>
+        <h1 class="subpage-title">Let's Connect & Collaborate</h1>
+        <p class="subpage-subtitle">
+          Available for frontline investigative dispatches, academic research partnerships, commentary, and conference talks on human rights, history, and climate vulnerability.
+        </p>
+      </div>
+    </section>
 
-<div class="info">
-<div><i class="fas fa-map-marker-alt"></i> Khulna University, Khulna-9208</div>
-<div><i class="fas fa-phone"></i> +8801973827347</div>
-<div><i class="fas fa-envelope"></i> mirazulislamku@gmail.com</div>
-</div>
+    <!-- Main Contact Grid -->
+    <section class="section">
+      <div class="container">
+        <div class="contact-grid">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <p>
+              Whether you are an editor seeking ground reports from southwestern Bangladesh, an academic researcher, or a fellow storyteller, please feel free to reach out.
+            </p>
 
-<h3>Connect</h3>
+            <div class="contact-item-row">
+              <div class="contact-icon-box">
+                <i class="fas fa-map-marker-alt"></i>
+              </div>
+              <div>
+                <h5>Office / Base Location</h5>
+                <span>Khulna, Bangladesh (Khulna University, Khulna-9208)</span>
+              </div>
+            </div>
 
-<div class="social">
-<a href="https://www.facebook.com/miraz.ku06" target="_blank"><i class="fab fa-facebook"></i></a>
-<a href="https://www.linkedin.com/" target="_blank"><i class="fab fa-linkedin"></i></a>
-<a href="https://github.com/MirazKU" target="_blank"><i class="fab fa-github"></i></a>
-</div>
+            <div class="contact-item-row">
+              <div class="contact-icon-box">
+                <i class="fas fa-envelope"></i>
+              </div>
+              <div>
+                <h5>Direct Electronic Mail</h5>
+                <a href="mailto:mirazulislamku@gmail.com">mirazulislamku@gmail.com</a>
+              </div>
+            </div>
 
-</div>
+            <div class="contact-item-row">
+              <div class="contact-icon-box">
+                <i class="fas fa-user-secret"></i>
+              </div>
+              <div>
+                <h5>Confidential Whistleblower Tips</h5>
+                <span>Encrypted inquiries accepted for public-interest reporting.</span>
+              </div>
+            </div>
 
-<!-- RIGHT FORM -->
-<div class="card">
+            <!-- Social Links -->
+            <div style="margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--border-light);">
+              <div style="font-size:0.85rem; font-weight:600; color:var(--text-secondary); margin-bottom:12px; text-transform:uppercase; letter-spacing:0.05em;">
+                Connect on Social Networks
+              </div>
+              <div class="social-links-row">
+                <a href="https://orcid.org/0009-0009-5692-8928" target="_blank" class="social-btn" title="ORCID Profile">
+                  <i class="fab fa-orcid" style="color:#a6ce39;"></i>
+                </a>
+                <a href="https://kuja-web.live/Profile/miraz.html" target="_blank" class="social-btn" title="KUJA Profile">
+                  <i class="fas fa-globe"></i>
+                </a>
+                <a href="https://www.facebook.com" target="_blank" class="social-btn" title="Facebook">
+                  <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="mailto:mirazulislamku@gmail.com" class="social-btn" title="Email">
+                  <i class="fas fa-envelope"></i>
+                </a>
+              </div>
+            </div>
 
-<h2>Send Message</h2>
+            <!-- CV Notice Card -->
+            <div style="margin-top: 24px; padding: 18px 20px; background: var(--bg-surface); border: 1px solid var(--accent-border); border-radius: var(--radius-md);">
+              <div style="font-size:0.85rem; font-weight:700; color:var(--accent-primary); margin-bottom:4px;">
+                <i class="fas fa-file-pdf"></i> Curriculum Vitae Request
+              </div>
+              <p style="font-size:0.88rem; color:var(--text-secondary); margin:0; line-height:1.6;">
+                Institutional and academic partners may request the complete, verified CV directly through the contact form or via email.
+              </p>
+            </div>
+          </div>
 
-<form action="https://formspree.io/f/xjgpaopd" method="POST">
+          <!-- Contact Form Card -->
+          <div class="contact-form-card">
+            <h3>Send a Direct Transmission</h3>
+            <p style="color:var(--text-muted); font-size:0.92rem; margin-bottom:24px;">
+              Fill out the form below. Messages are transmitted directly to Md. Mirazul Islam.
+            </p>
 
-<input type="text" name="name" placeholder="Your Name" required>
+            <form id="portfolio-contact-form">
+              <div class="form-group">
+                <label for="contact-name" class="form-label">Full Name</label>
+                <input type="text" id="contact-name" name="name" class="form-control" placeholder="e.g. Dr. A. Rahman / Newsroom Editor" required>
+              </div>
 
-<input type="email" name="email" placeholder="Your Email" required>
+              <div class="form-group">
+                <label for="contact-email" class="form-label">Email Address</label>
+                <input type="email" id="contact-email" name="email" class="form-control" placeholder="your.name@organization.com" required>
+              </div>
 
-<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+              <div class="form-group">
+                <label for="contact-subject" class="form-label">Subject</label>
+                <input type="text" id="contact-subject" name="subject" class="form-control" placeholder="Investigative Tip / Research Collaboration" required>
+              </div>
 
-<button type="submit">Send Message</button>
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Message</label>
+                <textarea id="contact-message" name="message" class="form-control" rows="5" placeholder="Detail your transmission, inquiries, or press collaboration request..." required></textarea>
+              </div>
 
-</form>
+              <button type="submit" id="contact-submit-btn" class="btn btn-primary" style="width: 100%;">
+                <i class="fas fa-paper-plane"></i> Transmit Message
+              </button>
 
-</div>
+              <div id="form-feedback" class="form-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-</div>
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-wide">
+          <h3 class="footer-brand font-serif">Md. Mirazul Islam</h3>
+          <p class="footer-text">
+            Investigative journalist and historical researcher based in Khulna, Bangladesh. Committed to evidence-based documentation of human rights, climate vulnerability, and institutional transparency.
+          </p>
+          <div class="footer-accreditations">
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Kaler Kantho</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Agamir Somoy</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> KUJA Executive</span>
+          </div>
+        </div>
 
-</div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Pages & Desks</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="featured.html">Featured Investigations</a></li>
+            <li><a href="about.html">Academic Profile & Bio</a></li>
+            <li><a href="research.html">Research Portfolio</a></li>
+            <li><a href="experience.html">Professional Timeline</a></li>
+            <li><a href="dispatches.html">All 49+ Dispatches</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
 
-<div id="footer"></div>
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect & Media</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:mirazulislamku@gmail.com"><i class="fas fa-envelope"></i> mirazulislamku@gmail.com</a></li>
+            <li><a href="https://orcid.org/0009-0009-5692-8928" target="_blank"><i class="fab fa-orcid"></i> ORCID Profile</a></li>
+            <li><a href="https://kuja-web.live/Profile/miraz.html" target="_blank"><i class="fas fa-globe"></i> KUJA Editorial Archive</a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook Video Feed</a></li>
+          </ul>
+        </div>
+      </div>
 
-<script src="header.js"></script>
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Md. Mirazul Islam. All editorial and academic rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)" onclick="handleCvClick(event)">Curriculum Vitae</a>
+          <span>•</span>
+          <a href="dispatches.html">News Archive</a>
+          <span>•</span>
+          <a href="contact.html">Press Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reader Modal -->
+  <div id="reader-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeReaderModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="reader-modal-content" class="modal-content-wrap"></div>
+    </div>
+  </div>
+
+  <!-- CV Privacy Modal -->
+  <div id="cv-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px; text-align: center; padding: 40px 28px;">
+      <button class="modal-close-btn" onclick="closeCvModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(217, 119, 6, 0.12); color: var(--accent-primary); display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 18px auto;">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+
+      <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text-primary); font-family: var(--font-display);">Curriculum Vitae Access</h3>
+      
+      <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px;">
+        তথ্যের সুরক্ষা ও ব্যক্তিগত গোপনীয়তার স্বার্থে পূর্ণাঙ্গ জীবনবৃত্তান্ত (CV) সরাসরি পাবলিক ডাউনলোড সংরক্ষিত রাখা হয়েছে। প্রাতিষ্ঠানিক, গবেষণা বা পেশাগত প্রয়োজনে জীবনবৃত্তান্ত পেতে অনুগ্রহ করে সরাসরি যোগাযোগ করার অনুরোধ করা হচ্ছে।
+      </p>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px; text-align: left; font-size: 0.9rem;">
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-envelope" style="color: var(--accent-primary);"></i>
+          <span><strong>ইমেইল:</strong> mirazulislamku@gmail.com</span>
+        </div>
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-university" style="color: var(--accent-primary);"></i>
+          <span><strong>ঠিকানা:</strong> ইতিহাস ও সভ্যতা ডিসিপ্লিন, খুলনা বিশ্ববিদ্যালয়</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-id-badge" style="color: var(--accent-primary);"></i>
+          <span><strong>ORCID:</strong> 0009-0009-5692-8928</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary btn-sm">
+          <i class="fas fa-envelope"></i> সিভি চেয়ে বার্তা পাঠান
+        </a>
+        <button class="btn btn-outline btn-sm" onclick="closeCvModal()">
+          বাতিল করুন (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="articles.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>

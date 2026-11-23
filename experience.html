@@ -1,0 +1,367 @@
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Professional Experience & Newsroom Leadership | Md. Mirazul Islam</title>
+  <meta name="title" content="Professional Experience & Newsroom Leadership | Md. Mirazul Islam">
+  <meta name="description" content="Newsroom leadership, investigative roles, and professional career trajectory of Md. Mirazul Islam.">
+  <meta name="author" content="Md. Mirazul Islam">
+
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Md. Mirazul Islam Home">
+        <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-name">Md. Mirazul Islam</span>
+          <span class="brand-tagline">Journalist & Researcher</span>
+        </div>
+      </a>
+
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="featured.html" class="nav-link ">Featured Work</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="research.html" class="nav-link ">Research</a></li>
+          <li><a href="experience.html" class="nav-link active">Experience</a></li>
+          <li><a href="dispatches.html" class="nav-link ">Dispatches</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Actions -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
+
+        <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">
+          <i class="fas fa-file-pdf"></i> <span>Download CV</span>
+        </a>
+
+        <button class="mobile-menu-btn" aria-label="Open mobile navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="mobile-drawer-close" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <div style="margin-bottom: 24px;">
+      <h3 class="font-serif" style="font-size: 1.3rem;">Md. Mirazul Islam</h3>
+      <p style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 600; text-transform: uppercase;">
+        Journalist | Researcher | Storyteller
+      </p>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="featured.html">Featured Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="research.html">Research Portfolio</a></li>
+      <li><a href="experience.html">Experience & Timeline</a></li>
+      <li><a href="dispatches.html">Publications & Dispatches</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-light);">
+      <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-primary btn-sm" style="width: 100%;">
+        <i class="fas fa-file-pdf"></i> Download CV (PDF)
+      </a>
+    </div>
+  </aside>
+
+  <main>
+    <!-- Subpage Banner -->
+    <section class="subpage-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+          <span style="color:var(--text-primary); font-weight:600;">Experience</span>
+        </div>
+        <div class="subpage-badge">
+          <i class="fas fa-history"></i> Career Trajectory
+        </div>
+        <h1 class="subpage-title">Professional Experience & Newsroom Leadership</h1>
+        <p class="subpage-subtitle">
+          A chronological timeline of active journalism roles across leading national dailies, executive newsroom governance, and empirical research societies.
+        </p>
+      </div>
+    </section>
+
+    <!-- Timeline Section -->
+    <section class="section">
+      <div class="container">
+        <div id="timeline-container" class="timeline-container">
+          <!-- Item 1: Kaler Kantho -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Reporter</h4>
+                  <div class="timeline-org">Daily Kaler Kantho (Leading National Daily in Bangladesh)</div>
+                </div>
+                <span class="timeline-period">November 2024 – Present</span>
+              </div>
+              <p class="timeline-desc">Leading specialized reporting on corruption, investigative research, institutional accountability, and higher education campus affairs across southwestern Bangladesh.</p>
+              <ul class="timeline-highlights">
+                <li>Authored and published over 300+ special reports on corruption and investigative research.</li>
+                <li>Frontline investigations on university governance, student rights, and coastal climate crises.</li>
+                <li>Conducting evidence-based field inquiries and publishing major print and digital exclusives.</li>
+              </ul>
+              <div class="timeline-featured-box">
+                <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; color:var(--accent-primary);"><i class="fas fa-newspaper"></i> আলোচিত প্রতিবেদন ও অনুসন্ধান:</div>
+                <div class="timeline-chips-wrap">
+                  <span class="timeline-chip" onclick="openReaderModal('pr-08')"><i class="fas fa-file-alt"></i> ময়ূর নদ দূষণ গবেষণা</span>
+                  <span class="timeline-chip" onclick="openReaderModal('pr-07')"><i class="fas fa-file-alt"></i> খুবির হলরোড বেহাল</span>
+                  <span class="timeline-chip" onclick="openReaderModal('kk-05')"><i class="fas fa-file-alt"></i> গল্লামারী বধ্যভূমি জাদুঘর</span>
+                  <span class="timeline-chip" onclick="openReaderModal('kk-01')"><i class="fas fa-file-alt"></i> শৃঙ্খলা বোর্ডে ৩০ শিক্ষার্থী</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2: Agamir Somoy -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Feature Writer & Campus Correspondent</h4>
+                  <div class="timeline-org">Daily Agamir Somoy (National Daily)</div>
+                </div>
+                <span class="timeline-period">May 2025 – Present</span>
+              </div>
+              <p class="timeline-desc">Producing in-depth investigative feature packages and human narratives focusing on human rights, environment, and grassroots student innovations.</p>
+              <ul class="timeline-highlights">
+                <li>Authored long-form narrative features highlighting youth innovators and CleanTech awards.</li>
+                <li>Special environmental feature stories exploring butterfly parks and coastal livelihood vulnerability.</li>
+              </ul>
+              <div class="timeline-featured-box">
+                <div style="font-size:0.8rem; font-weight:700; text-transform:uppercase; color:var(--accent-primary);"><i class="fas fa-newspaper"></i> আলোচিত ফিচার ও প্রতিবেদন:</div>
+                <div class="timeline-chips-wrap">
+                  <span class="timeline-chip" onclick="openReaderModal('pr-04')"><i class="fas fa-file-alt"></i> রঙিন ডানার পৃথিবী (প্রজাপতি)</span>
+                  <span class="timeline-chip" onclick="openReaderModal('pr-05')"><i class="fas fa-file-alt"></i> কয়েলের বদলে বাজ শিল্ড</span>
+                  <span class="timeline-chip" onclick="openReaderModal('pr-06')"><i class="fas fa-file-alt"></i> জার্সি বেচে বাড়তি আয় (সেলিম)</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3: KUJA Leadership -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">General Secretary & Executive Member</h4>
+                  <div class="timeline-org">Khulna University Journalists' Association (KUJA)</div>
+                </div>
+                <span class="timeline-period">February 2022 – October 2026</span>
+              </div>
+              <p class="timeline-desc">Leading institutional governance, defending press freedom on campus, organizing professional journalism workshops, and coordinating official press releases.</p>
+              <ul class="timeline-highlights">
+                <li>Served as General Secretary (October 2025 – October 2026), supervising campus newsroom ethics.</li>
+                <li>Executive Member (May 2024 – October 2025) and General Member (Feb 2022 – May 2024).</li>
+                <li>Coordinated editorial fact-checking and digital archiving of major university developments.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 4: Daily Observer -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Campus Contributor</h4>
+                  <div class="timeline-org">The Daily Observer (National English Daily)</div>
+                </div>
+                <span class="timeline-period">April 2024 – December 2025</span>
+              </div>
+              <p class="timeline-desc">Covered academic research publications, international conferences, environmental symposiums, and university administration in English.</p>
+              <ul class="timeline-highlights">
+                <li>Published exclusive English reports on Chuadanga's date molasses export feasibility study.</li>
+                <li>Documented European Union coastal salinity and education crisis field research.</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Item 5: Daily Bangladesh -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Campus Correspondent</h4>
+                  <div class="timeline-org">Daily Bangladesh</div>
+                </div>
+                <span class="timeline-period">March 2022 – November 2024</span>
+              </div>
+              <p class="timeline-desc">Conducted daily beat reporting on university admissions, student affairs, academic achievements, and regional educational policy.</p>
+            </div>
+          </div>
+
+          <!-- Item 6: Professional Fellowships -->
+          <div class="timeline-item">
+            <div class="timeline-dot"><i class="fas fa-circle" style="font-size:8px; color:var(--accent-primary);"></i></div>
+            <div class="timeline-card">
+              <div class="timeline-header">
+                <div>
+                  <h4 class="timeline-role">Fellowships & Specialized Training</h4>
+                  <div class="timeline-org">TIB, UNESCO & Press Institute Bangladesh (PIB)</div>
+                </div>
+                <span class="timeline-period">2023 – 2024</span>
+              </div>
+              <p class="timeline-desc">Professional certifications in investigative methodologies, anti-corruption investigation, AI fact-checking, and digital archival integrity.</p>
+              <ul class="timeline-highlights">
+                <li><strong>Press Institute Bangladesh (PIB) & UNESCO:</strong> Certified training in investigative reporting ethics and safety.</li>
+                <li><strong>Transparency International Bangladesh (TIB):</strong> Investigative journalism workshop on public procurement and institutional corruption.</li>
+                <li><strong>Center for Bangladesh Studies (CBS):</strong> Historical research methods and primary archival preservation.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <!-- Press Freedom & Ethics Pledge Box -->
+        <div style="margin-top: 56px; background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-lg); padding: 36px 32px; border-left: 4px solid var(--accent-primary);">
+          <h3 style="font-family:var(--font-serif); font-size:1.35rem; color:var(--text-primary); margin-bottom:12px;">
+            <i class="fas fa-shield-alt" style="color:var(--accent-primary); margin-right:8px;"></i> Editorial Integrity & Freedom of Expression Pledge
+          </h3>
+          <p style="color:var(--text-secondary); line-height:1.75; margin:0;">
+            All reporting and field inquiries adhere strictly to verified sourcing, primary document cross-examination, and public-interest journalistic integrity. Complying with UNESCO media ethics frameworks, reports are dedicated to amplifying marginalized coastal communities, combating disinformation, and upholding institutional accountability.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-wide">
+          <h3 class="footer-brand font-serif">Md. Mirazul Islam</h3>
+          <p class="footer-text">
+            Investigative journalist and historical researcher based in Khulna, Bangladesh. Committed to evidence-based documentation of human rights, climate vulnerability, and institutional transparency.
+          </p>
+          <div class="footer-accreditations">
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Kaler Kantho</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Agamir Somoy</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> KUJA Executive</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Pages & Desks</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="featured.html">Featured Investigations</a></li>
+            <li><a href="about.html">Academic Profile & Bio</a></li>
+            <li><a href="research.html">Research Portfolio</a></li>
+            <li><a href="experience.html">Professional Timeline</a></li>
+            <li><a href="dispatches.html">All 49+ Dispatches</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect & Media</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:mirazulislamku@gmail.com"><i class="fas fa-envelope"></i> mirazulislamku@gmail.com</a></li>
+            <li><a href="https://orcid.org/0009-0009-5692-8928" target="_blank"><i class="fab fa-orcid"></i> ORCID Profile</a></li>
+            <li><a href="https://kuja-web.live/Profile/miraz.html" target="_blank"><i class="fas fa-globe"></i> KUJA Editorial Archive</a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook Video Feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Md. Mirazul Islam. All editorial and academic rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)" onclick="handleCvClick(event)">Curriculum Vitae</a>
+          <span>•</span>
+          <a href="dispatches.html">News Archive</a>
+          <span>•</span>
+          <a href="contact.html">Press Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reader Modal -->
+  <div id="reader-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeReaderModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="reader-modal-content" class="modal-content-wrap"></div>
+    </div>
+  </div>
+
+  <!-- CV Privacy Modal -->
+  <div id="cv-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px; text-align: center; padding: 40px 28px;">
+      <button class="modal-close-btn" onclick="closeCvModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(217, 119, 6, 0.12); color: var(--accent-primary); display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 18px auto;">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+
+      <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text-primary); font-family: var(--font-display);">Curriculum Vitae Access</h3>
+      
+      <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px;">
+        তথ্যের সুরক্ষা ও ব্যক্তিগত গোপনীয়তার স্বার্থে পূর্ণাঙ্গ জীবনবৃত্তান্ত (CV) সরাসরি পাবলিক ডাউনলোড সংরক্ষিত রাখা হয়েছে। প্রাতিষ্ঠানিক, গবেষণা বা পেশাগত প্রয়োজনে জীবনবৃত্তান্ত পেতে অনুগ্রহ করে সরাসরি যোগাযোগ করার অনুরোধ করা হচ্ছে।
+      </p>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px; text-align: left; font-size: 0.9rem;">
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-envelope" style="color: var(--accent-primary);"></i>
+          <span><strong>ইমেইল:</strong> mirazulislamku@gmail.com</span>
+        </div>
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-university" style="color: var(--accent-primary);"></i>
+          <span><strong>ঠিকানা:</strong> ইতিহাস ও সভ্যতা ডিসিপ্লিন, খুলনা বিশ্ববিদ্যালয়</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-id-badge" style="color: var(--accent-primary);"></i>
+          <span><strong>ORCID:</strong> 0009-0009-5692-8928</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary btn-sm">
+          <i class="fas fa-envelope"></i> সিভি চেয়ে বার্তা পাঠান
+        </a>
+        <button class="btn btn-outline btn-sm" onclick="closeCvModal()">
+          বাতিল করুন (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="articles.js"></script>
+  <script src="main.js"></script>
+</body>
+</html>

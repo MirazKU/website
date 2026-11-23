@@ -1,54 +1,411 @@
-<!DOCTYPE html>
-<html lang="en">
+﻿<!DOCTYPE html>
+<html lang="en" data-theme="light">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Academic Research & Scholarly Inquiries | Md. Mirazul Islam</title>
+  <meta name="title" content="Academic Research & Scholarly Inquiries | Md. Mirazul Islam">
+  <meta name="description" content="Academic research studies, undergraduate thesis documentation, and empirical field surveys by Md. Mirazul Islam.">
+  <meta name="author" content="Md. Mirazul Islam">
 
-<title>Research & Activities | Md. Mirazul Islam</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-<link rel="stylesheet" href="style.css">
-
+  <link rel="icon" type="image/jpeg" href="images/profile.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <!-- Site Header -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="brand-link" aria-label="Md. Mirazul Islam Home">
+        <img src="images/profile.jpg" alt="Md. Mirazul Islam" class="brand-avatar">
+        <div class="brand-text">
+          <span class="brand-name">Md. Mirazul Islam</span>
+          <span class="brand-tagline">Journalist & Researcher</span>
+        </div>
+      </a>
 
-<div id="header"></div>
+      <!-- Desktop Navigation -->
+      <nav aria-label="Main Navigation">
+        <ul class="nav-links">
+          <li><a href="index.html" class="nav-link ">Home</a></li>
+          <li><a href="featured.html" class="nav-link ">Featured Work</a></li>
+          <li><a href="about.html" class="nav-link ">About</a></li>
+          <li><a href="research.html" class="nav-link active">Research</a></li>
+          <li><a href="experience.html" class="nav-link ">Experience</a></li>
+          <li><a href="dispatches.html" class="nav-link ">Dispatches</a></li>
+          <li><a href="contact.html" class="nav-link ">Contact</a></li>
+        </ul>
+      </nav>
 
-<div class="container">
+      <!-- Actions -->
+      <div class="header-actions">
+        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle visual theme" title="Toggle Light/Dark Theme">
+          <i id="theme-icon" class="fas fa-moon"></i>
+        </button>
 
-<h1 style="text-align:center; color:#7dd3fc; margin-bottom:30px;">Research & Activities</h1>
+        <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">
+          <i class="fas fa-file-pdf"></i> <span>Download CV</span>
+        </a>
 
-<!-- ONGOING RESEARCH -->
-<div class="card" style="background:linear-gradient(145deg,#1e40af,#1d4ed8); border:1px solid rgba(255,255,255,0.2); padding:30px; border-radius:14px; margin-bottom:25px; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
-<h2 style="color:#7dd3fc; margin-bottom:15px;">Ongoing Research</h2>
+        <button class="mobile-menu-btn" aria-label="Open mobile navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
 
-<p style="font-size:1.05rem; margin-bottom:15px; color:#ffffff;"><strong>Academic Focus:</strong> History, Civilization & Campus Media Studies (Khulna University)</p>
+  <!-- Mobile Drawer -->
+  <div class="mobile-drawer-overlay"></div>
+  <aside class="mobile-drawer">
+    <button class="mobile-drawer-close" aria-label="Close mobile menu">
+      <i class="fas fa-times"></i>
+    </button>
+    <div style="margin-bottom: 24px;">
+      <h3 class="font-serif" style="font-size: 1.3rem;">Md. Mirazul Islam</h3>
+      <p style="font-size: 0.8rem; color: var(--accent-primary); font-weight: 600; text-transform: uppercase;">
+        Journalist | Researcher | Storyteller
+      </p>
+    </div>
+    <ul class="mobile-nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="featured.html">Featured Work</a></li>
+      <li><a href="about.html">About Me</a></li>
+      <li><a href="research.html">Research Portfolio</a></li>
+      <li><a href="experience.html">Experience & Timeline</a></li>
+      <li><a href="dispatches.html">Publications & Dispatches</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="margin-top: auto; padding-top: 20px; border-top: 1px solid var(--border-light);">
+      <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-primary btn-sm" style="width: 100%;">
+        <i class="fas fa-file-pdf"></i> Download CV (PDF)
+      </a>
+    </div>
+  </aside>
 
-<ul style="line-height:1.8; color:#f0f9ff;">
-<li>Historical & Cultural Content Analysis</li>
-<li>Media Ethics, Fact-checking & Disinformation Countermeasures</li>
-<li>Campus Journalism & Student Media Dynamics</li>
-</ul>
-</div>
+  <main>
+    <!-- Subpage Banner -->
+    <section class="subpage-banner">
+      <div class="container">
+        <div class="breadcrumb-nav">
+          <a href="index.html"><i class="fas fa-home"></i> Home</a>
+          <span class="breadcrumb-separator"><i class="fas fa-chevron-right"></i></span>
+          <span style="color:var(--text-primary); font-weight:600;">Research</span>
+        </div>
+        <div class="subpage-badge">
+          <i class="fas fa-microscope"></i> Scholarly & Fieldwork Inquiries
+        </div>
+        <h1 class="subpage-title">Academic Research & Empirical Fieldwork</h1>
+        <p class="subpage-subtitle">
+          Field surveys, undergraduate thesis documentation, and academic research assistantships across climate vulnerability, environmental economics, and historical preservation.
+        </p>
+      </div>
+    </section>
 
-<!-- ACADEMIC & JOURNALISM ACTIVITIES -->
-<div class="card" style="background:linear-gradient(145deg,#1e40af,#1d4ed8); border:1px solid rgba(255,255,255,0.2); padding:30px; border-radius:14px; box-shadow:0 8px 20px rgba(0,0,0,0.2);">
-<h2 style="color:#7dd3fc; margin-bottom:15px;">Academic & Media Engagement</h2>
+    <!-- Research Portfolio Grid -->
+    <section class="section">
+      <div class="container">
+        <div id="research-grid" class="research-grid">
+          <!-- Project 1 (Undergrad Thesis) -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Undergraduate Thesis</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> 2025</span>
+            </div>
+            <h3 class="research-title">Profession in Peril: Adaptive Strategies among Coastal Fishermen in the Sundarbans</h3>
+            <div class="research-topic"><i class="fas fa-compass"></i> Climate Vulnerability & Livelihood Adaptation</div>
+            <p class="research-abstract">An empirical field thesis investigating how escalating salinity, unpredictable weather extremes, and mangrove ecological restrictions affect the traditional socio-economic coping mechanisms of coastal fishermen in the Sundarbans delta.</p>
+            <div class="research-metadata">
+              <div><strong>Methodology:</strong> Qualitative Field Inquiries & Oral History Interviews</div>
+              <div><strong>Institution:</strong> History and Civilization Discipline, Khulna University</div>
+              <div><strong>Focus Area:</strong> Sundarbans Mangrove Fringe & Coastal Communities</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Sundarbans</span><span class="research-tag">#Climate Vulnerability</span><span class="research-tag">#Coastal Fishermen</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-book-open"></i> Academic Thesis</span>
+              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Research Record <i class="fas fa-shield-alt"></i></a>
+            </div>
+          </div>
 
-<ul style="line-height:1.8; color:#f0f9ff;">
-<li>Founding Member, Khulna University Research Society (KURS)</li>
-<li>Digital and Physical Safety for Journalists Workshop (UNESCO / News Network)</li>
-<li>Multimedia Journalism Training (Press Institute Bangladesh - PIB)</li>
-</ul>
-</div>
+          <!-- Project 2: Sarojganj Date Molasses Export Study -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Published Research</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Oct 2025</span>
+            </div>
+            <h3 class="research-title">Heritage Date Molasses: International Market Expansion & Sarojganj Trade Inquiries</h3>
+            <div class="research-topic"><i class="fas fa-globe"></i> Agricultural Economics & Agro-Heritage Export</div>
+            <p class="research-abstract">An in-depth empirical inquiry into Chuadanga's 300-year-old Sarojganj date palm jaggery trade, investigating export barriers, chemical purity benchmarks, cold chain preservation, and potential international market access.</p>
+            <div class="research-metadata">
+              <div><strong>Lead Researcher:</strong> Dr. Md. Mahmud Alam (Associate Prof., Khulna University)</div>
+              <div><strong>Collaborator:</strong> Kazi Md. Mostafa Kamal (Dhaka University)</div>
+              <div><strong>Publication:</strong> The Daily Observer (Special Editorial Dispatch)</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#DateMolasses</span><span class="research-tag">#AgroExport</span><span class="research-tag">#Sarojganj</span><span class="research-tag">#TradePolicy</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-01')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+              <a href="https://kuja-web.live/Profile/miraz.html" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-archive"></i> Archive</a>
+            </div>
+          </div>
 
-</div>
+          <!-- Project 3: EU Coastal Poverty & Education Study -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">EU-Funded Research</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Nov 2025</span>
+            </div>
+            <h3 class="research-title">Sundarbans Coastal Communities: Salinity Ingress, Educational Dropouts & Poverty Traps</h3>
+            <div class="research-topic"><i class="fas fa-water"></i> Environmental Ecology & Climate Justice</div>
+            <p class="research-abstract">European Union co-funded multidimensional survey examining the nexus between extreme salinity intrusion, potable drinking water crisis, household poverty, and primary school dropout rates in climate-vulnerable Sundarbans coastal zones.</p>
+            <div class="research-metadata">
+              <div><strong>Lead Investigator:</strong> Prof. Dr. Abdullah Harun Chowdhury (Environmental Science, KU)</div>
+              <div><strong>Partner Agency:</strong> European Union (EU) & Development Partners</div>
+              <div><strong>Publication:</strong> The Daily Observer Special Research Feature</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#Sundarbans</span><span class="research-tag">#SalinityCrisis</span><span class="research-tag">#EUProject</span><span class="research-tag">#ClimatePoverty</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-02')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+              <a href="https://kuja-web.live/Profile/miraz.html" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-archive"></i> Archive</a>
+            </div>
+          </div>
 
-<div id="footer"></div>
+          <!-- Project 4: Mayur River Pollution & Environmental Economics -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Environmental Survey</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Sep 2025</span>
+            </div>
+            <h3 class="research-title">Mayur River Encroachment, Severe Industrial Pollution & Ecological Devastation</h3>
+            <div class="research-topic"><i class="fas fa-smog"></i> Environmental Economics & Urban Hydrology</div>
+            <p class="research-abstract">Comprehensive water quality analysis and economic impact assessment evaluating alarming dissolved oxygen depletion (under 1 mg/L), illegal industrial encroachment, and catastrophic aquatic biodiversity loss in Khulna's vital Mayur River basin.</p>
+            <div class="research-metadata">
+              <div><strong>Lead Researcher:</strong> Prof. Dr. Mohammad Ziaul Haider (Economics Discipline, KU)</div>
+              <div><strong>Key Findings:</strong> Most polluted river in southwestern Bangladesh; severe DO deficit</div>
+              <div><strong>Publication:</strong> Daily Kaler Kantho (Frontline Special Investigation)</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#MayurRiver</span><span class="research-tag">#WaterPollution</span><span class="research-tag">#EcologicalCrisis</span><span class="research-tag">#Khulna</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-08')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+              <a href="https://www.kalerkantho.com" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> News Link</a>
+            </div>
+          </div>
 
-<script src="header.js"></script>
+          <!-- Project 5: Butterfly Biodiversity & Conservation -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Biodiversity Study</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Oct 2025</span>
+            </div>
+            <h3 class="research-title">Butterfly Diversity & Eco-Tourism Habitat Assessment in Southwestern Delta</h3>
+            <div class="research-topic"><i class="fas fa-leaf"></i> Forestry & Biodiversity Conservation</div>
+            <p class="research-abstract">Ecological documentation identifying 41 butterfly species across 5 taxonomic families within Khulna University Butterfly Park, assessing host plant conservation and local ecological resilience.</p>
+            <div class="research-metadata">
+              <div><strong>Lead Researcher:</strong> Prof. Dr. Sharif Hasan Limon (Forestry & Wood Tech, KU)</div>
+              <div><strong>Scope:</strong> 41 species cataloged; Papilionidae, Nymphalidae, Pieridae</div>
+              <div><strong>Publication:</strong> Daily Agamir Somoy (Exclusive Special Feature)</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#ButterflyDiversity</span><span class="research-tag">#Forestry</span><span class="research-tag">#Biodiversity</span><span class="research-tag">#EcoTourism</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-04')">View Study Preview <i class="fas fa-arrow-right"></i></button>
+              <a href="https://kuja-web.live/Profile/miraz.html" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-archive"></i> Archive</a>
+            </div>
+          </div>
 
+          <!-- Project 6: Buz Shield Biopesticide Innovation -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Innovation Award</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> Aug 2025</span>
+            </div>
+            <h3 class="research-title">'Buz Shield' Eco-Friendly Herbal Mosquito Repellent & Biopesticide</h3>
+            <div class="research-topic"><i class="fas fa-flask"></i> CleanTech, Public Health & Sustainable Bio-Innovation</div>
+            <p class="research-abstract">Laboratory development of non-toxic botanical mosquito repellent formulations using indigenous plants, winning the National CleanTech Innovation Award with BDT 8.5 Lakh research grant.</p>
+            <div class="research-metadata">
+              <div><strong>Innovators:</strong> KU Biotechnology & Soil Science Research Teams</div>
+              <div><strong>Recognition:</strong> National CleanTech Innovation Award & 8.5 Lakh BDT Grant</div>
+              <div><strong>Publication:</strong> Daily Agamir Somoy (TIC Feature)</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#BuzShield</span><span class="research-tag">#CleanTech</span><span class="research-tag">#Biopesticide</span><span class="research-tag">#KULab</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <button class="btn btn-primary btn-sm" onclick="openReaderModal('pr-05')">View Innovation Story <i class="fas fa-arrow-right"></i></button>
+              <a href="https://kuja-web.live/Profile/miraz.html" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-archive"></i> Archive</a>
+            </div>
+          </div>
+
+          <!-- Project 7: Oral History & Liberation War Archives -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Archival Inquiry</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> 2024–2025</span>
+            </div>
+            <h3 class="research-title">Oral History Documentation of Southwestern 1971 Liberation War & Genocide</h3>
+            <div class="research-topic"><i class="fas fa-landmark"></i> Historical Documentation & Genocide Studies</div>
+            <p class="research-abstract">Primary oral history fieldwork and eyewitness documentation capturing the unrecorded testimonies of genocide survivors at Gollamari, Chuknagar, and southwestern killing fields during the 1971 Liberation War of Bangladesh.</p>
+            <div class="research-metadata">
+              <div><strong>Supervising Historian:</strong> Dr. Md. Mahmud Alam (Associate Professor)</div>
+              <div><strong>Field Inquiries:</strong> Gollamari Killing Field, Chuknagar, and Batiaghata</div>
+              <div><strong>Repository:</strong> Discipline of History and Civilization, KU</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#LiberationWar1971</span><span class="research-tag">#OralHistory</span><span class="research-tag">#GenocideStudies</span><span class="research-tag">#Gollamari</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-archive"></i> Institutional Archive</span>
+              <a href="javascript:void(0)" onclick="handleCvClick(event)" class="btn btn-outline btn-sm">Archival Record <i class="fas fa-shield-alt"></i></a>
+            </div>
+          </div>
+
+          <!-- Project 8: International Coastal & Climate Conference 2025 -->
+          <div class="research-card">
+            <div class="research-card-top">
+              <span class="status-badge published">Conference Proceedings</span>
+              <span class="research-year"><i class="far fa-calendar-alt"></i> 2025</span>
+            </div>
+            <h3 class="research-title">Khulna University 2nd International Coastal & Climate Conference 2025</h3>
+            <div class="research-topic"><i class="fas fa-users-cog"></i> Climate Diplomacy, Blue Economy & Coastal Resilience</div>
+            <p class="research-abstract">Comprehensive editorial documentation and academic session reporting on 120+ peer-reviewed papers presented by international climate scientists, focusing on Sundarbans salinity mitigation, blue carbon sequestration, and coastal community resilience.</p>
+            <div class="research-metadata">
+              <div><strong>Organized by:</strong> Khulna University & International Partner Universities</div>
+              <div><strong>Editorial Role:</strong> Press Rapporteur & Academic Dispatches Writer</div>
+              <div><strong>Coverage:</strong> Published across Daily Kaler Kantho & Observer</div>
+            </div>
+            <div class="research-tags">
+              <span class="research-tag">#ClimateConference</span><span class="research-tag">#BlueEconomy</span><span class="research-tag">#CoastalResilience</span><span class="research-tag">#KhulnaUniversity</span>
+            </div>
+            <div style="margin-top:auto; padding-top:16px; border-top:1px solid var(--border-light); display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-muted);"><i class="fas fa-globe"></i> International Conference</span>
+              <a href="https://kuja-web.live/Profile/miraz.html" target="_blank" class="btn btn-outline btn-sm"><i class="fas fa-external-link-alt"></i> Dispatches</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Site Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col footer-col-wide">
+          <h3 class="footer-brand font-serif">Md. Mirazul Islam</h3>
+          <p class="footer-text">
+            Investigative journalist and historical researcher based in Khulna, Bangladesh. Committed to evidence-based documentation of human rights, climate vulnerability, and institutional transparency.
+          </p>
+          <div class="footer-accreditations">
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Kaler Kantho</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> Daily Agamir Somoy</span>
+            <span><i class="fas fa-check-circle" style="color:var(--accent-primary);"></i> KUJA Executive</span>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Pages & Desks</h4>
+          <ul class="footer-links">
+            <li><a href="index.html">Home Overview</a></li>
+            <li><a href="featured.html">Featured Investigations</a></li>
+            <li><a href="about.html">Academic Profile & Bio</a></li>
+            <li><a href="research.html">Research Portfolio</a></li>
+            <li><a href="experience.html">Professional Timeline</a></li>
+            <li><a href="dispatches.html">All 49+ Dispatches</a></li>
+            <li><a href="contact.html">Get in Touch</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 class="footer-heading">Connect & Media</h4>
+          <ul class="footer-links">
+            <li><a href="mailto:mirazulislamku@gmail.com"><i class="fas fa-envelope"></i> mirazulislamku@gmail.com</a></li>
+            <li><a href="https://orcid.org/0009-0009-5692-8928" target="_blank"><i class="fab fa-orcid"></i> ORCID Profile</a></li>
+            <li><a href="https://kuja-web.live/Profile/miraz.html" target="_blank"><i class="fas fa-globe"></i> KUJA Editorial Archive</a></li>
+            <li><a href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook"></i> Facebook Video Feed</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          &copy; 2026 Md. Mirazul Islam. All editorial and academic rights reserved.
+        </div>
+        <div class="footer-bottom-links">
+          <a href="javascript:void(0)" onclick="handleCvClick(event)">Curriculum Vitae</a>
+          <span>•</span>
+          <a href="dispatches.html">News Archive</a>
+          <span>•</span>
+          <a href="contact.html">Press Inquiries</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Reader Modal -->
+  <div id="reader-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" onclick="closeReaderModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+      <div id="reader-modal-content" class="modal-content-wrap"></div>
+    </div>
+  </div>
+
+  <!-- CV Privacy Modal -->
+  <div id="cv-modal" class="reader-modal" role="dialog" aria-modal="true">
+    <div class="modal-dialog" style="max-width: 520px; text-align: center; padding: 40px 28px;">
+      <button class="modal-close-btn" onclick="closeCvModal()" aria-label="Close dialog">
+        <i class="fas fa-times"></i>
+      </button>
+
+      <div style="width: 64px; height: 64px; border-radius: 50%; background: rgba(217, 119, 6, 0.12); color: var(--accent-primary); display: inline-flex; align-items: center; justify-content: center; font-size: 1.8rem; margin: 0 auto 18px auto;">
+        <i class="fas fa-shield-alt"></i>
+      </div>
+
+      <h3 style="font-size: 1.4rem; margin-bottom: 12px; color: var(--text-primary); font-family: var(--font-display);">Curriculum Vitae Access</h3>
+      
+      <p style="font-size: 0.95rem; line-height: 1.7; color: var(--text-secondary); margin-bottom: 22px;">
+        তথ্যের সুরক্ষা ও ব্যক্তিগত গোপনীয়তার স্বার্থে পূর্ণাঙ্গ জীবনবৃত্তান্ত (CV) সরাসরি পাবলিক ডাউনলোড সংরক্ষিত রাখা হয়েছে। প্রাতিষ্ঠানিক, গবেষণা বা পেশাগত প্রয়োজনে জীবনবৃত্তান্ত পেতে অনুগ্রহ করে সরাসরি যোগাযোগ করার অনুরোধ করা হচ্ছে।
+      </p>
+
+      <div style="background: var(--bg-surface); border: 1px solid var(--border-light); border-radius: var(--radius-md); padding: 16px 20px; margin-bottom: 24px; text-align: left; font-size: 0.9rem;">
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-envelope" style="color: var(--accent-primary);"></i>
+          <span><strong>ইমেইল:</strong> mirazulislamku@gmail.com</span>
+        </div>
+        <div style="margin-bottom: 8px; display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-university" style="color: var(--accent-primary);"></i>
+          <span><strong>ঠিকানা:</strong> ইতিহাস ও সভ্যতা ডিসিপ্লিন, খুলনা বিশ্ববিদ্যালয়</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <i class="fas fa-id-badge" style="color: var(--accent-primary);"></i>
+          <span><strong>ORCID:</strong> 0009-0009-5692-8928</span>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap;">
+        <a href="contact.html" class="btn btn-primary btn-sm">
+          <i class="fas fa-envelope"></i> সিভি চেয়ে বার্তা পাঠান
+        </a>
+        <button class="btn btn-outline btn-sm" onclick="closeCvModal()">
+          বাতিল করুন (Close)
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <script src="articles.js"></script>
+  <script src="main.js"></script>
 </body>
 </html>
