@@ -9,6 +9,7 @@
     { "label": "Research & Thesis", "url": "research.html" },
     { "label": "Newspaper Articles", "url": "articles.html" },
     { "label": "Experience", "url": "experience.html" },
+    { "label": "My Blog", "url": "blog.html" },
     { "label": "CV", "url": "javascript:void(0)" },
     { "label": "Contact", "url": "contact.html" }
   ],
