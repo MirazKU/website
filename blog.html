@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Blog & Insights | Md. Mirazul Islam</title>
+<meta name="description" content="Thoughts, investigative field notes, linguistic research, and reflections on human rights, history, and journalism by Md. Mirazul Islam.">
+
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.maateen.me/solaiman-lipi/font.css" rel="stylesheet">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- BACKGROUND FLOATING NATURE & PRESS ICONS -->
+<div class="bg-icons">
+  <i class="fas fa-feather-alt"></i>
+  <i class="fas fa-newspaper"></i>
+  <i class="fas fa-graduation-cap"></i>
+  <i class="fas fa-book-open"></i>
+  <i class="fas fa-globe-asia"></i>
+</div>
+
+<!-- HEADER -->
+<div id="header">
+  <header>
+    <h2>Md. Mirazul Islam</h2>
+    <div class="menu-btn" onclick="toggleMenu()">☰</div>
+    <nav id="menu">
+      <a href="index.html">Home</a>
+      <a href="about.html">About Me</a>
+      <a href="research.html">Research & Thesis</a>
+      <a href="articles.html">Newspaper Articles</a>
+      <a href="experience.html">Experience</a>
+      <a href="blog.html" class="active">My Blog</a>
+      <a href="javascript:void(0)" onclick="openCvModal()" class="header-cv-btn"><i class="fas fa-file-alt"></i> <span>CV</span> <span class="cv-pulse-dot"></span></a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+</div>
+
+<div class="container" style="padding-top:40px; padding-bottom:60px;">
+  <!-- PAGE HEADER -->
+  <div style="text-align:center; margin-bottom:30px;">
+    <h1 style="color:#4ade80; font-size:2.2rem; font-weight:700; margin-bottom:8px;">My Blog & Field Insights</h1>
+    <p style="color:#bbf7d0; font-size:1rem; max-width:760px; margin:0 auto 20px auto; line-height:1.6;">
+      অনুসন্ধানী সাংবাদিকতা, সুন্দরবনের পরিবেশ সংকট, খুলনার অবাঙালি ভাষাতত্ত্ব এবং সমাজ ও ইতিহাসের গভীর বিশ্লেষণমূলক প্রবন্ধ সংকলন।
+    </p>
+
+    <!-- SEARCH INPUT -->
+    <input type="text" id="search" placeholder="🔍 শিরোনাম, বিষয় বা ট্যাগ দিয়ে ব্লগ পোস্ট খুঁজুন..." oninput="handleBlogSearch(this.value)">
+
+    <!-- CATEGORY FILTERS -->
+    <div class="categories">
+      <div class="cat-btn active" onclick="filterBlogCategory('all', this)">সকল প্রবন্ধ (All)</div>
+      <div class="cat-btn" onclick="filterBlogCategory('climate', this)"><i class="fas fa-leaf"></i> পরিবেশ ও সুন্দরবন</div>
+      <div class="cat-btn" onclick="filterBlogCategory('research', this)"><i class="fas fa-university"></i> ভাষাতত্ত্ব ও গবেষণা</div>
+      <div class="cat-btn" onclick="filterBlogCategory('journalism', this)"><i class="fas fa-pen-nib"></i> অনুসন্ধানী সাংবাদিকতা</div>
+      <div class="cat-btn" onclick="filterBlogCategory('media', this)"><i class="fas fa-shield-alt"></i> তথ্য যাচাই ও মিডিয়া</div>
+    </div>
+  </div>
+
+  <!-- BLOG GRID -->
+  <div class="blog-grid" id="blog-posts-container"></div>
+</div>
+
+<!-- BLOG READING MODAL -->
+<div class="blog-modal-backdrop" id="blogReadingModal" onclick="handleBlogBackdrop(event)">
+  <div class="blog-modal-content">
+    <button type="button" class="blog-modal-close" onclick="closeBlogModal()">&times;</button>
+    <div style="margin-bottom:20px;">
+      <h2 id="blogModalTitle" style="color:#4ade80; font-size:1.6rem; font-weight:700; margin-bottom:12px; line-height:1.4;"></h2>
+      <div id="blogModalMeta" style="font-size:0.88rem; color:#86efac; border-bottom:1px solid rgba(74,222,128,0.25); padding-bottom:14px;"></div>
+    </div>
+    <div class="blog-modal-body" id="blogModalBody" style="line-height:1.85;"></div>
+    <div style="margin-top:25px; border-top:1px solid rgba(74,222,128,0.2); padding-top:15px; display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:10px;">
+      <span style="font-size:0.85rem; color:#bbf7d0;"><i class="fas fa-pen"></i> লেখক: মোঃ মিরাজুল ইসলাম (ইতিহাস গবেষক ও সাংবাদিক)</span>
+      <button type="button" class="btn" onclick="closeBlogModal()" style="padding:7px 18px; font-size:0.85rem;">বন্ধ করুন</button>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div id="footer">
+  <footer>
+    <div class="footer-container">
+        <!-- ABOUT -->
+        <div class="footer-section">
+            <h2>Md. Mirazul Islam</h2>
+            <p>
+                Investigative Journalist & Historical Researcher at Khulna University.
+                Reporting on human rights, political violence, climate justice, and institutional accountability.
+            </p>
+        </div>
+
+        <!-- QUICK LINKS -->
+        <div class="footer-section">
+            <h3>Quick Links</h3>
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="research.html">Research & Thesis</a>
+            <a href="articles.html">Newspaper Articles</a>
+            <a href="experience.html">Experience</a>
+            <a href="blog.html">My Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- RESOURCES -->
+        <div class="footer-section">
+            <h3>Accreditations & Press</h3>
+            <a href="https://www.kalerkantho.com" target="_blank">Daily Kaler Kantho</a>
+            <a href="https://kuja-web.live/Profile/miraz.html" target="_blank">KUJA Profile</a>
+            <a href="https://orcid.org/0009-0009-5692-8928" target="_blank">ORCID Scholar</a>
+            <a href="https://www.researchgate.net" target="_blank">ResearchGate</a>
+            <a href="https://ku.ac.bd" target="_blank">Khulna University</a>
+        </div>
+
+        <!-- CONTACT -->
+        <div class="footer-section">
+            <h3>Get In Touch</h3>
+            <p>Email: <a href="mailto:mirazulislamku@gmail.com" style="color:#bbf7d0; text-decoration:none;">mirazulislamku@gmail.com</a></p>
+            <p>Discipline of History & Civilization<br>Khulna University, Khulna-9208, Bangladesh</p>
+        </div>
+    </div>
+
+    <!-- COPYRIGHT -->
+    <div class="footer-bottom">
+        © 2026 Md. Mirazul Islam. All editorial and academic rights reserved.
+    </div>
+  </footer>
+</div>
+
+<script src="header.js"></script>
+<script src="blog.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
